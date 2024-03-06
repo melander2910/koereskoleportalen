@@ -1,4 +1,12 @@
+using Portal.API.Models;
+using Portal.API.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<PortalDatabaseSettings>(
+    builder.Configuration.GetSection("PortalDatabase"));
+
+builder.Services.AddSingleton<DrivingSchoolService>();
 
 // Add services to the container.
 
