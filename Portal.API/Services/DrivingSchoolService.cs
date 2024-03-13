@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Portal.API.Models;
@@ -19,7 +20,14 @@ public class DrivingSchoolService
         _drivingSchoolCollection = mongoDatabase.GetCollection<DrivingSchool>(
             portalDatabaseSettings.Value.DrivingSchoolsCollectionName);
     }
-    
-    public async Task<List<DrivingSchool>> GetAsync() =>
-        await _drivingSchoolCollection.Find(_ => true).ToListAsync();
+
+    public async Task<List<DrivingSchool>> GetAsync()
+    {
+        return await _drivingSchoolCollection.Find(_ => true).ToListAsync();
+    }
+
+    public async Task<DrivingSchool?> GetAsync(string id)
+    {
+        return await _drivingSchoolCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+    }
 }
