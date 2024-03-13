@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,react,dotnetcore,rider,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,react,dotnetcore,rider,visualstudiocode
 
+### Env
+appsettings.json
+
+
 ### DotnetCore ###
 # .NET Core build folders
 bin/
