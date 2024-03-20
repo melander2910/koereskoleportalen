@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using Authentication.Service.Models;
 using Authentication.Service.Services.Interfaces;
@@ -16,7 +17,7 @@ public class JwtTokenGeneratorService : IJwtTokenGeneratorService
         _jwtOptions = jwtOptions.Value;
     }
 
-    public string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles)
+    public string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -24,9 +25,9 @@ public class JwtTokenGeneratorService : IJwtTokenGeneratorService
 
         var claimList = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Email,applicationUser.Email),
-            new Claim(JwtRegisteredClaimNames.Sub,applicationUser.Id),
-            new Claim(JwtRegisteredClaimNames.Name,applicationUser.UserName)
+            new Claim(JwtRegisteredClaimNames.Email, extendedIdentityUser.Email),
+            new Claim(JwtRegisteredClaimNames.Sub, extendedIdentityUser.Id),
+            new Claim(JwtRegisteredClaimNames.Name, extendedIdentityUser.UserName)
         };
 
         claimList.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
@@ -42,5 +43,16 @@ public class JwtTokenGeneratorService : IJwtTokenGeneratorService
 
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+    
+    public string GenerateRefreshToken()
+    {
+        var randomNumber = new byte[64];
+        using (var numberGenerator = RandomNumberGenerator.Create())
+        {
+            numberGenerator.GetBytes(randomNumber);
+        }
+
+        return Convert.ToBase64String(randomNumber);
     }
 }

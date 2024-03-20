@@ -1,8 +1,6 @@
 using Authentication.Service.Dto;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services.Interfaces;
-using Authentication.Service.Utils;
-using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Service.Services;
 
@@ -17,7 +15,7 @@ public class AuthService : IAuthService
     
     public async Task<string> Register(RegistrationRequestDto registrationRequestDto)
     {
-        ApplicationUser applicationUser = new()
+        ExtendedIdentityUser extendedIdentityUser = new()
         {
             UserName = registrationRequestDto.Email,
             Email = registrationRequestDto.Email,
@@ -26,7 +24,7 @@ public class AuthService : IAuthService
             PhoneNumber = registrationRequestDto.PhoneNumber
         };
 
-        return await _authRepository.Register(applicationUser, registrationRequestDto.Password);
+        return await _authRepository.Register(extendedIdentityUser, registrationRequestDto.Password);
     }
 
     public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
@@ -37,5 +35,10 @@ public class AuthService : IAuthService
     public async Task<bool> AssignRole(string email, string roleName)
     {
         return await _authRepository.AssignRole(email, roleName);
+    }
+
+    public async Task<LoginResponseDto> RefreshToken(RefreshTokenDto model)
+    {
+        return await _authRepository.RefreshToken(model);
     }
 }
