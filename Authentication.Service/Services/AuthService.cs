@@ -1,4 +1,5 @@
 using Authentication.Service.Dto;
+using Authentication.Service.Models;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services.Interfaces;
 

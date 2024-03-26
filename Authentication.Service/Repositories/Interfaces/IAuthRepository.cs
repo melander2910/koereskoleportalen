@@ -1,5 +1,5 @@
 using Authentication.Service.Dto;
-using Authentication.Service.Utils;
+using Authentication.Service.Models;
 
 namespace Authentication.Service.Repositories.Interfaces;
 

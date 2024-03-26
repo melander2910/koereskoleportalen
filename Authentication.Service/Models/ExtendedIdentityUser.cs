@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Authentication.Service;
+namespace Authentication.Service.Models;
 
 public class ExtendedIdentityUser : IdentityUser
 {

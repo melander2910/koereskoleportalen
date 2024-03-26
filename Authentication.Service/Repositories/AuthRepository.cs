@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Authentication.Service.Data;
 using Authentication.Service.Dto;
+using Authentication.Service.Models;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services.Interfaces;
 using Authentication.Service.Utils;
@@ -66,7 +67,7 @@ public class AuthRepository : IAuthRepository
         var refreshToken = _jwtTokenGeneratorService.GenerateRefreshToken();
 
         identityUser.RefreshToken = refreshToken;
-        identityUser.RefreshTokenExpiry = DateTime.Now.AddHours(12);
+        identityUser.RefreshTokenExpiry = DateTime.UtcNow.AddHours(12);
         await _userManager.UpdateAsync(identityUser);
 
         
@@ -123,7 +124,7 @@ public class AuthRepository : IAuthRepository
 
         var identityUser = await _userManager.FindByNameAsync(principal.Identity.Name);
         if (identityUser is null || identityUser.RefreshToken != model.RefreshToken ||
-            identityUser.RefreshTokenExpiry < DateTime.Now)
+            identityUser.RefreshTokenExpiry < DateTime.UtcNow)
         {
             return new LoginResponseDto();;
         }
@@ -133,7 +134,7 @@ public class AuthRepository : IAuthRepository
         var refreshToken = _jwtTokenGeneratorService.GenerateRefreshToken();
 
         identityUser.RefreshToken = refreshToken;
-        identityUser.RefreshTokenExpiry = DateTime.Now.AddHours(12);
+        identityUser.RefreshTokenExpiry = DateTime.UtcNow.AddHours(12);
         await _userManager.UpdateAsync(identityUser);
         
         UserDto userDTO = new()

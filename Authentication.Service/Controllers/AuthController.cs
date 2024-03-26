@@ -1,5 +1,6 @@
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebMVCApp.Controllers;
@@ -75,6 +76,13 @@ public class AuthController : ControllerBase
         }
 
         return Unauthorized();
+    }
+    
+    [HttpGet(Name = "GetWeatherForecast")]
+    // [Authorize]
+    public IEnumerable<string> Get()
+    {
+        return ["e", "h", "g", "h"];
     }
 
 }

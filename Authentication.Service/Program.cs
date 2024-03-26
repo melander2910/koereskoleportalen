@@ -1,3 +1,4 @@
+using System.Text;
 using Authentication.Service;
 using Authentication.Service.Data;
 using Authentication.Service.Models;
@@ -5,8 +6,10 @@ using Authentication.Service.Repositories;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services;
 using Authentication.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,28 +19,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
-
-builder.Services.AddIdentity<ExtendedIdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+builder.Services.AddIdentity<ExtendedIdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
-
-// by using this we can authorize endpoints in THIS application. We might need to NOT add it here but in other microservices.
-// builder.Services.AddAuthentication(options =>
-// {
-//     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-// }).AddJwtBearer(options =>
-// {
-//     options.TokenValidationParameters = new TokenValidationParameters()
-//     { 
-//         ValidateActor = false,
-//         ValidateIssuer = false,
-//         ValidateAudience = false,
-//         RequireExpirationTime = true,
-//         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes
-//             (builder.Configuration.GetSection("ApiSettings:JwtOptions:Secret").Value))
-//     };
-// });
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtTokenGeneratorService, JwtTokenGeneratorService>();

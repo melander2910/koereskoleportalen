@@ -1,3 +1,5 @@
+using Authentication.Service.Models;
+
 namespace Authentication.Service.Services.Interfaces;
 
 public interface IJwtTokenGeneratorService
