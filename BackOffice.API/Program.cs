@@ -1,8 +1,15 @@
+using BackOffice.API.Data;
 using BackOffice.API.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<Context>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddControllers();
 
@@ -49,5 +56,18 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-
+ApplyMigration();
 app.Run();
+
+void ApplyMigration()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var _dbContext = scope.ServiceProvider.GetRequiredService<Context>();
+        if (_dbContext.Database.GetPendingMigrations().Count() > 0)
+        {
+            _dbContext.Database.Migrate();
+        }
+    }
+}
+
