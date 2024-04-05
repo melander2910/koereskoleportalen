@@ -3,5 +3,7 @@ namespace Authentication.Service.Dto;
 public class LoginResponseDto
 {
     public UserDto User { get; set; }
-    public string Token { get; set; }
+    public bool IsLoggedIn { get; set; }
+    public string JwtToken { get; set; }
+    public string RefreshToken { get; set; }
 }

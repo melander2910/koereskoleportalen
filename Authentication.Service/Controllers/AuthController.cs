@@ -1,26 +1,27 @@
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Authentication.Service.Controllers;
+namespace WebMVCApp.Controllers;
 
-[Route("api/auth")]
+[Route("api/[controller]")]
 [ApiController]
-public class AuthAPIController : ControllerBase
+public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
     
     // TODO: how should authentication responses be implemented? Logging, error handling?
     protected ResponseDto _response;
     
-    public AuthAPIController(IAuthService authService)
+    public AuthController(IAuthService authService)
     {
         _authService = authService;
         _response = new ResponseDto();
     }
     
-    [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegistrationRequestDto model)
+    [HttpPost("Signup", Name = "Signup")]
+    public async Task<IActionResult> Signup([FromBody] RegistrationRequestDto model)
     {
         var errorMessage = await _authService.Register(model);
         if (!string.IsNullOrEmpty(errorMessage))
@@ -36,8 +37,8 @@ public class AuthAPIController : ControllerBase
         return Ok(_response);
     }
 
-    [HttpPost("login")]
-    public async Task<IActionResult> login([FromBody] LoginRequestDto model)
+    [HttpPost("Login", Name = "Login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequestDto model)
     {
         var loginResponse = await _authService.Login(model);
         if (loginResponse.User == null)
@@ -52,7 +53,7 @@ public class AuthAPIController : ControllerBase
     
     // AssignRole requires email and role
     // Who can Assign Roles?
-    [HttpPost("AssignRole")]
+    [HttpPost("AssignRole", Name = "AssignRole")]
     public async Task<IActionResult> AssignRole([FromBody] AssignRoleRequestDto model)
     {
         var assignRoleSuccessful = await _authService.AssignRole(model.Email, model.Role);
@@ -64,4 +65,24 @@ public class AuthAPIController : ControllerBase
         }
         return Ok(_response);
     }
+
+    [HttpPost("RefreshToken", Name = "RefreshToken")]
+    public async Task<IActionResult> RefreshToken(RefreshTokenDto model)
+    {
+        var loginResult = await _authService.RefreshToken(model);
+        if (loginResult.IsLoggedIn)
+        {
+            return Ok(loginResult);
+        }
+
+        return Unauthorized();
+    }
+    
+    [HttpGet(Name = "GetWeatherForecast")]
+    // [Authorize]
+    public IEnumerable<string> Get()
+    {
+        return ["e", "h", "g", "h"];
+    }
+
 }

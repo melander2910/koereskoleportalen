@@ -1,6 +1,9 @@
+using Authentication.Service.Models;
+
 namespace Authentication.Service.Services.Interfaces;
 
 public interface IJwtTokenGeneratorService
 {
-    string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles);
+    string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles);
+    string GenerateRefreshToken();
 }

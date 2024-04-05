@@ -1,11 +1,15 @@
+using System.Text;
 using Authentication.Service;
+using Authentication.Service.Data;
 using Authentication.Service.Models;
 using Authentication.Service.Repositories;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services;
 using Authentication.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,9 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+builder.Services.AddIdentity<ExtendedIdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddControllers();
