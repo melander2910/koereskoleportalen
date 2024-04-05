@@ -1,6 +1,6 @@
 namespace CvrSync.Service.Models;
 
-public class CvrAuthentication
+public class CvrAuthenticationSettings
 {
     public string Username { get; set; }
     public string Password { get; set; }
