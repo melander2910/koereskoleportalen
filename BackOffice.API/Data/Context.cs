@@ -12,5 +12,7 @@ public class Context : DbContext
     
     public DbSet<Organisation> Organisations { get; set; }
     public DbSet<ProductionUnit> ProductionUnits { get; set; }
+    public DbSet<User> Users { get; set; }
+
     
 }

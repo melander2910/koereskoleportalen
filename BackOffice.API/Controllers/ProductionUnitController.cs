@@ -1,49 +1,48 @@
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackOffice.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OrganisationController : ControllerBase
+public class ProductionUnitController : ControllerBase
 {
-    private readonly IOrganisationService _organisationService;
-    public OrganisationController(IOrganisationService organisationService)
+    private readonly IProductionUnitService _productionUnitService;
+    public ProductionUnitController(IProductionUnitService productionUnitService)
     {
-        _organisationService = organisationService;
+        _productionUnitService = productionUnitService;
     }
     
-    [HttpGet("{id}" ,Name = "GetOrganisationById")]
+    [HttpGet("{id}" ,Name = "GetProductionUnitById")]
     [Authorize]
     public async Task<IActionResult> GetById(int id)
     {
         return Ok(200);
     }
 
-    [HttpGet(Name = "GetAllOrganisations")]
+    [HttpGet(Name = "GetAllProductionUnits")]
     [Authorize]
     public async Task<IActionResult> GetAll()
     {
         return Ok(200);
     }
 
-    [HttpPost(Name = "CreateOrganisation")]
+    [HttpPost(Name = "CreateProductionUnit")]
     [Authorize]
     public async Task<IActionResult> Add([FromBody] string model)
     {
         return Ok(200);
     }
     
-    [HttpPut("{id}", Name = "UpdateOrganisation")]
+    [HttpPut("{id}", Name = "UpdateProductionUnit")]
     [Authorize]
     public async Task<IActionResult> Update(int id)
     {
         return Ok(200);
     }
     
-    [HttpDelete("{id}", Name = "DeleteOrganisation")]
+    [HttpDelete("{id}", Name = "DeleteProductionUnit")]
     [Authorize]
     public async Task<IActionResult> Delete(int id)
     {

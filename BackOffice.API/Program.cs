@@ -1,5 +1,9 @@
 using BackOffice.API.Data;
 using BackOffice.API.Extensions;
+using BackOffice.API.Repositories;
+using BackOffice.API.Repositories.Interfaces;
+using BackOffice.API.Services;
+using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -12,6 +16,16 @@ builder.Services.AddDbContext<Context>(options =>
 });
 
 builder.Services.AddControllers();
+
+
+builder.Services.AddScoped<IOrganisationService, OrganisationService>();
+builder.Services.AddScoped<IProductionUnitService, ProductionUnitService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IOrganisationRepository, OrganisationRepository>();
+builder.Services.AddScoped<IProductionUnitRepository, ProductionUnitRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>

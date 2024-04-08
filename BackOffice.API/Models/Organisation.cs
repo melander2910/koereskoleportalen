@@ -18,10 +18,11 @@ public class Organisation : BaseEntity
     public bool ClaimedByOwner { get; set; }
 
     public ICollection<ProductionUnit> ProductionUnits { get; set; }
+    public ICollection<User> Users { get; set; }
+
     
     // Orginsation should have a collection of users, where some will be owners, some admins and some teachers
     // Teachers and Admins might only be connected to a specific ProductionUnit? 
-    // ICollection<User> Users { get; set;}
 
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }

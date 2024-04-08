@@ -1,49 +1,48 @@
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackOffice.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class OrganisationController : ControllerBase
+public class UserController : ControllerBase
 {
-    private readonly IOrganisationService _organisationService;
-    public OrganisationController(IOrganisationService organisationService)
+    private readonly IUserService _userService;
+    public UserController(IUserService userService)
     {
-        _organisationService = organisationService;
+        _userService = userService;
     }
     
-    [HttpGet("{id}" ,Name = "GetOrganisationById")]
+    [HttpGet("{id}" ,Name = "GetUserById")]
     [Authorize]
     public async Task<IActionResult> GetById(int id)
     {
         return Ok(200);
     }
 
-    [HttpGet(Name = "GetAllOrganisations")]
+    [HttpGet(Name = "GetAllUsers")]
     [Authorize]
     public async Task<IActionResult> GetAll()
     {
         return Ok(200);
     }
 
-    [HttpPost(Name = "CreateOrganisation")]
+    [HttpPost(Name = "CreateUser")]
     [Authorize]
     public async Task<IActionResult> Add([FromBody] string model)
     {
         return Ok(200);
     }
     
-    [HttpPut("{id}", Name = "UpdateOrganisation")]
+    [HttpPut("{id}", Name = "UpdateUser")]
     [Authorize]
     public async Task<IActionResult> Update(int id)
     {
         return Ok(200);
     }
     
-    [HttpDelete("{id}", Name = "DeleteOrganisation")]
+    [HttpDelete("{id}", Name = "DeleteUser")]
     [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
