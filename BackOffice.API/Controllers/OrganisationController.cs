@@ -17,18 +17,20 @@ public class OrganisationController : ControllerBase
     
     [HttpGet("{id}" ,Name = "GetOrganisationById")]
     [Authorize]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(Guid id)
     {
-        return Ok(200);
+        var organisation = await _organisationService.FindAsync(id);
+        return Ok(organisation);
     }
 
     [HttpGet(Name = "GetAllOrganisations")]
     [Authorize]
     public async Task<IActionResult> GetAll()
     {
-        return Ok(200);
+        var organisations = await _organisationService.GetAllAsync();
+        return Ok(organisations);
     }
-
+    
     [HttpPost(Name = "CreateOrganisation")]
     [Authorize]
     public async Task<IActionResult> Add([FromBody] string model)
@@ -38,7 +40,7 @@ public class OrganisationController : ControllerBase
     
     [HttpPut("{id}", Name = "UpdateOrganisation")]
     [Authorize]
-    public async Task<IActionResult> Update(int id)
+    public async Task<IActionResult> Update(Guid id)
     {
         return Ok(200);
     }

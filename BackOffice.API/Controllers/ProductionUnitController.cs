@@ -16,9 +16,10 @@ public class ProductionUnitController : ControllerBase
     
     [HttpGet("{id}" ,Name = "GetProductionUnitById")]
     [Authorize]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(Guid id)
     {
-        return Ok(200);
+        var productionUnit = await _productionUnitService.FindAsync(id);
+        return Ok(productionUnit);
     }
 
     [HttpGet(Name = "GetAllProductionUnits")]
@@ -37,14 +38,14 @@ public class ProductionUnitController : ControllerBase
     
     [HttpPut("{id}", Name = "UpdateProductionUnit")]
     [Authorize]
-    public async Task<IActionResult> Update(int id)
+    public async Task<IActionResult> Update(Guid id)
     {
         return Ok(200);
     }
     
     [HttpDelete("{id}", Name = "DeleteProductionUnit")]
     [Authorize]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(200);
     }

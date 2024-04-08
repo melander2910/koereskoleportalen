@@ -13,38 +13,38 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
 
-    public Task<User> AddAsync(User user)
+    public async Task<User> AddAsync(User user)
     {
-        throw new NotImplementedException();
+        return await _userRepository.AddAsync(user);
     }
 
-    public Task<IEnumerable<User>> GetAllAsync()
+    public async Task<IEnumerable<User>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await _userRepository.GetAllAsync();
     }
 
-    public Task<IEnumerable<User>> GetAllByOrganisationIdAsync(Guid organisationId)
+    public async Task<IEnumerable<User>> GetAllByOrganisationIdAsync(Guid organisationId)
     {
-        throw new NotImplementedException();
+        return await _userRepository.GetAllByOrganisationIdAsync(organisationId);
     }
 
-    public Task<IEnumerable<User>> GetAllByProductionUnitIdAsync(Guid productionUnitId)
+    public async Task<IEnumerable<User>> GetAllByProductionUnitIdAsync(Guid productionUnitId)
     {
-        throw new NotImplementedException();
+        return await _userRepository.GetAllByProductionUnitIdAsync(productionUnitId);
     }
 
-    public Task<User> FindAsync(Guid id)
+    public async Task<User> FindAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await _userRepository.FindAsync(id);
     }
 
-    public Task<User> Update(Guid id, User user)
+    public async Task<User> Update(Guid id, User user)
     {
-        throw new NotImplementedException();
+        return await _userRepository.Update(id, user);
     }
 
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id)
     {
-        throw new NotImplementedException();
+        return await _userRepository.Delete(id);
     }
 }

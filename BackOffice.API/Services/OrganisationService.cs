@@ -13,33 +13,33 @@ public class OrganisationService : IOrganisationService
         _organisationRepository = organisationRepository;
     }
 
-    public Task<Organisation> AddAsync(Organisation organisation)
+    public async Task<Organisation> AddAsync(Organisation organisation)
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.AddAsync(organisation);
     }
 
-    public Task<IEnumerable<Organisation>> GetAllAsync()
+    public async Task<IEnumerable<Organisation>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.GetAllAsync();
     }
 
-    public Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId)
+    public async Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId)
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.GetAllByUserIdAsync(userId);
     }
 
-    public Task<Organisation> FindAsync(Guid id)
+    public async Task<Organisation> FindAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.FindAsync(id);
     }
 
-    public Task<Organisation> Update(Guid id, Organisation organisation)
+    public async Task<Organisation> Update(Guid id, Organisation organisation)
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.Update(id, organisation);
     }
 
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id)
     {
-        throw new NotImplementedException();
+        return await _organisationRepository.Delete(id);
     }
 }

@@ -16,7 +16,7 @@ public class UserController : ControllerBase
     
     [HttpGet("{id}" ,Name = "GetUserById")]
     [Authorize]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(Guid id)
     {
         return Ok(200);
     }
@@ -37,14 +37,14 @@ public class UserController : ControllerBase
     
     [HttpPut("{id}", Name = "UpdateUser")]
     [Authorize]
-    public async Task<IActionResult> Update(int id)
+    public async Task<IActionResult> Update(Guid id)
     {
         return Ok(200);
     }
     
     [HttpDelete("{id}", Name = "DeleteUser")]
     [Authorize]
-    public async Task<IActionResult> Delete(int id)
+    public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(200);
     }

@@ -13,33 +13,33 @@ public class ProductionUnitService : IProductionUnitService
         _productionUnitRepository = productionUnitRepository;
     }
 
-    public Task<ProductionUnit> AddAsync(ProductionUnit productionUnit)
+    public async Task<ProductionUnit> AddAsync(ProductionUnit productionUnit)
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.AddAsync(productionUnit);
     }
 
-    public Task<IEnumerable<ProductionUnit>> GetAllAsync()
+    public async Task<IEnumerable<ProductionUnit>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.GetAllAsync();
     }
 
-    public Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)
+    public async Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.GetAllByUserIdAsync(userId);
     }
 
-    public Task<ProductionUnit> FindAsync(Guid id)
+    public async Task<ProductionUnit> FindAsync(Guid id)
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.FindAsync(id);
     }
 
-    public Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit)
+    public async Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit)
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.Update(id, productionUnit);
     }
 
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id)
     {
-        throw new NotImplementedException();
+        return await _productionUnitRepository.Delete(id);
     }
 }
