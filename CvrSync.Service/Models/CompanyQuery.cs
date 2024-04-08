@@ -50,6 +50,12 @@ public class Address
 {
     [PropertyName("vejnavn")]
     public string RoadName { get; set; }
+    [PropertyName("husnummerFra")]
+    public int? HouseNumber { get; set; }
+    [PropertyName("etage")]
+    public string? Story { get; set; }
+    [PropertyName("sidedoer")]
+    public string? Door { get; set; }
     
     [PropertyName("postnummer")]
     public int ZipCode { get; set; }

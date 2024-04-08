@@ -53,7 +53,12 @@ public class ElasticSearchService
             {
                 CompanyNumber = query.Organisation.CompanyNumber,
                 Name = query.Organisation.MetaData.NewestName.Name,
-                Address = query.Organisation.MetaData.Address.RoadName,
+                Address = $"{query.Organisation.MetaData.Address.RoadName ?? ""} " +
+                          $"{query.Organisation.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
+                          $"{(query.Organisation.MetaData.Address.Story != null ? ", " : "")}" +
+                          $"{query.Organisation.MetaData.Address.Story?.ToString() ?? ""}" +
+                          $"{(query.Organisation.MetaData.Address.Story != null ? "." : "")}" +
+                          $"{query.Organisation.MetaData.Address.Door?.ToString() ?? ""}",
                 ZipCode = query.Organisation.MetaData.Address.ZipCode,
                 City = query.Organisation.MetaData.Address.Municipality.Name,
                 DrivingSchools = new List<DrivingSchool>()
@@ -102,6 +107,14 @@ public class ElasticSearchService
                 ProductionUnitNumber = query.Unit.ProductionUnitNumber,
                 CompanyNumber = query.Unit.CompanyRelation[0].CompanyNumber,
                 Name = query.Unit.MetaData.NewestName.Name,
+                Address = $"{query.Unit.MetaData.Address.RoadName ?? ""} " +
+                          $"{query.Unit.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
+                          $"{(query.Unit.MetaData.Address.Story != null ? ", " : "")}" +
+                          $"{query.Unit.MetaData.Address.Story?.ToString() ?? ""}" +
+                          $"{(query.Unit.MetaData.Address.Story != null ? "." : "")}" +
+                          $"{query.Unit.MetaData.Address.Door?.ToString() ?? ""}",
+                ZipCode = query.Unit.MetaData.Address.ZipCode,
+                City = query.Unit.MetaData.Address.Municipality.Name,
                 Status = query.Unit.MetaData.Status
             };
             
