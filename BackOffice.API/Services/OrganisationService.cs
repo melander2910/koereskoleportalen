@@ -1,3 +1,4 @@
+using BackOffice.API.Dto;
 using BackOffice.API.Models;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
@@ -13,8 +14,23 @@ public class OrganisationService : IOrganisationService
         _organisationRepository = organisationRepository;
     }
 
-    public async Task<Organisation> AddAsync(Organisation organisation)
+    public async Task<Organisation> AddAsync(OrganisationCreateDto organisationCreateDto)
     {
+        var organisation = new Organisation
+        {
+            Id = Guid.NewGuid(),
+            CreatedDate = DateTime.UtcNow,
+            CVR = organisationCreateDto.CVR,
+            Name = organisationCreateDto.Name,
+            PhoneNumber = organisationCreateDto.PhoneNumber,
+            Email = organisationCreateDto.Email,
+            City = organisationCreateDto.City,
+            StreetAddress = organisationCreateDto.StreetAddress,
+            Zipcode = organisationCreateDto.Zipcode,
+            
+            // TODO: will we create all in Postgres db beforehand?
+            ClaimedByOwner = true
+        };
         return await _organisationRepository.AddAsync(organisation);
     }
 

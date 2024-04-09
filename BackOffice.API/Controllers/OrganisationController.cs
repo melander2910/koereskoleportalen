@@ -1,3 +1,5 @@
+using BackOffice.API.Dto;
+using BackOffice.API.Models;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -10,9 +12,11 @@ namespace BackOffice.API.Controllers;
 public class OrganisationController : ControllerBase
 {
     private readonly IOrganisationService _organisationService;
-    public OrganisationController(IOrganisationService organisationService)
+    private readonly IUserService _userService;
+    public OrganisationController(IOrganisationService organisationService, IUserService userService)
     {
         _organisationService = organisationService;
+        _userService = userService;
     }
     
     [HttpGet("{id}" ,Name = "GetOrganisationById")]
@@ -33,8 +37,9 @@ public class OrganisationController : ControllerBase
     
     [HttpPost(Name = "CreateOrganisation")]
     [Authorize]
-    public async Task<IActionResult> Add([FromBody] string model)
+    public async Task<IActionResult> Add([FromBody] OrganisationCreateDto organisationCreateDto)
     {
+        var organisation = await _organisationService.AddAsync(organisationCreateDto);
         return Ok(200);
     }
     
@@ -50,5 +55,13 @@ public class OrganisationController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         return Ok(200);
+    }
+    
+    [HttpGet]
+    [Route("{id}/users", Name = "GetUsersByOrganisationId")]
+    public async Task<ActionResult<IEnumerable<Organisation>>> GetUsersByOrganisationId(Guid id)
+    {
+        var userOrganisations = await _userService.GetAllByOrganisationIdAsync(id);
+        return Ok(userOrganisations);
     }
 }

@@ -1,10 +1,11 @@
+using BackOffice.API.Dto;
 using BackOffice.API.Models;
 
 namespace BackOffice.API.Services.Interfaces;
 
 public interface IProductionUnitService
 {
-    Task<ProductionUnit> AddAsync(ProductionUnit productionUnit);
+    Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto);
     Task<IEnumerable<ProductionUnit>> GetAllAsync();
     Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId);
     Task<ProductionUnit> FindAsync(Guid id);

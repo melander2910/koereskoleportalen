@@ -1,10 +1,11 @@
+using BackOffice.API.Dto;
 using BackOffice.API.Models;
 
 namespace BackOffice.API.Services.Interfaces;
 
 public interface IOrganisationService
 {
-    Task<Organisation> AddAsync(Organisation organisation);
+    Task<Organisation> AddAsync(OrganisationCreateDto organisationCreateDto);
     Task<IEnumerable<Organisation>> GetAllAsync();
     Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId);
     Task<Organisation> FindAsync(Guid id);

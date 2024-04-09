@@ -1,3 +1,4 @@
+using BackOffice.API.Dto;
 using BackOffice.API.Models;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
@@ -13,8 +14,10 @@ public class ProductionUnitService : IProductionUnitService
         _productionUnitRepository = productionUnitRepository;
     }
 
-    public async Task<ProductionUnit> AddAsync(ProductionUnit productionUnit)
+    public async Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto)
     {
+        // TODO: Implement
+        var productionUnit = new ProductionUnit();
         return await _productionUnitRepository.AddAsync(productionUnit);
     }
 

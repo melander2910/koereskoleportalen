@@ -1,3 +1,5 @@
+using BackOffice.API.Dto;
+using BackOffice.API.Models;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +11,11 @@ namespace BackOffice.API.Controllers;
 public class ProductionUnitController : ControllerBase
 {
     private readonly IProductionUnitService _productionUnitService;
-    public ProductionUnitController(IProductionUnitService productionUnitService)
+    private readonly IUserService _userService;
+    public ProductionUnitController(IProductionUnitService productionUnitService, IUserService userService)
     {
         _productionUnitService = productionUnitService;
+        _userService = userService;
     }
     
     [HttpGet("{id}" ,Name = "GetProductionUnitById")]
@@ -26,14 +30,17 @@ public class ProductionUnitController : ControllerBase
     [Authorize]
     public async Task<IActionResult> GetAll()
     {
-        return Ok(200);
+        var productionUnits = await _productionUnitService.GetAllAsync();
+        return Ok(productionUnits);
     }
-
+    
+    // TODO: There is always at least one Production Unit matching the organisation?
     [HttpPost(Name = "CreateProductionUnit")]
     [Authorize]
-    public async Task<IActionResult> Add([FromBody] string model)
+    public async Task<IActionResult> Add([FromBody] ProductionUnitCreateDto productionUnitCreateDto)
     {
-        return Ok(200);
+        var productionUnit = await _productionUnitService.AddAsync(productionUnitCreateDto);
+        return Ok(productionUnit);
     }
     
     [HttpPut("{id}", Name = "UpdateProductionUnit")]
@@ -48,5 +55,13 @@ public class ProductionUnitController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         return Ok(200);
+    }
+    
+    [HttpGet]
+    [Route("{id}/users", Name = "GetUsersByProductionUnitId")]
+    public async Task<ActionResult<IEnumerable<ProductionUnit>>> GetUsersByProductionUnitId(Guid id)
+    {
+        var userProductionUnits = await _userService.GetAllByProductionUnitIdAsync(id);
+        return Ok(userProductionUnits);
     }
 }

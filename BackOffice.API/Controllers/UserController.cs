@@ -1,3 +1,5 @@
+using BackOffice.API.Dto;
+using BackOffice.API.Models;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,27 +20,31 @@ public class UserController : ControllerBase
     [Authorize]
     public async Task<IActionResult> GetById(Guid id)
     {
-        return Ok(200);
+        var user = await _userService.FindAsync(id);
+        return Ok(user);
     }
 
     [HttpGet(Name = "GetAllUsers")]
     [Authorize]
     public async Task<IActionResult> GetAll()
     {
-        return Ok(200);
+        var users = await _userService.GetAllAsync();
+        return Ok(users);
     }
 
     [HttpPost(Name = "CreateUser")]
     [Authorize]
-    public async Task<IActionResult> Add([FromBody] string model)
+    public async Task<IActionResult> Add([FromBody] UserSignupDto model)
     {
+        await _userService.AddAsync(model);
         return Ok(200);
     }
     
     [HttpPut("{id}", Name = "UpdateUser")]
     [Authorize]
-    public async Task<IActionResult> Update(Guid id)
+    public async Task<IActionResult> Update(Guid id, UserUpdateDto model)
     {
+        var updatedUser = await _userService.Update(id, model);
         return Ok(200);
     }
     

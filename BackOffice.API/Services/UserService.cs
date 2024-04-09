@@ -1,3 +1,4 @@
+using BackOffice.API.Dto;
 using BackOffice.API.Models;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
@@ -13,8 +14,18 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
 
-    public async Task<User> AddAsync(User user)
+    public async Task<User> AddAsync(UserSignupDto userDto)
     {
+        var user = new User
+        {
+            Id = userDto.Id,
+            CreatedDate = DateTime.UtcNow,
+            Firstname = userDto.Firstname,
+            Lastname = userDto.Lastname,
+            PhoneNumber = userDto.PhoneNumber,
+            Address = userDto.Address
+        };
+        
         return await _userRepository.AddAsync(user);
     }
 
@@ -38,8 +49,14 @@ public class UserService : IUserService
         return await _userRepository.FindAsync(id);
     }
 
-    public async Task<User> Update(Guid id, User user)
+    public async Task<User> Update(Guid id, UserUpdateDto userDto)
     {
+        var user = await _userRepository.FindAsync(id);
+        user.ModifiedDate = DateTime.UtcNow;
+        user.Firstname = userDto.Firstname;
+        user.Lastname = userDto.Lastname;
+        user.Address = userDto.Address;
+        
         return await _userRepository.Update(id, user);
     }
 

@@ -20,6 +20,9 @@ public class AuthController : ControllerBase
         _response = new ResponseDto();
     }
     
+    // TODO: Send 'User Signup Event' to RabbitMQ which will create the application user with matching Guid / Id
+    // TODO: Send event upon email verification?
+    // TODO: Apply default roles and permissions?
     [HttpPost("Signup", Name = "Signup")]
     public async Task<IActionResult> Signup([FromBody] RegistrationRequestDto model)
     {

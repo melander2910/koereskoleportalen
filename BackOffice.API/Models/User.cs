@@ -2,6 +2,10 @@ namespace BackOffice.API.Models;
 
 public class User : BaseEntity
 {
+    public User()
+    {
+        
+    }
     // Properties shared by all user types
     public string Firstname { get; set; }
     public string Lastname { get; set; }
