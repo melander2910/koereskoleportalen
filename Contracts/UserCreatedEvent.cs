@@ -1,6 +1,6 @@
-namespace BackOffice.API.Dto;
+﻿namespace Contracts;
 
-public class UserSignupDto
+public class UserCreatedEvent
 {
     public Guid Id { get; set; }
     public string Firstname { get; set; }

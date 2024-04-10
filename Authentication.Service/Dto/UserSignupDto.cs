@@ -1,4 +1,4 @@
-namespace BackOffice.API.Dto;
+namespace Authentication.Service.Dto;
 
 public class UserSignupDto
 {

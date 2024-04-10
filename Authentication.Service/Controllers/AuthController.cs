@@ -1,5 +1,6 @@
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
+using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,14 +11,15 @@ namespace WebMVCApp.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
-    
+
     // TODO: how should authentication responses be implemented? Logging, error handling?
     protected ResponseDto _response;
     
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService, IPublishEndpoint publishEndpoint)
     {
         _authService = authService;
         _response = new ResponseDto();
+        
     }
     
     // TODO: Send 'User Signup Event' to RabbitMQ which will create the application user with matching Guid / Id
@@ -27,7 +29,7 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Signup([FromBody] RegistrationRequestDto model)
     {
         var errorMessage = await _authService.Register(model);
-        if (!string.IsNullOrEmpty(errorMessage))
+        if (!string.IsNullOrEmpty(errorMessage) && errorMessage != "Identity User Created")
         {
             _response.IsSuccess = false;
             _response.Message= errorMessage;

@@ -6,6 +6,7 @@ using Authentication.Service.Repositories;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services;
 using Authentication.Service.Services.Interfaces;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,25 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtTokenGeneratorService, JwtTokenGeneratorService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+
+builder.Services.AddMassTransit(registrationConfigurator =>
+{
+    registrationConfigurator.SetKebabCaseEndpointNameFormatter();
+    
+    // MassTransit to use an EF outbox for message deduplication ??
+    
+    registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
+    {
+        factoryConfigurator.Host(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Host"), hostConfigurator =>
+        {
+            hostConfigurator.Username(builder.Configuration["RabbitMQ:Username"]);
+            hostConfigurator.Password(builder.Configuration["RabbitMQ:Password"]);
+        });
+        
+        factoryConfigurator.ConfigureEndpoints(registrationContext);
+    });
+});
+
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
