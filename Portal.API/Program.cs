@@ -1,12 +1,20 @@
+using Portal.API.Data;
 using Portal.API.Models;
+using Portal.API.Repositories;
+using Portal.API.Repositories.Interfaces;
 using Portal.API.Services;
+using Portal.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<PortalDatabaseSettings>(
     builder.Configuration.GetSection("PortalDatabase"));
 
-builder.Services.AddSingleton<DrivingSchoolService>();
+builder.Services.AddSingleton<MongoDbClient>();
+
+builder.Services.AddScoped<IOrganisationService, OrganisationService>();
+
+builder.Services.AddScoped<IOrganisationRepository, OrganisationRepository>();
 
 // Add services to the container.
 

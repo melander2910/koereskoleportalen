@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Portal.API.Models;
-using Portal.API.Services;
+using Portal.API.Services.Interfaces;
 
 namespace Portal.API.Controllers;
 
@@ -9,23 +8,23 @@ namespace Portal.API.Controllers;
 [Route("api/[controller]")]
 public class DrivingSchoolsController : ControllerBase
 {
-    private readonly DrivingSchoolService _drivingSchoolService;
+    private readonly IOrganisationService _organisationService;
 
-    public DrivingSchoolsController(DrivingSchoolService drivingSchoolService)
+    public DrivingSchoolsController(IOrganisationService organisationService)
     {
-        _drivingSchoolService = drivingSchoolService;
+        _organisationService = organisationService;
     }
-
+    
     [HttpGet]
-    public async Task<List<DrivingSchool>> Get()
+    public async Task<List<Organisation>> Get()
     {
-        return await _drivingSchoolService.GetAsync();
+        return await _organisationService.GetAsync();
     }
 
     [HttpGet("{id:length(24)}")]
-    public async Task<ActionResult<DrivingSchool>> Get(string id)
+    public async Task<ActionResult<Organisation>> Get(string id)
     {
-        var drivingSchool = await _drivingSchoolService.GetAsync(id);
+        var drivingSchool = await _organisationService.GetAsync(id);
 
         if (drivingSchool == null)
         {
