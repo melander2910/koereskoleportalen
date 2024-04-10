@@ -14,14 +14,14 @@ public class Unit
     public int ProductionUnitNumber { get; set; }
     
     [PropertyName("virksomhedsrelation")]
-    public IList<CompanyRelation> CompanyRelation { get; set; }
+    public IList<OrganisationRelation> OrganisationRelations { get; set; }
     
     [PropertyName("produktionsEnhedMetadata")]
     public MetaData MetaData { get; set; }
 }
 
-public class CompanyRelation
+public class OrganisationRelation
 {
     [PropertyName("cvrNummer")]
-    public int CompanyNumber { get; set; }
+    public int OrganisationNumber { get; set; }
 }

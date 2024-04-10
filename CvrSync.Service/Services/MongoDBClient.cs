@@ -6,7 +6,7 @@ namespace CvrSync.Service.Services;
 
 public class MongoDBClient
 {
-    private readonly IMongoCollection<Company> _companyCollection;
+    private readonly IMongoCollection<Organisation> _companyCollection;
 
     public MongoDBClient()
     {
@@ -28,22 +28,22 @@ public class MongoDBClient
 
         var mongoDatabase = mongoClient.GetDatabase(portalDatabaseSettings.DatabaseName);
 
-        _companyCollection = mongoDatabase.GetCollection<Company>(portalDatabaseSettings.DrivingSchoolsCollectionName);
+        _companyCollection = mongoDatabase.GetCollection<Organisation>(portalDatabaseSettings.DrivingSchoolsCollectionName);
     }
 
-    public async Task<Company?> GetAsync(int companyNumber)
+    public async Task<Organisation?> GetAsync(int organisationNumber)
     {
-        return await _companyCollection.Find(x => x.CompanyNumber == companyNumber).FirstOrDefaultAsync();
+        return await _companyCollection.Find(x => x.OrganisationNumber == organisationNumber).FirstOrDefaultAsync();
     }
 
-    public async Task CreateAsync(Company newCompany)
+    public async Task CreateAsync(Organisation newOrganisation)
     {
-        await _companyCollection.InsertOneAsync(newCompany);
+        await _companyCollection.InsertOneAsync(newOrganisation);
     }
 
-    public async Task UpdateAsync(string id, Company updatedCompany)
+    public async Task UpdateAsync(string id, Organisation updatedOrganisation)
     {
-        await _companyCollection.ReplaceOneAsync(x => x.Id == id, updatedCompany);
+        await _companyCollection.ReplaceOneAsync(x => x.Id == id, updatedOrganisation);
         
     }
     

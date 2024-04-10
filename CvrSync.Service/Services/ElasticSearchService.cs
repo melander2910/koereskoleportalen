@@ -25,19 +25,19 @@ public class ElasticSearchService
         _cvrPassword = cvrAuthenticationSettingsSettings.Password;
     }
     
-   public async Task GetCompanies()
+   public async Task GetOrganisations()
     {
         // Configuration for the Elasticsearch connection
-        string companiesIndex = "/cvr-permanent/virksomhed/";
+        string organisationIndex = "/cvr-permanent/virksomhed/";
         var settings = new ConnectionSettings(new Uri("http://distribution.virk.dk"))
             .BasicAuthentication(_cvrUsername, _cvrPassword)
-            .DefaultIndex(companiesIndex);
+            .DefaultIndex(organisationIndex);
         
         // Create an Elasticsearch client
         var client = new ElasticClient(settings);
         
         // Querying Elastic Search API
-        var response = await client.SearchAsync<CompanyQuery>(s => s
+        var response = await client.SearchAsync<OrganisationQuery>(s => s
                 .Size(1000)
                 .Query(q => q
                     .Bool(b => b
@@ -49,40 +49,19 @@ public class ElasticSearchService
 
         foreach (var query in doc)
         {
-            var newCompany = new Company
-            {
-                CompanyNumber = query.Organisation.CompanyNumber,
-                Name = query.Organisation.MetaData.NewestName.Name,
-                Address = $"{query.Organisation.MetaData.Address.RoadName ?? ""} " +
-                          $"{query.Organisation.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
-                          $"{(query.Organisation.MetaData.Address.Story != null ? ", " : "")}" +
-                          $"{query.Organisation.MetaData.Address.Story?.ToString() ?? ""}" +
-                          $"{(query.Organisation.MetaData.Address.Story != null ? "." : "")}" +
-                          $"{query.Organisation.MetaData.Address.Door?.ToString() ?? ""}",
-                ZipCode = query.Organisation.MetaData.Address.ZipCode,
-                City = query.Organisation.MetaData.Address.Municipality.Name,
-                DrivingSchools = new List<DrivingSchool>()
-            };
-
-            // TODO:
-            // probably fix this hardcoded way to find emails / phone numbers
-            if (query.Organisation.MetaData.ContactInformation.Count == 2)
-            {
-                newCompany.PhoneNumber = query.Organisation.MetaData.ContactInformation[0];
-                newCompany.Email = query.Organisation.MetaData.ContactInformation[1];
-            }
+            var newOrganisation = CreateOrganisation(query);
             
-            await _mongoDbClient.CreateAsync(newCompany);
+            await _mongoDbClient.CreateAsync(newOrganisation);
         }
     }
     
     public async Task GetProductionUnits()
     {
         // Configuration for the Elasticsearch connection
-        string companiesIndex = "/cvr-permanent/produktionsenhed/";
+        string productionUnitIndex = "/cvr-permanent/produktionsenhed/";
         var settings = new ConnectionSettings(new Uri("http://distribution.virk.dk"))
             .BasicAuthentication(_cvrUsername, _cvrPassword)
-            .DefaultIndex(companiesIndex);
+            .DefaultIndex(productionUnitIndex);
         
         // Create an Elasticsearch client
         var client = new ElasticClient(settings);
@@ -101,32 +80,66 @@ public class ElasticSearchService
         
         foreach (var query in doc)
         {
-
-            var newProductionUnit = new DrivingSchool
-            {
-                ProductionUnitNumber = query.Unit.ProductionUnitNumber,
-                CompanyNumber = query.Unit.CompanyRelation[0].CompanyNumber,
-                Name = query.Unit.MetaData.NewestName.Name,
-                Address = $"{query.Unit.MetaData.Address.RoadName ?? ""} " +
-                          $"{query.Unit.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
-                          $"{(query.Unit.MetaData.Address.Story != null ? ", " : "")}" +
-                          $"{query.Unit.MetaData.Address.Story?.ToString() ?? ""}" +
-                          $"{(query.Unit.MetaData.Address.Story != null ? "." : "")}" +
-                          $"{query.Unit.MetaData.Address.Door?.ToString() ?? ""}",
-                ZipCode = query.Unit.MetaData.Address.ZipCode,
-                City = query.Unit.MetaData.Address.Municipality.Name,
-                Status = query.Unit.MetaData.Status
-            };
+            var newDrivingSchool = CreateDrivingSchool(query);
             
-            Console.WriteLine($"{newProductionUnit.ProductionUnitNumber}, {newProductionUnit.CompanyNumber}");
-
-            var matchingCompany = await _mongoDbClient.GetAsync(newProductionUnit.CompanyNumber);
+            Console.WriteLine($"{newDrivingSchool.Name}");
+            
+            var matchingCompany = await _mongoDbClient.GetAsync(newDrivingSchool.OrganisationNumber);
 
             if (matchingCompany != null)
             {
-                matchingCompany.DrivingSchools.Add(newProductionUnit);
+                matchingCompany.DrivingSchools.Add(newDrivingSchool);
                 await _mongoDbClient.UpdateAsync(matchingCompany.Id, matchingCompany);
             }
         }
     } 
+    
+    public Organisation CreateOrganisation(OrganisationQuery query)
+    {
+        var newOrganisation = new Organisation
+        {
+            OrganisationNumber = query.Organisation.OrganisationNumber,
+            Name = query.Organisation.MetaData.NewestName.Name,
+            Address = $"{query.Organisation.MetaData.Address.RoadName ?? ""} " +
+                      $"{query.Organisation.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
+                      $"{(query.Organisation.MetaData.Address.Story != null ? ", " : "")}" +
+                      $"{query.Organisation.MetaData.Address.Story?.ToString() ?? ""}" +
+                      $"{(query.Organisation.MetaData.Address.Story != null ? "." : "")}" +
+                      $"{query.Organisation.MetaData.Address.Door?.ToString() ?? ""}",
+            ZipCode = query.Organisation.MetaData.Address.ZipCode,
+            City = query.Organisation.MetaData.Address.Municipality.Name,
+            DrivingSchools = new List<DrivingSchool>()
+        };
+        
+        // TODO:
+        // probably fix this hardcoded way to find emails / phone numbers
+        if (query.Organisation.MetaData.ContactInformation.Count == 2)
+        {
+            newOrganisation.PhoneNumber = query.Organisation.MetaData.ContactInformation[0];
+            newOrganisation.Email = query.Organisation.MetaData.ContactInformation[1];
+        }
+
+        return newOrganisation;
+    }
+
+    public DrivingSchool CreateDrivingSchool(DrivingSchoolQuery query)
+    {
+        var newDrivingSchool = new DrivingSchool
+        {
+            ProductionUnitNumber = query.Unit.ProductionUnitNumber,
+            OrganisationNumber = query.Unit.OrganisationRelations[0].OrganisationNumber,
+            Name = query.Unit.MetaData.NewestName.Name,
+            Address = $"{query.Unit.MetaData.Address.RoadName ?? ""} " +
+                      $"{query.Unit.MetaData.Address.HouseNumber?.ToString() ?? ""}" +
+                      $"{(query.Unit.MetaData.Address.Story != null ? ", " : "")}" +
+                      $"{query.Unit.MetaData.Address.Story?.ToString() ?? ""}" +
+                      $"{(query.Unit.MetaData.Address.Story != null ? "." : "")}" +
+                      $"{query.Unit.MetaData.Address.Door?.ToString() ?? ""}",
+            ZipCode = query.Unit.MetaData.Address.ZipCode,
+            City = query.Unit.MetaData.Address.Municipality.Name,
+            Status = query.Unit.MetaData.Status
+        };
+        
+        return newDrivingSchool;
+    }
 }

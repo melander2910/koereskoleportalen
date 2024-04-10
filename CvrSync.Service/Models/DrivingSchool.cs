@@ -9,7 +9,7 @@ public class DrivingSchool
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
     public int ProductionUnitNumber { get; set; }
-    public int CompanyNumber { get; set; }
+    public int OrganisationNumber { get; set; }
     public string Name { get; set; }
     public string Status { get; set; }
     public string Address { get; set; }

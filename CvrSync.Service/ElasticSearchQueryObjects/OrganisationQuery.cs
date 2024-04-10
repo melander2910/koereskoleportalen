@@ -1,17 +1,21 @@
 namespace CvrSync.Service.Models;
 using Nest;
 
+/*
+ * Classes that end with "Prop" is just a measurement to save that class name for another class
+ * e.g. OrganisationProp - "Organisation" is used somewhere else.
+ */
 
-public class CompanyQuery
+public class OrganisationQuery
 {
     [PropertyName("Vrvirksomhed")]
-    public Organisation Organisation { get; set; }
+    public OrganisationProp Organisation { get; set; }
 }
 
-public class Organisation
+public class OrganisationProp
 {
     [PropertyName("cvrNummer")]
-    public int CompanyNumber { get; set; }
+    public int OrganisationNumber { get; set; }
     [PropertyName("virksomhedMetadata")]
     public MetaData MetaData { get; set; }
     [PropertyName("penheder")]
