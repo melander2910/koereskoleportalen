@@ -29,7 +29,7 @@ public class AuthRepository : IAuthRepository
         _jwtTokenGeneratorService = jwtTokenGeneratorService;
         _config = config;
     }
-    public async Task<string> Register(ExtendedIdentityUser extendedIdentityUser, string password)
+    public async Task<ExtendedIdentityUser> Register(ExtendedIdentityUser extendedIdentityUser, string password)
     {
         try
         {
@@ -37,15 +37,18 @@ public class AuthRepository : IAuthRepository
             if (result.Succeeded)
             {
                 // email Normalized? ToLower/ToUpper?
-                var userToReturn = _dbContext.ApplicationUsers.First(u => u.UserName == extendedIdentityUser.Email);
-                // return created user?
-                return "User successfully created";
+                var createdUser = _dbContext.ApplicationUsers.First(u => u.UserName == extendedIdentityUser.Email);
+                return createdUser;
             }
-            return result.Errors.FirstOrDefault().Description;
+            // TODO: What do we return on error?
+            return null;
+            // result.Errors.FirstOrDefault().Description;
+
         }
         catch (Exception ex)
         {
-            return "Error: ";
+            return null;
+            //"Error: ";
         }
     }
 

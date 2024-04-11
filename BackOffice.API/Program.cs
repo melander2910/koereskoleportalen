@@ -1,9 +1,11 @@
+using BackOffice.API.Consumers;
 using BackOffice.API.Data;
 using BackOffice.API.Extensions;
 using BackOffice.API.Repositories;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services;
 using BackOffice.API.Services.Interfaces;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -25,6 +27,43 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IOrganisationRepository, OrganisationRepository>();
 builder.Services.AddScoped<IProductionUnitRepository, ProductionUnitRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+// builder.Services.AddMassTransit(registrationConfigurator =>
+// {
+//     registrationConfigurator.AddConsumersFromNamespaceContaining<UserConsumer>();
+//     registrationConfigurator.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("backofficeconsumer", false));
+//     
+//     registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
+//     {
+//         factoryConfigurator.Host(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Host"), "/", hostConfigurator =>
+//         {
+//             hostConfigurator.Username(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Username"));
+//             hostConfigurator.Password(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Password"));
+//         });
+//         
+//         factoryConfigurator.ConfigureEndpoints(registrationContext);
+//     });
+// });
+
+builder.Services.AddMassTransit(registrationConfigurator =>
+{
+    registrationConfigurator.SetKebabCaseEndpointNameFormatter();
+    registrationConfigurator.AddConsumer<UserCreatedEventConsumer>();
+    // MassTransit to use an EF outbox for message deduplication ??
+    
+    registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
+    {
+        factoryConfigurator.Host(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Host"), hostConfigurator =>
+        {
+            hostConfigurator.Username(builder.Configuration["RabbitMQ:Username"]);
+            hostConfigurator.Password(builder.Configuration["RabbitMQ:Password"]);
+        });
+        
+        factoryConfigurator.ConfigureEndpoints(registrationContext);
+    });
+});
+
+
 
 
 builder.Services.AddEndpointsApiExplorer();
