@@ -1,0 +1,12 @@
+﻿version: "3.13"
+services:
+  rabbitmq3:
+    container_name: "rabbitmq"
+    hostname: koereskoleportalen-mq
+    image: rabbitmq:management
+    environment:
+      - RABBITMQ_DEFAULT_USER=Admin
+      - RABBITMQ_DEFAULT_PASS=Admin2024
+    ports:
+      - '5672:5672'
+      - '15672:15672'
