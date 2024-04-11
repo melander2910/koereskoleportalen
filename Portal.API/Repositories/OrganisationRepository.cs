@@ -16,6 +16,7 @@ public class OrganisationRepository : IOrganisationRepository
 
     public async Task<List<Organisation>> GetAllAsync()
     {
+        /* merge test*/
         return await _mongoDbClient.OrganisationCollection.Find(_ => true).ToListAsync();
     }
 
