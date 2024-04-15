@@ -38,12 +38,17 @@ public class ElasticSearchService
         
         // Querying Elastic Search API
         var response = await client.SearchAsync<OrganisationQuery>(s => s
-                .Size(1000)
-                .Query(q => q
-                    .Bool(b => b
-                        .Must(m => m
-                            .Term(t => t.Organisation.MetaData.BusinessType.BusinessTypeCode, "855300"),
-                            m => m.Term(t => t.Organisation.MetaData.Status, "aktiv")))));
+            .Size(1000)
+            .Query(q => q
+                .Bool(b => b
+                    .Must(
+                        m => m.Term(t => t.Organisation.MetaData.BusinessType.BusinessTypeCode, "855300"),
+                        m => m.Term(t => t.Organisation.MetaData.Status, "aktiv"),
+                        m => m.Range(r => r.Field(f => f.Organisation.MetaData.Address.ZipCode).GreaterThanOrEquals(1000).LessThanOrEquals(2999))
+                    )
+                )
+            )
+        );
         
         var doc = response.Documents;
 
@@ -71,9 +76,14 @@ public class ElasticSearchService
             .Size(2000)
             .Query(q => q
                 .Bool(b => b
-                    .Must(m => m
-                            .Term(t => t.Unit.MetaData.BusinessType.BusinessTypeCode, "855300"),
-                        m => m.Term(t => t.Unit.MetaData.Status, "aktiv")))));
+                    .Must(
+                        m => m.Term(t => t.Unit.MetaData.BusinessType.BusinessTypeCode, "855300"),
+                        m => m.Term(t => t.Unit.MetaData.Status, "aktiv"),
+                        m => m.Range(r => r.Field(f => f.Unit.MetaData.Address.ZipCode).GreaterThanOrEquals(1000).LessThanOrEquals(2999))
+                    )
+                )
+            )
+        );
         
         
         var doc = response.Documents;
