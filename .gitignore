@@ -3,7 +3,7 @@
 
 ### Env
 appsettings.json
-
+appsettings.Development.json
 
 ### DotnetCore ###
 # .NET Core build folders
