@@ -20,7 +20,7 @@ public class TenantResolver
     
     public async Task InvokeAsync(HttpContext context, ICurrentTenantService currentTenantService)
     {
-        var gg = DetermineTenant(context);
+        // var gg = DetermineTenant(context);
         // context.Request.Headers.TryGetValue("tenant", out var tenantFromHeader);
         // tenantFromHeader = "Lisbeths Køreskole";
         // if (string.IsNullOrEmpty(tenantFromHeader) == false)
@@ -30,17 +30,17 @@ public class TenantResolver
         await _next(context);
     }
 
-    private string DetermineTenant(HttpContext context)
-    {
-        var user = context.User;
-        
-        if (user.HasClaim(c => c.Type == "tenant"))
-        {
-            return user.FindFirst("tenant")?.Value ?? string.Empty;
-        }
-
-        return "default-tenant";
-    }
+    // private string DetermineTenant(HttpContext context)
+    // {
+    //     var user = context.User;
+    //     
+    //     if (user.HasClaim(c => c.Type == "tenant"))
+    //     {
+    //         return user.FindFirst("tenant")?.Value ?? string.Empty;
+    //     }
+    //
+    //     return "default-tenant";
+    // }
 }
 
 // context.Request.Headers.TryGetValue("subTenant", out var subTenantFromHeader);

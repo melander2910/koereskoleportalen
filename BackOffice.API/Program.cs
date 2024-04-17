@@ -33,7 +33,7 @@ builder.Services.AddDbContext<TenantDbContext>(options =>
 
 
 builder.Services.AddControllers();
-
+// builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IOrganisationService, OrganisationService>();
 builder.Services.AddScoped<IProductionUnitService, ProductionUnitService>();
 builder.Services.AddScoped<IUserService, UserService>();
