@@ -1,5 +1,6 @@
 using BackOffice.API.Data;
 using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,7 +29,6 @@ public class OrganisationRepository : IOrganisationRepository
     public async Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId)
     {
         // TODO: Is there a better way to fetch Organisations by userId?
-        // query junction table to get Organisation ids and then query Organisation table with those ids?
         return await _dbContext.Organisations.Where(org => org.Users.Any(user => user.Id == userId)).ToListAsync();
     }
 

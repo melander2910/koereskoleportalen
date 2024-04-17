@@ -1,8 +1,7 @@
 using BackOffice.API.Dto;
-using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackOffice.API.Controllers;
@@ -40,7 +39,7 @@ public class OrganisationController : ControllerBase
     public async Task<IActionResult> Add([FromBody] OrganisationCreateDto organisationCreateDto)
     {
         var organisation = await _organisationService.AddAsync(organisationCreateDto);
-        return Ok(200);
+        return Ok(organisation);
     }
     
     [HttpPut("{id}", Name = "UpdateOrganisation")]

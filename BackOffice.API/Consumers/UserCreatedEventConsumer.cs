@@ -28,11 +28,3 @@ public sealed class UserCreatedEventConsumer : IConsumer<UserCreatedEvent>
     }
     
 }
-
-// public class UserConsumerDefinition : ConsumerDefinition<UserCreatedEventConsumer>
-// {
-//     protected override void ConfigureConsumer(IReceiveEndpointConfigurator endpointConfigurator, IConsumerConfigurator<UserCreatedEventConsumer> consumerConfigurator)
-//     {
-//         consumerConfigurator.UseMessageRetry(retry => retry.Interval(3, TimeSpan.FromSeconds(3)));
-//     }
-// }

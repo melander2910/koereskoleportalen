@@ -1,5 +1,6 @@
 using BackOffice.API.Data;
 using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

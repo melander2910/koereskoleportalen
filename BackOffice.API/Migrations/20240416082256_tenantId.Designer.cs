@@ -3,6 +3,7 @@ using System;
 using BackOffice.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackOffice.API.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20240416082256_tenantId")]
+    partial class tenantId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace BackOffice.API.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Course", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Course", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +59,7 @@ namespace BackOffice.API.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Organisation", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Organisation", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -135,7 +138,7 @@ namespace BackOffice.API.Migrations
                     b.ToTable("Organisations");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -218,7 +221,7 @@ namespace BackOffice.API.Migrations
                     b.ToTable("ProductionUnits");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.User", b =>
+            modelBuilder.Entity("BackOffice.API.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -281,9 +284,9 @@ namespace BackOffice.API.Migrations
                     b.ToTable("ProductionUnitUser");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Course", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Course", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.ProductionUnit", "ProductionUnit")
+                    b.HasOne("BackOffice.API.Models.ProductionUnit", "ProductionUnit")
                         .WithMany("Courses")
                         .HasForeignKey("ProductionUnitId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -292,9 +295,9 @@ namespace BackOffice.API.Migrations
                     b.Navigation("ProductionUnit");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.Organisation", "Organisation")
+                    b.HasOne("BackOffice.API.Models.Organisation", "Organisation")
                         .WithMany("ProductionUnits")
                         .HasForeignKey("OrganisationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -305,13 +308,13 @@ namespace BackOffice.API.Migrations
 
             modelBuilder.Entity("OrganisationUser", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.Organisation", null)
+                    b.HasOne("BackOffice.API.Models.Organisation", null)
                         .WithMany()
                         .HasForeignKey("OrganisationsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.User", null)
+                    b.HasOne("BackOffice.API.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -320,25 +323,25 @@ namespace BackOffice.API.Migrations
 
             modelBuilder.Entity("ProductionUnitUser", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.ProductionUnit", null)
+                    b.HasOne("BackOffice.API.Models.ProductionUnit", null)
                         .WithMany()
                         .HasForeignKey("ProductionUnitsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.User", null)
+                    b.HasOne("BackOffice.API.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Organisation", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Organisation", b =>
                 {
                     b.Navigation("ProductionUnits");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
                 {
                     b.Navigation("Courses");
                 });

@@ -3,6 +3,7 @@ using System;
 using BackOffice.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BackOffice.API.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20240416090749_AbstractTenantTwo")]
+    partial class AbstractTenantTwo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,41 +25,7 @@ namespace BackOffice.API.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Course", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("ProductionUnitId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("SubTenantId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("TenantId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductionUnitId");
-
-                    b.ToTable("Courses");
-                });
-
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Organisation", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Organisation", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -135,90 +104,71 @@ namespace BackOffice.API.Migrations
                     b.ToTable("Organisations");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.SubTenant", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("CVR")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("City")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Country")
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("CvrApiModifiedDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("IndustryCode")
-                        .HasColumnType("text");
-
-                    b.Property<string>("IndustryDescription")
-                        .HasColumnType("text");
-
-                    b.Property<double?>("Latitude")
-                        .HasColumnType("double precision");
-
-                    b.Property<double?>("Longtitude")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("character varying(13)");
 
                     b.Property<DateTime>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Municipality")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("SubTenantId")
                         .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("OrganisationId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ProductionUnitNumber")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("StartDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Status")
-                        .HasColumnType("text");
-
-                    b.Property<string>("StreetAddress")
                         .HasColumnType("text");
 
                     b.Property<string>("TenantId")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Zipcode")
+                    b.HasKey("Id");
+
+                    b.ToTable("SubTenant");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("SubTenant");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("BackOffice.API.Models.Tenant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("character varying(21)");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("TenantId")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrganisationId");
+                    b.ToTable("Tenant");
 
-                    b.ToTable("ProductionUnits");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Tenant");
+
+                    b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.User", b =>
+            modelBuilder.Entity("BackOffice.API.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -281,37 +231,100 @@ namespace BackOffice.API.Migrations
                     b.ToTable("ProductionUnitUser");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Course", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Course", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.ProductionUnit", "ProductionUnit")
-                        .WithMany("Courses")
-                        .HasForeignKey("ProductionUnitId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasBaseType("BackOffice.API.Models.SubTenant");
 
-                    b.Navigation("ProductionUnit");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("ProductionUnitId")
+                        .HasColumnType("uuid");
+
+                    b.HasIndex("ProductionUnitId");
+
+                    b.HasDiscriminator().HasValue("Course");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.Organisation", "Organisation")
-                        .WithMany("ProductionUnits")
-                        .HasForeignKey("OrganisationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasBaseType("BackOffice.API.Models.Tenant");
 
-                    b.Navigation("Organisation");
+                    b.Property<string>("CVR")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("City")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("CvrApiModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("IndustryCode")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IndustryDescription")
+                        .HasColumnType("text");
+
+                    b.Property<double?>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double?>("Longtitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Municipality")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("OrganisationId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProductionUnitNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("text");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Zipcode")
+                        .HasColumnType("text");
+
+                    b.HasIndex("OrganisationId");
+
+                    b.HasDiscriminator().HasValue("ProductionUnit");
                 });
 
             modelBuilder.Entity("OrganisationUser", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.Organisation", null)
+                    b.HasOne("BackOffice.API.Models.Organisation", null)
                         .WithMany()
                         .HasForeignKey("OrganisationsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.User", null)
+                    b.HasOne("BackOffice.API.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -320,25 +333,47 @@ namespace BackOffice.API.Migrations
 
             modelBuilder.Entity("ProductionUnitUser", b =>
                 {
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.ProductionUnit", null)
+                    b.HasOne("BackOffice.API.Models.ProductionUnit", null)
                         .WithMany()
                         .HasForeignKey("ProductionUnitsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BackOffice.API.Models.DatabaseEntities.User", null)
+                    b.HasOne("BackOffice.API.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.Organisation", b =>
+            modelBuilder.Entity("BackOffice.API.Models.Course", b =>
+                {
+                    b.HasOne("BackOffice.API.Models.ProductionUnit", "ProductionUnit")
+                        .WithMany("Courses")
+                        .HasForeignKey("ProductionUnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProductionUnit");
+                });
+
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
+                {
+                    b.HasOne("BackOffice.API.Models.Organisation", "Organisation")
+                        .WithMany("ProductionUnits")
+                        .HasForeignKey("OrganisationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organisation");
+                });
+
+            modelBuilder.Entity("BackOffice.API.Models.Organisation", b =>
                 {
                     b.Navigation("ProductionUnits");
                 });
 
-            modelBuilder.Entity("BackOffice.API.Models.DatabaseEntities.ProductionUnit", b =>
+            modelBuilder.Entity("BackOffice.API.Models.ProductionUnit", b =>
                 {
                     b.Navigation("Courses");
                 });

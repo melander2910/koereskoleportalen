@@ -1,5 +1,6 @@
 using BackOffice.API.Data;
 using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,8 @@ public class ProductionUnitRepository : IProductionUnitRepository
 
     public async Task<IEnumerable<ProductionUnit>> GetAllAsync()
     {
-        return await _dbContext.ProductionUnits.ToListAsync();
+        var gg = await _dbContext.ProductionUnits.ToListAsync();
+        return gg;
     }
 
     public async Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)

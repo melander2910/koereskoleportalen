@@ -1,4 +1,6 @@
-namespace BackOffice.API.Models;
+using BackOffice.API.Models.Abstracts;
+
+namespace BackOffice.API.Models.DatabaseEntities;
 
 public class User : BaseEntity
 {

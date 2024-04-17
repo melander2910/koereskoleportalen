@@ -1,5 +1,6 @@
 using BackOffice.API.Dto;
 using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
 

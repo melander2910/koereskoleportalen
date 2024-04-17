@@ -1,4 +1,5 @@
 using BackOffice.API.Models;
+using BackOffice.API.Models.DatabaseEntities;
 
 namespace BackOffice.API.Repositories.Interfaces;
 

@@ -66,7 +66,8 @@ public class AuthRepository : IAuthRepository
 
         // if user was found, Generate JWT Token
         var roles = await _userManager.GetRolesAsync(identityUser);
-        var token = _jwtTokenGeneratorService.GenerateToken(identityUser, roles);
+        var claims = await _userManager.GetClaimsAsync(identityUser);
+        var token = _jwtTokenGeneratorService.GenerateToken(identityUser, roles, claims);
         var refreshToken = _jwtTokenGeneratorService.GenerateRefreshToken();
 
         identityUser.RefreshToken = refreshToken;
@@ -133,7 +134,8 @@ public class AuthRepository : IAuthRepository
         }
 
         var roles = await _userManager.GetRolesAsync(identityUser);
-        var token = _jwtTokenGeneratorService.GenerateToken(identityUser, roles);
+        var claims = await _userManager.GetClaimsAsync(identityUser);
+        var token = _jwtTokenGeneratorService.GenerateToken(identityUser, roles, claims);
         var refreshToken = _jwtTokenGeneratorService.GenerateRefreshToken();
 
         identityUser.RefreshToken = refreshToken;

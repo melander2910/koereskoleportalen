@@ -9,7 +9,7 @@ public static class WebApplicationBuilderExtension
     public static WebApplicationBuilder AddApplicationAuthentication(this WebApplicationBuilder builder)
     {
         var settingsSection = builder.Configuration.GetSection("ApiSettings:JwtOptions");
-
+    
         var secret = settingsSection.GetValue<string>("Secret");
         var issuer = settingsSection.GetValue<string>("Issuer");
         var audience = settingsSection.GetValue<string>("Audience");
@@ -34,7 +34,7 @@ public static class WebApplicationBuilderExtension
                 ValidateIssuer = true,
                 ValidIssuer = issuer,
                 ValidAudience = audience,
-                ValidateAudience = true
+                ValidateAudience = true,
             };
         });
 

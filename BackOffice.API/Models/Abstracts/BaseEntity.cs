@@ -1,4 +1,4 @@
-namespace BackOffice.API.Models;
+namespace BackOffice.API.Models.Abstracts;
 
 public abstract class BaseEntity
 {

@@ -1,6 +1,7 @@
 using BackOffice.API.Consumers;
 using BackOffice.API.Data;
 using BackOffice.API.Extensions;
+using BackOffice.API.Middleware;
 using BackOffice.API.Repositories;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services;
@@ -12,13 +13,26 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Context
 builder.Services.AddDbContext<Context>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddControllers();
+// TenantDbContext
+builder.Services.AddDbContext<TenantDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
+// SubTenantDbContext
+// builder.Services.AddDbContext<SubTenantDbContext>(options =>
+// {
+//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+// });
+
+
+builder.Services.AddControllers();
 
 builder.Services.AddScoped<IOrganisationService, OrganisationService>();
 builder.Services.AddScoped<IProductionUnitService, ProductionUnitService>();
@@ -28,29 +42,21 @@ builder.Services.AddScoped<IOrganisationRepository, OrganisationRepository>();
 builder.Services.AddScoped<IProductionUnitRepository, ProductionUnitRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
-// builder.Services.AddMassTransit(registrationConfigurator =>
-// {
-//     registrationConfigurator.AddConsumersFromNamespaceContaining<UserConsumer>();
-//     registrationConfigurator.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("backofficeconsumer", false));
-//     
-//     registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
-//     {
-//         factoryConfigurator.Host(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Host"), "/", hostConfigurator =>
-//         {
-//             hostConfigurator.Username(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Username"));
-//             hostConfigurator.Password(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Password"));
-//         });
-//         
-//         factoryConfigurator.ConfigureEndpoints(registrationContext);
-//     });
-// });
+builder.Services.AddScoped<ICurrentTenantService, CurrentTenantService>();
+builder.Services.AddScoped<ICurrentSubTenantService, CurrentSubTenantService>();
+
+builder.Services.AddScoped<ITenantService, TenantService>();
+builder.Services.AddScoped<ISubtenantService, SubTenantService>();
+
+
+
 
 builder.Services.AddMassTransit(registrationConfigurator =>
 {
     registrationConfigurator.SetKebabCaseEndpointNameFormatter();
     registrationConfigurator.AddConsumer<UserCreatedEventConsumer>();
     // MassTransit to use an EF outbox for message deduplication ??
-    
+
     registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
     {
         factoryConfigurator.Host(builder.Configuration.GetSection("RabbitMQ").GetValue<string>("Host"), hostConfigurator =>
@@ -62,9 +68,6 @@ builder.Services.AddMassTransit(registrationConfigurator =>
         factoryConfigurator.ConfigureEndpoints(registrationContext);
     });
 });
-
-
-
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
@@ -108,6 +111,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<TenantResolver>();
 app.MapControllers();
 ApplyMigration();
 app.Run();

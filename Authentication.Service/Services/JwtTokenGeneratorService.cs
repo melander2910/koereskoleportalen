@@ -17,18 +17,25 @@ public class JwtTokenGeneratorService : IJwtTokenGeneratorService
         _jwtOptions = jwtOptions.Value;
     }
 
-    public string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles)
+    public string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles, IList<Claim> claims)
     {
+        
         var tokenHandler = new JwtSecurityTokenHandler();
-
+        
         var key = Encoding.ASCII.GetBytes(_jwtOptions.Secret);
-
+        
+        
         var claimList = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Email, extendedIdentityUser.Email),
             new Claim(JwtRegisteredClaimNames.Sub, extendedIdentityUser.Id),
             new Claim(JwtRegisteredClaimNames.Name, extendedIdentityUser.UserName)
         };
+
+        foreach (var claim in claims)
+        {
+            claimList.Add(new Claim(claim.Type, claim.Value));
+        }
 
         claimList.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
