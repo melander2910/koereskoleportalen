@@ -6,7 +6,8 @@ namespace CvrSync.Service.Services;
 
 public class MongoDBClient
 {
-    private readonly IMongoCollection<Organisation> _companyCollection;
+    private readonly IMongoCollection<Organisation> _organisationCollection;
+    private readonly IMongoCollection<DrivingSchool> _drivingSchoolCollection;
 
     public MongoDBClient()
     {
@@ -22,29 +23,40 @@ public class MongoDBClient
         PortalDatabaseSettings? portalDatabaseSettings = config.GetRequiredSection("PortalDatabase").Get<PortalDatabaseSettings>();
         
         Console.WriteLine(portalDatabaseSettings.DrivingSchoolsCollectionName);
+        Console.WriteLine(portalDatabaseSettings.OrganisationsCollectionName);
         
         var mongoClient = new MongoClient(
             portalDatabaseSettings.ConnectionString);
 
         var mongoDatabase = mongoClient.GetDatabase(portalDatabaseSettings.DatabaseName);
 
-        _companyCollection = mongoDatabase.GetCollection<Organisation>(portalDatabaseSettings.DrivingSchoolsCollectionName);
+        _organisationCollection = mongoDatabase.GetCollection<Organisation>(portalDatabaseSettings.OrganisationsCollectionName);
+        _drivingSchoolCollection = mongoDatabase.GetCollection<DrivingSchool>(portalDatabaseSettings.DrivingSchoolsCollectionName);
     }
 
-    public async Task<Organisation?> GetAsync(int organisationNumber)
+    public async Task<Organisation?> GetOrganisationAsync(int organisationNumber)
     {
-        return await _companyCollection.Find(x => x.OrganisationNumber == organisationNumber).FirstOrDefaultAsync();
+        return await _organisationCollection.Find(x => x.OrganisationNumber == organisationNumber).FirstOrDefaultAsync();
     }
 
-    public async Task CreateAsync(Organisation newOrganisation)
+    public async Task CreateOrganisationAsync(Organisation newOrganisation)
     {
-        await _companyCollection.InsertOneAsync(newOrganisation);
+        await _organisationCollection.InsertOneAsync(newOrganisation);
     }
 
-    public async Task UpdateAsync(string id, Organisation updatedOrganisation)
+    public async Task UpdateOrganisationAsync(string id, Organisation updatedOrganisation)
     {
-        await _companyCollection.ReplaceOneAsync(x => x.Id == id, updatedOrganisation);
-        
+        await _organisationCollection.ReplaceOneAsync(x => x.Id == id, updatedOrganisation);
+    }
+    
+    public async Task<List<DrivingSchool>> GetDrivingSchoolsByOrganisationNumberAsync(int organisationNumber)
+    {
+        return await _drivingSchoolCollection.Find(x => x.OrganisationNumber == organisationNumber).ToListAsync();
+    }
+    
+    public async Task CreateDrivingSchoolAsync(DrivingSchool newDrivingSchool)
+    {
+        await _drivingSchoolCollection.InsertOneAsync(newDrivingSchool);
     }
     
 }

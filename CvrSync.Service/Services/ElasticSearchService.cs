@@ -56,7 +56,17 @@ public class ElasticSearchService
         {
             var newOrganisation = CreateOrganisation(query);
             
-            await _mongoDbClient.CreateAsync(newOrganisation);
+            var matchingDrivingSchools = await _mongoDbClient.GetDrivingSchoolsByOrganisationNumberAsync(newOrganisation.OrganisationNumber);
+
+            if (matchingDrivingSchools.Count != 0)
+            {
+                foreach (var drivingSchool in matchingDrivingSchools)
+                {
+                    newOrganisation.DrivingSchoolsProductionUnitNumbers.Add(drivingSchool.ProductionUnitNumber);
+                }
+            }
+            
+            await _mongoDbClient.CreateOrganisationAsync(newOrganisation);
         }
     }
     
@@ -85,22 +95,14 @@ public class ElasticSearchService
             )
         );
         
-        
         var doc = response.Documents;
         
         foreach (var query in doc)
         {
             var newDrivingSchool = CreateDrivingSchool(query);
+            Console.WriteLine(newDrivingSchool.Name);
             
-            Console.WriteLine($"{newDrivingSchool.Name}");
-            
-            var matchingCompany = await _mongoDbClient.GetAsync(newDrivingSchool.OrganisationNumber);
-
-            if (matchingCompany != null)
-            {
-                matchingCompany.DrivingSchools.Add(newDrivingSchool);
-                await _mongoDbClient.UpdateAsync(matchingCompany.Id, matchingCompany);
-            }
+            await _mongoDbClient.CreateDrivingSchoolAsync(newDrivingSchool);
         }
     } 
     
@@ -118,7 +120,7 @@ public class ElasticSearchService
                       $"{query.Organisation.MetaData.Address.Door?.ToString() ?? ""}",
             ZipCode = query.Organisation.MetaData.Address.ZipCode,
             City = query.Organisation.MetaData.Address.Municipality.Name,
-            DrivingSchools = new List<DrivingSchool>()
+            DrivingSchoolsProductionUnitNumbers = new List<int>()
         };
         
         // TODO:

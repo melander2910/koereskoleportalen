@@ -6,8 +6,8 @@ internal class Program
     {
         ElasticSearchService elasticSearchService = new ElasticSearchService();
         
-        await elasticSearchService.GetOrganisations();
         await elasticSearchService.GetProductionUnits();
+        await elasticSearchService.GetOrganisations();
         
         Console.WriteLine("Database seeded");
     }
