@@ -6,11 +6,11 @@ namespace Portal.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class DrivingSchoolsController : ControllerBase
+public class OrganisationController : ControllerBase
 {
     private readonly IOrganisationService _organisationService;
 
-    public DrivingSchoolsController(IOrganisationService organisationService)
+    public OrganisationController(IOrganisationService organisationService)
     {
         _organisationService = organisationService;
     }
@@ -24,13 +24,13 @@ public class DrivingSchoolsController : ControllerBase
     [HttpGet("{id:length(24)}")]
     public async Task<ActionResult<Organisation>> Get(string id)
     {
-        var drivingSchool = await _organisationService.GetAsync(id);
+        var organisation = await _organisationService.GetAsync(id);
 
-        if (drivingSchool == null)
+        if (organisation == null)
         {
             return NotFound();
         }
 
-        return drivingSchool;
+        return organisation;
     }
 }

@@ -13,8 +13,10 @@ builder.Services.Configure<PortalDatabaseSettings>(
 builder.Services.AddSingleton<MongoDbClient>();
 
 builder.Services.AddScoped<IOrganisationService, OrganisationService>();
+builder.Services.AddScoped<IDrivingSchoolService, DrivingSchoolService>();
 
 builder.Services.AddScoped<IOrganisationRepository, OrganisationRepository>();
+builder.Services.AddScoped<IDrivingSchoolRepository, DrivingSchoolRepository>();
 
 // Add services to the container.
 

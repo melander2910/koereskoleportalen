@@ -7,6 +7,7 @@ namespace Portal.API.Data;
 public class MongoDbClient
 {
     public readonly IMongoCollection<Organisation> OrganisationCollection;
+    public readonly IMongoCollection<DrivingSchool> DrivingSchoolCollection;
 
     public MongoDbClient(IOptions<PortalDatabaseSettings> portalDatabaseSettings)
     {
@@ -17,6 +18,8 @@ public class MongoDbClient
             portalDatabaseSettings.Value.DatabaseName);
 
         OrganisationCollection = mongoDatabase.GetCollection<Organisation>(
+            portalDatabaseSettings.Value.OrganisationsCollectionName);
+        DrivingSchoolCollection = mongoDatabase.GetCollection<DrivingSchool>(
             portalDatabaseSettings.Value.DrivingSchoolsCollectionName);
     }
 }
