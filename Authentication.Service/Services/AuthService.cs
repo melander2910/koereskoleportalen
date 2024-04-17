@@ -42,13 +42,13 @@ public class AuthService : IAuthService
         };
         await _publishEndpoint.Publish(signupDto);
 
-        // await _publishEndpoint.Publish<UserSignupDto>(new
-        // {
-        //     Id = createdUser.Id,
-        //     firstname = createdUser.Name,
-        //     Lastname = createdUser.Name,
-        //     PhoneNumber = createdUser.PhoneNumber
-        // });
+         await _publishEndpoint.Publish<UserSignupDto>(new
+         {
+             Id = createdUser.Id,
+             firstname = createdUser.Name,
+             Lastname = createdUser.Name,
+             PhoneNumber = createdUser.PhoneNumber
+         });
         return "Identity User Created";
     }
 
@@ -57,13 +57,13 @@ public class AuthService : IAuthService
         Console.WriteLine("Login");
         Console.WriteLine(loginRequestDto.Username);
         
-        // var signupDto = new UserSignupDto
-        // {
-        //     Id = Guid.NewGuid(),
-        //     Firstname = "Bob",
-        //     Lastname = "Bobsen",
-        //     PhoneNumber = "61750924"
-        // };
+         var signupDto = new UserSignupDto
+         {
+             Id = Guid.NewGuid(),
+             Firstname = "Bob",
+             Lastname = "Bobsen",
+             PhoneNumber = "61750924"
+         };
         await _publishEndpoint.Publish(
             new UserCreatedEvent
             {
@@ -73,7 +73,7 @@ public class AuthService : IAuthService
                 PhoneNumber = "61514141",
                 Address = "Kolind Jylland"
             });
-        // await _publishEndpoint.Publish<UserSignupDto>(new UserSignupDto{ Id = Guid.NewGuid(), Firstname = "Ubby", Lastname = "Dubby", PhoneNumber = "61514141"});
+         await _publishEndpoint.Publish<UserSignupDto>(new UserSignupDto{ Id = Guid.NewGuid(), Firstname = "Ubby", Lastname = "Dubby", PhoneNumber = "61514141"});
         Console.WriteLine("published endpoint");
 
         return await _authRepository.Login(loginRequestDto);
