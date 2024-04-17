@@ -2,7 +2,7 @@ import pika
 
 def publish_message(queue_name, message):
     # Set up connection parameters with authentication
-    credentials = pika.PlainCredentials('guest', 'guest')
+    credentials = pika.PlainCredentials('Admin', 'Admin2024')
     parameters = pika.ConnectionParameters('localhost',
                                            5672,  # Default port for RabbitMQ
                                            '/',    # Default virtual host
@@ -30,6 +30,6 @@ def publish_message(queue_name, message):
 
 # Example usage
 if __name__ == "__main__":
-    queue_name = 'hello'
+    queue_name = 'test'
     message = 'Hello World!'
     publish_message(queue_name, message)

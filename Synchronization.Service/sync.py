@@ -16,7 +16,7 @@ def on_message_received(ch, method, properties, body):
         # Similar decision needs to be made here
 
 # Connection parameters with authentication
-credentials = pika.PlainCredentials('guest', 'guest')
+credentials = pika.PlainCredentials('Admin', 'Admin2024')
 parameters = pika.ConnectionParameters('localhost',
                                        5672,
                                        '/',  # specific vhost
