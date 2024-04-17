@@ -17,4 +17,9 @@ public class TenantRepository : ITenantRepository
     {
         return await _tenantDbContext.Organisations.Where(org => org.Users.Any(user => user.Id == userId)).ToListAsync();
     }
+
+    public async Task<Organisation> GetById(Guid id)
+    {
+        return await _tenantDbContext.Organisations.FindAsync(id);
+    }
 }

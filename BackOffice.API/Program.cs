@@ -48,8 +48,8 @@ builder.Services.AddScoped<ICurrentSubTenantService, CurrentSubTenantService>();
 builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<ISubtenantService, SubTenantService>();
 
-
-
+builder.Services.AddScoped<ITenantRepository, TenantRepository>();
+builder.Services.AddScoped<ISubTenantRepository, SubTenantRepository>();
 
 builder.Services.AddMassTransit(registrationConfigurator =>
 {
