@@ -1,4 +1,3 @@
-using BackOffice.API.Models;
 using BackOffice.API.Models.DatabaseEntities;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,4 +13,5 @@ public class TenantDbContext : DbContext
     }
 
     public DbSet<Organisation> Organisations { get; set; }
+    public DbSet<User> Users { get; set; }
 }

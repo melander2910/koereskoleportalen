@@ -4,7 +4,7 @@ namespace BackOffice.API.Services.Interfaces;
 
 public interface ITenantService
 {
-    Task<IEnumerable<Organisation>> GetAllByUserId();
+    Task<IEnumerable<Organisation>> GetAllByUserId(string id);
     Task<Organisation> GetById(Guid id);
 
 }

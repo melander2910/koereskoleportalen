@@ -1,4 +1,3 @@
-using BackOffice.API.Models;
 using BackOffice.API.Models.Abstracts;
 using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Services.Interfaces;

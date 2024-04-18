@@ -8,10 +8,19 @@ using BackOffice.API.Services;
 using BackOffice.API.Services.Interfaces;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowAll", corsPolicyBuilder =>
+//         corsPolicyBuilder.AllowAnyOrigin()
+//             .AllowAnyMethod()
+//             .AllowAnyHeader());
+// });
 
 // Context
 builder.Services.AddDbContext<Context>(options =>
@@ -25,15 +34,8 @@ builder.Services.AddDbContext<TenantDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// SubTenantDbContext
-// builder.Services.AddDbContext<SubTenantDbContext>(options =>
-// {
-//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
-// });
-
-
 builder.Services.AddControllers();
-// builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IOrganisationService, OrganisationService>();
 builder.Services.AddScoped<IProductionUnitService, ProductionUnitService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -95,6 +97,7 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
+
 // WebApplicationBuilderExtension
 builder.AddApplicationAuthentication();
 
@@ -107,8 +110,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+
+// app.UseRouting();
+// app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<TenantResolver>();

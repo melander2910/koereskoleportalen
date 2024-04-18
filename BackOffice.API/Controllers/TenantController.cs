@@ -1,3 +1,5 @@
+using System.Security.Claims;
+using BackOffice.API.Dto;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -10,16 +12,42 @@ namespace BackOffice.API.Controllers;
 public class TenantController : ControllerBase
 {
     private readonly ITenantService _tenantService;
-    public TenantController(ITenantService tenantService)
+    private readonly ICurrentTenantService _currentTenantService;
+    public TenantController(ITenantService tenantService, ICurrentTenantService currentTenantService)
     {
         _tenantService = tenantService;
+        _currentTenantService = currentTenantService;
     }
     
     [HttpGet(Name = "GetTenantsByUserId")]
     [Authorize]
     public async Task<IActionResult> GetTenantsByUserId()
     {
-        var tenants = await _tenantService.GetAllByUserId();
-        return Ok(tenants);
+        if (HttpContext.User.Identity.IsAuthenticated)
+        {
+            var authorizedUserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var tenants = await _tenantService.GetAllByUserId(authorizedUserId);
+            if (tenants != null)
+            {
+                return Ok(tenants);
+            }
+            return Ok("You are not associated with any organisation");
+        }
+        return StatusCode(401);
+    }
+
+    // TODO: remove this and just set request header on future requests?
+    [HttpPost(Name = "SetTenantId")]
+    [Authorize]
+    public async Task<IActionResult> SetTenantId([FromBody] TenantRequestDto model)
+    {
+        var tenantClaims = HttpContext.User.Claims.Where(x => x.Type == "tenant").Select(x => x.Value);
+        
+        if (HttpContext.User.Identity.IsAuthenticated && tenantClaims.Contains(model.TenantId))
+        {
+            await _currentTenantService.SetTenant(model.TenantId);
+        }
+
+        return Ok(model);
     }
 }

@@ -7,19 +7,15 @@ namespace BackOffice.API.Services;
 public class TenantService : ITenantService
 {
     private readonly ITenantRepository _tenantRepository;
-    // private readonly HttpContext _httpContext;
 
     public TenantService(ITenantRepository tenantRepository)
     {
         _tenantRepository = tenantRepository;
-        // _httpContext = httpContext;
     }
-    public async Task<IEnumerable<Organisation>> GetAllByUserId()
+    public async Task<IEnumerable<Organisation>> GetAllByUserId(string id)
     {
-        // var authorizedUserId = _httpContext.User.Claims.Where(x => x.Type == "sub").FirstOrDefault().Value;
-        // var userGuid = Guid.Parse(authorizedUserId);
-        // return await _tenantRepository.GetTenantsByUserId(userGuid);
-        return null;
+        var userGuid = Guid.Parse(id);
+        return await _tenantRepository.GetTenantsByUserId(userGuid);
     }
 
     public Task<Organisation> GetById(Guid id)
