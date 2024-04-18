@@ -20,13 +20,16 @@ public class TenantResolver
     
     public async Task InvokeAsync(HttpContext context, ICurrentTenantService currentTenantService)
     {
-        // var gg = DetermineTenant(context);
-        // context.Request.Headers.TryGetValue("tenant", out var tenantFromHeader);
-        // tenantFromHeader = "Lisbeths Køreskole";
-        // if (string.IsNullOrEmpty(tenantFromHeader) == false)
-        // {
-        //     await currentTenantService.SetTenant(tenantFromHeader);
-        // }
+        context.Request.Headers.TryGetValue("tenant", out var selectedTenantId);
+        
+        if (!string.IsNullOrEmpty(selectedTenantId))
+        {
+            var userTenantClaims = context.User.Claims.Where(x => x.Type == "tenant").Select(x => x.Value);
+            if (context.User.Identity.IsAuthenticated && userTenantClaims.Contains(selectedTenantId.FirstOrDefault()))
+            {
+                await currentTenantService.SetTenant(selectedTenantId);
+            }
+        }
         await _next(context);
     }
 
@@ -42,12 +45,3 @@ public class TenantResolver
     //     return "default-tenant";
     // }
 }
-
-// context.Request.Headers.TryGetValue("subTenant", out var subTenantFromHeader);
-
-// if (string.IsNullOrEmpty(tenantFromHeader) == false)
-// {
-//     await currentSubTenantService.SetSubTenant(subTenantFromHeader);
-// }
-// await currentTenantService.SetTenant("Lisbeths Køreskole");
-// await currentSubTenantService.SetSubTenant("1019542722");

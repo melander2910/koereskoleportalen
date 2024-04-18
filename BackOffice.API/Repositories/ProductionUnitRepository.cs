@@ -1,8 +1,6 @@
 using BackOffice.API.Data;
-using BackOffice.API.Models;
 using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
-using BackOffice.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackOffice.API.Repositories;
