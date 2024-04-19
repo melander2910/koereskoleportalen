@@ -1,12 +1,47 @@
 ﻿version: "3.13"
 services:
+  #portal_api:
+    #container_name: portal_api
+    #build:
+      #context: ..
+      #dockerfile: ./koereskoleportalen/Portal.API/Dockerfile
+    #ports:
+      #- "5051:80"
   rabbitmq3:
     container_name: "rabbitmq"
     hostname: koereskoleportalen-mq
     image: rabbitmq:management
     environment:
-      - RABBITMQ_DEFAULT_USER=Admin
-      - RABBITMQ_DEFAULT_PASS=Admin2024
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD}
     ports:
       - '5672:5672'
       - '15672:15672'
+  postgres_backoffice:
+    container_name: "postgres_backoffice_compose"
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_BACKOFFICE_DBNAME}
+      - PGPORT=5432
+    ports:
+      - '5432:5432'
+  postgres_identity:
+    container_name: "postgres_identity_compose"
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_IDENTITY_DBNAME}
+      - PGPORT=5442
+    ports:
+      - '5442:5442'
+  portal_mongodb:
+    container_name: "portal_mongodb"
+    image: "mongo:latest"
+    ports:
+      - '27017:27017'
+    
+    
+    
