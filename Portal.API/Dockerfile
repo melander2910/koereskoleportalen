@@ -1,17 +1,25 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
-WORKDIR /App
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Copy everything
-COPY . ./
-# Restore as distinct layers
+WORKDIR /src
+EXPOSE 80
+EXPOSE 443
+
+#COPY ["Portal.API.csproj", "Portal.API/"]
+COPY ["Portal.API.csproj", "."]
+#RUN dotnet restore "Portal.API/Portal.API.csproj"
 RUN dotnet restore "./Portal.API.csproj"
-#RUN dotnet restore "./koereskoleportalen/Portal.API/Portal.API.csproj"
-# Build and publish a release
-RUN dotnet publish "./Portal.API.csproj" -c Release -o out
-#RUN dotnet publish "./koereskoleportalen/Portal.API/Portal.API.csproj" -c Release -o out
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /App
-COPY --from=build-env /App/out .
+COPY . .
+#WORKDIR "/src/Portal.API"
+WORKDIR "/src/."
+#RUN dotnet build "Portal.API.csproj" -c Release -o /app
+RUN dotnet build "Portal.API.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Portal.API.csproj" -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=publish /app/publish .
+
 ENTRYPOINT ["dotnet", "Portal.API.dll"]

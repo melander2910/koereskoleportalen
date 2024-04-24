@@ -1,12 +1,12 @@
 ﻿version: "3.13"
 services:
-  #portal_api:
-    #container_name: portal_api
-    #build:
-      #context: ..
-      #dockerfile: ./koereskoleportalen/Portal.API/Dockerfile
-    #ports:
-      #- "5051:80"
+  portal_api:
+    container_name: portal_api
+    build:
+      context: ..
+      dockerfile: ./koereskoleportalen/Portal.API/Dockerfile
+    ports:
+      - "5051:8080"
   rabbitmq3:
     container_name: "rabbitmq"
     hostname: koereskoleportalen-mq

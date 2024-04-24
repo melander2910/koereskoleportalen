@@ -7,6 +7,8 @@ using Portal.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors();
+
 builder.Services.Configure<PortalDatabaseSettings>(
     builder.Configuration.GetSection("PortalDatabase"));
 
@@ -34,6 +36,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(options => options.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
