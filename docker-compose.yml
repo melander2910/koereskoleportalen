@@ -7,6 +7,17 @@ services:
       dockerfile: ./koereskoleportalen/Portal.API/Dockerfile
     ports:
       - "5051:8080"
+    depends_on: 
+      - portal_mongodb
+    networks:
+      - backend_network
+  portal_client:
+    container_name: portal_client
+    build:
+      context: ..
+      dockerfile: ./koereskoleportalen/Portal.Client/Dockerfile
+    ports:
+      - "5173:5173"
   rabbitmq3:
     container_name: "rabbitmq"
     hostname: koereskoleportalen-mq
@@ -17,6 +28,8 @@ services:
     ports:
       - '5672:5672'
       - '15672:15672'
+    networks:
+      - backend_network
   postgres_backoffice:
     container_name: "postgres_backoffice_compose"
     image: postgres:latest
@@ -27,6 +40,8 @@ services:
       - PGPORT=5432
     ports:
       - '5432:5432'
+    networks:
+      - backend_network
   postgres_identity:
     container_name: "postgres_identity_compose"
     image: postgres:latest
@@ -37,11 +52,18 @@ services:
       - PGPORT=5442
     ports:
       - '5442:5442'
+    networks:
+      - backend_network
   portal_mongodb:
     container_name: "portal_mongodb"
     image: "mongo:latest"
     ports:
       - '27017:27017'
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
     
     
     
