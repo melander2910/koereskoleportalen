@@ -2,7 +2,7 @@
 name = "synchronization-service"
 version = "0.1.0"
 description = ""
-authors = ["Lasse Bøgeskov-Jensen <lbj@kuatro-group.com>"]
+authors = ["Lasse Bøgeskov-Jensen <lass026q@stud.kea.com>"]
 readme = "README.md"
 packages = [{include = "synchronization"}]
 
@@ -10,6 +10,7 @@ packages = [{include = "synchronization"}]
 python = "^3.10"
 pika = "^1.2.0"
 json = "^2.0.9"
+pymongo = "^4.6.3"
 
 
 [build-system]

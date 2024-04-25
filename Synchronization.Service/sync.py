@@ -1,11 +1,16 @@
 import pika
 import json
 from pymongo import MongoClient
+from bson import ObjectId
 
-# MongoDB connection setup
+
+# MongoDB setup
 client = MongoClient('mongodb://localhost:27017/')
-db = client.my_database  # Use your actual database name
-collection = db.my_collection  # Use your actual collection name
+db_name='koereskoleportalen-portal'
+db_collection='companies'
+db = client[db_name] # Update with your database name
+collection = db[db_collection]  # Update with your collection name
+
 
 # RabbitMQ setup
 credentials = pika.PlainCredentials('Admin', 'Admin2024')
@@ -16,7 +21,7 @@ parameters = pika.ConnectionParameters(host='localhost',
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
-# Declare the main exchange, queue, and setup for dead lettering
+# Declarring the main exchange, queue, and setup for dead lettering
 channel.exchange_declare(exchange='main_exchange', exchange_type='direct', durable=True)
 channel.exchange_declare(exchange='dead_letter_exchange', exchange_type='direct', durable=True)
 channel.queue_declare(queue='my_queue', arguments={
@@ -32,8 +37,15 @@ def on_message(ch, method, properties, body):
         update_data = json.loads(body.decode())
         print(f"Received update request: {update_data}")
 
-        # Assume update_data contains a unique identifier and fields to update
-        filter_criteria = {'_id': update_data['_id']}  # or any other unique field
+        # Save received JSON to a file
+        with open('received_updates.json', 'a') as f:
+            json.dump(update_data, f)
+            f.write('\n')
+
+        if '_id' in update_data and '$oid' in update_data['_id']:
+            update_data['_id'] = ObjectId(update_data['_id']['$oid'])
+
+        filter_criteria = {'_id': update_data['_id']}
         update_operation = {'$set': update_data}
 
         # Perform the update
@@ -43,12 +55,17 @@ def on_message(ch, method, properties, body):
         else:
             print("No document matches the given criteria.")
 
+        # Acknowledge the message as successfully processed
         ch.basic_ack(delivery_tag=method.delivery_tag)
+
     except json.JSONDecodeError:
         print("Failed to decode JSON.")
+        # Reject the message and send it to the dead letter queue
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+
     except Exception as error:
         print(f"Error processing message: {error}")
+        # Reject the message and send it to the dead letter queue
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
 
 
@@ -56,3 +73,15 @@ def on_message(ch, method, properties, body):
 channel.basic_consume(queue='my_queue', on_message_callback=on_message, auto_ack=False)
 print('Starting to consume')
 channel.start_consuming()
+
+
+#If the message is a json file
+def update_database_from_json(json_data, collection):
+    for item in json_data:
+        filter_criteria = {'_id': item['_id']}
+        update_operation = {'$set': item}
+        result = collection.update_one(filter_criteria, update_operation, upsert=True)
+        if result.matched_count:
+            print(f"Updated document with _id: {item['_id']}")
+        else:
+            print(f"Inserted new document with _id: {item['_id']}")
