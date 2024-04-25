@@ -1,35 +1,45 @@
 import pika
+import json
 
-def publish_message(queue_name, message):
-    # Set up connection parameters with authentication
-    credentials = pika.PlainCredentials('Admin', 'Admin2024')
-    parameters = pika.ConnectionParameters('localhost',
-                                           5672,  # Default port for RabbitMQ
-                                           '/',    # Default virtual host
-                                           credentials)
-    
-    # Establish a connection with RabbitMQ server
-    connection = pika.BlockingConnection(parameters)
-    channel = connection.channel()
+# Setup credentials and connection parameters
+credentials = pika.PlainCredentials('Admin', 'Admin2024')
+parameters = pika.ConnectionParameters(host='localhost',
+                                       port=5672,
+                                       virtual_host='/',
+                                       credentials=credentials)
 
-    # Declare the queue to ensure it exists
-    channel.queue_declare(queue=queue_name, durable=True)
+# Connect to RabbitMQ
+connection = pika.BlockingConnection(parameters)
+channel = connection.channel()
 
-    # Publish the message to the queue
-    channel.basic_publish(exchange='',
-                          routing_key=queue_name,
-                          body=message,
-                          properties=pika.BasicProperties(
-                              delivery_mode=2,  # make message persistent
-                          ))
+# Ensure the queue exists
+channel.queue_declare(queue='my_new_queue')
 
-    print(f"Sent '{message}' to queue '{queue_name}'")
-    
-    # Close the connection
-    connection.close()
+# Prepare a JSON message
+message = {
+  "_id": {
+    "$oid": "661f78b99d44989496f80c50"
+  },
+  "DrivingSchools": [],
+  "OrganisationNumber": 35091971,
+  "Name": "Morten Lützhøft",
+  "Address": "Søndergårdsvej 19",
+  "ZipCode": 2870,
+  "City": "GENTOFTEEEEEEEE",
+  "IndustryCode": 0,
+  "Email":"",
+  "PhoneNumber":"",
+}
 
-# Example usage
-if __name__ == "__main__":
-    queue_name = 'test'
-    message = 'Hello World!'
-    publish_message(queue_name, message)
+# Convert the message to a JSON formatted string
+json_message = json.dumps(message)
+
+# Publish the message
+channel.basic_publish(exchange='',
+                      routing_key='my_queue',
+                      body=json_message)
+
+print(" [x] Sent 'JSON Message'")
+
+# Close the connection
+connection.close()
