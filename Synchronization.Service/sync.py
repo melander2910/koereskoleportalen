@@ -1,22 +1,23 @@
 import pika
 import json
+from config import RABBITMQ_USER, RABBITMQ_PASSWORD, RABBITMQ_HOST, RABBITMQ_PORT, RABBITMQ_VHOST, MONGO_HOST, MONGO_PORT, MONGO_DB_NAME, MONGO_DB_COLLECTION
 from pymongo import MongoClient
 from bson import ObjectId
 
 
 # MongoDB setup
-client = MongoClient('mongodb://localhost:27017/')
-db_name='koereskoleportalen-portal'
-db_collection='companies'
+client = MongoClient(MONGO_HOST, MONGO_PORT)
+db_name= MONGO_DB_NAME
+db_collection= MONGO_DB_COLLECTION
 db = client[db_name] # Update with your database name
 collection = db[db_collection]  # Update with your collection name
 
 
 # RabbitMQ setup
-credentials = pika.PlainCredentials('Admin', 'Admin2024')
-parameters = pika.ConnectionParameters(host='localhost',
-                                       port=5672,
-                                       virtual_host='/',
+credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASSWORD)
+parameters = pika.ConnectionParameters(host=RABBITMQ_HOST,
+                                       port=RABBITMQ_PORT,
+                                       virtual_host=RABBITMQ_VHOST,
                                        credentials=credentials)
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
