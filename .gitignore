@@ -4,6 +4,7 @@
 ### Env
 appsettings.json
 appsettings.Development.json
+config.json
 
 ### DotnetCore ###
 # .NET Core build folders

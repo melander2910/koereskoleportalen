@@ -1,8 +1,31 @@
 import pika
 import json
+import time
+import pybreaker
 from config import RABBITMQ_USER, RABBITMQ_PASSWORD, RABBITMQ_HOST, RABBITMQ_PORT, RABBITMQ_VHOST, MONGO_HOST, MONGO_PORT, MONGO_DB_NAME, MONGO_DB_COLLECTION
 from pymongo import MongoClient, errors
 from bson import ObjectId
+from pymongo.errors import ConnectionFailure, OperationFailure
+
+
+def load_config():
+    with open('config.json', 'r') as file:
+        return json.load(file)
+
+config = load_config()
+RABBITMQ_USER = config['RABBITMQ_USER']
+RABBITMQ_HOST = config['RABBITMQ_HOST']
+RABBITMQ_PORT = config['RABBITMQ_PORT']
+RABBITMQ_VHOST = config['RABBITMQ_VHOST']
+RABBITMQ_PASSWORD = config['RABBITMQ_PASSWORD']
+
+MONGODB_URI = config['MONGODB_URI']
+MONGO_DB_NAME = config['MONGO_DB_NAME']
+MONGO_DB_COLLECTION = config['MONGO_DB_COLLECTION']
+MONGO_HOST = config['MONGO_HOST']
+MONGO_PORT = config['MONGO_PORT']
+
+
 
 
 # MongoDB setup
@@ -11,6 +34,7 @@ db_name= MONGO_DB_NAME
 db_collection= MONGO_DB_COLLECTION
 db = client[db_name] # Update with your database name
 collection = db[db_collection]  # Update with your collection name
+mongo_circuit_breaker = pybreaker.CircuitBreaker(fail_max=3, reset_timeout=30)
 
 
 # RabbitMQ setup
@@ -32,6 +56,23 @@ channel.queue_declare(queue='my_queue', arguments={
 channel.queue_declare(queue='dead_letter_queue')
 channel.queue_bind(queue='my_queue', exchange='main_exchange', routing_key='main')
 channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', routing_key='dead')
+
+
+def connect_with_retry(uri, max_attempts=5):
+    attempt = 0
+    while attempt < max_attempts:
+        try:
+            client = MongoClient(uri)
+            # The ismaster command is cheap and does not require auth.
+            client.admin.command('ismaster')
+            return client
+        except ConnectionFailure:
+            attempt += 1
+            sleep_time = 2 ** attempt  # Exponential backoff
+            print(f"Connection failed, retrying in {sleep_time} seconds...")
+            time.sleep(sleep_time)
+    raise Exception("Database connection failed after several attempts")
+
 
 def is_mongodb_connected():
     """ Check if MongoDB is connected """
@@ -75,12 +116,12 @@ def on_message(ch, method, properties, body):
         # Acknowledge the message as successfully processed
         ch.basic_ack(delivery_tag=method.delivery_tag)
 
-    except json.JSONDecodeError:
-        print("Failed to decode JSON.")
+    except json.JSONDecodeError as e:
+        print("JSON Decode Error, will not retry.")
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
-    except Exception as error:
-        print(f"Error processing message: {error}")
-        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+    except Exception as e:
+        print("Processing error, message will be requeued.")
+        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
 
 
 # Start consuming messages with the JSON handler
