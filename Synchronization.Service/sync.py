@@ -1,7 +1,7 @@
 import pika
 import json
 from config import RABBITMQ_USER, RABBITMQ_PASSWORD, RABBITMQ_HOST, RABBITMQ_PORT, RABBITMQ_VHOST, MONGO_HOST, MONGO_PORT, MONGO_DB_NAME, MONGO_DB_COLLECTION
-from pymongo import MongoClient
+from pymongo import MongoClient, errors
 from bson import ObjectId
 
 
@@ -33,15 +33,31 @@ channel.queue_declare(queue='dead_letter_queue')
 channel.queue_bind(queue='my_queue', exchange='main_exchange', routing_key='main')
 channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', routing_key='dead')
 
+def is_mongodb_connected():
+    """ Check if MongoDB is connected """
+    try:
+        # The ismaster command is cheap and does not require auth.
+        client.admin.command('ismaster')
+        return True
+    except errors.ConnectionFailure:
+        print("MongoDB not available")
+        return False
+
 def on_message(ch, method, properties, body):
     try:
+        if not is_mongodb_connected():
+            print("MongoDB connection failed. Sending message to dead letter queue.")
+            # Nack the message and send it to the dead letter queue
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+            return
+
         update_data = json.loads(body.decode())
         print(f"Received update request: {update_data}")
 
         # Save received JSON to a file
         with open('received_updates.json', 'a') as f:
             json.dump(update_data, f)
-            f.write('\n')
+            f.write('\n')  # Write a newline to separate JSON entries
 
         if '_id' in update_data and '$oid' in update_data['_id']:
             update_data['_id'] = ObjectId(update_data['_id']['$oid'])
@@ -61,12 +77,9 @@ def on_message(ch, method, properties, body):
 
     except json.JSONDecodeError:
         print("Failed to decode JSON.")
-        # Reject the message and send it to the dead letter queue
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
-
     except Exception as error:
         print(f"Error processing message: {error}")
-        # Reject the message and send it to the dead letter queue
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
 
 
