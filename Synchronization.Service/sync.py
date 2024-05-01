@@ -2,7 +2,6 @@ import pika
 import json
 import time
 import pybreaker
-from config import RABBITMQ_USER, RABBITMQ_PASSWORD, RABBITMQ_HOST, RABBITMQ_PORT, RABBITMQ_VHOST, MONGO_HOST, MONGO_PORT, MONGO_DB_NAME, MONGO_DB_COLLECTION
 from pymongo import MongoClient, errors
 from bson import ObjectId
 from pymongo.errors import ConnectionFailure, OperationFailure
@@ -13,17 +12,20 @@ def load_config():
         return json.load(file)
 
 config = load_config()
-RABBITMQ_USER = config['RABBITMQ_USER']
-RABBITMQ_HOST = config['RABBITMQ_HOST']
-RABBITMQ_PORT = config['RABBITMQ_PORT']
-RABBITMQ_VHOST = config['RABBITMQ_VHOST']
-RABBITMQ_PASSWORD = config['RABBITMQ_PASSWORD']
 
-MONGODB_URI = config['MONGODB_URI']
-MONGO_DB_NAME = config['MONGO_DB_NAME']
-MONGO_DB_COLLECTION = config['MONGO_DB_COLLECTION']
-MONGO_HOST = config['MONGO_HOST']
-MONGO_PORT = config['MONGO_PORT']
+# Accessing RabbitMQ configuration
+RABBITMQ_USER = config['rabbitmq']['RABBITMQ_USER']
+RABBITMQ_HOST = config['rabbitmq']['RABBITMQ_HOST']
+RABBITMQ_PORT = config['rabbitmq']['RABBITMQ_PORT']
+RABBITMQ_VHOST = config['rabbitmq']['RABBITMQ_VHOST']
+RABBITMQ_PASSWORD = config['rabbitmq']['RABBITMQ_PASSWORD']
+
+# Constructing MongoDB URI and accessing other MongoDB configuration
+MONGO_HOST = config['mongo']['MONGO_HOST']
+MONGO_PORT = config['mongo']['MONGO_PORT']
+MONGO_DB_NAME = config['mongo']['MONGO_DB_NAME']
+MONGO_DB_COLLECTION = config['mongo']['MONGO_DB_COLLECTION']
+MONGODB_URI = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
 
 
 
@@ -61,11 +63,12 @@ channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', r
 def connect_with_retry(uri, max_attempts=5):
     attempt = 0
     while attempt < max_attempts:
+        print(f"Connecting to MongoDB at {uri}")
         try:
             client = MongoClient(uri)
             # The ismaster command is cheap and does not require auth.
             client.admin.command('ismaster')
-            return client
+            return client, True
         except ConnectionFailure:
             attempt += 1
             sleep_time = 2 ** attempt  # Exponential backoff

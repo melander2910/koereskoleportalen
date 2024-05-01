@@ -1,0 +1,5 @@
+pika = "^1.2.0"
+json = "^2.0.9"
+pymongo = "^4.6.3"
+pybreaker = "1.2.0"
+bson = "^0.5.10"
