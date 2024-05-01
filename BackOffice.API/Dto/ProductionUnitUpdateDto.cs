@@ -1,9 +1,7 @@
 namespace BackOffice.API.Dto;
 
-public class ProductionUnitCreateDto
+public class ProductionUnitUpdateDto
 {
-    public string ProductionUnitNumber { get; set; }
-    public string CVR { get; set; }
     public string Name { get; set; }
     public string PhoneNumber { get; set; }
     public string Email { get; set; }

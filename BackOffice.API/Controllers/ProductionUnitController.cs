@@ -45,9 +45,10 @@ public class ProductionUnitController : ControllerBase
     
     [HttpPut("{id}", Name = "UpdateProductionUnit")]
     [Authorize]
-    public async Task<IActionResult> Update(Guid id)
+    public async Task<IActionResult> Update(Guid id, [FromBody] ProductionUnitUpdateDto productionUnitUpdateDto)
     {
-        return Ok(200);
+        var productionUnit = await _productionUnitService.Update(id, productionUnitUpdateDto);
+        return Ok(productionUnit);
     }
     
     [HttpDelete("{id}", Name = "DeleteProductionUnit")]

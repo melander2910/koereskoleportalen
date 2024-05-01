@@ -10,6 +10,6 @@ public interface IProductionUnitService
     Task<IEnumerable<ProductionUnit>> GetAllAsync();
     Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId);
     Task<ProductionUnit> FindAsync(Guid id);
-    Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit);
+    Task<ProductionUnit> Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto);
     Task<bool> Delete(Guid id);
 }

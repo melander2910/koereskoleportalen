@@ -36,7 +36,7 @@ public class AuthService : IAuthService
         await _publishEndpoint.Publish(
             new UserCreatedEvent
             {
-                Id = Guid.NewGuid(), 
+                Id = new Guid(createdUser.Id), 
                 Firstname = createdUser.Name, 
                 Lastname = "TestLastinami", 
                 PhoneNumber = createdUser.PhoneNumber,

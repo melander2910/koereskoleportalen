@@ -18,7 +18,20 @@ public class ProductionUnitService : IProductionUnitService
     public async Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto)
     {
         // TODO: Implement
-        var productionUnit = new ProductionUnit();
+        var productionUnit = new ProductionUnit
+        {
+            ProductionUnitNumber = productionUnitCreateDto.ProductionUnitNumber,
+            CVR = productionUnitCreateDto.CVR,
+            Name = productionUnitCreateDto.Name,
+            City = productionUnitCreateDto.City,
+            PhoneNumber = productionUnitCreateDto.PhoneNumber,
+            Email = productionUnitCreateDto.Email,
+            StreetAddress = productionUnitCreateDto.StreetAddress,
+            Zipcode = productionUnitCreateDto.Zipcode,
+            OrganisationId = new Guid("079de1a7-f995-47bf-86f3-c98a9dcee55b"),
+            TenantId = ""
+        };
+        
         return await _productionUnitRepository.AddAsync(productionUnit);
     }
 
@@ -37,8 +50,16 @@ public class ProductionUnitService : IProductionUnitService
         return await _productionUnitRepository.FindAsync(id);
     }
 
-    public async Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit)
+    public async Task<ProductionUnit> Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto)
     {
+        var productionUnit = await _productionUnitRepository.FindAsync(id);
+        productionUnit.Name = productionUnitUpdateDto.Name;
+        productionUnit.PhoneNumber = productionUnitUpdateDto.PhoneNumber;
+        productionUnit.Email = productionUnitUpdateDto.Email;
+        productionUnit.City = productionUnitUpdateDto.City;
+        productionUnit.StreetAddress = productionUnitUpdateDto.StreetAddress;
+        productionUnit.Zipcode = productionUnitUpdateDto.Zipcode;
+        
         return await _productionUnitRepository.Update(id, productionUnit);
     }
 
