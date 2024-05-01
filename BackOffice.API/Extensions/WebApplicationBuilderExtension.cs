@@ -36,6 +36,19 @@ public static class WebApplicationBuilderExtension
                 ValidAudience = audience,
                 ValidateAudience = true,
             };
+
+            option.Events = new JwtBearerEvents
+            {
+                OnMessageReceived = context =>
+                {
+                    if (context.Request.Cookies.ContainsKey("jwtToken"))
+                    {
+                        context.Token = context.Request.Cookies["jwtToken"];
+                    }
+                    
+                    return Task.CompletedTask;
+                }
+            };
         });
 
         return builder;

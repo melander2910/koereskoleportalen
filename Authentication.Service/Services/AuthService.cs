@@ -33,49 +33,21 @@ public class AuthService : IAuthService
         // TODO: Create a createApplicationUserDto and perhaps implement automapper. 
         // We dont want to send tokens with this message to RabbitMQ, only Id, Firstname, Lastname
         
-        var signupDto = new UserSignupDto
-        {
-            Id = new Guid(createdUser.Id),
-            Firstname = createdUser.Name,
-            Lastname = createdUser.Name,
-            PhoneNumber = createdUser.PhoneNumber
-        };
-        await _publishEndpoint.Publish(signupDto);
-
-         await _publishEndpoint.Publish<UserSignupDto>(new
-         {
-             Id = createdUser.Id,
-             firstname = createdUser.Name,
-             Lastname = createdUser.Name,
-             PhoneNumber = createdUser.PhoneNumber
-         });
+        await _publishEndpoint.Publish(
+            new UserCreatedEvent
+            {
+                Id = Guid.NewGuid(), 
+                Firstname = createdUser.Name, 
+                Lastname = "TestLastinami", 
+                PhoneNumber = createdUser.PhoneNumber,
+                Address = "TestKolind 8210 Aarhus"
+            });
+       
         return "Identity User Created";
     }
 
     public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
     {
-        Console.WriteLine("Login");
-        Console.WriteLine(loginRequestDto.Username);
-        
-         var signupDto = new UserSignupDto
-         {
-             Id = Guid.NewGuid(),
-             Firstname = "Bob",
-             Lastname = "Bobsen",
-             PhoneNumber = "61750924"
-         };
-        await _publishEndpoint.Publish(
-            new UserCreatedEvent
-            {
-                Id = Guid.NewGuid(), 
-                Firstname = "Ubby", 
-                Lastname = "Dubby", 
-                PhoneNumber = "61514141",
-                Address = "Kolind Jylland"
-            });
-         await _publishEndpoint.Publish<UserSignupDto>(new UserSignupDto{ Id = Guid.NewGuid(), Firstname = "Ubby", Lastname = "Dubby", PhoneNumber = "61514141"});
-        Console.WriteLine("published endpoint");
-
         return await _authRepository.Login(loginRequestDto);
     }
 

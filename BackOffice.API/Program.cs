@@ -8,19 +8,12 @@ using BackOffice.API.Services;
 using BackOffice.API.Services.Interfaces;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("AllowAll", corsPolicyBuilder =>
-//         corsPolicyBuilder.AllowAnyOrigin()
-//             .AllowAnyMethod()
-//             .AllowAnyHeader());
-// });
+builder.Services.AddCors();
 
 // Context
 builder.Services.AddDbContext<Context>(options =>
@@ -110,10 +103,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseHttpsRedirection();
+
+// TODO: Create env variable?
+app.UseCors(options => options.WithOrigins(["http://localhost:5173", "http://localhost:3000"]).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+
+if (!app.Environment.IsDevelopment())
+{
+    // app.UseHttpsRedirection();
+
+}
 
 // app.UseRouting();
-// app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<TenantResolver>();

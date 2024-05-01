@@ -52,10 +52,31 @@ public class AuthController : ControllerBase
             _response.Message = "Username or password is incorrect";
             return BadRequest(_response);
         }
-        _response.Result = loginResponse;
+        Response.Cookies.Append("jwtToken", loginResponse.JwtToken, new CookieOptions
+        {
+            HttpOnly = true,
+            SameSite = SameSiteMode.None,
+            Secure = true
+        });
+
+        var responseLogin = new LoginResponseDto
+        {
+            User = loginResponse.User,
+            IsLoggedIn = true
+        };
+        _response.Result = responseLogin;
         return Ok(_response);
     }
     
+    // TODO: what about refresh token?
+    // Response.Cookies.Append("refreshToken", loginResponse.RefreshToken, new CookieOptions
+    // {
+    //     HttpOnly = true,
+    //     // TODO: what is this?
+    //     SameSite = SameSiteMode.None,
+    //     // TODO: enable if using https?
+    //     Secure = false
+    // });
     // AssignRole requires email and role
     // Who can Assign Roles?
     [HttpPost("AssignRole", Name = "AssignRole")]

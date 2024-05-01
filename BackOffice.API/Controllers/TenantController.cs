@@ -27,6 +27,8 @@ public class TenantController : ControllerBase
         {
             var authorizedUserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var tenants = await _tenantService.GetAllByUserId(authorizedUserId);
+            // var tenants = await _tenantService.GetAllByUserId("7a55a85a-4666-4fc7-93c9-37d3ced84907");
+
             if (tenants != null)
             {
                 return Ok(tenants);

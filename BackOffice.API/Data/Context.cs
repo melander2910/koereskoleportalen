@@ -33,7 +33,7 @@ public class Context : DbContext
         // TODO: Can we avoid having to add query filter for each entity?
         // Tried to implement logic using interfaces and abstract classes, where all entities implementing abstract class or interface would have query filter.
         builder.Entity<ProductionUnit>().HasQueryFilter(x => x.TenantId == TenantId);
-        // builder.Entity<Course>().HasQueryFilter(x => x.TenantId == TenantId && x.SubTenantId == SubTenantId);
+        //builder.Entity<Course>().HasQueryFilter(x => x.TenantId == TenantId && x.SubTenantId == SubTenantId);
     }
     
     public override int SaveChanges()
