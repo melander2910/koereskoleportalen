@@ -268,3 +268,7 @@ fabric.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react,dotnetcore,rider,visualstudiocode
+Authentication.Service/appsettings.Development.json
+Authentication.Service/appsettings.Development.json
+Authentication.Service/appsettings.json
+BackOffice.API/appsettings.Development.json

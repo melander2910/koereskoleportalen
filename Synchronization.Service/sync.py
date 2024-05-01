@@ -113,9 +113,21 @@ def on_message(ch, method, properties, body):
         with open('received_updates.json', 'a') as f:
             json.dump(update_data, f)
             f.write('\n')  # Write a newline to separate JSON entries
+            
+        # Assume 'collection_name' is part of the message for simplicity
+        target_collection = update_data.get('collection_name')
+        if target_collection not in ['organisations', 'drivingschools']:
+            print("Invalid collection specified.")
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+            return    
 
         if '_id' in update_data and '$oid' in update_data['_id']:
             update_data['_id'] = ObjectId(update_data['_id']['$oid'])
+            
+        # Determine the appropriate MongoDB collection
+        collection = db[target_collection]  # dynamically select the collection
+        filter_criteria = {'_id': update_data['_id']}
+        update_operation = {'$set': update_data}    
 
         filter_criteria = {'_id': update_data['_id']}
         update_operation = {'$set': update_data}
