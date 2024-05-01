@@ -30,8 +30,36 @@ MONGODB_URI = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
 
 
 
+def connect_with_retry(client, uri, max_attempts=5):
+    attempt = 0
+    while attempt < max_attempts:
+        try:
+            print(f"Checking MongoDB connection at {uri}")
+            # The ismaster command is cheap and does not require auth and is now replaced by 'ping'.
+            client.admin.command('ping')
+            print("Connection successful.")
+            return True
+        except ConnectionFailure:
+            print("Connection failed. Attempting to reconnect...")
+            attempt += 1
+            sleep_time = 2 ** attempt  # Exponential backoff
+            print(f"Retrying in {sleep_time} seconds...")
+            time.sleep(sleep_time)
+            try:
+                # Reinitialize the MongoClient, which may help in reconnecting in certain scenarios.
+                client = MongoClient(uri)
+            except ConnectionFailure:
+                continue  # Continue the loop if reinitialization fails
+    raise Exception("Database connection failed after several attempts")
+
+
 # MongoDB setup
-client = MongoClient(MONGO_HOST, MONGO_PORT)
+client = MongoClient(MONGODB_URI)
+try:
+    connect_with_retry(client, MONGODB_URI)
+except Exception as e:
+    print(str(e))
+    exit(1)  # Exit the script or handle the failure appropriately
 db_name= MONGO_DB_NAME
 db_collection= MONGO_DB_COLLECTION
 db = client[db_name] # Update with your database name
@@ -60,24 +88,7 @@ channel.queue_bind(queue='my_queue', exchange='main_exchange', routing_key='main
 channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', routing_key='dead')
 
 
-def connect_with_retry(uri, max_attempts=5):
-    attempt = 0
-    while attempt < max_attempts:
-        print(f"Connecting to MongoDB at {uri}")
-        try:
-            client = MongoClient(uri)
-            # The ismaster command is cheap and does not require auth.
-            client.admin.command('ismaster')
-            return client, True
-        except ConnectionFailure:
-            attempt += 1
-            sleep_time = 2 ** attempt  # Exponential backoff
-            print(f"Connection failed, retrying in {sleep_time} seconds...")
-            time.sleep(sleep_time)
-    raise Exception("Database connection failed after several attempts")
-
-
-def is_mongodb_connected():
+def is_mongodb_connected(client):
     """ Check if MongoDB is connected """
     try:
         # The ismaster command is cheap and does not require auth.
@@ -89,7 +100,7 @@ def is_mongodb_connected():
 
 def on_message(ch, method, properties, body):
     try:
-        if not is_mongodb_connected():
+        if not is_mongodb_connected(client):
             print("MongoDB connection failed. Sending message to dead letter queue.")
             # Nack the message and send it to the dead letter queue
             ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
