@@ -67,13 +67,13 @@ public class ProductionUnitService : IProductionUnitService
         await _publishEndpoint.Publish(
             new ProductionUnitUpdatedEvent
             {
-                ProductionUnitNumber = productionUnit.ProductionUnitNumber,
+                ProductionUnitNumber = Int32.Parse(productionUnit.ProductionUnitNumber),
                 Name = productionUnitUpdateDto.Name,
-                PhoneNumber = productionUnitUpdateDto.PhoneNumber,
-                Email = productionUnitUpdateDto.Email,
+                /*PhoneNumber = productionUnitUpdateDto.PhoneNumber,
+                Email = productionUnitUpdateDto.Email,*/
                 City = productionUnitUpdateDto.City,
-                StreetAddress = productionUnitUpdateDto.StreetAddress,
-                Zipcode = productionUnitUpdateDto.Zipcode
+                Address = productionUnitUpdateDto.StreetAddress,
+                ZipCode = Int32.Parse(productionUnitUpdateDto.Zipcode)
             });
 
         return updatedProductionUnit;

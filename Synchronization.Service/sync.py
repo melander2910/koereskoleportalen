@@ -83,7 +83,7 @@ channel.queue_declare(queue='organisations_queue', arguments={'x-dead-letter-exc
 channel.queue_declare(queue='drivingschools_queue', arguments={'x-dead-letter-exchange': 'dead_letter_exchange','x-dead-letter-routing-key': 'dead'})
 channel.queue_declare(queue='dead_letter_queue')
 channel.queue_bind(queue='organisations_queue', exchange='main_exchange', routing_key='organisations')
-channel.queue_bind(queue='drivingschools_queue', exchange='main_exchange', routing_key='drivingschools')
+channel.queue_bind(queue='drivingschools_queue', exchange='Contracts:ProductionUnitUpdatedEvent', routing_key='drivingschools')
 channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', routing_key='dead')
 
 
@@ -119,17 +119,31 @@ def on_message_organisations(ch, method, properties, body):
     
     
 def on_message_drivingschools(ch, method, properties, body):
+    if not connect_with_retry(client, MONGODB_URI):
+        print("not connected")
+        exit(1)
+
     try:
         update_data = json.loads(body.decode())
-
+        update_data_message = update_data["message"]
+        
         # Assuming the message contains 'ProductionUnitNumber' as the identifier
-        if 'ProductionUnitNumber' not in update_data:
+        if 'ProductionUnitNumber' not in update_data_message:
             print("ProductionUnitNumber missing in data")
             ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
             return
 
-        filter_criteria = {'ProductionUnitNumber': update_data['ProductionUnitNumber']}
-        update_operation = {'$set': update_data}
+        #filter_criteria = {'ProductionUnitNumber': update_data_message['productionUnitNumber']}
+        filter_criteria = {'ProductionUnitNumber': update_data_message['ProductionUnitNumber']}
+        print(filter_criteria)
+        test_msg = {"City": "gottem"}
+        print('test msg')
+        print(test_msg)
+
+        update_operation = {'$set': update_data_message}
+        print('update_msg')
+        print(update_operation)
+        #update_operation = {'$set': test_msg}
 
         # Perform the update in MongoDB
         result = ds_collection.update_one(filter_criteria, update_operation)
