@@ -1,23 +1,25 @@
 using BackOffice.API.Dto;
-using BackOffice.API.Models;
 using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Repositories.Interfaces;
 using BackOffice.API.Services.Interfaces;
+using Contracts;
+using MassTransit;
 
 namespace BackOffice.API.Services;
 
 public class ProductionUnitService : IProductionUnitService
 {
     private readonly IProductionUnitRepository _productionUnitRepository;
+    private readonly IPublishEndpoint _publishEndpoint;
     
-    public ProductionUnitService(IProductionUnitRepository productionUnitRepository)
+    public ProductionUnitService(IProductionUnitRepository productionUnitRepository, IPublishEndpoint publishEndpoint)
     {
         _productionUnitRepository = productionUnitRepository;
+        _publishEndpoint = publishEndpoint;
     }
 
     public async Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto)
     {
-        // TODO: Implement
         var productionUnit = new ProductionUnit
         {
             ProductionUnitNumber = productionUnitCreateDto.ProductionUnitNumber,
@@ -60,7 +62,21 @@ public class ProductionUnitService : IProductionUnitService
         productionUnit.StreetAddress = productionUnitUpdateDto.StreetAddress;
         productionUnit.Zipcode = productionUnitUpdateDto.Zipcode;
         
-        return await _productionUnitRepository.Update(id, productionUnit);
+        var updatedProductionUnit = await _productionUnitRepository.Update(id, productionUnit);
+        
+        await _publishEndpoint.Publish(
+            new ProductionUnitUpdatedEvent
+            {
+                ProductionUnitNumber = productionUnit.ProductionUnitNumber,
+                Name = productionUnitUpdateDto.Name,
+                PhoneNumber = productionUnitUpdateDto.PhoneNumber,
+                Email = productionUnitUpdateDto.Email,
+                City = productionUnitUpdateDto.City,
+                StreetAddress = productionUnitUpdateDto.StreetAddress,
+                Zipcode = productionUnitUpdateDto.Zipcode
+            });
+
+        return updatedProductionUnit;
     }
 
     public async Task<bool> Delete(Guid id)
