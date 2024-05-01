@@ -24,7 +24,8 @@ RABBITMQ_PASSWORD = config['rabbitmq']['RABBITMQ_PASSWORD']
 MONGO_HOST = config['mongo']['MONGO_HOST']
 MONGO_PORT = config['mongo']['MONGO_PORT']
 MONGO_DB_NAME = config['mongo']['MONGO_DB_NAME']
-MONGO_DB_COLLECTION = config['mongo']['MONGO_DB_COLLECTION']
+MONGO_DS_COLLECTION = config['mongo']['MONGO_DS_COLLECTION']
+MONGO_ORG_COLLECTION = config['mongo']['MONGO_ORG_COLLECTION']
 MONGODB_URI = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
 
 
@@ -59,11 +60,10 @@ try:
     connect_with_retry(client, MONGODB_URI)
 except Exception as e:
     print(str(e))
-    exit(1)  # Exit the script or handle the failure appropriately
-db_name= MONGO_DB_NAME
-db_collection= MONGO_DB_COLLECTION
-db = client[db_name] # Update with your database name
-collection = db[db_collection]  # Update with your collection name
+    exit(1) 
+db = client[MONGO_DB_NAME]
+ds_collection = db[MONGO_DS_COLLECTION]
+org_collection = db[MONGO_ORG_COLLECTION]
 mongo_circuit_breaker = pybreaker.CircuitBreaker(fail_max=3, reset_timeout=30)
 
 
@@ -79,67 +79,34 @@ channel = connection.channel()
 # Declarring the main exchange, queue, and setup for dead lettering
 channel.exchange_declare(exchange='main_exchange', exchange_type='direct', durable=True)
 channel.exchange_declare(exchange='dead_letter_exchange', exchange_type='direct', durable=True)
-channel.queue_declare(queue='my_queue', arguments={
-    'x-dead-letter-exchange': 'dead_letter_exchange',
-    'x-dead-letter-routing-key': 'dead'
-})
+channel.queue_declare(queue='organisations_queue', arguments={'x-dead-letter-exchange': 'dead_letter_exchange','x-dead-letter-routing-key': 'dead'})
+channel.queue_declare(queue='drivingschools_queue', arguments={'x-dead-letter-exchange': 'dead_letter_exchange','x-dead-letter-routing-key': 'dead'})
 channel.queue_declare(queue='dead_letter_queue')
-channel.queue_bind(queue='my_queue', exchange='main_exchange', routing_key='main')
+channel.queue_bind(queue='organisations_queue', exchange='main_exchange', routing_key='organisations')
+channel.queue_bind(queue='drivingschools_queue', exchange='main_exchange', routing_key='drivingschools')
 channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', routing_key='dead')
 
 
-def is_mongodb_connected(client):
-    """ Check if MongoDB is connected """
+def on_message_organisations(ch, method, properties, body):
     try:
-        # The ismaster command is cheap and does not require auth.
-        client.admin.command('ismaster')
-        return True
-    except errors.ConnectionFailure:
-        print("MongoDB not available")
-        return False
+        update_data = json.loads(body.decode())
 
-def on_message(ch, method, properties, body):
-    try:
-        if not is_mongodb_connected(client):
-            print("MongoDB connection failed. Sending message to dead letter queue.")
-            # Nack the message and send it to the dead letter queue
-            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+        # Assuming the message contains 'OrganisationNumber' as the identifier
+        if 'OrganisationNumber' not in update_data:
+            print("OrganisationNumber missing in data")
+            ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
             return
 
-        update_data = json.loads(body.decode())
-        print(f"Received update request: {update_data}")
-
-        # Save received JSON to a file
-        with open('received_updates.json', 'a') as f:
-            json.dump(update_data, f)
-            f.write('\n')  # Write a newline to separate JSON entries
-            
-        # Assume 'collection_name' is part of the message for simplicity
-        target_collection = update_data.get('collection_name')
-        if target_collection not in ['organisations', 'drivingschools']:
-            print("Invalid collection specified.")
-            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
-            return    
-
-        if '_id' in update_data and '$oid' in update_data['_id']:
-            update_data['_id'] = ObjectId(update_data['_id']['$oid'])
-            
-        # Determine the appropriate MongoDB collection
-        collection = db[target_collection]  # dynamically select the collection
-        filter_criteria = {'_id': update_data['_id']}
-        update_operation = {'$set': update_data}    
-
-        filter_criteria = {'_id': update_data['_id']}
+        filter_criteria = {'OrganisationNumber': update_data['OrganisationNumber']}
         update_operation = {'$set': update_data}
 
-        # Perform the update
-        result = collection.update_one(filter_criteria, update_operation)
+        # Perform the update in MongoDB
+        result = org_collection.update_one(filter_criteria, update_operation)
         if result.modified_count > 0:
-            print("Document updated successfully.")
+            print("Organisation document updated successfully.")
         else:
-            print("No document matches the given criteria.")
+            print("No organisation matches the given criteria.")
 
-        # Acknowledge the message as successfully processed
         ch.basic_ack(delivery_tag=method.delivery_tag)
 
     except json.JSONDecodeError as e:
@@ -149,20 +116,60 @@ def on_message(ch, method, properties, body):
         print("Processing error, message will be requeued.")
         ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
 
+    
+    
+def on_message_drivingschools(ch, method, properties, body):
+    try:
+        update_data = json.loads(body.decode())
 
-# Start consuming messages with the JSON handler
-channel.basic_consume(queue='my_queue', on_message_callback=on_message, auto_ack=False)
-print('Starting to consume')
-channel.start_consuming()
+        # Assuming the message contains 'ProductionUnitNumber' as the identifier
+        if 'ProductionUnitNumber' not in update_data:
+            print("ProductionUnitNumber missing in data")
+            ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
+            return
 
+        filter_criteria = {'ProductionUnitNumber': update_data['ProductionUnitNumber']}
+        update_operation = {'$set': update_data}
 
-#If the message is a json file
-def update_database_from_json(json_data, collection):
-    for item in json_data:
-        filter_criteria = {'_id': item['_id']}
-        update_operation = {'$set': item}
-        result = collection.update_one(filter_criteria, update_operation, upsert=True)
-        if result.matched_count:
-            print(f"Updated document with _id: {item['_id']}")
+        # Perform the update in MongoDB
+        result = ds_collection.update_one(filter_criteria, update_operation)
+        if result.modified_count > 0:
+            print("Driving school document updated successfully.")
         else:
-            print(f"Inserted new document with _id: {item['_id']}")
+            print("No driving school matches the given criteria.")
+
+        ch.basic_ack(delivery_tag=method.delivery_tag)
+
+    except json.JSONDecodeError as e:
+        print("JSON Decode Error, will not retry.")
+        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+    except Exception as e:
+        print("Processing error, message will be requeued.")
+        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
+   
+    
+    
+def start_consuming_messages():
+    connection = pika.BlockingConnection(
+        pika.ConnectionParameters(host=RABBITMQ_HOST ,port=RABBITMQ_PORT, virtual_host=RABBITMQ_VHOST, credentials=credentials)
+    )
+    channel = connection.channel()
+
+    # Organisations queue consumer
+    channel.basic_consume(
+        queue='organisations_queue',
+        on_message_callback=on_message_organisations,
+        auto_ack=True
+    )
+
+    # Driving schools queue consumer
+    channel.basic_consume(
+        queue='drivingschools_queue',
+        on_message_callback=on_message_drivingschools,
+        auto_ack=True
+    )
+
+    print("Starting to consume messages from queues")
+    channel.start_consuming()
+
+start_consuming_messages()
