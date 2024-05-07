@@ -1,34 +1,30 @@
 import pika
 import json
 import time
+import os
 import pybreaker
+from dotenv import load_dotenv
 from pymongo import MongoClient, errors
 from bson import ObjectId
 from pymongo.errors import ConnectionFailure, OperationFailure
 
 
-def load_config():
-    with open('config.json', 'r') as file:
-        return json.load(file)
+load_dotenv()  # This loads the environment variables from .envp
 
-config = load_config()
-
-# Accessing RabbitMQ configuration
-RABBITMQ_USER = config['rabbitmq']['RABBITMQ_USER']
-RABBITMQ_HOST = config['rabbitmq']['RABBITMQ_HOST']
-RABBITMQ_PORT = config['rabbitmq']['RABBITMQ_PORT']
-RABBITMQ_VHOST = config['rabbitmq']['RABBITMQ_VHOST']
-RABBITMQ_PASSWORD = config['rabbitmq']['RABBITMQ_PASSWORD']
+# Accessing RabbitMQ configuration from environment variables
+RABBITMQ_USER = os.getenv('RABBITMQ_USER')
+RABBITMQ_HOST = os.getenv('RABBITMQ_HOST')
+RABBITMQ_PORT = int(os.getenv('RABBITMQ_PORT'))
+RABBITMQ_VHOST = os.getenv('RABBITMQ_VHOST')
+RABBITMQ_PASSWORD = os.getenv('RABBITMQ_PASSWORD')
 
 # Constructing MongoDB URI and accessing other MongoDB configuration
-MONGO_HOST = config['mongo']['MONGO_HOST']
-MONGO_PORT = config['mongo']['MONGO_PORT']
-MONGO_DB_NAME = config['mongo']['MONGO_DB_NAME']
-MONGO_DS_COLLECTION = config['mongo']['MONGO_DS_COLLECTION']
-MONGO_ORG_COLLECTION = config['mongo']['MONGO_ORG_COLLECTION']
+MONGO_HOST = os.getenv('MONGO_HOST')
+MONGO_PORT = int(os.getenv('MONGO_PORT'))
+MONGO_DB_NAME = os.getenv('MONGO_DB_NAME')
+MONGO_DS_COLLECTION = os.getenv('MONGO_DS_COLLECTION')
+MONGO_ORG_COLLECTION = os.getenv('MONGO_ORG_COLLECTION')
 MONGODB_URI = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
-
-
 
 
 def connect_with_retry(client, uri, max_attempts=5):

@@ -1,0 +1,29 @@
+# Use an official Python runtime as a parent image
+FROM python:3.10-slim
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Make port 5672 available to the world outside this container if needed
+EXPOSE 5672
+
+# Set environment variables
+ENV RABBITMQ_USER=Admin
+ENV RABBITMQ_PASSWORD=Admin2024
+ENV RABBITMQ_HOST=localhost
+ENV RABBITMQ_PORT=5672
+ENV RABBITMQ_VHOST=/
+ENV MONGO_HOST=localhost
+ENV MONGO_PORT=27017
+ENV MONGO_DB_NAME=koereskoleportalen-portal
+ENV MONGO_DS_COLLECTION=Drivingschools
+ENV MONGO_ORG_COLLECTION=Organisations
+
+# Command to run the application
+CMD ["python", "sync.py"]
