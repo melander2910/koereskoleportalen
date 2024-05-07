@@ -5,7 +5,6 @@ import os
 import pybreaker
 from dotenv import load_dotenv
 from pymongo import MongoClient, errors
-from bson import ObjectId
 from pymongo.errors import ConnectionFailure, OperationFailure
 
 
@@ -128,18 +127,20 @@ def on_message_drivingschools(ch, method, properties, body):
     else:
         try:
             update_data = json.loads(body.decode())
+            update_data_message = update_data["message"]
             print(update_data)
 
             # Assuming the message contains 'ProductionUnitNumber' as the identifier
-            if 'ProductionUnitNumber' not in update_data:
+            if'ProductionUnitNumber' not in update_data_message:
                 print("ProductionUnitNumber missing in data")
                 ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
                 return
 
             
-            filter_criteria = {'ProductionUnitNumber': update_data['ProductionUnitNumber']}
-            update_operation = {'$set': update_data}
-
+                #filter_criteria = {'ProductionUnitNumber': update_data_message['productionUnitNumber']}
+            filter_criteria = {'ProductionUnitNumber': update_data_message['ProductionUnitNumber']}
+            update_operation = {'$set': update_data_message}
+            
             # Perform the update in MongoDB
             result = ds_collection.update_one(filter_criteria, update_operation)
             if result.modified_count > 0:
