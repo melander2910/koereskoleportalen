@@ -88,79 +88,78 @@ channel.queue_bind(queue='dead_letter_queue', exchange='dead_letter_exchange', r
 
 
 def on_message_organisations(ch, method, properties, body):
-    try:
-        update_data = json.loads(body.decode())
+    
+    if not connect_with_retry(client, MONGODB_URI):
+        print("Failed to connect to MongoDB. Exiting...")
+        exit(1)
+    else:
+        
+        try:
+            update_data = json.loads(body.decode())
 
-        # Assuming the message contains 'OrganisationNumber' as the identifier
-        if 'OrganisationNumber' not in update_data:
-            print("OrganisationNumber missing in data")
-            ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
-            return
+            # Assuming the message contains 'OrganisationNumber' as the identifier
+            if 'OrganisationNumber' not in update_data:
+                print("OrganisationNumber missing in data")
+                ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
+                return
 
-        filter_criteria = {'OrganisationNumber': update_data['OrganisationNumber']}
-        update_operation = {'$set': update_data}
+            filter_criteria = {'OrganisationNumber': update_data['OrganisationNumber']}
+            update_operation = {'$set': update_data}
 
-        # Perform the update in MongoDB
-        result = org_collection.update_one(filter_criteria, update_operation)
-        if result.modified_count > 0:
-            print("Organisation document updated successfully.")
-        else:
-            print("No organisation matches the given criteria.")
+            # Perform the update in MongoDB
+            result = org_collection.update_one(filter_criteria, update_operation)
+            if result.modified_count > 0:
+                print("Organisation document updated successfully.")
+            else:
+                print("No organisation matches the given criteria.")
 
-        ch.basic_ack(delivery_tag=method.delivery_tag)
+            ch.basic_ack(delivery_tag=method.delivery_tag)
 
-    except json.JSONDecodeError as e:
-        print("JSON Decode Error, will not retry.")
-        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
-    except Exception as e:
-        print("Processing error, message will be requeued.")
-        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
+        except json.JSONDecodeError as e:
+            print("JSON Decode Error, will not retry.")
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+        except Exception as e:
+            print("Processing error, message will be requeued.")
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
 
     
     
 def on_message_drivingschools(ch, method, properties, body):
+    
     if not connect_with_retry(client, MONGODB_URI):
-        print("not connected")
+        print("Failed to connect to MongoDB. Exiting...")
         exit(1)
+    else:
+        try:
+            update_data = json.loads(body.decode())
+            print(update_data)
 
-    try:
-        update_data = json.loads(body.decode())
-        update_data_message = update_data["message"]
-        
-        # Assuming the message contains 'ProductionUnitNumber' as the identifier
-        if 'ProductionUnitNumber' not in update_data_message:
-            print("ProductionUnitNumber missing in data")
-            ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
-            return
+            # Assuming the message contains 'ProductionUnitNumber' as the identifier
+            if 'ProductionUnitNumber' not in update_data:
+                print("ProductionUnitNumber missing in data")
+                ch.basic_ack(delivery_tag=method.delivery_tag)  # Acknowledge message as processed
+                return
 
-        #filter_criteria = {'ProductionUnitNumber': update_data_message['productionUnitNumber']}
-        filter_criteria = {'ProductionUnitNumber': update_data_message['ProductionUnitNumber']}
-        print(filter_criteria)
-        test_msg = {"City": "gottem"}
-        print('test msg')
-        print(test_msg)
+            
+            filter_criteria = {'ProductionUnitNumber': update_data['ProductionUnitNumber']}
+            update_operation = {'$set': update_data}
 
-        update_operation = {'$set': update_data_message}
-        print('update_msg')
-        print(update_operation)
-        #update_operation = {'$set': test_msg}
+            # Perform the update in MongoDB
+            result = ds_collection.update_one(filter_criteria, update_operation)
+            if result.modified_count > 0:
+                print("Driving school document updated successfully.")
+            else:
+                print("No driving school matches the given criteria.")
 
-        # Perform the update in MongoDB
-        result = ds_collection.update_one(filter_criteria, update_operation)
-        if result.modified_count > 0:
-            print("Driving school document updated successfully.")
-        else:
-            print("No driving school matches the given criteria.")
+            ch.basic_ack(delivery_tag=method.delivery_tag)
 
-        ch.basic_ack(delivery_tag=method.delivery_tag)
-
-    except json.JSONDecodeError as e:
-        print("JSON Decode Error, will not retry.")
-        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
-    except Exception as e:
-        print("Processing error, message will be requeued.")
-        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
-   
+        except json.JSONDecodeError as e:
+            print("JSON Decode Error, will not retry.")
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=False)
+        except Exception as e:
+            print("Processing error, message will be requeued.")
+            ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
+    
     
     
 def start_consuming_messages():
