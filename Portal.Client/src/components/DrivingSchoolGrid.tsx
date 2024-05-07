@@ -12,7 +12,7 @@ function DrivingSchoolGrid({ searchInput }: Props) {
         <>
             <div className="grid grid-cols-4 gap-4">
                 {drivingschools
-                    .filter((drivingSchool) => drivingSchool.name.toLowerCase().includes(searchInput.toLowerCase()))
+                    .filter((drivingSchool) => drivingSchool.name?.toLowerCase().includes(searchInput.toLowerCase()))
                     .map((drivingSchool) => (
                         <Card key={drivingSchool.id}>
                             <CardHeader>

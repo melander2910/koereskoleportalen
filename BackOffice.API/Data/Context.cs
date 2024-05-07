@@ -27,6 +27,7 @@ public class Context : DbContext
     public DbSet<User> Users { get; set; }
     
     public DbSet<Course> Courses { get; set; }
+    public DbSet<ProductionUnitRemoved> ProductionUnitsRemoved { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {

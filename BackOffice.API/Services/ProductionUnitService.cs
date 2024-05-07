@@ -81,6 +81,19 @@ public class ProductionUnitService : IProductionUnitService
 
     public async Task<bool> Delete(Guid id)
     {
-        return await _productionUnitRepository.Delete(id);
+        var productionUnit = await _productionUnitRepository.FindAsync(id);
+        if (productionUnit == null)
+        {
+            throw new Exception($"Production unit with id: ${id}, was not found");
+        }
+        
+        ProductionUnitRemoved productionUnitRemoved = new ProductionUnitRemoved
+        {
+            ProductionUnit = productionUnit,
+            TenantId = productionUnit.TenantId,
+            RemovedDate = DateTime.UtcNow
+        };
+        
+        return await _productionUnitRepository.Delete(id, productionUnitRemoved);
     }
 }

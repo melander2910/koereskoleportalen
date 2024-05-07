@@ -10,5 +10,5 @@ public interface IProductionUnitRepository
     Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId);
     Task<ProductionUnit> FindAsync(Guid id);
     Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit);
-    Task<bool> Delete(Guid id);
+    Task<bool> Delete(Guid id, ProductionUnitRemoved productionUnitRemoved);
 }

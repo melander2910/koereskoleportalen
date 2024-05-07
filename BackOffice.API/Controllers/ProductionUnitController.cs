@@ -55,7 +55,8 @@ public class ProductionUnitController : ControllerBase
     [Authorize]
     public async Task<IActionResult> Delete(Guid id)
     {
-        return Ok(200);
+        var productionUnitDeleted = await _productionUnitService.Delete(id);
+        return Ok(productionUnitDeleted);
     }
     
     [HttpGet]

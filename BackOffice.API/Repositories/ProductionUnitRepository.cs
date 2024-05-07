@@ -23,20 +23,20 @@ public class ProductionUnitRepository : IProductionUnitRepository
 
     public async Task<IEnumerable<ProductionUnit>> GetAllAsync()
     {
-        var gg = await _dbContext.ProductionUnits.ToListAsync();
-        return gg;
+        var productionUnits = await _dbContext.ProductionUnits.Where(pu => pu.ProductionUnitsRemoved.Count == 0).ToListAsync();
+        return productionUnits;
     }
 
     public async Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)
     {
         // TODO: Is there a better way to fetch ProductionUnits by userId?
         // query junction table to get ProductionUnit ids and then query ProductionUnit table with those ids?
-        return await _dbContext.ProductionUnits.Where(pu => pu.Users.Any(user => user.Id == userId)).ToListAsync();
+        return await _dbContext.ProductionUnits.Where(pu => pu.Users.Any(user => user.Id == userId && pu.ProductionUnitsRemoved.Count == 0)).ToListAsync();
     }
 
     public async Task<ProductionUnit> FindAsync(Guid id)
     {
-        return await _dbContext.ProductionUnits.FindAsync(id);
+        return await _dbContext.ProductionUnits.Where(pu => pu.ProductionUnitsRemoved.Count == 0).FirstOrDefaultAsync(pu => pu.Id == id);
     }
 
     public async Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit)
@@ -48,8 +48,10 @@ public class ProductionUnitRepository : IProductionUnitRepository
         return updatedProductionUnit.Entity;
     }
 
-    public Task<bool> Delete(Guid id)
+    public async Task<bool> Delete(Guid id, ProductionUnitRemoved productionUnitRemoved)
     {
-        throw new NotImplementedException();
+        await _dbContext.ProductionUnitsRemoved.AddAsync(productionUnitRemoved);
+        await _dbContext.SaveChangesAsync();
+        return true;
     }
 }

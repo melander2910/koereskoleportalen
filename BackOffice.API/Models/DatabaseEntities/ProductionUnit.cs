@@ -22,6 +22,7 @@ public class ProductionUnit : Tenant
     
     // TODO: Multi tenancy subtenant testing purposes
     public ICollection<Course> Courses { get; set; }
+    public ICollection<ProductionUnitRemoved> ProductionUnitsRemoved { get; set; } = new List<ProductionUnitRemoved>();
     
     public string? Municipality { get; set; } // kommune
 
