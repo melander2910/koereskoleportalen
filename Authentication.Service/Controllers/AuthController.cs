@@ -1,10 +1,9 @@
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
 using MassTransit;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebMVCApp.Controllers;
+namespace Authentication.Service.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -62,7 +61,9 @@ public class AuthController : ControllerBase
         var responseLogin = new LoginResponseDto
         {
             User = loginResponse.User,
-            IsLoggedIn = true
+            IsLoggedIn = true,
+            TenantClaims = loginResponse.TenantClaims
+            
         };
         _response.Result = responseLogin;
         return Ok(_response);

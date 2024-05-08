@@ -54,7 +54,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 // TODO: Create env variable?
-app.UseCors(options => options.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+app.UseCors(options => options.WithOrigins("http://localhost:5173", "http://localhost:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

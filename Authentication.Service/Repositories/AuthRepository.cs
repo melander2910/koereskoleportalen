@@ -80,17 +80,18 @@ public class AuthRepository : IAuthRepository
             Email = identityUser.Email,
             Id = identityUser.Id,
             Name = identityUser.Name,
-            PhoneNumber = identityUser.PhoneNumber
+            PhoneNumber = identityUser.PhoneNumber,
         };
-
+        
         LoginResponseDto loginResponseDto = new LoginResponseDto()
         {
             User = userDTO,
             JwtToken = token,
             IsLoggedIn = true,
-            RefreshToken = refreshToken
+            RefreshToken = refreshToken,
+            TenantClaims = claims.Where(x => x.Type == "tenant").Select(x => x.Value).ToList()
         };
-
+        
         return loginResponseDto;
     }
 
