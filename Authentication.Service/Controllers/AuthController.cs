@@ -1,6 +1,8 @@
+using System.Security.Claims;
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
 using MassTransit;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Authentication.Service.Controllers;
@@ -104,12 +106,21 @@ public class AuthController : ControllerBase
 
         return Unauthorized();
     }
+
+    [HttpPost("Claim")]
+    [Authorize]
+    public async Task<IActionResult> CreateClaim([FromBody] CreateClaimDto createClaimDto)
+    {
+        var user = HttpContext.User;
+        var result = await _authService.CreateClaim(user, createClaimDto);
+        return Ok(result);
+    }
     
-    [HttpGet(Name = "GetWeatherForecast")]
-    // [Authorize]
+    /*[HttpGet("Weather", Name = "GetWeatherForecast")]
+    [Authorize]
     public IEnumerable<string> Get()
     {
         return ["e", "h", "g", "h"];
-    }
-
+    }*/
+    
 }

@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Authentication.Service.Dto;
 using Authentication.Service.Models;
 using Authentication.Service.Repositories.Interfaces;
@@ -59,5 +60,10 @@ public class AuthService : IAuthService
     public async Task<LoginResponseDto> RefreshToken(RefreshTokenDto model)
     {
         return await _authRepository.RefreshToken(model);
+    }
+
+    public async Task<bool> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
+    {   
+        return await _authRepository.CreateClaim(user, createClaimDto);
     }
 }
