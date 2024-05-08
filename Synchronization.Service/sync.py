@@ -26,11 +26,11 @@ MONGO_ORG_COLLECTION = os.getenv('MONGO_ORG_COLLECTION')
 MONGODB_URI = f"mongodb://{MONGO_HOST}:{MONGO_PORT}"
 
 
-def connect_with_retry(client, uri, max_attempts=5):
+def connect_with_retry(client, uri, max_attempts=1):
     attempt = 0
     while attempt < max_attempts:
         try:
-            print(f"Checking MongoDB connection at {uri}")
+            print(f"Checking MongoDB connection at {MONGODB_URI}")
             # The ismaster command is cheap and does not require auth and is now replaced by 'ping'.
             client.admin.command('ping')
             print("Connection successful.")
@@ -43,7 +43,7 @@ def connect_with_retry(client, uri, max_attempts=5):
             time.sleep(sleep_time)
             try:
                 # Reinitialize the MongoClient, which may help in reconnecting in certain scenarios.
-                client = MongoClient(uri)
+                client = MongoClient(MONGODB_URI)
             except ConnectionFailure:
                 continue  # Continue the loop if reinitialization fails
     raise Exception("Database connection failed after several attempts")
@@ -70,6 +70,12 @@ parameters = pika.ConnectionParameters(host=RABBITMQ_HOST,
                                        credentials=credentials)
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
+#check if connection is successful
+if connection.is_open:
+    print("Connection to RabbitMQ is successful")
+else:
+    print("Connection to RabbitMQ failed")
+
 
 # Declarring the main exchange, queue, and setup for dead lettering
 channel.exchange_declare(exchange='main_exchange', exchange_type='direct', durable=True)
@@ -105,10 +111,13 @@ def on_message_organisations(ch, method, properties, body):
             result = org_collection.update_one(filter_criteria, update_operation)
             if result.modified_count > 0:
                 print("Organisation document updated successfully.")
+                ch.basic_ack(delivery_tag=method.delivery_tag)
             else:
-                print("No organisation matches the given criteria.")
+                print("No organisation matches the given criteria, or no updates to apply")
+                #add to dead letter queue
+                ch.basic_publish(exchange='dead_letter_exchange', routing_key='dead', body=body)
 
-            ch.basic_ack(delivery_tag=method.delivery_tag)
+            
 
         except json.JSONDecodeError as e:
             print("JSON Decode Error, will not retry.")
@@ -116,6 +125,7 @@ def on_message_organisations(ch, method, properties, body):
         except Exception as e:
             print("Processing error, message will be requeued.")
             ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
+            ch.basic_publish(exchange='dead_letter_exchange', routing_key='dead', body=body)
 
     
     
@@ -129,6 +139,8 @@ def on_message_drivingschools(ch, method, properties, body):
             update_data = json.loads(body.decode())
             update_data_message = update_data["message"]
             print(update_data)
+            print(update_data_message)
+            print(ds_collection)
 
             # Assuming the message contains 'ProductionUnitNumber' as the identifier
             if'ProductionUnitNumber' not in update_data_message:
@@ -169,14 +181,14 @@ def start_consuming_messages():
     channel.basic_consume(
         queue='organisations_queue',
         on_message_callback=on_message_organisations,
-        auto_ack=True
+        #auto_ack=True
     )
 
     # Driving schools queue consumer
     channel.basic_consume(
         queue='drivingschools_queue',
         on_message_callback=on_message_drivingschools,
-        auto_ack=True
+        #auto_ack=True
     )
 
     print("Starting to consume messages from queues")
