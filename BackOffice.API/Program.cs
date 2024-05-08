@@ -27,6 +27,12 @@ builder.Services.AddDbContext<TenantDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+// SubTenantDbContext
+builder.Services.AddDbContext<SubTenantDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IOrganisationService, OrganisationService>();
@@ -41,7 +47,7 @@ builder.Services.AddScoped<ICurrentTenantService, CurrentTenantService>();
 builder.Services.AddScoped<ICurrentSubTenantService, CurrentSubTenantService>();
 
 builder.Services.AddScoped<ITenantService, TenantService>();
-builder.Services.AddScoped<ISubtenantService, SubTenantService>();
+builder.Services.AddScoped<ISubTenantService, SubTenantService>();
 
 builder.Services.AddScoped<ITenantRepository, TenantRepository>();
 builder.Services.AddScoped<ISubTenantRepository, SubTenantRepository>();
@@ -114,6 +120,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 // app.UseRouting();
+app.UseHttpsRedirection();
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<TenantResolver>();

@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using BackOffice.API.Dto;
+using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,19 +22,16 @@ public class TenantController : ControllerBase
     
     [HttpGet(Name = "GetTenantsByUserId")]
     [Authorize]
-    public async Task<IActionResult> GetTenantsByUserId()
+    public async Task<ActionResult<IEnumerable<Organisation>>> GetTenantsByUserId()
     {
         if (HttpContext.User.Identity.IsAuthenticated)
         {
             var authorizedUserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var tenants = await _tenantService.GetAllByUserId(authorizedUserId);
-            // var tenants = await _tenantService.GetAllByUserId("7a55a85a-4666-4fc7-93c9-37d3ced84907");
-
             if (tenants != null)
             {
                 return Ok(tenants);
             }
-            return Ok("You are not associated with any organisation");
         }
         return StatusCode(401);
     }

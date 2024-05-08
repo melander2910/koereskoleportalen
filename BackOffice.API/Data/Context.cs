@@ -9,17 +9,17 @@ namespace BackOffice.API.Data;
 public class Context : DbContext
 {
     private readonly ICurrentTenantService _currentTenantService;
-    // private readonly ICurrentSubTenantService _currentSubTenantService;
+    private readonly ICurrentSubTenantService _currentSubTenantService;
     public string TenantId { get; set; }
-    // public string SubTenantId { get; set; }
+    public string SubTenantId { get; set; }
 
     public Context(DbContextOptions<Context> options, ICurrentTenantService currentTenantService, ICurrentSubTenantService currentSubTenantService)
         : base(options)
     {
         _currentTenantService = currentTenantService;
-        // _currentSubTenantService = currentSubTenantService;
+        _currentSubTenantService = currentSubTenantService;
         TenantId = _currentTenantService.TenantId;
-        // SubTenantId = _currentSubTenantService.SubTenantId;
+        SubTenantId = _currentSubTenantService.SubTenantId;
     }
 
     public DbSet<Organisation> Organisations { get; set; }
@@ -34,7 +34,7 @@ public class Context : DbContext
         // TODO: Can we avoid having to add query filter for each entity?
         // Tried to implement logic using interfaces and abstract classes, where all entities implementing abstract class or interface would have query filter.
         builder.Entity<ProductionUnit>().HasQueryFilter(x => x.TenantId == TenantId);
-        //builder.Entity<Course>().HasQueryFilter(x => x.TenantId == TenantId && x.SubTenantId == SubTenantId);
+        builder.Entity<Course>().HasQueryFilter(x => x.TenantId == TenantId && x.SubTenantId == SubTenantId);
     }
     
     public override int SaveChanges()
@@ -50,7 +50,7 @@ public class Context : DbContext
         //             break;
         //     }
         // }
-        
+        // TODO: Subtenant id? ?
         // Will there be other than production unit that implements ITenant?
         foreach (var entry in ChangeTracker.Entries<Tenant>().ToList())
         {
