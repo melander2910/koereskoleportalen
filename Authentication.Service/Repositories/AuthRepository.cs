@@ -14,14 +14,15 @@ namespace Authentication.Service.Repositories;
 
 public class AuthRepository : IAuthRepository
 {
-   private readonly ApplicationDbContext _dbContext;
+    private readonly ApplicationDbContext _dbContext;
     private readonly UserManager<ExtendedIdentityUser> _userManager;
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly IJwtTokenGeneratorService _jwtTokenGeneratorService;
     private readonly IConfiguration _config;
 
-    public AuthRepository(ApplicationDbContext dbContext, UserManager<ExtendedIdentityUser> userManager, 
-        RoleManager<IdentityRole> roleManager, IJwtTokenGeneratorService jwtTokenGeneratorService, IConfiguration config)
+    public AuthRepository(ApplicationDbContext dbContext, UserManager<ExtendedIdentityUser> userManager,
+        RoleManager<IdentityRole> roleManager, IJwtTokenGeneratorService jwtTokenGeneratorService,
+        IConfiguration config)
     {
         _dbContext = dbContext;
         _userManager = userManager;
@@ -29,17 +30,19 @@ public class AuthRepository : IAuthRepository
         _jwtTokenGeneratorService = jwtTokenGeneratorService;
         _config = config;
     }
+
     public async Task<ExtendedIdentityUser> Register(ExtendedIdentityUser extendedIdentityUser, string password)
     {
         try
         {
-            var result = await  _userManager.CreateAsync(extendedIdentityUser, password);
+            var result = await _userManager.CreateAsync(extendedIdentityUser, password);
             if (result.Succeeded)
             {
                 // email Normalized? ToLower/ToUpper?
                 var createdUser = _dbContext.ApplicationUsers.First(u => u.UserName == extendedIdentityUser.Email);
                 return createdUser;
             }
+
             // TODO: What do we return on error?
             return null;
             // result.Errors.FirstOrDefault().Description;
@@ -55,13 +58,14 @@ public class AuthRepository : IAuthRepository
     public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
     {
         // TODO: should identityUser be found in ApplicationUsers(extendedIdentityUsers) or UserManager<ExtendedIdentityUser>
-        var identityUser = _dbContext.ApplicationUsers.FirstOrDefault(u => u.UserName.ToLower() == loginRequestDto.Username.ToLower());
+        var identityUser =
+            _dbContext.ApplicationUsers.FirstOrDefault(u => u.UserName.ToLower() == loginRequestDto.Username.ToLower());
 
         bool isValid = await _userManager.CheckPasswordAsync(identityUser, loginRequestDto.Password);
 
-        if(identityUser == null || isValid == false)
+        if (identityUser == null || isValid == false)
         {
-            return new LoginResponseDto() { User = null, JwtToken = "", IsLoggedIn = false};
+            return new LoginResponseDto() { User = null, JwtToken = "", IsLoggedIn = false };
         }
 
         // if user was found, Generate JWT Token
@@ -74,13 +78,13 @@ public class AuthRepository : IAuthRepository
         identityUser.RefreshTokenExpiry = DateTime.UtcNow.AddHours(12);
         await _userManager.UpdateAsync(identityUser);
 
-        
+
         UserDto userDTO = new()
         {
             Email = identityUser.Email,
             Id = identityUser.Id,
             Name = identityUser.Name,
-            PhoneNumber = identityUser.PhoneNumber
+            PhoneNumber = identityUser.PhoneNumber,
         };
 
         LoginResponseDto loginResponseDto = new LoginResponseDto()
@@ -88,7 +92,8 @@ public class AuthRepository : IAuthRepository
             User = userDTO,
             JwtToken = token,
             IsLoggedIn = true,
-            RefreshToken = refreshToken
+            RefreshToken = refreshToken,
+            TenantClaims = claims.Where(x => x.Type == "tenant").Select(x => x.Value).ToList()
         };
 
         return loginResponseDto;
@@ -104,12 +109,13 @@ public class AuthRepository : IAuthRepository
         var user = _dbContext.ApplicationUsers.FirstOrDefault(u => u.Email.ToLower() == email.ToLower());
         if (user != null)
         {
-            
+
             if (!_roleManager.RoleExistsAsync(roleName).GetAwaiter().GetResult())
             {
                 // create role if it does not exist
                 _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
             }
+
             await _userManager.AddToRoleAsync(user, roleName);
             return true;
         }
@@ -120,17 +126,19 @@ public class AuthRepository : IAuthRepository
     public async Task<LoginResponseDto> RefreshToken(RefreshTokenDto model)
     {
         var principal = GetTokenPrincipal(model.JwtToken);
-        
+
         if (principal?.Identity?.Name is null)
         {
-            return new LoginResponseDto();;
+            return new LoginResponseDto();
+            ;
         }
 
         var identityUser = await _userManager.FindByNameAsync(principal.Identity.Name);
         if (identityUser is null || identityUser.RefreshToken != model.RefreshToken ||
             identityUser.RefreshTokenExpiry < DateTime.UtcNow)
         {
-            return new LoginResponseDto();;
+            return new LoginResponseDto();
+            ;
         }
 
         var roles = await _userManager.GetRolesAsync(identityUser);
@@ -141,7 +149,7 @@ public class AuthRepository : IAuthRepository
         identityUser.RefreshToken = refreshToken;
         identityUser.RefreshTokenExpiry = DateTime.UtcNow.AddHours(12);
         await _userManager.UpdateAsync(identityUser);
-        
+
         UserDto userDTO = new()
         {
             Email = identityUser.Email,
@@ -176,4 +184,30 @@ public class AuthRepository : IAuthRepository
         };
         return new JwtSecurityTokenHandler().ValidateToken(jwtToken, validation, out _);
     }
+
+    public async Task<bool> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
+    {
+        var userIdentity = await _userManager.GetUserAsync(user);
+
+        if (userIdentity == null)
+        {
+            return false;
+        } 
+        
+        var existingClaims = await _userManager.GetClaimsAsync(userIdentity);
+
+        foreach (var claim in existingClaims)
+        {
+            if (claim.Value == createClaimDto.ClaimValue)
+            {
+                throw new Exception("Claim with given value already exists for user");
+            }
+        }
+        
+        var newClaim = new Claim($"{createClaimDto.ClaimType}", $"{createClaimDto.ClaimValue}");
+        
+        await _userManager.AddClaimAsync(userIdentity, newClaim);
+        return true;
+    }
+
 }

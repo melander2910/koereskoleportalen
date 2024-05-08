@@ -1,4 +1,5 @@
 using Authentication.Service.Data;
+using Authentication.Service.Extensions;
 using Authentication.Service.Models;
 using Authentication.Service.Repositories;
 using Authentication.Service.Repositories.Interfaces;
@@ -42,6 +43,10 @@ builder.Services.AddMassTransit(registrationConfigurator =>
     });
 });
 
+// WebApplicationBuilderExtension
+builder.AddApplicationAuthentication();
+
+builder.Services.AddAuthorization();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -51,10 +56,12 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 
+
+
 app.UseSwagger();
 app.UseSwaggerUI();
 // TODO: Create env variable?
-app.UseCors(options => options.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+app.UseCors(options => options.WithOrigins("http://localhost:5173", "http://localhost:3000").AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

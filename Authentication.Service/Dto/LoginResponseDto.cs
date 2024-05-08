@@ -6,4 +6,6 @@ public class LoginResponseDto
     public bool IsLoggedIn { get; set; }
     public string JwtToken { get; set; }
     public string RefreshToken { get; set; }
+    
+    public List<string> TenantClaims { get; set; }
 }
