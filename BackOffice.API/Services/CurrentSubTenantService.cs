@@ -15,16 +15,14 @@ public class CurrentSubTenantService : ICurrentSubTenantService
     
     public string SubTenantId { get; set; }
     
-    
     public async Task<bool> SetSubTenant(string subTenantId)
     {
-        // var subTenantInfo = await _subContext.ProductionUnits.Where(x => x.ProductionUnitNumber == subTenantId).FirstOrDefaultAsync();
-        // if (subTenantInfo != null)
-        // {
-        //     SubTenantId = subTenantInfo.ProductionUnitNumber;
-        //     return true;
-        // }
-
-        throw new Exception("Subtenant invalid");
+        if (subTenantId != null)
+        {
+            SubTenantId = subTenantId;
+            return true;
+        }
+        
+        throw new Exception("SubTenant invalid");
     }
 }

@@ -18,7 +18,7 @@ public class TenantResolver
     
     // , ICurrentSubTenantService currentSubTenantService
     
-    public async Task InvokeAsync(HttpContext context, ICurrentTenantService currentTenantService)
+    public async Task InvokeAsync(HttpContext context, ICurrentTenantService currentTenantService, ICurrentSubTenantService currentSubTenantService)
     {
         context.Request.Headers.TryGetValue("tenant", out var selectedTenantId);
         
@@ -28,6 +28,17 @@ public class TenantResolver
             if (context.User.Identity.IsAuthenticated && userTenantClaims.Contains(selectedTenantId.FirstOrDefault()))
             {
                 await currentTenantService.SetTenant(selectedTenantId);
+            }
+        }
+        
+        context.Request.Headers.TryGetValue("subtenant", out var selectedSubTenantId);
+        
+        if  (!string.IsNullOrEmpty(selectedSubTenantId))
+        {
+            var userSubTenantClaims = context.User.Claims.Where(x => x.Type == "subtenant").Select(x => x.Value);
+            if (context.User.Identity.IsAuthenticated && userSubTenantClaims.Contains(selectedSubTenantId.FirstOrDefault()))
+            {
+                await currentSubTenantService.SetSubTenant(selectedSubTenantId);
             }
         }
         await _next(context);

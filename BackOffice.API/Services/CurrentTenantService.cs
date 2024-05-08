@@ -12,6 +12,8 @@ public class CurrentTenantService: ICurrentTenantService
     
     public string TenantId { get; set; }
     
+    public string SubTenantId { get; set; }
+    
     public async Task<bool> SetTenant(string tenantId)
     {
         if (tenantId != null)
@@ -22,6 +24,4 @@ public class CurrentTenantService: ICurrentTenantService
 
         throw new Exception("Tenant invalid");
     }
-    
-   
 }
