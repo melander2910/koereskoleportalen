@@ -61,6 +61,19 @@ services:
       - '27017:27017'
     networks:
       - backend_network
+  sync_service:
+    container_name: sync_service
+    build:
+      context: ..
+      dockerfile: ./koereskoleportalen/Synchronization.Service/dockerfile
+    ports:
+      - '5673:5673'
+    depends_on:
+      - portal_mongodb
+      - rabbitmq3
+    networks:
+      - backend_network
+    
 
 networks:
   backend_network:
