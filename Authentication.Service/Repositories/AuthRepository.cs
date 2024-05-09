@@ -191,7 +191,7 @@ public class AuthRepository : IAuthRepository
 
         if (userIdentity == null)
         {
-            return false;
+            throw new Exception("Error with the given user identity");
         } 
         
         var existingClaims = await _userManager.GetClaimsAsync(userIdentity);

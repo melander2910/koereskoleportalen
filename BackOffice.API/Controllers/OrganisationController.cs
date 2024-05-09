@@ -63,4 +63,10 @@ public class OrganisationController : ControllerBase
         var userOrganisations = await _userService.GetAllByOrganisationIdAsync(id);
         return Ok(userOrganisations);
     }
+
+    [HttpGet("bycvr")]
+    public async Task<Organisation> GetByCvr(string cvr)
+    {
+        return await _organisationService.FindByCvrAsync(cvr);
+    }
 }

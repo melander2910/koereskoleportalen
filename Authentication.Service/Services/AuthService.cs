@@ -64,6 +64,30 @@ public class AuthService : IAuthService
 
     public async Task<bool> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
     {   
-        return await _authRepository.CreateClaim(user, createClaimDto);
+        await _authRepository.CreateClaim(user, createClaimDto);
+        
+        var userIdString = user.FindFirstValue(ClaimTypes.NameIdentifier);
+        var userIdGuid = new Guid(userIdString);
+        if (createClaimDto.ClaimType == "tenant")
+        {
+            await _publishEndpoint.Publish(
+                new TenantClaimCreatedEvent
+                {
+                    UserId = userIdGuid,
+                    CVR = createClaimDto.ClaimValue
+                });
+        }
+        
+        if (createClaimDto.ClaimType == "subtenant")
+        {
+            await _publishEndpoint.Publish(
+                new SubTenantClaimCreatedEvent
+                {
+                    UserId = userIdGuid,
+                    ProductionUnitNumber = createClaimDto.ClaimValue
+                });
+        }
+        
+        return true;
     }
 }

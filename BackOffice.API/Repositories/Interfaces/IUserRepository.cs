@@ -12,4 +12,6 @@ public interface IUserRepository
     Task<User> FindAsync(Guid id);
     Task<User> Update(Guid id, User user);
     Task<bool> Delete(Guid id);
+    Task<bool> AddOrganisationUserReference(User user, Organisation organisation);
+    Task<bool> AddProductionUnitUserReference(User user, ProductionUnit productionUnit);
 }

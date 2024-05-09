@@ -7,9 +7,9 @@ namespace BackOffice.API.Repositories;
 
 public class ProductionUnitRepository : IProductionUnitRepository
 {
-    private readonly Context _dbContext;
+    private readonly TenantDbContext _dbContext;
 
-    public ProductionUnitRepository(Context dbContext)
+    public ProductionUnitRepository(TenantDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -53,5 +53,10 @@ public class ProductionUnitRepository : IProductionUnitRepository
         await _dbContext.ProductionUnitsRemoved.AddAsync(productionUnitRemoved);
         await _dbContext.SaveChangesAsync();
         return true;
+    }
+
+    public async Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber)
+    {
+        return await _dbContext.ProductionUnits.FirstOrDefaultAsync(pu => pu.ProductionUnitNumber == productionUnitNumber);
     }
 }

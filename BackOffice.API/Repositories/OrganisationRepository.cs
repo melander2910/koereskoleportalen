@@ -56,4 +56,8 @@ public class OrganisationRepository : IOrganisationRepository
         await _dbContext.SaveChangesAsync();
         return true;
     }
+    public async Task<Organisation> FindByCvrAsync(string cvr)
+    {
+        return await _dbContext.Organisations.FirstOrDefaultAsync(o => o.CVR == cvr);
+    }
 }

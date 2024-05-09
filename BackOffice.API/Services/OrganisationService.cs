@@ -59,4 +59,9 @@ public class OrganisationService : IOrganisationService
     {
         return await _organisationRepository.Delete(id);
     }
+    
+    public async Task<Organisation> FindByCvrAsync(string cvr)
+    {
+        return await _organisationRepository.FindByCvrAsync(cvr);
+    }
 }

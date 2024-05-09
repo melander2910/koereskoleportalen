@@ -5,6 +5,7 @@ using Authentication.Service.Repositories;
 using Authentication.Service.Repositories.Interfaces;
 using Authentication.Service.Services;
 using Authentication.Service.Services.Interfaces;
+using Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

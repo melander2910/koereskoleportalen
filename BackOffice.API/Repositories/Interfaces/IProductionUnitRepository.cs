@@ -11,4 +11,5 @@ public interface IProductionUnitRepository
     Task<ProductionUnit> FindAsync(Guid id);
     Task<ProductionUnit> Update(Guid id, ProductionUnit productionUnit);
     Task<bool> Delete(Guid id, ProductionUnitRemoved productionUnitRemoved);
+    Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber);
 }

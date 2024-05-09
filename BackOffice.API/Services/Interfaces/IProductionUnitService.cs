@@ -12,4 +12,5 @@ public interface IProductionUnitService
     Task<ProductionUnit> FindAsync(Guid id);
     Task<ProductionUnit> Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto);
     Task<bool> Delete(Guid id);
+    Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber);
 }

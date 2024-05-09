@@ -56,6 +56,8 @@ builder.Services.AddMassTransit(registrationConfigurator =>
 {
     registrationConfigurator.SetKebabCaseEndpointNameFormatter();
     registrationConfigurator.AddConsumer<UserCreatedEventConsumer>();
+    registrationConfigurator.AddConsumer<TenantClaimCreatedEventConsumer>();
+    registrationConfigurator.AddConsumer<SubTenantClaimCreatedEventConsumer>();
     // MassTransit to use an EF outbox for message deduplication ??
 
     registrationConfigurator.UsingRabbitMq((registrationContext, factoryConfigurator) =>
