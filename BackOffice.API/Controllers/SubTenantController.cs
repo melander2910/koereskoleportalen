@@ -21,7 +21,7 @@ public class SubTenantController : ControllerBase
     
     [HttpGet(Name = "GetSubTenantsByUserId")]
     [Authorize]
-    public async Task<ActionResult<IEnumerable<Organisation>>> GetTenantsByUserId()
+    public async Task<ActionResult<IEnumerable<ProductionUnit>>> GetSubTenantsByUserId()
     {
         if (HttpContext.User.Identity.IsAuthenticated)
         {

@@ -44,7 +44,7 @@ public class SubTenantDbContext : DbContext
     }
     
     public DbSet<ProductionUnit> ProductionUnits { get; set; }
-    
+    public DbSet<User> Users { get; set; }
     // add other dbsets
     // example add 'Courses' if courses should be viewable across sub tenant context / across production units
 }

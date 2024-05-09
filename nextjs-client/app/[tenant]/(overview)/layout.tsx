@@ -1,5 +1,5 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
-import TenancyPicker from '../ui/tenancy/tenancy-picker';
+import TenancyPicker from '../../ui/tenancy/tenancy-picker';
  
 export default function Layout({ children, params }: { children: React.ReactNode, params: { tenant: string, subtenant: string } }) {
   return (
