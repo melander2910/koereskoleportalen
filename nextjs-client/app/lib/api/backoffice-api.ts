@@ -94,6 +94,7 @@ export interface ProductionUnit {
   organisationId?: string;
   users?: User[] | null;
   courses?: Course[] | null;
+  productionUnitsRemoved?: ProductionUnitRemoved[] | null;
   municipality?: string | null;
   industryCode?: string | null;
   industryDescription?: string | null;
@@ -117,6 +118,15 @@ export interface ProductionUnitCreateDto {
   city?: string | null;
   streetAddress?: string | null;
   zipcode?: string | null;
+}
+
+export interface ProductionUnitRemoved {
+  /** @format int32 */
+  id?: number;
+  tenantId?: string | null;
+  /** @format date-time */
+  removedDate?: string;
+  productionUnit?: ProductionUnit;
 }
 
 export interface ProductionUnitUpdateDto {
@@ -624,6 +634,23 @@ export class Api<
     getUsersByProductionUnitId: (id: string, params: RequestParams = {}) =>
       this.request<ProductionUnit[], any>({
         path: `/api/ProductionUnit/${id}/users`,
+        method: 'GET',
+        secure: true,
+        format: 'json',
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags SubTenant
+     * @name GetSubTenantsByUserId
+     * @request GET:/api/SubTenant
+     * @secure
+     */
+    getSubTenantsByUserId: (params: RequestParams = {}) =>
+      this.request<ProductionUnit[], any>({
+        path: `/api/SubTenant`,
         method: 'GET',
         secure: true,
         format: 'json',
