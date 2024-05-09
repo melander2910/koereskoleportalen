@@ -35,19 +35,9 @@ export default function TenancyPicker({
       return response.data; // Extract the data from the response
     },
   });
-
-
-    const authClient = new AUTHAPI({
-      baseUrl: 'http://localhost:5167',
-      baseApiParams: {
-        credentials: 'include',
-      },
-    }).api;
-
     const router = useRouter();
 
     const handleLogout = () => {
-      authClient.logout();
       router.push('/logout');
     };
 
