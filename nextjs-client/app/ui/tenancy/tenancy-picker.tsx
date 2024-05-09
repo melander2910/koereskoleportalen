@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PowerIcon } from '@heroicons/react/24/outline';
 import { Api } from '@/app/lib/api/backoffice-api';
+import { Api as AUTHAPI } from '@/app/lib/api/auth-api';
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
+import { useRouter } from 'next/navigation'
 
 
 export default function TenancyPicker({
@@ -29,9 +31,26 @@ export default function TenancyPicker({
     queryKey: ['userTenants'],
     queryFn: async () => {
       const response = await backOfficeClient.getTenantsByUserId();
+      console.log(response.data);
       return response.data; // Extract the data from the response
     },
   });
+
+
+    const authClient = new AUTHAPI({
+      baseUrl: 'http://localhost:5167',
+      baseApiParams: {
+        credentials: 'include',
+      },
+    }).api;
+
+    const router = useRouter();
+
+    const handleLogout = () => {
+      authClient.logout();
+      router.push('/logout');
+    };
+
 
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
@@ -58,7 +77,7 @@ export default function TenancyPicker({
         })}
         <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
         <form>
-          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
+          <button onClick={()=> handleLogout()} className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
             <PowerIcon className="w-6" />
             <div className="hidden md:block">Sign Out</div>
           </button>

@@ -2,6 +2,8 @@ using System.Security.Claims;
 using Authentication.Service.Dto;
 using Authentication.Service.Services.Interfaces;
 using MassTransit;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -71,6 +73,13 @@ public class AuthController : ControllerBase
         return Ok(_response);
     }
     
+    [HttpPost("Logout", Name = "Logout")]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return Ok();
+    }
+
     // TODO: what about refresh token?
     // Response.Cookies.Append("refreshToken", loginResponse.RefreshToken, new CookieOptions
     // {

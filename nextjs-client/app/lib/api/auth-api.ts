@@ -14,6 +14,11 @@ export interface AssignRoleRequestDto {
   role?: string | null;
 }
 
+export interface CreateClaimDto {
+  claimType?: string | null;
+  claimValue?: string | null;
+}
+
 export interface LoginRequestDto {
   username?: string | null;
   password?: string | null;
@@ -326,6 +331,20 @@ export class Api<
      * No description
      *
      * @tags Auth
+     * @name Logout
+     * @request POST:/api/Auth/Logout
+     */
+    logout: (params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/api/Auth/logout`,
+        method: 'POST',
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Auth
      * @name AssignRole
      * @request POST:/api/Auth/AssignRole
      */
@@ -358,14 +377,15 @@ export class Api<
      * No description
      *
      * @tags Auth
-     * @name GetWeatherForecast
-     * @request GET:/api/Auth
+     * @name AuthClaimCreate
+     * @request POST:/api/Auth/Claim
      */
-    getWeatherForecast: (params: RequestParams = {}) =>
-      this.request<string[], any>({
-        path: `/api/Auth`,
-        method: 'GET',
-        format: 'json',
+    authClaimCreate: (data: CreateClaimDto, params: RequestParams = {}) =>
+      this.request<void, any>({
+        path: `/api/Auth/Claim`,
+        method: 'POST',
+        body: data,
+        type: ContentType.Json,
         ...params,
       }),
   };

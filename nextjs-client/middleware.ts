@@ -20,8 +20,14 @@ export default async function middleware(req: NextRequest) {
   // check if cookie is valid too?
   // you cannot make requests to backend with invalid cookie, but frontend might need to handle it so it does not look weird
   if(jwtToken && path == "/login"){
-    return NextResponse.redirect(new URL(`/${jwtToken}`, req.nextUrl));
+    return NextResponse.redirect(new URL(`/`, req.nextUrl));
 
+  }
+
+  if(jwtToken && path == "/logout"){
+    const response = NextResponse.redirect(new URL(`/login`, req.nextUrl));
+    response.cookies.delete('jwtToken');
+    return response;
   }
 
   return NextResponse.next();
