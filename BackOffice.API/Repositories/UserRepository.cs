@@ -54,4 +54,20 @@ public class UserRepository : IUserRepository
     {
         throw new NotImplementedException();
     }
+
+    public async Task<bool> AddOrganisationUserReference(User user, Organisation organisation)
+    {
+        user.Organisations.Add(organisation);
+        _dbContext.Users.Update(user);
+        await _dbContext.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> AddProductionUnitUserReference(User user, ProductionUnit productionUnit)
+    {
+        user.ProductionUnits.Add(productionUnit);
+        _dbContext.Users.Update(user);
+        await _dbContext.SaveChangesAsync();
+        return true;
+    }
 }

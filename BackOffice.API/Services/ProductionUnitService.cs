@@ -96,4 +96,9 @@ public class ProductionUnitService : IProductionUnitService
         
         return await _productionUnitRepository.Delete(id, productionUnitRemoved);
     }
+
+    public async Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber)
+    {
+        return await _productionUnitRepository.FindByProductionUnitNumber(productionUnitNumber);
+    }
 }

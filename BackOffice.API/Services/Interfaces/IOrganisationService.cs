@@ -9,7 +9,9 @@ public interface IOrganisationService
     Task<Organisation> AddAsync(OrganisationCreateDto organisationCreateDto);
     Task<IEnumerable<Organisation>> GetAllAsync();
     Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId);
+    Task<Organisation> FindByCvrAsync(string cvr);
     Task<Organisation> FindAsync(Guid id);
     Task<Organisation> Update(Guid id, Organisation organisation);
     Task<bool> Delete(Guid id);
+    
 }

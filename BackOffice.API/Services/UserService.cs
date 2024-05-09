@@ -65,4 +65,14 @@ public class UserService : IUserService
     {
         return await _userRepository.Delete(id);
     }
+
+    public async Task<bool> AddOrganisationUserReference(User user, Organisation organisation)
+    {
+        return await _userRepository.AddOrganisationUserReference(user, organisation);
+    }
+
+    public async Task<bool> AddProductionUnitUserReference(User user, ProductionUnit productionUnit)
+    {
+        return await _userRepository.AddProductionUnitUserReference(user, productionUnit);
+    }
 }
