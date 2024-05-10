@@ -39,6 +39,10 @@ export default function SubTenancyPicker({
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
       {userSubTenantsData?.map((subtenant: ProductionUnit) => {
         return (
+<<<<<<< Updated upstream
+=======
+          <>
+>>>>>>> Stashed changes
             <Link
               key={subtenant.productionUnitNumber}
               href={`${pathname}/${subtenant.productionUnitNumber}/dashboard`}
@@ -55,6 +59,10 @@ export default function SubTenancyPicker({
                 </p>
               </div>
             </Link>
+<<<<<<< Updated upstream
+=======
+          </>
+>>>>>>> Stashed changes
         );
       })}
     </div>

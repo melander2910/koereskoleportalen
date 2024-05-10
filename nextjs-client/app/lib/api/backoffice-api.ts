@@ -535,6 +535,29 @@ export class Api<
     /**
      * No description
      *
+     * @tags Organisation
+     * @name OrganisationBycvrList
+     * @request GET:/api/Organisation/bycvr
+     * @secure
+     */
+    organisationBycvrList: (
+      query?: {
+        cvr?: string;
+      },
+      params: RequestParams = {},
+    ) =>
+      this.request<Organisation, any>({
+        path: `/api/Organisation/bycvr`,
+        method: 'GET',
+        query: query,
+        secure: true,
+        format: 'json',
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
      * @tags ProductionUnit
      * @name GetProductionUnitById
      * @request GET:/api/ProductionUnit/{id}
@@ -634,6 +657,26 @@ export class Api<
     getUsersByProductionUnitId: (id: string, params: RequestParams = {}) =>
       this.request<ProductionUnit[], any>({
         path: `/api/ProductionUnit/${id}/users`,
+        method: 'GET',
+        secure: true,
+        format: 'json',
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags ProductionUnit
+     * @name GetProductionUnitByProductionUnitNumber
+     * @request GET:/api/ProductionUnit/productionUnitNumber/{productionUnitNumber}
+     * @secure
+     */
+    getProductionUnitByProductionUnitNumber: (
+      productionUnitNumber: string,
+      params: RequestParams = {},
+    ) =>
+      this.request<ProductionUnit, any>({
+        path: `/api/ProductionUnit/productionUnitNumber/${productionUnitNumber}`,
         method: 'GET',
         secure: true,
         format: 'json',
