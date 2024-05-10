@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o ./kubernetes/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: postgres-identity
+  name: postgres_identity
+spec:
+  ports:
+    - name: "5442"
+      port: 5442
+      targetPort: 5442
+  selector:
+    io.kompose.service: postgres-identity

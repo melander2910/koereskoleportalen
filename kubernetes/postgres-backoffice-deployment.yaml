@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o ./kubernetes/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: postgres-backoffice
+  name: postgres-backoffice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: postgres-backoffice
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -o ./kubernetes/
+        kompose.version: 1.33.0 (HEAD)
+      labels:
+        io.kompose.network/koereskoleportalen-backend-network: "true"
+        io.kompose.service: postgres-backoffice
+    spec:
+      containers:
+        - env:
+            - name: PGPORT
+              value: "5432"
+            - name: POSTGRES_DB
+            - name: POSTGRES_PASSWORD
+            - name: POSTGRES_USER
+          image: postgres:latest
+          name: postgres-backoffice-compose
+          ports:
+            - containerPort: 5432
+              hostPort: 5432
+              protocol: TCP
+      restartPolicy: Always

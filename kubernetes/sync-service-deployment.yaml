@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o ./kubernetes/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: sync-service
+  name: sync-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: sync-service
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -o ./kubernetes/
+        kompose.version: 1.33.0 (HEAD)
+      labels:
+        io.kompose.network/koereskoleportalen-backend-network: "true"
+        io.kompose.service: sync-service
+    spec:
+      containers:
+        - image: sync-service
+          name: sync-service
+          ports:
+            - containerPort: 5673
+              hostPort: 5673
+              protocol: TCP
+      restartPolicy: Always

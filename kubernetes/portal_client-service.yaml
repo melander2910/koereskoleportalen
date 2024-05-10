@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o ./kubernetes/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: portal-client
+  name: portal_client
+spec:
+  ports:
+    - name: "5173"
+      port: 5173
+      targetPort: 5173
+  selector:
+    io.kompose.service: portal-client

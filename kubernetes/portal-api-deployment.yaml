@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -o ./kubernetes/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: portal-api
+  name: portal-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: portal-api
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -o ./kubernetes/
+        kompose.version: 1.33.0 (HEAD)
+      labels:
+        io.kompose.network/koereskoleportalen-backend-network: "true"
+        io.kompose.service: portal-api
+    spec:
+      containers:
+        - image: portal-api
+          name: portal-api
+          ports:
+            - containerPort: 8080
+              hostPort: 5051
+              protocol: TCP
+      restartPolicy: Always
