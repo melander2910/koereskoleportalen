@@ -67,9 +67,12 @@ public class ProductionUnitController : ControllerBase
         return Ok(userProductionUnits);
     }
     
-    [HttpGet("bypun")]
-    public async Task<ProductionUnit> GetByPun(string pun)
+    [HttpGet("productionUnitNumber/{productionUnitNumber}" ,Name = "GetProductionUnitByProductionUnitNumber")]
+    [Authorize]
+    public async Task<ActionResult<ProductionUnit>> GetByProductionUnitNumber(string productionUnitNumber)
     {
-        return await _productionUnitService.FindByProductionUnitNumber(pun);
+        var productionUnit = await _productionUnitService.FindByProductionUnitNumber(productionUnitNumber);
+        return Ok(productionUnit);
     }
+    
 }
