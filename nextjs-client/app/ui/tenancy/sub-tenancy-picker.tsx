@@ -39,30 +39,22 @@ export default function SubTenancyPicker({
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
       {userSubTenantsData?.map((subtenant: ProductionUnit) => {
         return (
-<<<<<<< Updated upstream
-=======
-          <>
->>>>>>> Stashed changes
-            <Link
-              key={subtenant.productionUnitNumber}
-              href={`${pathname}/${subtenant.productionUnitNumber}/dashboard`}
-              className="flex grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
-            >
-              <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
-                <div className="p-4">
-                  <h3 className="ml-2 text-sm font-medium">
-                    {subtenant.name} {subtenant.city}
-                  </h3>
-                </div>
-                <p className="truncate rounded-xl bg-white px-4 py-8 text-center text-2xl">
-                  {subtenant.productionUnitNumber}
-                </p>
+          <Link
+            key={subtenant.productionUnitNumber}
+            href={`${pathname}/${subtenant.productionUnitNumber}/dashboard`}
+            className="flex grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
+          >
+            <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
+              <div className="p-4">
+                <h3 className="ml-2 text-sm font-medium">
+                  {subtenant.name} {subtenant.city}
+                </h3>
               </div>
-            </Link>
-<<<<<<< Updated upstream
-=======
-          </>
->>>>>>> Stashed changes
+              <p className="truncate rounded-xl bg-white px-4 py-8 text-center text-2xl">
+                {subtenant.productionUnitNumber}
+              </p>
+            </div>
+          </Link>
         );
       })}
     </div>
