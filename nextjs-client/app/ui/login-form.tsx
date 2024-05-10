@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   AtSymbolIcon,
@@ -9,8 +9,8 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { Api as AuthAPI, LoginRequestDto } from '../lib/api/auth-api';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'
-
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function LoginForm() {
   const authClient = new AuthAPI({
@@ -20,11 +20,11 @@ export default function LoginForm() {
     },
   }).api;
 
-  const router = useRouter()
+  const router = useRouter();
   const [loginRequestDto, setLoginRequestDto] = useState<LoginRequestDto>({});
 
   const handleLogin = async () => {
-    console.log("Login");
+    console.log('Login');
     var response = await authClient.login(loginRequestDto);
     var data = await response.json();
     console.log(data.result);
@@ -92,6 +92,14 @@ export default function LoginForm() {
         <Button onClick={() => handleLogin()} className="mt-4 w-full">
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
+        <div>
+          <h2>
+            Dont have an account?{' '}
+            <Link className="text-sky-500" href="/register">
+              Click here
+            </Link>
+          </h2>
+        </div>
         <div className="flex h-8 items-end space-x-1">
           {/* Add form errors here */}
         </div>
