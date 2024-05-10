@@ -16,9 +16,14 @@ import { Button } from '../button';
 import { Api as AuthAPI, CreateClaimDto, LoginRequestDto } from '../../lib/api/auth-api';
 
 
+interface Props {
+  claimType: "tenant" | "subtenant"
+  displayText: string
+}
 
-export default function AddTenantModal() {
-  const [tempTenant, setTempTenant] = useState<CreateClaimDto>({claimType: "tenant", claimValue: ""})
+
+export default function AddTenantModal({claimType, displayText}: Props) {
+  const [tempTenant, setTempTenant] = useState<CreateClaimDto>({claimType: claimType, claimValue: ""})
   
   const authClient = new AuthAPI({
     baseUrl: 'http://localhost:5167',
@@ -28,6 +33,7 @@ export default function AddTenantModal() {
   }).api; 
 
   const handleAddTentantClaim = async () => {
+    console.log(tempTenant);
     if(tempTenant.claimValue != ""){
       var response = await authClient.authClaimCreate(tempTenant)
       var data = await response.json();
@@ -39,20 +45,20 @@ export default function AddTenantModal() {
       <DialogTrigger asChild>
         <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
             <PlusIcon className="w-6" />
-            <p className="hidden md:block">New organisation</p>
+            <p className="hidden md:block">New {displayText}</p>
         </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Claim organisation</DialogTitle>
+          <DialogTitle>Claim {displayText}</DialogTitle>
           <DialogDescription>
-            To claim your organisation, you must be the organisation owner, provide the valid CVR-number and go through our manual verification flow.
+            To claim your {displayText}, you must be the organisation owner, provide the valid {claimType == 'tenant' ? 'CVR number' : 'Production Unit Number'} and go through our manual verification flow.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-left">
-              CVR
+              {claimType == "tenant" ? 'CVR' : 'Production Unit Number'}
             </Label>
             <Input
               id="name"
@@ -68,7 +74,7 @@ export default function AddTenantModal() {
           </div>
         </div>
         <DialogFooter className="sm:justify-end">
-          <Button onClick={() => {handleAddTentantClaim()}} type="submit">Claim organisation</Button>
+          <Button onClick={() => {handleAddTentantClaim()}} type="submit">Claim {displayText}</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
