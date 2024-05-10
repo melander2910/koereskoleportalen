@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
 import {
   AtSymbolIcon,
   KeyIcon,
-  ExclamationCircleIcon,
+
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
@@ -11,6 +11,7 @@ import { Api as AuthAPI, LoginRequestDto } from '../lib/api/auth-api';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+
 
 export default function LoginForm() {
   const authClient = new AuthAPI({
@@ -24,11 +25,17 @@ export default function LoginForm() {
   const [loginRequestDto, setLoginRequestDto] = useState<LoginRequestDto>({});
 
   const handleLogin = async () => {
-    console.log('Login');
     var response = await authClient.login(loginRequestDto);
     var data = await response.json();
-    console.log(data.result);
-    router.push(`/${data.result.tenantClaims[0]}`);
+
+    if(localStorage.getItem("currentTenant") != null){
+      var currentTenant = localStorage.getItem("currentTenant")!;
+      router.push(`/${currentTenant}`);
+    } else {
+      localStorage.setItem("currentTenant", data.result.tenantClaims[0])
+      router.push(`/${data.result.tenantClaims[0]}`);
+    }
+    
   };
 
   return (

@@ -16,7 +16,6 @@ export default function Page({ params }: { params: { tenant: string } }) {
   }).api;
 
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <main>

@@ -1,33 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export default async function middleware(req: NextRequest) {
-  // const protectedRoutes = ['/', '/dashboard'];
   const publicRoutes = ['/login', '/signup', '/favicon.ico', '/register'];
   const path = req.nextUrl.pathname;
-  // const isProtectedRoute = protectedRoutes.includes(path);
   const isPublicRoute = publicRoutes.includes(path);
   const jwtToken = req.cookies.get('jwtToken')?.value;
-  console.log(jwtToken);
-  console.log(path);
 
-  const tenantClaims = req.cookies.get('tenantClaims')?.value;
+  if(jwtToken && path == "/logout"){
+    console.log("have jwt and visit logout")
+    const response = NextResponse.redirect(new URL(`/login`, req.nextUrl));
+    response.cookies.delete('jwtToken');
+    return response;
+  }
 
   if (!jwtToken && !isPublicRoute) {
-    console.log('User is not authenticated');
+    console.log("dont have jwt and visit non public")
+
     return NextResponse.redirect(new URL('/login', req.nextUrl));
   }
 
   // check if cookie is valid too?
   // you cannot make requests to backend with invalid cookie, but frontend might need to handle it so it does not look weird
-  if (jwtToken && path == '/login') {
-    return NextResponse.redirect(new URL(`/`, req.nextUrl));
+  if(jwtToken && path == "/login"){
+    console.log("have jwt and visit login")
+
+    // TODO: add currentTenant to response from server?
+    // var currentTenant = localStorage.getItem("currentTenant")!;
+    return NextResponse.redirect(new URL(`/${"tenant"}`, req.nextUrl));
+
   }
 
-  if (jwtToken && path == '/logout') {
-    const response = NextResponse.redirect(new URL(`/login`, req.nextUrl));
-    response.cookies.delete('jwtToken');
-    return response;
-  }
+  
 
   return NextResponse.next();
 }

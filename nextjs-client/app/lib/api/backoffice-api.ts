@@ -692,7 +692,7 @@ export class Api<
      * @secure
      */
     getSubTenantsByUserId: (params: RequestParams = {}) =>
-      this.request<Organisation[], any>({
+      this.request<ProductionUnit[], any>({
         path: `/api/SubTenant`,
         method: 'GET',
         secure: true,
