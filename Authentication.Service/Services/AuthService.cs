@@ -62,9 +62,9 @@ public class AuthService : IAuthService
         return await _authRepository.RefreshToken(model);
     }
 
-    public async Task<bool> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
+    public async Task<string> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
     {   
-        await _authRepository.CreateClaim(user, createClaimDto);
+        var jwtToken = await _authRepository.CreateClaim(user, createClaimDto);
         
         var userIdString = user.FindFirstValue(ClaimTypes.NameIdentifier);
         var userIdGuid = new Guid(userIdString);
@@ -88,6 +88,6 @@ public class AuthService : IAuthService
                 });
         }
         
-        return true;
+        return jwtToken;
     }
 }

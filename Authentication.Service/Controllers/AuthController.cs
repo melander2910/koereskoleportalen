@@ -121,8 +121,15 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> CreateClaim([FromBody] CreateClaimDto createClaimDto)
     {
         var user = HttpContext.User;
-        var result = await _authService.CreateClaim(user, createClaimDto);
-        return Ok(result);
+        var newJwtToken = await _authService.CreateClaim(user, createClaimDto);
+        Response.Cookies.Append("jwtToken", newJwtToken, new CookieOptions
+        {
+            HttpOnly = true,
+            SameSite = SameSiteMode.None,
+            Secure = true
+        });
+        
+        return Ok("Success");
     }
     
     /*[HttpGet("Weather", Name = "GetWeatherForecast")]

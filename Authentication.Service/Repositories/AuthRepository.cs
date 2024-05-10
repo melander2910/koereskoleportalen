@@ -130,7 +130,6 @@ public class AuthRepository : IAuthRepository
         if (principal?.Identity?.Name is null)
         {
             return new LoginResponseDto();
-            ;
         }
 
         var identityUser = await _userManager.FindByNameAsync(principal.Identity.Name);
@@ -138,7 +137,6 @@ public class AuthRepository : IAuthRepository
             identityUser.RefreshTokenExpiry < DateTime.UtcNow)
         {
             return new LoginResponseDto();
-            ;
         }
 
         var roles = await _userManager.GetRolesAsync(identityUser);
@@ -184,17 +182,19 @@ public class AuthRepository : IAuthRepository
         };
         return new JwtSecurityTokenHandler().ValidateToken(jwtToken, validation, out _);
     }
+    
+    
 
-    public async Task<bool> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
+    public async Task<string> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
     {
-        var userIdentity = await _userManager.GetUserAsync(user);
+        var identityUser = await _userManager.GetUserAsync(user);
 
-        if (userIdentity == null)
+        if (identityUser == null)
         {
             throw new Exception("Error with the given user identity");
         } 
         
-        var existingClaims = await _userManager.GetClaimsAsync(userIdentity);
+        var existingClaims = await _userManager.GetClaimsAsync(identityUser);
 
         foreach (var claim in existingClaims)
         {
@@ -206,8 +206,16 @@ public class AuthRepository : IAuthRepository
         
         var newClaim = new Claim($"{createClaimDto.ClaimType}", $"{createClaimDto.ClaimValue}");
         
-        await _userManager.AddClaimAsync(userIdentity, newClaim);
-        return true;
+        await _userManager.AddClaimAsync(identityUser, newClaim);
+        
+        // return new JWT Token to user
+        var roles = await _userManager.GetRolesAsync(identityUser);
+        var claims = await _userManager.GetClaimsAsync(identityUser);
+        var token = _jwtTokenGeneratorService.GenerateToken(identityUser, roles, claims);
+        
+        // TODO: do we need any refresh token handling here?
+        
+        return token;
     }
 
 }
