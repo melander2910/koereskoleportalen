@@ -19,9 +19,7 @@ variables:
   dockerfile5: 'sync_service'
 
 steps:
-  - task: UseDocker@0
-    inputs:
-      containerRegistry: $(dockerRegistryServiceConnection)
+  - task: Docker@0
 
   - script: |
       docker-compose -f docker-compose.yml build
