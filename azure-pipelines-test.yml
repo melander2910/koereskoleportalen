@@ -10,20 +10,62 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
+  dockerRegistryServiceConnection: 'docker-service-connection'
+  containerRegistry: 'azure-container-registry'
+  dockerfile1: 'portal_api'
+  dockerfile2: 'portal-mongodb'
+  dockerfile3: 'portal-client'
+  dockerfile4: 'postgress_backoffice'
+  dockerfile5: 'sync_service'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Portal.API/Dockerfile'
-        tags: Latest
-          $(tag)
+steps:
+  - task: UseDocker@0
+    inputs:
+      containerRegistry: $(dockerRegistryServiceConnection)
+
+  - script: |
+      docker-compose -f docker-compose.yml build
+    displayName: 'Build Docker images using Docker Compose'
+
+  - script: |
+      docker-compose -f docker-compose.yml up -d
+    displayName: 'Run Docker Compose services'
+
+  - script: |
+      docker-compose -f docker-compose.yml down
+    displayName: 'Tear down Docker Compose services'
+
+  - task: Docker@2
+    displayName: Push Docker image 1
+    inputs:
+      containerRegistry: $(dockerRegistryServiceConnection)
+      repository: $(containerRegistry)/$(imageName1)
+      command: push
+      tags: |
+        $(Build.BuildId)
+
+  - task: Docker@2
+    displayName: Push Docker image 2
+    inputs:
+      containerRegistry: $(dockerRegistryServiceConnection)
+      repository: $(containerRegistry)/$(imageName2)
+      command: push
+      tags: |
+        $(Build.BuildId)       
+  - task: Docker@2
+    displayName: Push Docker image 3
+    inputs:
+      containerRegistry: $(dockerRegistryServiceConnection)
+      repository: $(containerRegistry)/$(imageName3)
+      command: push
+      tags: |
+        $(Build.BuildId)       
+  - task: Docker@2
+    displayName: Push Docker image 4
+    inputs:
+      containerRegistry: $(dockerRegistryServiceConnection)
+      repository: $(containerRegistry)/$(imageName4)
+      command: push
+      tags: |
+        $(Build.BuildId)       
+
