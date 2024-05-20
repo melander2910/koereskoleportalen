@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Dto
+  commentId: N:BackOffice.API.Dto
+  id: BackOffice.API.Dto
+  children:
+  - BackOffice.API.Dto.OrganisationCreateDto
+  - BackOffice.API.Dto.ProductionUnitCreateDto
+  - BackOffice.API.Dto.ProductionUnitUpdateDto
+  - BackOffice.API.Dto.TenantRequestDto
+  - BackOffice.API.Dto.UserSignupDto
+  - BackOffice.API.Dto.UserUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Dto
+  nameWithType: BackOffice.API.Dto
+  fullName: BackOffice.API.Dto
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Dto.OrganisationCreateDto
+  commentId: T:BackOffice.API.Dto.OrganisationCreateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.OrganisationCreateDto.html
+  name: OrganisationCreateDto
+  nameWithType: OrganisationCreateDto
+  fullName: BackOffice.API.Dto.OrganisationCreateDto
+- uid: BackOffice.API.Dto.ProductionUnitCreateDto
+  commentId: T:BackOffice.API.Dto.ProductionUnitCreateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.ProductionUnitCreateDto.html
+  name: ProductionUnitCreateDto
+  nameWithType: ProductionUnitCreateDto
+  fullName: BackOffice.API.Dto.ProductionUnitCreateDto
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto
+  commentId: T:BackOffice.API.Dto.ProductionUnitUpdateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html
+  name: ProductionUnitUpdateDto
+  nameWithType: ProductionUnitUpdateDto
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto
+- uid: BackOffice.API.Dto.TenantRequestDto
+  commentId: T:BackOffice.API.Dto.TenantRequestDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.TenantRequestDto.html
+  name: TenantRequestDto
+  nameWithType: TenantRequestDto
+  fullName: BackOffice.API.Dto.TenantRequestDto
+- uid: BackOffice.API.Dto.UserSignupDto
+  commentId: T:BackOffice.API.Dto.UserSignupDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.UserSignupDto.html
+  name: UserSignupDto
+  nameWithType: UserSignupDto
+  fullName: BackOffice.API.Dto.UserSignupDto
+- uid: BackOffice.API.Dto.UserUpdateDto
+  commentId: T:BackOffice.API.Dto.UserUpdateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.UserUpdateDto.html
+  name: UserUpdateDto
+  nameWithType: UserUpdateDto
+  fullName: BackOffice.API.Dto.UserUpdateDto
+- uid: BackOffice.API.Dto
+  commentId: N:BackOffice.API.Dto
+  href: BackOffice.html
+  name: BackOffice.API.Dto
+  nameWithType: BackOffice.API.Dto
+  fullName: BackOffice.API.Dto
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html

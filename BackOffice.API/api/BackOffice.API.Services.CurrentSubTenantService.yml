@@ -1,0 +1,585 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Services.CurrentSubTenantService
+  commentId: T:BackOffice.API.Services.CurrentSubTenantService
+  id: CurrentSubTenantService
+  parent: BackOffice.API.Services
+  children:
+  - BackOffice.API.Services.CurrentSubTenantService.SetSubTenant(System.String)
+  - BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+  langs:
+  - csharp
+  - vb
+  name: CurrentSubTenantService
+  nameWithType: CurrentSubTenantService
+  fullName: BackOffice.API.Services.CurrentSubTenantService
+  type: Class
+  source:
+    remote:
+      path: BackOffice.API/Services/CurrentSubTenantService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: CurrentSubTenantService
+    path: Services/CurrentSubTenantService.cs
+    startLine: 6
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services
+  syntax:
+    content: 'public class CurrentSubTenantService : ICurrentSubTenantService'
+    content.vb: Public Class CurrentSubTenantService Implements ICurrentSubTenantService
+  inheritance:
+  - System.Object
+  implements:
+  - BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+  commentId: P:BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+  id: SubTenantId
+  parent: BackOffice.API.Services.CurrentSubTenantService
+  langs:
+  - csharp
+  - vb
+  name: SubTenantId
+  nameWithType: CurrentSubTenantService.SubTenantId
+  fullName: BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Services/CurrentSubTenantService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: SubTenantId
+    path: Services/CurrentSubTenantService.cs
+    startLine: 15
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services
+  example: []
+  syntax:
+    content: public string SubTenantId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SubTenantId As String
+  overload: BackOffice.API.Services.CurrentSubTenantService.SubTenantId*
+  implements:
+  - BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SubTenantId
+- uid: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant(System.String)
+  commentId: M:BackOffice.API.Services.CurrentSubTenantService.SetSubTenant(System.String)
+  id: SetSubTenant(System.String)
+  parent: BackOffice.API.Services.CurrentSubTenantService
+  langs:
+  - csharp
+  - vb
+  name: SetSubTenant(string)
+  nameWithType: CurrentSubTenantService.SetSubTenant(string)
+  fullName: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant(string)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/CurrentSubTenantService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: SetSubTenant
+    path: Services/CurrentSubTenantService.cs
+    startLine: 17
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services
+  example: []
+  syntax:
+    content: public Task<bool> SetSubTenant(string subTenantId)
+    parameters:
+    - id: subTenantId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function SetSubTenant(subTenantId As String) As Task(Of Boolean)
+  overload: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant*
+  implements:
+  - BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(System.String)
+  nameWithType.vb: CurrentSubTenantService.SetSubTenant(String)
+  fullName.vb: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant(String)
+  name.vb: SetSubTenant(String)
+references:
+- uid: BackOffice.API.Services
+  commentId: N:BackOffice.API.Services
+  href: BackOffice.html
+  name: BackOffice.API.Services
+  nameWithType: BackOffice.API.Services
+  fullName: BackOffice.API.Services
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html
+  name: ICurrentSubTenantService
+  nameWithType: ICurrentSubTenantService
+  fullName: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BackOffice.API.Services.Interfaces
+  commentId: N:BackOffice.API.Services.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Services.Interfaces
+  nameWithType: BackOffice.API.Services.Interfaces
+  fullName: BackOffice.API.Services.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+- uid: BackOffice.API.Services.CurrentSubTenantService.SubTenantId*
+  commentId: Overload:BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+  href: BackOffice.API.Services.CurrentSubTenantService.html#BackOffice_API_Services_CurrentSubTenantService_SubTenantId
+  name: SubTenantId
+  nameWithType: CurrentSubTenantService.SubTenantId
+  fullName: BackOffice.API.Services.CurrentSubTenantService.SubTenantId
+- uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SubTenantId
+  commentId: P:BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SubTenantId
+  parent: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html#BackOffice_API_Services_Interfaces_ICurrentSubTenantService_SubTenantId
+  name: SubTenantId
+  nameWithType: ICurrentSubTenantService.SubTenantId
+  fullName: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SubTenantId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant*
+  commentId: Overload:BackOffice.API.Services.CurrentSubTenantService.SetSubTenant
+  href: BackOffice.API.Services.CurrentSubTenantService.html#BackOffice_API_Services_CurrentSubTenantService_SetSubTenant_System_String_
+  name: SetSubTenant
+  nameWithType: CurrentSubTenantService.SetSubTenant
+  fullName: BackOffice.API.Services.CurrentSubTenantService.SetSubTenant
+- uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(System.String)
+  commentId: M:BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(System.String)
+  parent: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  isExternal: true
+  href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html#BackOffice_API_Services_Interfaces_ICurrentSubTenantService_SetSubTenant_System_String_
+  name: SetSubTenant(string)
+  nameWithType: ICurrentSubTenantService.SetSubTenant(string)
+  fullName: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(string)
+  nameWithType.vb: ICurrentSubTenantService.SetSubTenant(String)
+  fullName.vb: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(String)
+  name.vb: SetSubTenant(String)
+  spec.csharp:
+  - uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(System.String)
+    name: SetSubTenant
+    href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html#BackOffice_API_Services_Interfaces_ICurrentSubTenantService_SetSubTenant_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.SetSubTenant(System.String)
+    name: SetSubTenant
+    href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html#BackOffice_API_Services_Interfaces_ICurrentSubTenantService_SetSubTenant_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -1,0 +1,306 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  commentId: T:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  id: IDrivingSchoolRepository
+  parent: Portal.API.Repositories.Interfaces
+  children:
+  - Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync
+  - Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IDrivingSchoolRepository
+  nameWithType: IDrivingSchoolRepository
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  type: Interface
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IDrivingSchoolRepository
+    path: ../Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+    startLine: 4
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: public interface IDrivingSchoolRepository
+    content.vb: Public Interface IDrivingSchoolRepository
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync
+  commentId: M:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync
+  id: GetAllAsync
+  parent: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IDrivingSchoolRepository.GetAllAsync()
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllAsync
+    path: ../Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+    startLine: 6
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: Task<List<DrivingSchool>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.DrivingSchool}}
+    content.vb: Function GetAllAsync() As Task(Of List(Of DrivingSchool))
+  overload: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync*
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync(System.String)
+  commentId: M:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(string)
+  nameWithType: IDrivingSchoolRepository.GetAsync(string)
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAsync
+    path: ../Portal.API/Repositories/Interfaces/IDrivingSchoolRepository.cs
+    startLine: 7
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: Task<DrivingSchool> GetAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Portal.API.Models.DrivingSchool}
+    content.vb: Function GetAsync(id As String) As Task(Of DrivingSchool)
+  overload: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync*
+  nameWithType.vb: IDrivingSchoolRepository.GetAsync(String)
+  fullName.vb: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync(String)
+  name.vb: GetAsync(String)
+references:
+- uid: Portal.API.Repositories.Interfaces
+  commentId: N:Portal.API.Repositories.Interfaces
+  href: Portal.html
+  name: Portal.API.Repositories.Interfaces
+  nameWithType: Portal.API.Repositories.Interfaces
+  fullName: Portal.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync*
+  commentId: Overload:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync
+  href: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.html#Portal_API_Repositories_Interfaces_IDrivingSchoolRepository_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IDrivingSchoolRepository.GetAllAsync
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.DrivingSchool}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.DrivingSchool}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<DrivingSchool>>
+  nameWithType: Task<List<DrivingSchool>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Portal.API.Models.DrivingSchool>>
+  nameWithType.vb: Task(Of List(Of DrivingSchool))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Portal.API.Models.DrivingSchool))
+  name.vb: Task(Of List(Of DrivingSchool))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Portal.API.Models.DrivingSchool
+    name: DrivingSchool
+    href: Portal.API.Models.DrivingSchool.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Portal.API.Models.DrivingSchool
+    name: DrivingSchool
+    href: Portal.API.Models.DrivingSchool.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync*
+  commentId: Overload:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync
+  href: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.html#Portal_API_Repositories_Interfaces_IDrivingSchoolRepository_GetAsync_System_String_
+  name: GetAsync
+  nameWithType: IDrivingSchoolRepository.GetAsync
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.GetAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{Portal.API.Models.DrivingSchool}
+  commentId: T:System.Threading.Tasks.Task{Portal.API.Models.DrivingSchool}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DrivingSchool>
+  nameWithType: Task<DrivingSchool>
+  fullName: System.Threading.Tasks.Task<Portal.API.Models.DrivingSchool>
+  nameWithType.vb: Task(Of DrivingSchool)
+  fullName.vb: System.Threading.Tasks.Task(Of Portal.API.Models.DrivingSchool)
+  name.vb: Task(Of DrivingSchool)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Portal.API.Models.DrivingSchool
+    name: DrivingSchool
+    href: Portal.API.Models.DrivingSchool.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Portal.API.Models.DrivingSchool
+    name: DrivingSchool
+    href: Portal.API.Models.DrivingSchool.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Migrations
+  commentId: N:Authentication.Service.Migrations
+  id: Authentication.Service.Migrations
+  children:
+  - Authentication.Service.Migrations.AddedRefrshToken
+  - Authentication.Service.Migrations.identityInitialCreate
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Migrations
+  nameWithType: Authentication.Service.Migrations
+  fullName: Authentication.Service.Migrations
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Migrations.identityInitialCreate
+  commentId: T:Authentication.Service.Migrations.identityInitialCreate
+  href: Authentication.Service.Migrations.identityInitialCreate.html
+  name: identityInitialCreate
+  nameWithType: identityInitialCreate
+  fullName: Authentication.Service.Migrations.identityInitialCreate
+- uid: Authentication.Service.Migrations.AddedRefrshToken
+  commentId: T:Authentication.Service.Migrations.AddedRefrshToken
+  href: Authentication.Service.Migrations.AddedRefrshToken.html
+  name: AddedRefrshToken
+  nameWithType: AddedRefrshToken
+  fullName: Authentication.Service.Migrations.AddedRefrshToken

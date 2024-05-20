@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Services.Interfaces
+  commentId: N:BackOffice.API.Services.Interfaces
+  id: BackOffice.API.Services.Interfaces
+  children:
+  - BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  - BackOffice.API.Services.Interfaces.ICurrentTenantService
+  - BackOffice.API.Services.Interfaces.IOrganisationService
+  - BackOffice.API.Services.Interfaces.IProductionUnitService
+  - BackOffice.API.Services.Interfaces.ISubTenantService
+  - BackOffice.API.Services.Interfaces.ITenantService
+  - BackOffice.API.Services.Interfaces.IUserService
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Services.Interfaces
+  nameWithType: BackOffice.API.Services.Interfaces
+  fullName: BackOffice.API.Services.Interfaces
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html
+  name: ICurrentSubTenantService
+  nameWithType: ICurrentSubTenantService
+  fullName: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+- uid: BackOffice.API.Services.Interfaces.ICurrentTenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ICurrentTenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ICurrentTenantService.html
+  name: ICurrentTenantService
+  nameWithType: ICurrentTenantService
+  fullName: BackOffice.API.Services.Interfaces.ICurrentTenantService
+- uid: BackOffice.API.Services.Interfaces.IOrganisationService
+  commentId: T:BackOffice.API.Services.Interfaces.IOrganisationService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.IOrganisationService.html
+  name: IOrganisationService
+  nameWithType: IOrganisationService
+  fullName: BackOffice.API.Services.Interfaces.IOrganisationService
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService
+  commentId: T:BackOffice.API.Services.Interfaces.IProductionUnitService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html
+  name: IProductionUnitService
+  nameWithType: IProductionUnitService
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService
+- uid: BackOffice.API.Services.Interfaces.ISubTenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ISubTenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ISubTenantService.html
+  name: ISubTenantService
+  nameWithType: ISubTenantService
+  fullName: BackOffice.API.Services.Interfaces.ISubTenantService
+- uid: BackOffice.API.Services.Interfaces.ITenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ITenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ITenantService.html
+  name: ITenantService
+  nameWithType: ITenantService
+  fullName: BackOffice.API.Services.Interfaces.ITenantService
+- uid: BackOffice.API.Services.Interfaces.IUserService
+  commentId: T:BackOffice.API.Services.Interfaces.IUserService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: BackOffice.API.Services.Interfaces.IUserService
+- uid: BackOffice.API.Services.Interfaces
+  commentId: N:BackOffice.API.Services.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Services.Interfaces
+  nameWithType: BackOffice.API.Services.Interfaces
+  fullName: BackOffice.API.Services.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html

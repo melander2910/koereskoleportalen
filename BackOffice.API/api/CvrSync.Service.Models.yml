@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: CvrSync.Service.Models
+  commentId: N:CvrSync.Service.Models
+  id: CvrSync.Service.Models
+  children:
+  - CvrSync.Service.Models.Address
+  - CvrSync.Service.Models.BusinessType
+  - CvrSync.Service.Models.CvrAuthenticationSettings
+  - CvrSync.Service.Models.DrivingSchool
+  - CvrSync.Service.Models.DrivingSchoolQuery
+  - CvrSync.Service.Models.MetaData
+  - CvrSync.Service.Models.Municipality
+  - CvrSync.Service.Models.NewestName
+  - CvrSync.Service.Models.Organisation
+  - CvrSync.Service.Models.OrganisationProp
+  - CvrSync.Service.Models.OrganisationQuery
+  - CvrSync.Service.Models.OrganisationRelation
+  - CvrSync.Service.Models.PortalDatabaseSettings
+  - CvrSync.Service.Models.ProductionUnit
+  - CvrSync.Service.Models.Unit
+  langs:
+  - csharp
+  - vb
+  name: CvrSync.Service.Models
+  nameWithType: CvrSync.Service.Models
+  fullName: CvrSync.Service.Models
+  type: Namespace
+  assemblies:
+  - CvrSync.Service
+references:
+- uid: CvrSync.Service.Models.DrivingSchoolQuery
+  commentId: T:CvrSync.Service.Models.DrivingSchoolQuery
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.DrivingSchoolQuery.html
+  name: DrivingSchoolQuery
+  nameWithType: DrivingSchoolQuery
+  fullName: CvrSync.Service.Models.DrivingSchoolQuery
+- uid: CvrSync.Service.Models.Unit
+  commentId: T:CvrSync.Service.Models.Unit
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.Unit.html
+  name: Unit
+  nameWithType: Unit
+  fullName: CvrSync.Service.Models.Unit
+- uid: CvrSync.Service.Models.OrganisationRelation
+  commentId: T:CvrSync.Service.Models.OrganisationRelation
+  href: CvrSync.Service.Models.OrganisationRelation.html
+  name: OrganisationRelation
+  nameWithType: OrganisationRelation
+  fullName: CvrSync.Service.Models.OrganisationRelation
+- uid: CvrSync.Service.Models.OrganisationQuery
+  commentId: T:CvrSync.Service.Models.OrganisationQuery
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.OrganisationQuery.html
+  name: OrganisationQuery
+  nameWithType: OrganisationQuery
+  fullName: CvrSync.Service.Models.OrganisationQuery
+- uid: CvrSync.Service.Models.OrganisationProp
+  commentId: T:CvrSync.Service.Models.OrganisationProp
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.OrganisationProp.html
+  name: OrganisationProp
+  nameWithType: OrganisationProp
+  fullName: CvrSync.Service.Models.OrganisationProp
+- uid: CvrSync.Service.Models.ProductionUnit
+  commentId: T:CvrSync.Service.Models.ProductionUnit
+  href: CvrSync.Service.Models.ProductionUnit.html
+  name: ProductionUnit
+  nameWithType: ProductionUnit
+  fullName: CvrSync.Service.Models.ProductionUnit
+- uid: CvrSync.Service.Models.MetaData
+  commentId: T:CvrSync.Service.Models.MetaData
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.MetaData.html
+  name: MetaData
+  nameWithType: MetaData
+  fullName: CvrSync.Service.Models.MetaData
+- uid: CvrSync.Service.Models.NewestName
+  commentId: T:CvrSync.Service.Models.NewestName
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.NewestName.html
+  name: NewestName
+  nameWithType: NewestName
+  fullName: CvrSync.Service.Models.NewestName
+- uid: CvrSync.Service.Models.Address
+  commentId: T:CvrSync.Service.Models.Address
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: CvrSync.Service.Models.Address
+- uid: CvrSync.Service.Models.Municipality
+  commentId: T:CvrSync.Service.Models.Municipality
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.Municipality.html
+  name: Municipality
+  nameWithType: Municipality
+  fullName: CvrSync.Service.Models.Municipality
+- uid: CvrSync.Service.Models.BusinessType
+  commentId: T:CvrSync.Service.Models.BusinessType
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.BusinessType.html
+  name: BusinessType
+  nameWithType: BusinessType
+  fullName: CvrSync.Service.Models.BusinessType
+- uid: CvrSync.Service.Models.DrivingSchool
+  commentId: T:CvrSync.Service.Models.DrivingSchool
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.DrivingSchool.html
+  name: DrivingSchool
+  nameWithType: DrivingSchool
+  fullName: CvrSync.Service.Models.DrivingSchool
+- uid: CvrSync.Service.Models.CvrAuthenticationSettings
+  commentId: T:CvrSync.Service.Models.CvrAuthenticationSettings
+  href: CvrSync.Service.Models.CvrAuthenticationSettings.html
+  name: CvrAuthenticationSettings
+  nameWithType: CvrAuthenticationSettings
+  fullName: CvrSync.Service.Models.CvrAuthenticationSettings
+- uid: CvrSync.Service.Models.PortalDatabaseSettings
+  commentId: T:CvrSync.Service.Models.PortalDatabaseSettings
+  href: CvrSync.Service.Models.PortalDatabaseSettings.html
+  name: PortalDatabaseSettings
+  nameWithType: PortalDatabaseSettings
+  fullName: CvrSync.Service.Models.PortalDatabaseSettings
+- uid: CvrSync.Service.Models.Organisation
+  commentId: T:CvrSync.Service.Models.Organisation
+  parent: CvrSync.Service.Models
+  href: CvrSync.Service.Models.Organisation.html
+  name: Organisation
+  nameWithType: Organisation
+  fullName: CvrSync.Service.Models.Organisation
+- uid: CvrSync.Service.Models
+  commentId: N:CvrSync.Service.Models
+  href: CvrSync.html
+  name: CvrSync.Service.Models
+  nameWithType: CvrSync.Service.Models
+  fullName: CvrSync.Service.Models
+  spec.csharp:
+  - uid: CvrSync
+    name: CvrSync
+    href: CvrSync.html
+  - name: .
+  - uid: CvrSync.Service
+    name: Service
+    href: CvrSync.Service.html
+  - name: .
+  - uid: CvrSync.Service.Models
+    name: Models
+    href: CvrSync.Service.Models.html
+  spec.vb:
+  - uid: CvrSync
+    name: CvrSync
+    href: CvrSync.html
+  - name: .
+  - uid: CvrSync.Service
+    name: Service
+    href: CvrSync.Service.html
+  - name: .
+  - uid: CvrSync.Service.Models
+    name: Models
+    href: CvrSync.Service.Models.html

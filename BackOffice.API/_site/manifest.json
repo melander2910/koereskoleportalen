@@ -1,0 +1,1648 @@
+{
+  "source_base_path": "/Users/kristianhadberg/Documents/KEASWD/dls/koereskoleportalen/BackOffice.API",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Controllers.AuthController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Data.ApplicationDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Data.ApplicationDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.AssignRoleRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.AssignRoleRequestDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.CreateClaimDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.CreateClaimDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.LoginRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.LoginRequestDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.LoginResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.LoginResponseDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.RefreshTokenDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.RefreshTokenDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.RegistrationRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.RegistrationRequestDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.ResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.ResponseDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.UserDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.UserDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.UserSignupDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.UserSignupDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Dto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Extensions.WebApplicationBuilderExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Extensions.WebApplicationBuilderExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Migrations.AddedRefrshToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Migrations.AddedRefrshToken.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Migrations.identityInitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Migrations.identityInitialCreate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Models.ExtendedIdentityUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Models.ExtendedIdentityUser.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Models.JwtOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Models.JwtOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Repositories.AuthRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Repositories.AuthRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Repositories.Interfaces.IAuthRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Repositories.Interfaces.IAuthRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Repositories.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Repositories.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Repositories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.AuthService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.AuthService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.Interfaces.IAuthService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.Interfaces.IAuthService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.JwtTokenGeneratorService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.JwtTokenGeneratorService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Utils.Enums.AuthorizationRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Utils.Enums.AuthorizationRoles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Utils.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Utils.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Authentication.Service.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Authentication.Service.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Consumers.TenantClaimCreatedEventConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Consumers.TenantClaimCreatedEventConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Consumers.UserCreatedEventConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Consumers.UserCreatedEventConsumer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Consumers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Consumers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.OrganisationController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.OrganisationController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.ProductionUnitController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.ProductionUnitController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.SubTenantController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.SubTenantController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.TenantController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.TenantController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.UserController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.UserController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Data.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Data.Context.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Data.SubTenantDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Data.SubTenantDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Data.TenantDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Data.TenantDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.OrganisationCreateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.OrganisationCreateDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.ProductionUnitCreateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.ProductionUnitCreateDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.ProductionUnitUpdateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.ProductionUnitUpdateDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.TenantRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.TenantRequestDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.UserSignupDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.UserSignupDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.UserUpdateDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.UserUpdateDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Dto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Extensions.WebApplicationBuilderExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Extensions.WebApplicationBuilderExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Middleware.TenantResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Middleware.TenantResolver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Middleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.AbstractTenantTwo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.AbstractTenantTwo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.AddedFixAbstractClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.AddedFixAbstractClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.AddedUserEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.AddedUserEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.InitialCreateBackOffice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.InitialCreateBackOffice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.NullableProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.NullableProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.ProductionUnitRemoved.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.ProductionUnitRemoved.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.SpecifyingTableNames.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.SpecifyingTableNames.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.abstracttenancy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.abstracttenancy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.tenantId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.tenantId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.Abstracts.BaseEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.Abstracts.BaseEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.Abstracts.SubTenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.Abstracts.SubTenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.Abstracts.Tenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.Abstracts.Tenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.Abstracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.Abstracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.Course.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.Course.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.Organisation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.Organisation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.ProductionUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.ProductionUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.User.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Models.DatabaseEntities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Models.DatabaseEntities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.IOrganisationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.IProductionUnitRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.IProductionUnitRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.ISubTenantRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.ISubTenantRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.ITenantRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.ITenantRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.IUserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.IUserRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.OrganisationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.OrganisationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.ProductionUnitRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.ProductionUnitRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.SubTenantRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.SubTenantRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.TenantRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.TenantRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.UserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.UserRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Repositories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.CurrentSubTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.CurrentSubTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.CurrentTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.CurrentTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.ICurrentSubTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.ICurrentSubTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.ICurrentTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.ICurrentTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.IOrganisationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.IOrganisationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.IProductionUnitService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.IProductionUnitService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.ISubTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.ISubTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.ITenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.ITenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.IUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.IUserService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.OrganisationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.OrganisationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.ProductionUnitService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.ProductionUnitService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.SubTenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.SubTenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.TenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.TenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.UserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.UserService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.WeatherForecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.WeatherForecast.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BackOffice.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BackOffice.API.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.ProductionUnitUpdatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.ProductionUnitUpdatedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.SubTenantClaimCreatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.SubTenantClaimCreatedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.TenantClaimCreatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.TenantClaimCreatedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.UserCreatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.UserCreatedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.Address.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.BusinessType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.BusinessType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.CvrAuthenticationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.CvrAuthenticationSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.DrivingSchool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.DrivingSchool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.DrivingSchoolQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.DrivingSchoolQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.MetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.MetaData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.Municipality.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.Municipality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.NewestName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.NewestName.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.Organisation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.Organisation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.OrganisationProp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.OrganisationProp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.OrganisationQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.OrganisationQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.OrganisationRelation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.OrganisationRelation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.PortalDatabaseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.PortalDatabaseSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.ProductionUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.ProductionUnit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.Unit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Services.ElasticSearchService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Services.ElasticSearchService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Services.MongoDBClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Services.MongoDBClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Services.NewElasticSearchService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Services.NewElasticSearchService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CvrSync.Service.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CvrSync.Service.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Controllers.DrivingSchoolController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Controllers.DrivingSchoolController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Controllers.OrganisationController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Controllers.OrganisationController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Data.MongoDbClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Data.MongoDbClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Models.DrivingSchool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Models.DrivingSchool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Models.Organisation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Models.Organisation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Models.PortalDatabaseSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Models.PortalDatabaseSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.DrivingSchoolRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.DrivingSchoolRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.Interfaces.IOrganisationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.Interfaces.IOrganisationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.OrganisationRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.OrganisationRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Repositories.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.Interfaces.DrivingSchoolService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.Interfaces.DrivingSchoolService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.Interfaces.IDrivingSchoolService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.Interfaces.IDrivingSchoolService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.Interfaces.IOrganisationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.Interfaces.IOrganisationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.OrganisationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.OrganisationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Portal.API.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Portal.API.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Repositories
+  commentId: N:BackOffice.API.Repositories
+  id: BackOffice.API.Repositories
+  children:
+  - BackOffice.API.Repositories.OrganisationRepository
+  - BackOffice.API.Repositories.ProductionUnitRepository
+  - BackOffice.API.Repositories.SubTenantRepository
+  - BackOffice.API.Repositories.TenantRepository
+  - BackOffice.API.Repositories.UserRepository
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Repositories
+  nameWithType: BackOffice.API.Repositories
+  fullName: BackOffice.API.Repositories
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Repositories.OrganisationRepository
+  commentId: T:BackOffice.API.Repositories.OrganisationRepository
+  href: BackOffice.API.Repositories.OrganisationRepository.html
+  name: OrganisationRepository
+  nameWithType: OrganisationRepository
+  fullName: BackOffice.API.Repositories.OrganisationRepository
+- uid: BackOffice.API.Repositories.ProductionUnitRepository
+  commentId: T:BackOffice.API.Repositories.ProductionUnitRepository
+  href: BackOffice.API.Repositories.ProductionUnitRepository.html
+  name: ProductionUnitRepository
+  nameWithType: ProductionUnitRepository
+  fullName: BackOffice.API.Repositories.ProductionUnitRepository
+- uid: BackOffice.API.Repositories.SubTenantRepository
+  commentId: T:BackOffice.API.Repositories.SubTenantRepository
+  href: BackOffice.API.Repositories.SubTenantRepository.html
+  name: SubTenantRepository
+  nameWithType: SubTenantRepository
+  fullName: BackOffice.API.Repositories.SubTenantRepository
+- uid: BackOffice.API.Repositories.TenantRepository
+  commentId: T:BackOffice.API.Repositories.TenantRepository
+  href: BackOffice.API.Repositories.TenantRepository.html
+  name: TenantRepository
+  nameWithType: TenantRepository
+  fullName: BackOffice.API.Repositories.TenantRepository
+- uid: BackOffice.API.Repositories.UserRepository
+  commentId: T:BackOffice.API.Repositories.UserRepository
+  href: BackOffice.API.Repositories.UserRepository.html
+  name: UserRepository
+  nameWithType: UserRepository
+  fullName: BackOffice.API.Repositories.UserRepository

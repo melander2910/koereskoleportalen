@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Repositories.Interfaces
+  commentId: N:Authentication.Service.Repositories.Interfaces
+  id: Authentication.Service.Repositories.Interfaces
+  children:
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Repositories.Interfaces
+  nameWithType: Authentication.Service.Repositories.Interfaces
+  fullName: Authentication.Service.Repositories.Interfaces
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  commentId: T:Authentication.Service.Repositories.Interfaces.IAuthRepository
+  parent: Authentication.Service.Repositories.Interfaces
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html
+  name: IAuthRepository
+  nameWithType: IAuthRepository
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository
+- uid: Authentication.Service.Repositories.Interfaces
+  commentId: N:Authentication.Service.Repositories.Interfaces
+  href: Authentication.html
+  name: Authentication.Service.Repositories.Interfaces
+  nameWithType: Authentication.Service.Repositories.Interfaces
+  fullName: Authentication.Service.Repositories.Interfaces
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Repositories
+    name: Repositories
+    href: Authentication.Service.Repositories.html
+  - name: .
+  - uid: Authentication.Service.Repositories.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Repositories.Interfaces.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Repositories
+    name: Repositories
+    href: Authentication.Service.Repositories.html
+  - name: .
+  - uid: Authentication.Service.Repositories.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Repositories.Interfaces.html

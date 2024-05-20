@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Extensions
+  commentId: N:BackOffice.API.Extensions
+  id: BackOffice.API.Extensions
+  children:
+  - BackOffice.API.Extensions.WebApplicationBuilderExtension
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Extensions
+  nameWithType: BackOffice.API.Extensions
+  fullName: BackOffice.API.Extensions
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Extensions.WebApplicationBuilderExtension
+  commentId: T:BackOffice.API.Extensions.WebApplicationBuilderExtension
+  href: BackOffice.API.Extensions.WebApplicationBuilderExtension.html
+  name: WebApplicationBuilderExtension
+  nameWithType: WebApplicationBuilderExtension
+  fullName: BackOffice.API.Extensions.WebApplicationBuilderExtension

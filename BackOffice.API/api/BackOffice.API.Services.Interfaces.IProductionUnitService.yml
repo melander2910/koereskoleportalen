@@ -1,0 +1,585 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService
+  commentId: T:BackOffice.API.Services.Interfaces.IProductionUnitService
+  id: IProductionUnitService
+  parent: BackOffice.API.Services.Interfaces
+  children:
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.Delete(System.Guid)
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync(System.Guid)
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber(System.String)
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync(System.Guid)
+  - BackOffice.API.Services.Interfaces.IProductionUnitService.Update(System.Guid,BackOffice.API.Dto.ProductionUnitUpdateDto)
+  langs:
+  - csharp
+  - vb
+  name: IProductionUnitService
+  nameWithType: IProductionUnitService
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService
+  type: Interface
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IProductionUnitService
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 6
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: public interface IProductionUnitService
+    content.vb: Public Interface IProductionUnitService
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)
+  id: AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(ProductionUnitCreateDto)
+  nameWithType: IProductionUnitService.AddAsync(ProductionUnitCreateDto)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: AddAsync
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 8
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto)
+    parameters:
+    - id: productionUnitCreateDto
+      type: BackOffice.API.Dto.ProductionUnitCreateDto
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+    content.vb: Function AddAsync(productionUnitCreateDto As ProductionUnitCreateDto) As Task(Of ProductionUnit)
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync
+  id: GetAllAsync
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IProductionUnitService.GetAllAsync()
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllAsync
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 9
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<IEnumerable<ProductionUnit>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of ProductionUnit))
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync(System.Guid)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync(System.Guid)
+  id: GetAllByUserIdAsync(System.Guid)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: GetAllByUserIdAsync(Guid)
+  nameWithType: IProductionUnitService.GetAllByUserIdAsync(Guid)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllByUserIdAsync
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 10
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)
+    parameters:
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+    content.vb: Function GetAllByUserIdAsync(userId As Guid) As Task(Of IEnumerable(Of ProductionUnit))
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync(System.Guid)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync(System.Guid)
+  id: FindAsync(System.Guid)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: FindAsync(Guid)
+  nameWithType: IProductionUnitService.FindAsync(Guid)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: FindAsync
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 11
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<ProductionUnit> FindAsync(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+    content.vb: Function FindAsync(id As Guid) As Task(Of ProductionUnit)
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.Update(System.Guid,BackOffice.API.Dto.ProductionUnitUpdateDto)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.Update(System.Guid,BackOffice.API.Dto.ProductionUnitUpdateDto)
+  id: Update(System.Guid,BackOffice.API.Dto.ProductionUnitUpdateDto)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: Update(Guid, ProductionUnitUpdateDto)
+  nameWithType: IProductionUnitService.Update(Guid, ProductionUnitUpdateDto)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.Update(System.Guid, BackOffice.API.Dto.ProductionUnitUpdateDto)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Update
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 12
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<ProductionUnit> Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: productionUnitUpdateDto
+      type: BackOffice.API.Dto.ProductionUnitUpdateDto
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+    content.vb: Function Update(id As Guid, productionUnitUpdateDto As ProductionUnitUpdateDto) As Task(Of ProductionUnit)
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.Update*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.Delete(System.Guid)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.Delete(System.Guid)
+  id: Delete(System.Guid)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Guid)
+  nameWithType: IProductionUnitService.Delete(Guid)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.Delete(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Delete
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 13
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<bool> Delete(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function Delete(id As Guid) As Task(Of Boolean)
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.Delete*
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber(System.String)
+  commentId: M:BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber(System.String)
+  id: FindByProductionUnitNumber(System.String)
+  parent: BackOffice.API.Services.Interfaces.IProductionUnitService
+  langs:
+  - csharp
+  - vb
+  name: FindByProductionUnitNumber(string)
+  nameWithType: IProductionUnitService.FindByProductionUnitNumber(string)
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber(string)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Services/Interfaces/IProductionUnitService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: FindByProductionUnitNumber
+    path: Services/Interfaces/IProductionUnitService.cs
+    startLine: 14
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Services.Interfaces
+  syntax:
+    content: Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber)
+    parameters:
+    - id: productionUnitNumber
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+    content.vb: Function FindByProductionUnitNumber(productionUnitNumber As String) As Task(Of ProductionUnit)
+  overload: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber*
+  nameWithType.vb: IProductionUnitService.FindByProductionUnitNumber(String)
+  fullName.vb: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber(String)
+  name.vb: FindByProductionUnitNumber(String)
+references:
+- uid: BackOffice.API.Services.Interfaces
+  commentId: N:BackOffice.API.Services.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Services.Interfaces
+  nameWithType: BackOffice.API.Services.Interfaces
+  fullName: BackOffice.API.Services.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_AddAsync_BackOffice_API_Dto_ProductionUnitCreateDto_
+  name: AddAsync
+  nameWithType: IProductionUnitService.AddAsync
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.AddAsync
+- uid: BackOffice.API.Dto.ProductionUnitCreateDto
+  commentId: T:BackOffice.API.Dto.ProductionUnitCreateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.ProductionUnitCreateDto.html
+  name: ProductionUnitCreateDto
+  nameWithType: ProductionUnitCreateDto
+  fullName: BackOffice.API.Dto.ProductionUnitCreateDto
+- uid: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+  commentId: T:System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ProductionUnit>
+  nameWithType: Task<ProductionUnit>
+  fullName: System.Threading.Tasks.Task<BackOffice.API.Models.DatabaseEntities.ProductionUnit>
+  nameWithType.vb: Task(Of ProductionUnit)
+  fullName.vb: System.Threading.Tasks.Task(Of BackOffice.API.Models.DatabaseEntities.ProductionUnit)
+  name.vb: Task(Of ProductionUnit)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: )
+- uid: BackOffice.API.Dto
+  commentId: N:BackOffice.API.Dto
+  href: BackOffice.html
+  name: BackOffice.API.Dto
+  nameWithType: BackOffice.API.Dto
+  fullName: BackOffice.API.Dto
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IProductionUnitService.GetAllAsync
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<ProductionUnit>>
+  nameWithType: Task<IEnumerable<ProductionUnit>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<BackOffice.API.Models.DatabaseEntities.ProductionUnit>>
+  nameWithType.vb: Task(Of IEnumerable(Of ProductionUnit))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of BackOffice.API.Models.DatabaseEntities.ProductionUnit))
+  name.vb: Task(Of IEnumerable(Of ProductionUnit))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: )
+  - name: )
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_GetAllByUserIdAsync_System_Guid_
+  name: GetAllByUserIdAsync
+  nameWithType: IProductionUnitService.GetAllByUserIdAsync
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.GetAllByUserIdAsync
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_FindAsync_System_Guid_
+  name: FindAsync
+  nameWithType: IProductionUnitService.FindAsync
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.FindAsync
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.Update*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.Update
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_Update_System_Guid_BackOffice_API_Dto_ProductionUnitUpdateDto_
+  name: Update
+  nameWithType: IProductionUnitService.Update
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.Update
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto
+  commentId: T:BackOffice.API.Dto.ProductionUnitUpdateDto
+  parent: BackOffice.API.Dto
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html
+  name: ProductionUnitUpdateDto
+  nameWithType: ProductionUnitUpdateDto
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.Delete*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.Delete
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_Delete_System_Guid_
+  name: Delete
+  nameWithType: IProductionUnitService.Delete
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.Delete
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber*
+  commentId: Overload:BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html#BackOffice_API_Services_Interfaces_IProductionUnitService_FindByProductionUnitNumber_System_String_
+  name: FindByProductionUnitNumber
+  nameWithType: IProductionUnitService.FindByProductionUnitNumber
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService.FindByProductionUnitNumber
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Services
+  commentId: N:Authentication.Service.Services
+  id: Authentication.Service.Services
+  children:
+  - Authentication.Service.Services.AuthService
+  - Authentication.Service.Services.JwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Services
+  nameWithType: Authentication.Service.Services
+  fullName: Authentication.Service.Services
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Services.AuthService
+  commentId: T:Authentication.Service.Services.AuthService
+  href: Authentication.Service.Services.AuthService.html
+  name: AuthService
+  nameWithType: AuthService
+  fullName: Authentication.Service.Services.AuthService
+- uid: Authentication.Service.Services.JwtTokenGeneratorService
+  commentId: T:Authentication.Service.Services.JwtTokenGeneratorService
+  href: Authentication.Service.Services.JwtTokenGeneratorService.html
+  name: JwtTokenGeneratorService
+  nameWithType: JwtTokenGeneratorService
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService

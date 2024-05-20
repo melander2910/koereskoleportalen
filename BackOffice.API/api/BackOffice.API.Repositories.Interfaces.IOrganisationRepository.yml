@@ -1,0 +1,586 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  id: IOrganisationRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  children:
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync(BackOffice.API.Models.DatabaseEntities.Organisation)
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete(System.Guid)
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync(System.Guid)
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync(System.String)
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync(System.Guid)
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update(System.Guid,BackOffice.API.Models.DatabaseEntities.Organisation)
+  langs:
+  - csharp
+  - vb
+  name: IOrganisationRepository
+  nameWithType: IOrganisationRepository
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  type: Interface
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IOrganisationRepository
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 5
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: public interface IOrganisationRepository
+    content.vb: Public Interface IOrganisationRepository
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync(BackOffice.API.Models.DatabaseEntities.Organisation)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync(BackOffice.API.Models.DatabaseEntities.Organisation)
+  id: AddAsync(BackOffice.API.Models.DatabaseEntities.Organisation)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(Organisation)
+  nameWithType: IOrganisationRepository.AddAsync(Organisation)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync(BackOffice.API.Models.DatabaseEntities.Organisation)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: AddAsync
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 7
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<Organisation> AddAsync(Organisation organisation)
+    parameters:
+    - id: organisation
+      type: BackOffice.API.Models.DatabaseEntities.Organisation
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+    content.vb: Function AddAsync(organisation As Organisation) As Task(Of Organisation)
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync*
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  id: GetAllAsync
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IOrganisationRepository.GetAllAsync()
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllAsync
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 8
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<IEnumerable<Organisation>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.Organisation}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of Organisation))
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync*
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync(System.Guid)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync(System.Guid)
+  id: GetAllByUserIdAsync(System.Guid)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllByUserIdAsync(Guid)
+  nameWithType: IOrganisationRepository.GetAllByUserIdAsync(Guid)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllByUserIdAsync
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 9
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<IEnumerable<Organisation>> GetAllByUserIdAsync(Guid userId)
+    parameters:
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.Organisation}}
+    content.vb: Function GetAllByUserIdAsync(userId As Guid) As Task(Of IEnumerable(Of Organisation))
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync*
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync(System.Guid)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync(System.Guid)
+  id: FindAsync(System.Guid)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: FindAsync(Guid)
+  nameWithType: IOrganisationRepository.FindAsync(Guid)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: FindAsync
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 10
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<Organisation> FindAsync(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+    content.vb: Function FindAsync(id As Guid) As Task(Of Organisation)
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync*
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync(System.String)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync(System.String)
+  id: FindByCvrAsync(System.String)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: FindByCvrAsync(string)
+  nameWithType: IOrganisationRepository.FindByCvrAsync(string)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync(string)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: FindByCvrAsync
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 11
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<Organisation> FindByCvrAsync(string cvr)
+    parameters:
+    - id: cvr
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+    content.vb: Function FindByCvrAsync(cvr As String) As Task(Of Organisation)
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync*
+  nameWithType.vb: IOrganisationRepository.FindByCvrAsync(String)
+  fullName.vb: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync(String)
+  name.vb: FindByCvrAsync(String)
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update(System.Guid,BackOffice.API.Models.DatabaseEntities.Organisation)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update(System.Guid,BackOffice.API.Models.DatabaseEntities.Organisation)
+  id: Update(System.Guid,BackOffice.API.Models.DatabaseEntities.Organisation)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Guid, Organisation)
+  nameWithType: IOrganisationRepository.Update(Guid, Organisation)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update(System.Guid, BackOffice.API.Models.DatabaseEntities.Organisation)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Update
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 13
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<Organisation> Update(Guid id, Organisation organisation)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: organisation
+      type: BackOffice.API.Models.DatabaseEntities.Organisation
+    return:
+      type: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+    content.vb: Function Update(id As Guid, organisation As Organisation) As Task(Of Organisation)
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update*
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete(System.Guid)
+  commentId: M:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete(System.Guid)
+  id: Delete(System.Guid)
+  parent: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(Guid)
+  nameWithType: IOrganisationRepository.Delete(Guid)
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Delete
+    path: Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 14
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<bool> Delete(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function Delete(id As Guid) As Task(Of Boolean)
+  overload: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete*
+references:
+- uid: BackOffice.API.Repositories.Interfaces
+  commentId: N:BackOffice.API.Repositories.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Repositories.Interfaces
+  nameWithType: BackOffice.API.Repositories.Interfaces
+  fullName: BackOffice.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_AddAsync_BackOffice_API_Models_DatabaseEntities_Organisation_
+  name: AddAsync
+  nameWithType: IOrganisationRepository.AddAsync
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.AddAsync
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation
+  commentId: T:BackOffice.API.Models.DatabaseEntities.Organisation
+  parent: BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  name: Organisation
+  nameWithType: Organisation
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation
+- uid: System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+  commentId: T:System.Threading.Tasks.Task{BackOffice.API.Models.DatabaseEntities.Organisation}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Organisation>
+  nameWithType: Task<Organisation>
+  fullName: System.Threading.Tasks.Task<BackOffice.API.Models.DatabaseEntities.Organisation>
+  nameWithType.vb: Task(Of Organisation)
+  fullName.vb: System.Threading.Tasks.Task(Of BackOffice.API.Models.DatabaseEntities.Organisation)
+  name.vb: Task(Of Organisation)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.Organisation
+    name: Organisation
+    href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.Organisation
+    name: Organisation
+    href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  - name: )
+- uid: BackOffice.API.Models.DatabaseEntities
+  commentId: N:BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.html
+  name: BackOffice.API.Models.DatabaseEntities
+  nameWithType: BackOffice.API.Models.DatabaseEntities
+  fullName: BackOffice.API.Models.DatabaseEntities
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IOrganisationRepository.GetAllAsync
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.Organisation}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.Organisation}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Organisation>>
+  nameWithType: Task<IEnumerable<Organisation>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<BackOffice.API.Models.DatabaseEntities.Organisation>>
+  nameWithType.vb: Task(Of IEnumerable(Of Organisation))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of BackOffice.API.Models.DatabaseEntities.Organisation))
+  name.vb: Task(Of IEnumerable(Of Organisation))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.Organisation
+    name: Organisation
+    href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.Organisation
+    name: Organisation
+    href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  - name: )
+  - name: )
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_GetAllByUserIdAsync_System_Guid_
+  name: GetAllByUserIdAsync
+  nameWithType: IOrganisationRepository.GetAllByUserIdAsync
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.GetAllByUserIdAsync
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_FindAsync_System_Guid_
+  name: FindAsync
+  nameWithType: IOrganisationRepository.FindAsync
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindAsync
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_FindByCvrAsync_System_String_
+  name: FindByCvrAsync
+  nameWithType: IOrganisationRepository.FindByCvrAsync
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.FindByCvrAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_Update_System_Guid_BackOffice_API_Models_DatabaseEntities_Organisation_
+  name: Update
+  nameWithType: IOrganisationRepository.Update
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Update
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html#BackOffice_API_Repositories_Interfaces_IOrganisationRepository_Delete_System_Guid_
+  name: Delete
+  nameWithType: IOrganisationRepository.Delete
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.Delete
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )

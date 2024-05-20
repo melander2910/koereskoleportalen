@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Services.Interfaces
+  commentId: N:Authentication.Service.Services.Interfaces
+  id: Authentication.Service.Services.Interfaces
+  children:
+  - Authentication.Service.Services.Interfaces.IAuthService
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Services.Interfaces
+  nameWithType: Authentication.Service.Services.Interfaces
+  fullName: Authentication.Service.Services.Interfaces
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Services.Interfaces.IAuthService
+  commentId: T:Authentication.Service.Services.Interfaces.IAuthService
+  parent: Authentication.Service.Services.Interfaces
+  href: Authentication.Service.Services.Interfaces.IAuthService.html
+  name: IAuthService
+  nameWithType: IAuthService
+  fullName: Authentication.Service.Services.Interfaces.IAuthService
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  commentId: T:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  parent: Authentication.Service.Services.Interfaces
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html
+  name: IJwtTokenGeneratorService
+  nameWithType: IJwtTokenGeneratorService
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+- uid: Authentication.Service.Services.Interfaces
+  commentId: N:Authentication.Service.Services.Interfaces
+  href: Authentication.html
+  name: Authentication.Service.Services.Interfaces
+  nameWithType: Authentication.Service.Services.Interfaces
+  fullName: Authentication.Service.Services.Interfaces
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html

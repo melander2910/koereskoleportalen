@@ -1,0 +1,890 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Services.JwtTokenGeneratorService
+  commentId: T:Authentication.Service.Services.JwtTokenGeneratorService
+  id: JwtTokenGeneratorService
+  parent: Authentication.Service.Services
+  children:
+  - Authentication.Service.Services.JwtTokenGeneratorService.#ctor(Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions})
+  - Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken
+  - Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  langs:
+  - csharp
+  - vb
+  name: JwtTokenGeneratorService
+  nameWithType: JwtTokenGeneratorService
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService
+  type: Class
+  source:
+    remote:
+      path: Authentication.Service/Services/JwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: JwtTokenGeneratorService
+    path: ../Authentication.Service/Services/JwtTokenGeneratorService.cs
+    startLine: 11
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services
+  syntax:
+    content: 'public class JwtTokenGeneratorService : IJwtTokenGeneratorService'
+    content.vb: Public Class JwtTokenGeneratorService Implements IJwtTokenGeneratorService
+  inheritance:
+  - System.Object
+  implements:
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.#ctor(Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions})
+  commentId: M:Authentication.Service.Services.JwtTokenGeneratorService.#ctor(Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions})'
+  parent: Authentication.Service.Services.JwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: JwtTokenGeneratorService(IOptions<JwtOptions>)
+  nameWithType: JwtTokenGeneratorService.JwtTokenGeneratorService(IOptions<JwtOptions>)
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.JwtTokenGeneratorService(Microsoft.Extensions.Options.IOptions<Authentication.Service.Models.JwtOptions>)
+  type: Constructor
+  source:
+    remote:
+      path: Authentication.Service/Services/JwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: .ctor
+    path: ../Authentication.Service/Services/JwtTokenGeneratorService.cs
+    startLine: 14
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services
+  syntax:
+    content: public JwtTokenGeneratorService(IOptions<JwtOptions> jwtOptions)
+    parameters:
+    - id: jwtOptions
+      type: Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions}
+    content.vb: Public Sub New(jwtOptions As IOptions(Of JwtOptions))
+  overload: Authentication.Service.Services.JwtTokenGeneratorService.#ctor*
+  nameWithType.vb: JwtTokenGeneratorService.New(IOptions(Of JwtOptions))
+  fullName.vb: Authentication.Service.Services.JwtTokenGeneratorService.New(Microsoft.Extensions.Options.IOptions(Of Authentication.Service.Models.JwtOptions))
+  name.vb: New(IOptions(Of JwtOptions))
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  commentId: M:Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  id: GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  parent: Authentication.Service.Services.JwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  nameWithType: JwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IList<System.Security.Claims.Claim>)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Services/JwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GenerateToken
+    path: ../Authentication.Service/Services/JwtTokenGeneratorService.cs
+    startLine: 19
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services
+  example: []
+  syntax:
+    content: public string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles, IList<Claim> claims)
+    parameters:
+    - id: extendedIdentityUser
+      type: Authentication.Service.Models.ExtendedIdentityUser
+    - id: roles
+      type: System.Collections.Generic.IEnumerable{System.String}
+    - id: claims
+      type: System.Collections.Generic.IList{System.Security.Claims.Claim}
+    return:
+      type: System.String
+    content.vb: Public Function GenerateToken(extendedIdentityUser As ExtendedIdentityUser, roles As IEnumerable(Of String), claims As IList(Of Claim)) As String
+  overload: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken*
+  implements:
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  nameWithType.vb: JwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+  fullName.vb: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IList(Of System.Security.Claims.Claim))
+  name.vb: GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken
+  commentId: M:Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken
+  id: GenerateRefreshToken
+  parent: Authentication.Service.Services.JwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: GenerateRefreshToken()
+  nameWithType: JwtTokenGeneratorService.GenerateRefreshToken()
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken()
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Services/JwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GenerateRefreshToken
+    path: ../Authentication.Service/Services/JwtTokenGeneratorService.cs
+    startLine: 54
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services
+  example: []
+  syntax:
+    content: public string GenerateRefreshToken()
+    return:
+      type: System.String
+    content.vb: Public Function GenerateRefreshToken() As String
+  overload: Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken*
+  implements:
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+references:
+- uid: Authentication.Service.Services
+  commentId: N:Authentication.Service.Services
+  href: Authentication.html
+  name: Authentication.Service.Services
+  nameWithType: Authentication.Service.Services
+  fullName: Authentication.Service.Services
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  commentId: T:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  parent: Authentication.Service.Services.Interfaces
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html
+  name: IJwtTokenGeneratorService
+  nameWithType: IJwtTokenGeneratorService
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Authentication.Service.Services.Interfaces
+  commentId: N:Authentication.Service.Services.Interfaces
+  href: Authentication.html
+  name: Authentication.Service.Services.Interfaces
+  nameWithType: Authentication.Service.Services.Interfaces
+  fullName: Authentication.Service.Services.Interfaces
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.#ctor*
+  commentId: Overload:Authentication.Service.Services.JwtTokenGeneratorService.#ctor
+  href: Authentication.Service.Services.JwtTokenGeneratorService.html#Authentication_Service_Services_JwtTokenGeneratorService__ctor_Microsoft_Extensions_Options_IOptions_Authentication_Service_Models_JwtOptions__
+  name: JwtTokenGeneratorService
+  nameWithType: JwtTokenGeneratorService.JwtTokenGeneratorService
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.JwtTokenGeneratorService
+  nameWithType.vb: JwtTokenGeneratorService.New
+  fullName.vb: Authentication.Service.Services.JwtTokenGeneratorService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{Authentication.Service.Models.JwtOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<JwtOptions>
+  nameWithType: IOptions<JwtOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<Authentication.Service.Models.JwtOptions>
+  nameWithType.vb: IOptions(Of JwtOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of Authentication.Service.Models.JwtOptions)
+  name.vb: IOptions(Of JwtOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: Authentication.Service.Models.JwtOptions
+    name: JwtOptions
+    href: Authentication.Service.Models.JwtOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Authentication.Service.Models.JwtOptions
+    name: JwtOptions
+    href: Authentication.Service.Models.JwtOptions.html
+  - name: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken*
+  commentId: Overload:Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken
+  href: Authentication.Service.Services.JwtTokenGeneratorService.html#Authentication_Service_Services_JwtTokenGeneratorService_GenerateToken_Authentication_Service_Models_ExtendedIdentityUser_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IList_System_Security_Claims_Claim__
+  name: GenerateToken
+  nameWithType: JwtTokenGeneratorService.GenerateToken
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.GenerateToken
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  commentId: M:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  parent: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  isExternal: true
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateToken_Authentication_Service_Models_ExtendedIdentityUser_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IList_System_Security_Claims_Claim__
+  name: GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  nameWithType: IJwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IList<System.Security.Claims.Claim>)
+  nameWithType.vb: IJwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+  fullName.vb: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IList(Of System.Security.Claims.Claim))
+  name.vb: GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+  spec.csharp:
+  - uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+    name: GenerateToken
+    href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateToken_Authentication_Service_Models_ExtendedIdentityUser_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IList_System_Security_Claims_Claim__
+  - name: (
+  - uid: Authentication.Service.Models.ExtendedIdentityUser
+    name: ExtendedIdentityUser
+    href: Authentication.Service.Models.ExtendedIdentityUser.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+    name: GenerateToken
+    href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateToken_Authentication_Service_Models_ExtendedIdentityUser_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IList_System_Security_Claims_Claim__
+  - name: (
+  - uid: Authentication.Service.Models.ExtendedIdentityUser
+    name: ExtendedIdentityUser
+    href: Authentication.Service.Models.ExtendedIdentityUser.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: )
+  - name: )
+- uid: Authentication.Service.Models.ExtendedIdentityUser
+  commentId: T:Authentication.Service.Models.ExtendedIdentityUser
+  parent: Authentication.Service.Models
+  href: Authentication.Service.Models.ExtendedIdentityUser.html
+  name: ExtendedIdentityUser
+  nameWithType: ExtendedIdentityUser
+  fullName: Authentication.Service.Models.ExtendedIdentityUser
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IList{System.Security.Claims.Claim}
+  commentId: T:System.Collections.Generic.IList{System.Security.Claims.Claim}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<Claim>
+  nameWithType: IList<Claim>
+  fullName: System.Collections.Generic.IList<System.Security.Claims.Claim>
+  nameWithType.vb: IList(Of Claim)
+  fullName.vb: System.Collections.Generic.IList(Of System.Security.Claims.Claim)
+  name.vb: IList(Of Claim)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Authentication.Service.Models
+  commentId: N:Authentication.Service.Models
+  href: Authentication.html
+  name: Authentication.Service.Models
+  nameWithType: Authentication.Service.Models
+  fullName: Authentication.Service.Models
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken*
+  commentId: Overload:Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken
+  href: Authentication.Service.Services.JwtTokenGeneratorService.html#Authentication_Service_Services_JwtTokenGeneratorService_GenerateRefreshToken
+  name: GenerateRefreshToken
+  nameWithType: JwtTokenGeneratorService.GenerateRefreshToken
+  fullName: Authentication.Service.Services.JwtTokenGeneratorService.GenerateRefreshToken
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  commentId: M:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  parent: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateRefreshToken
+  name: GenerateRefreshToken()
+  nameWithType: IJwtTokenGeneratorService.GenerateRefreshToken()
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken()
+  spec.csharp:
+  - uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+    name: GenerateRefreshToken
+    href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateRefreshToken
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+    name: GenerateRefreshToken
+    href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateRefreshToken
+  - name: (
+  - name: )

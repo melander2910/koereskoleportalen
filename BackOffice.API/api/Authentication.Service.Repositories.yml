@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Repositories
+  commentId: N:Authentication.Service.Repositories
+  id: Authentication.Service.Repositories
+  children:
+  - Authentication.Service.Repositories.AuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Repositories
+  nameWithType: Authentication.Service.Repositories
+  fullName: Authentication.Service.Repositories
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Repositories.AuthRepository
+  commentId: T:Authentication.Service.Repositories.AuthRepository
+  href: Authentication.Service.Repositories.AuthRepository.html
+  name: AuthRepository
+  nameWithType: AuthRepository
+  fullName: Authentication.Service.Repositories.AuthRepository

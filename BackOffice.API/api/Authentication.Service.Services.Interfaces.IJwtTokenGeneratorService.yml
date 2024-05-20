@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  commentId: T:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  id: IJwtTokenGeneratorService
+  parent: Authentication.Service.Services.Interfaces
+  children:
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  - Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  langs:
+  - csharp
+  - vb
+  name: IJwtTokenGeneratorService
+  nameWithType: IJwtTokenGeneratorService
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  type: Interface
+  source:
+    remote:
+      path: Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IJwtTokenGeneratorService
+    path: ../Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+    startLine: 5
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services.Interfaces
+  syntax:
+    content: public interface IJwtTokenGeneratorService
+    content.vb: Public Interface IJwtTokenGeneratorService
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  commentId: M:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  id: GenerateToken(Authentication.Service.Models.ExtendedIdentityUser,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IList{System.Security.Claims.Claim})
+  parent: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  nameWithType: IJwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable<string>, IList<Claim>)
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IList<System.Security.Claims.Claim>)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GenerateToken
+    path: ../Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+    startLine: 7
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services.Interfaces
+  syntax:
+    content: string GenerateToken(ExtendedIdentityUser extendedIdentityUser, IEnumerable<string> roles, IList<Claim> claims)
+    parameters:
+    - id: extendedIdentityUser
+      type: Authentication.Service.Models.ExtendedIdentityUser
+    - id: roles
+      type: System.Collections.Generic.IEnumerable{System.String}
+    - id: claims
+      type: System.Collections.Generic.IList{System.Security.Claims.Claim}
+    return:
+      type: System.String
+    content.vb: Function GenerateToken(extendedIdentityUser As ExtendedIdentityUser, roles As IEnumerable(Of String), claims As IList(Of Claim)) As String
+  overload: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken*
+  nameWithType.vb: IJwtTokenGeneratorService.GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+  fullName.vb: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken(Authentication.Service.Models.ExtendedIdentityUser, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IList(Of System.Security.Claims.Claim))
+  name.vb: GenerateToken(ExtendedIdentityUser, IEnumerable(Of String), IList(Of Claim))
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  commentId: M:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  id: GenerateRefreshToken
+  parent: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+  langs:
+  - csharp
+  - vb
+  name: GenerateRefreshToken()
+  nameWithType: IJwtTokenGeneratorService.GenerateRefreshToken()
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken()
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GenerateRefreshToken
+    path: ../Authentication.Service/Services/Interfaces/IJwtTokenGeneratorService.cs
+    startLine: 8
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Services.Interfaces
+  syntax:
+    content: string GenerateRefreshToken()
+    return:
+      type: System.String
+    content.vb: Function GenerateRefreshToken() As String
+  overload: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken*
+references:
+- uid: Authentication.Service.Services.Interfaces
+  commentId: N:Authentication.Service.Services.Interfaces
+  href: Authentication.html
+  name: Authentication.Service.Services.Interfaces
+  nameWithType: Authentication.Service.Services.Interfaces
+  fullName: Authentication.Service.Services.Interfaces
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Services
+    name: Services
+    href: Authentication.Service.Services.html
+  - name: .
+  - uid: Authentication.Service.Services.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Services.Interfaces.html
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken*
+  commentId: Overload:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateToken_Authentication_Service_Models_ExtendedIdentityUser_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IList_System_Security_Claims_Claim__
+  name: GenerateToken
+  nameWithType: IJwtTokenGeneratorService.GenerateToken
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateToken
+- uid: Authentication.Service.Models.ExtendedIdentityUser
+  commentId: T:Authentication.Service.Models.ExtendedIdentityUser
+  parent: Authentication.Service.Models
+  href: Authentication.Service.Models.ExtendedIdentityUser.html
+  name: ExtendedIdentityUser
+  nameWithType: ExtendedIdentityUser
+  fullName: Authentication.Service.Models.ExtendedIdentityUser
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IList{System.Security.Claims.Claim}
+  commentId: T:System.Collections.Generic.IList{System.Security.Claims.Claim}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<Claim>
+  nameWithType: IList<Claim>
+  fullName: System.Collections.Generic.IList<System.Security.Claims.Claim>
+  nameWithType.vb: IList(Of Claim)
+  fullName.vb: System.Collections.Generic.IList(Of System.Security.Claims.Claim)
+  name.vb: IList(Of Claim)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Authentication.Service.Models
+  commentId: N:Authentication.Service.Models
+  href: Authentication.html
+  name: Authentication.Service.Models
+  nameWithType: Authentication.Service.Models
+  fullName: Authentication.Service.Models
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken*
+  commentId: Overload:Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken
+  href: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.html#Authentication_Service_Services_Interfaces_IJwtTokenGeneratorService_GenerateRefreshToken
+  name: GenerateRefreshToken
+  nameWithType: IJwtTokenGeneratorService.GenerateRefreshToken
+  fullName: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService.GenerateRefreshToken

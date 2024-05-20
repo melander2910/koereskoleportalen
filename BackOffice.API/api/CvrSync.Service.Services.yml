@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: CvrSync.Service.Services
+  commentId: N:CvrSync.Service.Services
+  id: CvrSync.Service.Services
+  children:
+  - CvrSync.Service.Services.ElasticSearchService
+  - CvrSync.Service.Services.MongoDBClient
+  - CvrSync.Service.Services.NewElasticSearchService
+  langs:
+  - csharp
+  - vb
+  name: CvrSync.Service.Services
+  nameWithType: CvrSync.Service.Services
+  fullName: CvrSync.Service.Services
+  type: Namespace
+  assemblies:
+  - CvrSync.Service
+references:
+- uid: CvrSync.Service.Services.ElasticSearchService
+  commentId: T:CvrSync.Service.Services.ElasticSearchService
+  href: CvrSync.Service.Services.ElasticSearchService.html
+  name: ElasticSearchService
+  nameWithType: ElasticSearchService
+  fullName: CvrSync.Service.Services.ElasticSearchService
+- uid: CvrSync.Service.Services.MongoDBClient
+  commentId: T:CvrSync.Service.Services.MongoDBClient
+  href: CvrSync.Service.Services.MongoDBClient.html
+  name: MongoDBClient
+  nameWithType: MongoDBClient
+  fullName: CvrSync.Service.Services.MongoDBClient
+- uid: CvrSync.Service.Services.NewElasticSearchService
+  commentId: T:CvrSync.Service.Services.NewElasticSearchService
+  href: CvrSync.Service.Services.NewElasticSearchService.html
+  name: NewElasticSearchService
+  nameWithType: NewElasticSearchService
+  fullName: CvrSync.Service.Services.NewElasticSearchService

@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Repositories.Interfaces
+  commentId: N:BackOffice.API.Repositories.Interfaces
+  id: BackOffice.API.Repositories.Interfaces
+  children:
+  - BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  - BackOffice.API.Repositories.Interfaces.IProductionUnitRepository
+  - BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  - BackOffice.API.Repositories.Interfaces.ITenantRepository
+  - BackOffice.API.Repositories.Interfaces.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Repositories.Interfaces
+  nameWithType: BackOffice.API.Repositories.Interfaces
+  fullName: BackOffice.API.Repositories.Interfaces
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  href: BackOffice.API.Repositories.Interfaces.IOrganisationRepository.html
+  name: IOrganisationRepository
+  nameWithType: IOrganisationRepository
+  fullName: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+- uid: BackOffice.API.Repositories.Interfaces.IProductionUnitRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.IProductionUnitRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  href: BackOffice.API.Repositories.Interfaces.IProductionUnitRepository.html
+  name: IProductionUnitRepository
+  nameWithType: IProductionUnitRepository
+  fullName: BackOffice.API.Repositories.Interfaces.IProductionUnitRepository
+- uid: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  href: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.html
+  name: ISubTenantRepository
+  nameWithType: ISubTenantRepository
+  fullName: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+- uid: BackOffice.API.Repositories.Interfaces.ITenantRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.ITenantRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  href: BackOffice.API.Repositories.Interfaces.ITenantRepository.html
+  name: ITenantRepository
+  nameWithType: ITenantRepository
+  fullName: BackOffice.API.Repositories.Interfaces.ITenantRepository
+- uid: BackOffice.API.Repositories.Interfaces.IUserRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.IUserRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  href: BackOffice.API.Repositories.Interfaces.IUserRepository.html
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: BackOffice.API.Repositories.Interfaces.IUserRepository
+- uid: BackOffice.API.Repositories.Interfaces
+  commentId: N:BackOffice.API.Repositories.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Repositories.Interfaces
+  nameWithType: BackOffice.API.Repositories.Interfaces
+  fullName: BackOffice.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html

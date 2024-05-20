@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Consumers
+  commentId: N:BackOffice.API.Consumers
+  id: BackOffice.API.Consumers
+  children:
+  - BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  - BackOffice.API.Consumers.TenantClaimCreatedEventConsumer
+  - BackOffice.API.Consumers.UserCreatedEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Consumers
+  nameWithType: BackOffice.API.Consumers
+  fullName: BackOffice.API.Consumers
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  commentId: T:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  href: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.html
+  name: SubTenantClaimCreatedEventConsumer
+  nameWithType: SubTenantClaimCreatedEventConsumer
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+- uid: BackOffice.API.Consumers.TenantClaimCreatedEventConsumer
+  commentId: T:BackOffice.API.Consumers.TenantClaimCreatedEventConsumer
+  href: BackOffice.API.Consumers.TenantClaimCreatedEventConsumer.html
+  name: TenantClaimCreatedEventConsumer
+  nameWithType: TenantClaimCreatedEventConsumer
+  fullName: BackOffice.API.Consumers.TenantClaimCreatedEventConsumer
+- uid: BackOffice.API.Consumers.UserCreatedEventConsumer
+  commentId: T:BackOffice.API.Consumers.UserCreatedEventConsumer
+  href: BackOffice.API.Consumers.UserCreatedEventConsumer.html
+  name: UserCreatedEventConsumer
+  nameWithType: UserCreatedEventConsumer
+  fullName: BackOffice.API.Consumers.UserCreatedEventConsumer

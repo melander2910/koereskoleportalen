@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Repositories.Interfaces
+  commentId: N:Portal.API.Repositories.Interfaces
+  id: Portal.API.Repositories.Interfaces
+  children:
+  - Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  - Portal.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Repositories.Interfaces
+  nameWithType: Portal.API.Repositories.Interfaces
+  fullName: Portal.API.Repositories.Interfaces
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  commentId: T:Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+  parent: Portal.API.Repositories.Interfaces
+  href: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository.html
+  name: IDrivingSchoolRepository
+  nameWithType: IDrivingSchoolRepository
+  fullName: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository
+  commentId: T:Portal.API.Repositories.Interfaces.IOrganisationRepository
+  parent: Portal.API.Repositories.Interfaces
+  href: Portal.API.Repositories.Interfaces.IOrganisationRepository.html
+  name: IOrganisationRepository
+  nameWithType: IOrganisationRepository
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository
+- uid: Portal.API.Repositories.Interfaces
+  commentId: N:Portal.API.Repositories.Interfaces
+  href: Portal.html
+  name: Portal.API.Repositories.Interfaces
+  nameWithType: Portal.API.Repositories.Interfaces
+  fullName: Portal.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html

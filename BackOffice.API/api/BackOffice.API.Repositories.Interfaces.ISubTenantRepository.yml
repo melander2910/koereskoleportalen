@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  commentId: T:BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  id: ISubTenantRepository
+  parent: BackOffice.API.Repositories.Interfaces
+  children:
+  - BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId(System.Guid)
+  langs:
+  - csharp
+  - vb
+  name: ISubTenantRepository
+  nameWithType: ISubTenantRepository
+  fullName: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  type: Interface
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/ISubTenantRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ISubTenantRepository
+    path: Repositories/Interfaces/ISubTenantRepository.cs
+    startLine: 4
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: public interface ISubTenantRepository
+    content.vb: Public Interface ISubTenantRepository
+- uid: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId(System.Guid)
+  commentId: M:BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId(System.Guid)
+  id: GetSubTenantsByUserId(System.Guid)
+  parent: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+  langs:
+  - csharp
+  - vb
+  name: GetSubTenantsByUserId(Guid)
+  nameWithType: ISubTenantRepository.GetSubTenantsByUserId(Guid)
+  fullName: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId(System.Guid)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Repositories/Interfaces/ISubTenantRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetSubTenantsByUserId
+    path: Repositories/Interfaces/ISubTenantRepository.cs
+    startLine: 6
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Repositories.Interfaces
+  syntax:
+    content: Task<IEnumerable<ProductionUnit>> GetSubTenantsByUserId(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+    content.vb: Function GetSubTenantsByUserId(id As Guid) As Task(Of IEnumerable(Of ProductionUnit))
+  overload: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId*
+references:
+- uid: BackOffice.API.Repositories.Interfaces
+  commentId: N:BackOffice.API.Repositories.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Repositories.Interfaces
+  nameWithType: BackOffice.API.Repositories.Interfaces
+  fullName: BackOffice.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Repositories
+    name: Repositories
+    href: BackOffice.API.Repositories.html
+  - name: .
+  - uid: BackOffice.API.Repositories.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Repositories.Interfaces.html
+- uid: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId*
+  commentId: Overload:BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId
+  href: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.html#BackOffice_API_Repositories_Interfaces_ISubTenantRepository_GetSubTenantsByUserId_System_Guid_
+  name: GetSubTenantsByUserId
+  nameWithType: ISubTenantRepository.GetSubTenantsByUserId
+  fullName: BackOffice.API.Repositories.Interfaces.ISubTenantRepository.GetSubTenantsByUserId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{BackOffice.API.Models.DatabaseEntities.ProductionUnit}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<ProductionUnit>>
+  nameWithType: Task<IEnumerable<ProductionUnit>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<BackOffice.API.Models.DatabaseEntities.ProductionUnit>>
+  nameWithType.vb: Task(Of IEnumerable(Of ProductionUnit))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of BackOffice.API.Models.DatabaseEntities.ProductionUnit))
+  name.vb: Task(Of IEnumerable(Of ProductionUnit))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

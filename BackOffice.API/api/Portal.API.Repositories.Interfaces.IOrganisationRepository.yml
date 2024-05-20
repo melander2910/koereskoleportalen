@@ -1,0 +1,306 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository
+  commentId: T:Portal.API.Repositories.Interfaces.IOrganisationRepository
+  id: IOrganisationRepository
+  parent: Portal.API.Repositories.Interfaces
+  children:
+  - Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  - Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IOrganisationRepository
+  nameWithType: IOrganisationRepository
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository
+  type: Interface
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IOrganisationRepository
+    path: ../Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 4
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: public interface IOrganisationRepository
+    content.vb: Public Interface IOrganisationRepository
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  commentId: M:Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  id: GetAllAsync
+  parent: Portal.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IOrganisationRepository.GetAllAsync()
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAllAsync
+    path: ../Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 6
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: Task<List<Organisation>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.Organisation}}
+    content.vb: Function GetAllAsync() As Task(Of List(Of Organisation))
+  overload: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync*
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync(System.String)
+  commentId: M:Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: Portal.API.Repositories.Interfaces.IOrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(string)
+  nameWithType: IOrganisationRepository.GetAsync(string)
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync(string)
+  type: Method
+  source:
+    remote:
+      path: Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+      branch: main
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: GetAsync
+    path: ../Portal.API/Repositories/Interfaces/IOrganisationRepository.cs
+    startLine: 7
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Repositories.Interfaces
+  syntax:
+    content: Task<Organisation> GetAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Portal.API.Models.Organisation}
+    content.vb: Function GetAsync(id As String) As Task(Of Organisation)
+  overload: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync*
+  nameWithType.vb: IOrganisationRepository.GetAsync(String)
+  fullName.vb: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync(String)
+  name.vb: GetAsync(String)
+references:
+- uid: Portal.API.Repositories.Interfaces
+  commentId: N:Portal.API.Repositories.Interfaces
+  href: Portal.html
+  name: Portal.API.Repositories.Interfaces
+  nameWithType: Portal.API.Repositories.Interfaces
+  fullName: Portal.API.Repositories.Interfaces
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Repositories
+    name: Repositories
+    href: Portal.API.Repositories.html
+  - name: .
+  - uid: Portal.API.Repositories.Interfaces
+    name: Interfaces
+    href: Portal.API.Repositories.Interfaces.html
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync*
+  commentId: Overload:Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+  href: Portal.API.Repositories.Interfaces.IOrganisationRepository.html#Portal_API_Repositories_Interfaces_IOrganisationRepository_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IOrganisationRepository.GetAllAsync
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.Organisation}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Portal.API.Models.Organisation}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Organisation>>
+  nameWithType: Task<List<Organisation>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Portal.API.Models.Organisation>>
+  nameWithType.vb: Task(Of List(Of Organisation))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Portal.API.Models.Organisation))
+  name.vb: Task(Of List(Of Organisation))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Portal.API.Models.Organisation
+    name: Organisation
+    href: Portal.API.Models.Organisation.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Portal.API.Models.Organisation
+    name: Organisation
+    href: Portal.API.Models.Organisation.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync*
+  commentId: Overload:Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync
+  href: Portal.API.Repositories.Interfaces.IOrganisationRepository.html#Portal_API_Repositories_Interfaces_IOrganisationRepository_GetAsync_System_String_
+  name: GetAsync
+  nameWithType: IOrganisationRepository.GetAsync
+  fullName: Portal.API.Repositories.Interfaces.IOrganisationRepository.GetAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{Portal.API.Models.Organisation}
+  commentId: T:System.Threading.Tasks.Task{Portal.API.Models.Organisation}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Organisation>
+  nameWithType: Task<Organisation>
+  fullName: System.Threading.Tasks.Task<Portal.API.Models.Organisation>
+  nameWithType.vb: Task(Of Organisation)
+  fullName.vb: System.Threading.Tasks.Task(Of Portal.API.Models.Organisation)
+  name.vb: Task(Of Organisation)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Portal.API.Models.Organisation
+    name: Organisation
+    href: Portal.API.Models.Organisation.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Portal.API.Models.Organisation
+    name: Organisation
+    href: Portal.API.Models.Organisation.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

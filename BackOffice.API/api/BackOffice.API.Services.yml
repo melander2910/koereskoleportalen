@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Services
+  commentId: N:BackOffice.API.Services
+  id: BackOffice.API.Services
+  children:
+  - BackOffice.API.Services.CurrentSubTenantService
+  - BackOffice.API.Services.CurrentTenantService
+  - BackOffice.API.Services.OrganisationService
+  - BackOffice.API.Services.ProductionUnitService
+  - BackOffice.API.Services.SubTenantService
+  - BackOffice.API.Services.TenantService
+  - BackOffice.API.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Services
+  nameWithType: BackOffice.API.Services
+  fullName: BackOffice.API.Services
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Services.CurrentSubTenantService
+  commentId: T:BackOffice.API.Services.CurrentSubTenantService
+  href: BackOffice.API.Services.CurrentSubTenantService.html
+  name: CurrentSubTenantService
+  nameWithType: CurrentSubTenantService
+  fullName: BackOffice.API.Services.CurrentSubTenantService
+- uid: BackOffice.API.Services.CurrentTenantService
+  commentId: T:BackOffice.API.Services.CurrentTenantService
+  href: BackOffice.API.Services.CurrentTenantService.html
+  name: CurrentTenantService
+  nameWithType: CurrentTenantService
+  fullName: BackOffice.API.Services.CurrentTenantService
+- uid: BackOffice.API.Services.OrganisationService
+  commentId: T:BackOffice.API.Services.OrganisationService
+  href: BackOffice.API.Services.OrganisationService.html
+  name: OrganisationService
+  nameWithType: OrganisationService
+  fullName: BackOffice.API.Services.OrganisationService
+- uid: BackOffice.API.Services.ProductionUnitService
+  commentId: T:BackOffice.API.Services.ProductionUnitService
+  href: BackOffice.API.Services.ProductionUnitService.html
+  name: ProductionUnitService
+  nameWithType: ProductionUnitService
+  fullName: BackOffice.API.Services.ProductionUnitService
+- uid: BackOffice.API.Services.SubTenantService
+  commentId: T:BackOffice.API.Services.SubTenantService
+  href: BackOffice.API.Services.SubTenantService.html
+  name: SubTenantService
+  nameWithType: SubTenantService
+  fullName: BackOffice.API.Services.SubTenantService
+- uid: BackOffice.API.Services.TenantService
+  commentId: T:BackOffice.API.Services.TenantService
+  href: BackOffice.API.Services.TenantService.html
+  name: TenantService
+  nameWithType: TenantService
+  fullName: BackOffice.API.Services.TenantService
+- uid: BackOffice.API.Services.UserService
+  commentId: T:BackOffice.API.Services.UserService
+  href: BackOffice.API.Services.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: BackOffice.API.Services.UserService

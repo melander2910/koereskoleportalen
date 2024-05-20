@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Data
+  commentId: N:Portal.API.Data
+  id: Portal.API.Data
+  children:
+  - Portal.API.Data.MongoDbClient
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Data
+  nameWithType: Portal.API.Data
+  fullName: Portal.API.Data
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Data.MongoDbClient
+  commentId: T:Portal.API.Data.MongoDbClient
+  parent: Portal.API.Data
+  href: Portal.API.Data.MongoDbClient.html
+  name: MongoDbClient
+  nameWithType: MongoDbClient
+  fullName: Portal.API.Data.MongoDbClient
+- uid: Portal.API.Data
+  commentId: N:Portal.API.Data
+  href: Portal.html
+  name: Portal.API.Data
+  nameWithType: Portal.API.Data
+  fullName: Portal.API.Data
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Data
+    name: Data
+    href: Portal.API.Data.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Data
+    name: Data
+    href: Portal.API.Data.html

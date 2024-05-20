@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Models
+  commentId: N:Portal.API.Models
+  id: Portal.API.Models
+  children:
+  - Portal.API.Models.DrivingSchool
+  - Portal.API.Models.Organisation
+  - Portal.API.Models.PortalDatabaseSettings
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Models
+  nameWithType: Portal.API.Models
+  fullName: Portal.API.Models
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Models.DrivingSchool
+  commentId: T:Portal.API.Models.DrivingSchool
+  href: Portal.API.Models.DrivingSchool.html
+  name: DrivingSchool
+  nameWithType: DrivingSchool
+  fullName: Portal.API.Models.DrivingSchool
+- uid: Portal.API.Models.Organisation
+  commentId: T:Portal.API.Models.Organisation
+  href: Portal.API.Models.Organisation.html
+  name: Organisation
+  nameWithType: Organisation
+  fullName: Portal.API.Models.Organisation
+- uid: Portal.API.Models.PortalDatabaseSettings
+  commentId: T:Portal.API.Models.PortalDatabaseSettings
+  href: Portal.API.Models.PortalDatabaseSettings.html
+  name: PortalDatabaseSettings
+  nameWithType: PortalDatabaseSettings
+  fullName: Portal.API.Models.PortalDatabaseSettings
