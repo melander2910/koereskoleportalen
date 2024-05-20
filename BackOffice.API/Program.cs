@@ -4,8 +4,11 @@ using BackOffice.API.Extensions;
 using BackOffice.API.Middleware;
 using BackOffice.API.Repositories;
 using BackOffice.API.Repositories.Interfaces;
+using BackOffice.API.Schema;
 using BackOffice.API.Services;
 using BackOffice.API.Services.Interfaces;
+using EntityGraphQL.AspNet;
+using GraphQL.Server.Ui.Altair;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +35,9 @@ builder.Services.AddDbContext<SubTenantDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddGraphQLSchema(Schema.AddGraphQlOptions);
+
 
 builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
@@ -123,11 +129,16 @@ if (!app.Environment.IsDevelopment())
 
 // app.UseRouting();
 app.UseHttpsRedirection();
-
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<TenantResolver>();
-app.MapControllers();
+app.UseEndpoints(routeBuilder =>
+{
+    routeBuilder.MapGraphQL<Context>("/graphql");
+    routeBuilder.MapGraphQLAltair("/graphql"); // Provide the GraphQL endpoint URL as a string
+});
+// app.MapControllers();
 ApplyMigration();
 app.Run();
 

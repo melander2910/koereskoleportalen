@@ -1,0 +1,154 @@
+schema {
+	query: Query
+	mutation: Mutation
+}
+
+"""Boolean scalar"""
+scalar Boolean
+"""Char scalar"""
+scalar Char
+"""Date with time scalar"""
+scalar Date
+"""Date value only scalar"""
+scalar DateOnly
+"""DateTimeOffset scalar"""
+scalar DateTimeOffset
+"""Float scalar"""
+scalar Float
+"""ID scalar"""
+scalar ID
+"""Int scalar"""
+scalar Int
+"""String scalar"""
+scalar String
+"""Time value only scalar"""
+scalar TimeOnly
+
+"""Directs the executor to include this field or fragment only when the `if` argument is true."""
+directive @include(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+"""Directs the executor to skip this field or fragment when the `if` argument is true."""
+directive @skip(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+type Query {
+	"""Return a Course by its Id"""
+	course(id: ID!): Course
+	courses: [Course!]!
+	"""Return a Organisation by its Id"""
+	organisation(id: ID!): Organisation
+	organisations: [Organisation!]!
+	"""Return a ProductionUnit by its Id"""
+	productionUnit(id: ID!): ProductionUnit
+	productionUnits: [ProductionUnit!]!
+	productionUnitsRemoved: [ProductionUnitRemoved!]!
+	"""Return a ProductionUnitRemoved by its Id"""
+	productionUnitsRemovedById(id: Int!): ProductionUnitRemoved
+	subTenantId: String!
+	tenantId: String!
+	"""Return a User by its Id"""
+	user(id: ID!): User
+	users: [User!]!
+}
+
+type Course {
+	createdDate: Date!
+	id: ID!
+	modifiedDate: Date!
+	name: String!
+	productionUnit: ProductionUnit!
+	productionUnitId: ID!
+	subTenantId: String!
+	tenantId: String!
+}
+
+type Organisation {
+	advertisementProtection: Boolean
+	city: String
+	claimedByOwner: Boolean
+	country: String
+	createdDate: Date!
+	cVR: String!
+	cvrApiModifiedDate: Date
+	email: String
+	endDate: Date
+	id: ID!
+	industryCode: String
+	industryDescription: String
+	latitude: Float
+	longtitude: Float
+	modifiedDate: Date!
+	municipality: String
+	name: String!
+	organisationType: String
+	phoneNumber: String
+	"""Return a ProductionUnit by its Id"""
+	productionUnit(id: ID!): ProductionUnit
+	productionUnits: [ProductionUnit!]!
+	startDate: Date
+	status: String
+	streetAddress: String
+	"""Return a User by its Id"""
+	user(id: ID!): User
+	users: [User!]!
+	zipcode: String
+}
+
+type ProductionUnit {
+	city: String
+	country: String
+	"""Return a Course by its Id"""
+	course(id: ID!): Course
+	courses: [Course!]!
+	createdDate: Date!
+	cVR: String!
+	cvrApiModifiedDate: Date
+	email: String
+	endDate: Date
+	id: ID!
+	industryCode: String
+	industryDescription: String
+	latitude: Float
+	longtitude: Float
+	modifiedDate: Date!
+	municipality: String
+	name: String!
+	organisation: Organisation!
+	organisationId: ID!
+	phoneNumber: String
+	productionUnitNumber: String!
+	productionUnitsRemoved: [ProductionUnitRemoved!]!
+	"""Return a ProductionUnitRemoved by its Id"""
+	productionUnitsRemovedById(id: Int!): ProductionUnitRemoved
+	startDate: Date
+	status: String
+	streetAddress: String
+	tenantId: String!
+	"""Return a User by its Id"""
+	user(id: ID!): User
+	users: [User!]!
+	zipcode: String
+}
+
+type ProductionUnitRemoved {
+	id: Int!
+	productionUnit: ProductionUnit!
+	removedDate: Date!
+	tenantId: String!
+}
+
+type User {
+	address: String!
+	createdDate: Date!
+	firstname: String!
+	id: ID!
+	lastname: String!
+	modifiedDate: Date!
+	organisations: [Organisation!]!
+	phoneNumber: String!
+	productionUnits: [ProductionUnit!]!
+}
+
+type Mutation {
+	"""Add a new course to the system"""
+	addNewCourse(name: String!, productionUnitId: ID!, tenantId: String!, subtenantId: String!): Course!
+}
+
