@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Models
+  commentId: N:Authentication.Service.Models
+  id: Authentication.Service.Models
+  children:
+  - Authentication.Service.Models.ExtendedIdentityUser
+  - Authentication.Service.Models.JwtOptions
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Models
+  nameWithType: Authentication.Service.Models
+  fullName: Authentication.Service.Models
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Models.ExtendedIdentityUser
+  commentId: T:Authentication.Service.Models.ExtendedIdentityUser
+  parent: Authentication.Service.Models
+  href: Authentication.Service.Models.ExtendedIdentityUser.html
+  name: ExtendedIdentityUser
+  nameWithType: ExtendedIdentityUser
+  fullName: Authentication.Service.Models.ExtendedIdentityUser
+- uid: Authentication.Service.Models.JwtOptions
+  commentId: T:Authentication.Service.Models.JwtOptions
+  href: Authentication.Service.Models.JwtOptions.html
+  name: JwtOptions
+  nameWithType: JwtOptions
+  fullName: Authentication.Service.Models.JwtOptions
+- uid: Authentication.Service.Models
+  commentId: N:Authentication.Service.Models
+  href: Authentication.html
+  name: Authentication.Service.Models
+  nameWithType: Authentication.Service.Models
+  fullName: Authentication.Service.Models
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html

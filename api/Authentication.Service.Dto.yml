@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Dto
+  commentId: N:Authentication.Service.Dto
+  id: Authentication.Service.Dto
+  children:
+  - Authentication.Service.Dto.AssignRoleRequestDto
+  - Authentication.Service.Dto.CreateClaimDto
+  - Authentication.Service.Dto.LoginRequestDto
+  - Authentication.Service.Dto.LoginResponseDto
+  - Authentication.Service.Dto.RefreshTokenDto
+  - Authentication.Service.Dto.RegistrationRequestDto
+  - Authentication.Service.Dto.ResponseDto
+  - Authentication.Service.Dto.UserDto
+  - Authentication.Service.Dto.UserSignupDto
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Dto
+  nameWithType: Authentication.Service.Dto
+  fullName: Authentication.Service.Dto
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Dto.AssignRoleRequestDto
+  commentId: T:Authentication.Service.Dto.AssignRoleRequestDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.AssignRoleRequestDto.html
+  name: AssignRoleRequestDto
+  nameWithType: AssignRoleRequestDto
+  fullName: Authentication.Service.Dto.AssignRoleRequestDto
+- uid: Authentication.Service.Dto.CreateClaimDto
+  commentId: T:Authentication.Service.Dto.CreateClaimDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.CreateClaimDto.html
+  name: CreateClaimDto
+  nameWithType: CreateClaimDto
+  fullName: Authentication.Service.Dto.CreateClaimDto
+- uid: Authentication.Service.Dto.LoginRequestDto
+  commentId: T:Authentication.Service.Dto.LoginRequestDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.LoginRequestDto.html
+  name: LoginRequestDto
+  nameWithType: LoginRequestDto
+  fullName: Authentication.Service.Dto.LoginRequestDto
+- uid: Authentication.Service.Dto.LoginResponseDto
+  commentId: T:Authentication.Service.Dto.LoginResponseDto
+  href: Authentication.Service.Dto.LoginResponseDto.html
+  name: LoginResponseDto
+  nameWithType: LoginResponseDto
+  fullName: Authentication.Service.Dto.LoginResponseDto
+- uid: Authentication.Service.Dto.RefreshTokenDto
+  commentId: T:Authentication.Service.Dto.RefreshTokenDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.RefreshTokenDto.html
+  name: RefreshTokenDto
+  nameWithType: RefreshTokenDto
+  fullName: Authentication.Service.Dto.RefreshTokenDto
+- uid: Authentication.Service.Dto.RegistrationRequestDto
+  commentId: T:Authentication.Service.Dto.RegistrationRequestDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.RegistrationRequestDto.html
+  name: RegistrationRequestDto
+  nameWithType: RegistrationRequestDto
+  fullName: Authentication.Service.Dto.RegistrationRequestDto
+- uid: Authentication.Service.Dto.ResponseDto
+  commentId: T:Authentication.Service.Dto.ResponseDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.ResponseDto.html
+  name: ResponseDto
+  nameWithType: ResponseDto
+  fullName: Authentication.Service.Dto.ResponseDto
+- uid: Authentication.Service.Dto.UserDto
+  commentId: T:Authentication.Service.Dto.UserDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.UserDto.html
+  name: UserDto
+  nameWithType: UserDto
+  fullName: Authentication.Service.Dto.UserDto
+- uid: Authentication.Service.Dto.UserSignupDto
+  commentId: T:Authentication.Service.Dto.UserSignupDto
+  href: Authentication.Service.Dto.UserSignupDto.html
+  name: UserSignupDto
+  nameWithType: UserSignupDto
+  fullName: Authentication.Service.Dto.UserSignupDto
+- uid: Authentication.Service.Dto
+  commentId: N:Authentication.Service.Dto
+  href: Authentication.html
+  name: Authentication.Service.Dto
+  nameWithType: Authentication.Service.Dto
+  fullName: Authentication.Service.Dto
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Dto
+    name: Dto
+    href: Authentication.Service.Dto.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Dto
+    name: Dto
+    href: Authentication.Service.Dto.html

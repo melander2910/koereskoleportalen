@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Models.DatabaseEntities
+  commentId: N:BackOffice.API.Models.DatabaseEntities
+  id: BackOffice.API.Models.DatabaseEntities
+  children:
+  - BackOffice.API.Models.DatabaseEntities.Course
+  - BackOffice.API.Models.DatabaseEntities.Organisation
+  - BackOffice.API.Models.DatabaseEntities.ProductionUnit
+  - BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved
+  - BackOffice.API.Models.DatabaseEntities.User
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Models.DatabaseEntities
+  nameWithType: BackOffice.API.Models.DatabaseEntities
+  fullName: BackOffice.API.Models.DatabaseEntities
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Models.DatabaseEntities.Course
+  commentId: T:BackOffice.API.Models.DatabaseEntities.Course
+  href: BackOffice.API.Models.DatabaseEntities.Course.html
+  name: Course
+  nameWithType: Course
+  fullName: BackOffice.API.Models.DatabaseEntities.Course
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation
+  commentId: T:BackOffice.API.Models.DatabaseEntities.Organisation
+  parent: BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html
+  name: Organisation
+  nameWithType: Organisation
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation
+- uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+  commentId: T:BackOffice.API.Models.DatabaseEntities.ProductionUnit
+  parent: BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  name: ProductionUnit
+  nameWithType: ProductionUnit
+  fullName: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+- uid: BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved
+  commentId: T:BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved
+  parent: BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved.html
+  name: ProductionUnitRemoved
+  nameWithType: ProductionUnitRemoved
+  fullName: BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved
+- uid: BackOffice.API.Models.DatabaseEntities.User
+  commentId: T:BackOffice.API.Models.DatabaseEntities.User
+  parent: BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.API.Models.DatabaseEntities.User.html
+  name: User
+  nameWithType: User
+  fullName: BackOffice.API.Models.DatabaseEntities.User
+- uid: BackOffice.API.Models.DatabaseEntities
+  commentId: N:BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.html
+  name: BackOffice.API.Models.DatabaseEntities
+  nameWithType: BackOffice.API.Models.DatabaseEntities
+  fullName: BackOffice.API.Models.DatabaseEntities
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html

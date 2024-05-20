@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Data
+  commentId: N:Authentication.Service.Data
+  id: Authentication.Service.Data
+  children:
+  - Authentication.Service.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Data
+  nameWithType: Authentication.Service.Data
+  fullName: Authentication.Service.Data
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Data.ApplicationDbContext
+  commentId: T:Authentication.Service.Data.ApplicationDbContext
+  parent: Authentication.Service.Data
+  href: Authentication.Service.Data.ApplicationDbContext.html
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: Authentication.Service.Data.ApplicationDbContext
+- uid: Authentication.Service.Data
+  commentId: N:Authentication.Service.Data
+  href: Authentication.html
+  name: Authentication.Service.Data
+  nameWithType: Authentication.Service.Data
+  fullName: Authentication.Service.Data
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Data
+    name: Data
+    href: Authentication.Service.Data.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Data
+    name: Data
+    href: Authentication.Service.Data.html

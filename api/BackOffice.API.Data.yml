@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Data
+  commentId: N:BackOffice.API.Data
+  id: BackOffice.API.Data
+  children:
+  - BackOffice.API.Data.Context
+  - BackOffice.API.Data.SubTenantDbContext
+  - BackOffice.API.Data.TenantDbContext
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Data
+  nameWithType: BackOffice.API.Data
+  fullName: BackOffice.API.Data
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Data.Context
+  commentId: T:BackOffice.API.Data.Context
+  parent: BackOffice.API.Data
+  href: BackOffice.API.Data.Context.html
+  name: Context
+  nameWithType: Context
+  fullName: BackOffice.API.Data.Context
+- uid: BackOffice.API.Data.SubTenantDbContext
+  commentId: T:BackOffice.API.Data.SubTenantDbContext
+  parent: BackOffice.API.Data
+  href: BackOffice.API.Data.SubTenantDbContext.html
+  name: SubTenantDbContext
+  nameWithType: SubTenantDbContext
+  fullName: BackOffice.API.Data.SubTenantDbContext
+- uid: BackOffice.API.Data.TenantDbContext
+  commentId: T:BackOffice.API.Data.TenantDbContext
+  parent: BackOffice.API.Data
+  href: BackOffice.API.Data.TenantDbContext.html
+  name: TenantDbContext
+  nameWithType: TenantDbContext
+  fullName: BackOffice.API.Data.TenantDbContext
+- uid: BackOffice.API.Data
+  commentId: N:BackOffice.API.Data
+  href: BackOffice.html
+  name: BackOffice.API.Data
+  nameWithType: BackOffice.API.Data
+  fullName: BackOffice.API.Data
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Data
+    name: Data
+    href: BackOffice.API.Data.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Data
+    name: Data
+    href: BackOffice.API.Data.html

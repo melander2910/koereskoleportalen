@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Extensions
+  commentId: N:Authentication.Service.Extensions
+  id: Authentication.Service.Extensions
+  children:
+  - Authentication.Service.Extensions.WebApplicationBuilderExtension
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Extensions
+  nameWithType: Authentication.Service.Extensions
+  fullName: Authentication.Service.Extensions
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Extensions.WebApplicationBuilderExtension
+  commentId: T:Authentication.Service.Extensions.WebApplicationBuilderExtension
+  href: Authentication.Service.Extensions.WebApplicationBuilderExtension.html
+  name: WebApplicationBuilderExtension
+  nameWithType: WebApplicationBuilderExtension
+  fullName: Authentication.Service.Extensions.WebApplicationBuilderExtension

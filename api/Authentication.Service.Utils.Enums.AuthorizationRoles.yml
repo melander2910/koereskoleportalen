@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+  commentId: T:Authentication.Service.Utils.Enums.AuthorizationRoles
+  id: Enums.AuthorizationRoles
+  parent: Authentication.Service.Utils
+  children:
+  - Authentication.Service.Utils.Enums.AuthorizationRoles.Admin
+  - Authentication.Service.Utils.Enums.AuthorizationRoles.Owner
+  langs:
+  - csharp
+  - vb
+  name: Enums.AuthorizationRoles
+  nameWithType: Enums.AuthorizationRoles
+  fullName: Authentication.Service.Utils.Enums.AuthorizationRoles
+  type: Enum
+  source:
+    remote:
+      path: Authentication.Service/Utils/Enums.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: AuthorizationRoles
+    path: Authentication.Service/Utils/Enums.cs
+    startLine: 4
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Utils
+  syntax:
+    content: public enum Enums.AuthorizationRoles
+    content.vb: Public Enum Enums.AuthorizationRoles
+- uid: Authentication.Service.Utils.Enums.AuthorizationRoles.Owner
+  commentId: F:Authentication.Service.Utils.Enums.AuthorizationRoles.Owner
+  id: Owner
+  parent: Authentication.Service.Utils.Enums.AuthorizationRoles
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: Enums.AuthorizationRoles.Owner
+  fullName: Authentication.Service.Utils.Enums.AuthorizationRoles.Owner
+  type: Field
+  source:
+    remote:
+      path: Authentication.Service/Utils/Enums.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Owner
+    path: Authentication.Service/Utils/Enums.cs
+    startLine: 6
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Utils
+  syntax:
+    content: Owner = 0
+    return:
+      type: Authentication.Service.Utils.Enums.AuthorizationRoles
+- uid: Authentication.Service.Utils.Enums.AuthorizationRoles.Admin
+  commentId: F:Authentication.Service.Utils.Enums.AuthorizationRoles.Admin
+  id: Admin
+  parent: Authentication.Service.Utils.Enums.AuthorizationRoles
+  langs:
+  - csharp
+  - vb
+  name: Admin
+  nameWithType: Enums.AuthorizationRoles.Admin
+  fullName: Authentication.Service.Utils.Enums.AuthorizationRoles.Admin
+  type: Field
+  source:
+    remote:
+      path: Authentication.Service/Utils/Enums.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Admin
+    path: Authentication.Service/Utils/Enums.cs
+    startLine: 7
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Utils
+  syntax:
+    content: Admin = 1
+    return:
+      type: Authentication.Service.Utils.Enums.AuthorizationRoles
+references:
+- uid: Authentication.Service.Utils
+  commentId: N:Authentication.Service.Utils
+  href: Authentication.html
+  name: Authentication.Service.Utils
+  nameWithType: Authentication.Service.Utils
+  fullName: Authentication.Service.Utils
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Utils
+    name: Utils
+    href: Authentication.Service.Utils.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Utils
+    name: Utils
+    href: Authentication.Service.Utils.html
+- uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+  commentId: T:Authentication.Service.Utils.Enums.AuthorizationRoles
+  parent: Authentication.Service.Utils
+  href: Authentication.Service.Utils.Enums.html
+  name: Enums.AuthorizationRoles
+  nameWithType: Enums.AuthorizationRoles
+  fullName: Authentication.Service.Utils.Enums.AuthorizationRoles
+  spec.csharp:
+  - uid: Authentication.Service.Utils.Enums
+    name: Enums
+    href: Authentication.Service.Utils.Enums.html
+  - name: .
+  - uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+    name: AuthorizationRoles
+    href: Authentication.Service.Utils.Enums.AuthorizationRoles.html
+  spec.vb:
+  - uid: Authentication.Service.Utils.Enums
+    name: Enums
+    href: Authentication.Service.Utils.Enums.html
+  - name: .
+  - uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+    name: AuthorizationRoles
+    href: Authentication.Service.Utils.Enums.AuthorizationRoles.html

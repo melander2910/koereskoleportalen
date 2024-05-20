@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Contracts
+  commentId: N:Contracts
+  id: Contracts
+  children:
+  - Contracts.ProductionUnitUpdatedEvent
+  - Contracts.SubTenantClaimCreatedEvent
+  - Contracts.TenantClaimCreatedEvent
+  - Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
+  type: Namespace
+  assemblies:
+  - Contracts
+references:
+- uid: Contracts.ProductionUnitUpdatedEvent
+  commentId: T:Contracts.ProductionUnitUpdatedEvent
+  href: Contracts.ProductionUnitUpdatedEvent.html
+  name: ProductionUnitUpdatedEvent
+  nameWithType: ProductionUnitUpdatedEvent
+  fullName: Contracts.ProductionUnitUpdatedEvent
+- uid: Contracts.SubTenantClaimCreatedEvent
+  commentId: T:Contracts.SubTenantClaimCreatedEvent
+  href: Contracts.SubTenantClaimCreatedEvent.html
+  name: SubTenantClaimCreatedEvent
+  nameWithType: SubTenantClaimCreatedEvent
+  fullName: Contracts.SubTenantClaimCreatedEvent
+- uid: Contracts.TenantClaimCreatedEvent
+  commentId: T:Contracts.TenantClaimCreatedEvent
+  href: Contracts.TenantClaimCreatedEvent.html
+  name: TenantClaimCreatedEvent
+  nameWithType: TenantClaimCreatedEvent
+  fullName: Contracts.TenantClaimCreatedEvent
+- uid: Contracts.UserCreatedEvent
+  commentId: T:Contracts.UserCreatedEvent
+  href: Contracts.UserCreatedEvent.html
+  name: UserCreatedEvent
+  nameWithType: UserCreatedEvent
+  fullName: Contracts.UserCreatedEvent

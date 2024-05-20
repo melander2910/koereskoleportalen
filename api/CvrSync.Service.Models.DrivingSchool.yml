@@ -1,0 +1,671 @@
+### YamlMime:ManagedReference
+items:
+- uid: CvrSync.Service.Models.DrivingSchool
+  commentId: T:CvrSync.Service.Models.DrivingSchool
+  id: DrivingSchool
+  parent: CvrSync.Service.Models
+  children:
+  - CvrSync.Service.Models.DrivingSchool.Address
+  - CvrSync.Service.Models.DrivingSchool.City
+  - CvrSync.Service.Models.DrivingSchool.Id
+  - CvrSync.Service.Models.DrivingSchool.IndustryCode
+  - CvrSync.Service.Models.DrivingSchool.Name
+  - CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+  - CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+  - CvrSync.Service.Models.DrivingSchool.Status
+  - CvrSync.Service.Models.DrivingSchool.ZipCode
+  langs:
+  - csharp
+  - vb
+  name: DrivingSchool
+  nameWithType: DrivingSchool
+  fullName: CvrSync.Service.Models.DrivingSchool
+  type: Class
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: DrivingSchool
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 6
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public class DrivingSchool
+    content.vb: Public Class DrivingSchool
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CvrSync.Service.Models.DrivingSchool.Id
+  commentId: P:CvrSync.Service.Models.DrivingSchool.Id
+  id: Id
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: DrivingSchool.Id
+  fullName: CvrSync.Service.Models.DrivingSchool.Id
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Id
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 8
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: >-
+      [BsonId]
+
+      [BsonRepresentation(BsonType.ObjectId)]
+
+      public string? Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonId>
+
+      <BsonRepresentation(BsonType.ObjectId)>
+
+      Public Property Id As String
+  overload: CvrSync.Service.Models.DrivingSchool.Id*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute.#ctor
+    arguments: []
+  - type: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute.#ctor(MongoDB.Bson.BsonType)
+    arguments:
+    - type: MongoDB.Bson.BsonType
+      value: 7
+- uid: CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+  commentId: P:CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+  id: ProductionUnitNumber
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: ProductionUnitNumber
+  nameWithType: DrivingSchool.ProductionUnitNumber
+  fullName: CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ProductionUnitNumber
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 11
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public int ProductionUnitNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProductionUnitNumber As Integer
+  overload: CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber*
+- uid: CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+  commentId: P:CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+  id: OrganisationNumber
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: OrganisationNumber
+  nameWithType: DrivingSchool.OrganisationNumber
+  fullName: CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: OrganisationNumber
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 12
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public int OrganisationNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property OrganisationNumber As Integer
+  overload: CvrSync.Service.Models.DrivingSchool.OrganisationNumber*
+- uid: CvrSync.Service.Models.DrivingSchool.Name
+  commentId: P:CvrSync.Service.Models.DrivingSchool.Name
+  id: Name
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: DrivingSchool.Name
+  fullName: CvrSync.Service.Models.DrivingSchool.Name
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Name
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 13
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: CvrSync.Service.Models.DrivingSchool.Name*
+- uid: CvrSync.Service.Models.DrivingSchool.Status
+  commentId: P:CvrSync.Service.Models.DrivingSchool.Status
+  id: Status
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: DrivingSchool.Status
+  fullName: CvrSync.Service.Models.DrivingSchool.Status
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Status
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 14
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: CvrSync.Service.Models.DrivingSchool.Status*
+- uid: CvrSync.Service.Models.DrivingSchool.Address
+  commentId: P:CvrSync.Service.Models.DrivingSchool.Address
+  id: Address
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: DrivingSchool.Address
+  fullName: CvrSync.Service.Models.DrivingSchool.Address
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Address
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 15
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Address As String
+  overload: CvrSync.Service.Models.DrivingSchool.Address*
+- uid: CvrSync.Service.Models.DrivingSchool.ZipCode
+  commentId: P:CvrSync.Service.Models.DrivingSchool.ZipCode
+  id: ZipCode
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: ZipCode
+  nameWithType: DrivingSchool.ZipCode
+  fullName: CvrSync.Service.Models.DrivingSchool.ZipCode
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ZipCode
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 16
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public int ZipCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ZipCode As Integer
+  overload: CvrSync.Service.Models.DrivingSchool.ZipCode*
+- uid: CvrSync.Service.Models.DrivingSchool.City
+  commentId: P:CvrSync.Service.Models.DrivingSchool.City
+  id: City
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: DrivingSchool.City
+  fullName: CvrSync.Service.Models.DrivingSchool.City
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: City
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 17
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: CvrSync.Service.Models.DrivingSchool.City*
+- uid: CvrSync.Service.Models.DrivingSchool.IndustryCode
+  commentId: P:CvrSync.Service.Models.DrivingSchool.IndustryCode
+  id: IndustryCode
+  parent: CvrSync.Service.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: IndustryCode
+  nameWithType: DrivingSchool.IndustryCode
+  fullName: CvrSync.Service.Models.DrivingSchool.IndustryCode
+  type: Property
+  source:
+    remote:
+      path: CvrSync.Service/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IndustryCode
+    path: CvrSync.Service/Models/DrivingSchool.cs
+    startLine: 18
+  assemblies:
+  - CvrSync.Service
+  namespace: CvrSync.Service.Models
+  syntax:
+    content: public int IndustryCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IndustryCode As Integer
+  overload: CvrSync.Service.Models.DrivingSchool.IndustryCode*
+references:
+- uid: CvrSync.Service.Models
+  commentId: N:CvrSync.Service.Models
+  href: CvrSync.html
+  name: CvrSync.Service.Models
+  nameWithType: CvrSync.Service.Models
+  fullName: CvrSync.Service.Models
+  spec.csharp:
+  - uid: CvrSync
+    name: CvrSync
+    href: CvrSync.html
+  - name: .
+  - uid: CvrSync.Service
+    name: Service
+    href: CvrSync.Service.html
+  - name: .
+  - uid: CvrSync.Service.Models
+    name: Models
+    href: CvrSync.Service.Models.html
+  spec.vb:
+  - uid: CvrSync
+    name: CvrSync
+    href: CvrSync.html
+  - name: .
+  - uid: CvrSync.Service
+    name: Service
+    href: CvrSync.Service.html
+  - name: .
+  - uid: CvrSync.Service.Models
+    name: Models
+    href: CvrSync.Service.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CvrSync.Service.Models.DrivingSchool.Id*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.Id
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_Id
+  name: Id
+  nameWithType: DrivingSchool.Id
+  fullName: CvrSync.Service.Models.DrivingSchool.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_ProductionUnitNumber
+  name: ProductionUnitNumber
+  nameWithType: DrivingSchool.ProductionUnitNumber
+  fullName: CvrSync.Service.Models.DrivingSchool.ProductionUnitNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: CvrSync.Service.Models.DrivingSchool.OrganisationNumber*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_OrganisationNumber
+  name: OrganisationNumber
+  nameWithType: DrivingSchool.OrganisationNumber
+  fullName: CvrSync.Service.Models.DrivingSchool.OrganisationNumber
+- uid: CvrSync.Service.Models.DrivingSchool.Name*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.Name
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_Name
+  name: Name
+  nameWithType: DrivingSchool.Name
+  fullName: CvrSync.Service.Models.DrivingSchool.Name
+- uid: CvrSync.Service.Models.DrivingSchool.Status*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.Status
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_Status
+  name: Status
+  nameWithType: DrivingSchool.Status
+  fullName: CvrSync.Service.Models.DrivingSchool.Status
+- uid: CvrSync.Service.Models.DrivingSchool.Address*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.Address
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_Address
+  name: Address
+  nameWithType: DrivingSchool.Address
+  fullName: CvrSync.Service.Models.DrivingSchool.Address
+- uid: CvrSync.Service.Models.DrivingSchool.ZipCode*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.ZipCode
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_ZipCode
+  name: ZipCode
+  nameWithType: DrivingSchool.ZipCode
+  fullName: CvrSync.Service.Models.DrivingSchool.ZipCode
+- uid: CvrSync.Service.Models.DrivingSchool.City*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.City
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_City
+  name: City
+  nameWithType: DrivingSchool.City
+  fullName: CvrSync.Service.Models.DrivingSchool.City
+- uid: CvrSync.Service.Models.DrivingSchool.IndustryCode*
+  commentId: Overload:CvrSync.Service.Models.DrivingSchool.IndustryCode
+  href: CvrSync.Service.Models.DrivingSchool.html#CvrSync_Service_Models_DrivingSchool_IndustryCode
+  name: IndustryCode
+  nameWithType: DrivingSchool.IndustryCode
+  fullName: CvrSync.Service.Models.DrivingSchool.IndustryCode

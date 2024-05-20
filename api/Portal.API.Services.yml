@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Services
+  commentId: N:Portal.API.Services
+  id: Portal.API.Services
+  children:
+  - Portal.API.Services.OrganisationService
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Services
+  nameWithType: Portal.API.Services
+  fullName: Portal.API.Services
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Services.OrganisationService
+  commentId: T:Portal.API.Services.OrganisationService
+  href: Portal.API.Services.OrganisationService.html
+  name: OrganisationService
+  nameWithType: OrganisationService
+  fullName: Portal.API.Services.OrganisationService

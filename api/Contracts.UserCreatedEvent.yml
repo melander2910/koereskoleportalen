@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Contracts.UserCreatedEvent
+  commentId: T:Contracts.UserCreatedEvent
+  id: UserCreatedEvent
+  parent: Contracts
+  children:
+  - Contracts.UserCreatedEvent.Address
+  - Contracts.UserCreatedEvent.Firstname
+  - Contracts.UserCreatedEvent.Id
+  - Contracts.UserCreatedEvent.Lastname
+  - Contracts.UserCreatedEvent.PhoneNumber
+  langs:
+  - csharp
+  - vb
+  name: UserCreatedEvent
+  nameWithType: UserCreatedEvent
+  fullName: Contracts.UserCreatedEvent
+  type: Class
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: UserCreatedEvent
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 2
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public class UserCreatedEvent
+    content.vb: Public Class UserCreatedEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Contracts.UserCreatedEvent.Id
+  commentId: P:Contracts.UserCreatedEvent.Id
+  id: Id
+  parent: Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UserCreatedEvent.Id
+  fullName: Contracts.UserCreatedEvent.Id
+  type: Property
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Id
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 4
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Contracts.UserCreatedEvent.Id*
+- uid: Contracts.UserCreatedEvent.Firstname
+  commentId: P:Contracts.UserCreatedEvent.Firstname
+  id: Firstname
+  parent: Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Firstname
+  nameWithType: UserCreatedEvent.Firstname
+  fullName: Contracts.UserCreatedEvent.Firstname
+  type: Property
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Firstname
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 5
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public string Firstname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Firstname As String
+  overload: Contracts.UserCreatedEvent.Firstname*
+- uid: Contracts.UserCreatedEvent.Lastname
+  commentId: P:Contracts.UserCreatedEvent.Lastname
+  id: Lastname
+  parent: Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Lastname
+  nameWithType: UserCreatedEvent.Lastname
+  fullName: Contracts.UserCreatedEvent.Lastname
+  type: Property
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Lastname
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 6
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public string Lastname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Lastname As String
+  overload: Contracts.UserCreatedEvent.Lastname*
+- uid: Contracts.UserCreatedEvent.PhoneNumber
+  commentId: P:Contracts.UserCreatedEvent.PhoneNumber
+  id: PhoneNumber
+  parent: Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: PhoneNumber
+  nameWithType: UserCreatedEvent.PhoneNumber
+  fullName: Contracts.UserCreatedEvent.PhoneNumber
+  type: Property
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: PhoneNumber
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 7
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public string PhoneNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PhoneNumber As String
+  overload: Contracts.UserCreatedEvent.PhoneNumber*
+- uid: Contracts.UserCreatedEvent.Address
+  commentId: P:Contracts.UserCreatedEvent.Address
+  id: Address
+  parent: Contracts.UserCreatedEvent
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: UserCreatedEvent.Address
+  fullName: Contracts.UserCreatedEvent.Address
+  type: Property
+  source:
+    remote:
+      path: Contracts/UserCreatedEvent.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Address
+    path: Contracts/UserCreatedEvent.cs
+    startLine: 8
+  assemblies:
+  - Contracts
+  namespace: Contracts
+  syntax:
+    content: public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Address As String
+  overload: Contracts.UserCreatedEvent.Address*
+references:
+- uid: Contracts
+  commentId: N:Contracts
+  href: Contracts.html
+  name: Contracts
+  nameWithType: Contracts
+  fullName: Contracts
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Contracts.UserCreatedEvent.Id*
+  commentId: Overload:Contracts.UserCreatedEvent.Id
+  href: Contracts.UserCreatedEvent.html#Contracts_UserCreatedEvent_Id
+  name: Id
+  nameWithType: UserCreatedEvent.Id
+  fullName: Contracts.UserCreatedEvent.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Contracts.UserCreatedEvent.Firstname*
+  commentId: Overload:Contracts.UserCreatedEvent.Firstname
+  href: Contracts.UserCreatedEvent.html#Contracts_UserCreatedEvent_Firstname
+  name: Firstname
+  nameWithType: UserCreatedEvent.Firstname
+  fullName: Contracts.UserCreatedEvent.Firstname
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Contracts.UserCreatedEvent.Lastname*
+  commentId: Overload:Contracts.UserCreatedEvent.Lastname
+  href: Contracts.UserCreatedEvent.html#Contracts_UserCreatedEvent_Lastname
+  name: Lastname
+  nameWithType: UserCreatedEvent.Lastname
+  fullName: Contracts.UserCreatedEvent.Lastname
+- uid: Contracts.UserCreatedEvent.PhoneNumber*
+  commentId: Overload:Contracts.UserCreatedEvent.PhoneNumber
+  href: Contracts.UserCreatedEvent.html#Contracts_UserCreatedEvent_PhoneNumber
+  name: PhoneNumber
+  nameWithType: UserCreatedEvent.PhoneNumber
+  fullName: Contracts.UserCreatedEvent.PhoneNumber
+- uid: Contracts.UserCreatedEvent.Address*
+  commentId: Overload:Contracts.UserCreatedEvent.Address
+  href: Contracts.UserCreatedEvent.html#Contracts_UserCreatedEvent_Address
+  name: Address
+  nameWithType: UserCreatedEvent.Address
+  fullName: Contracts.UserCreatedEvent.Address

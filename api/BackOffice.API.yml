@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API
+  commentId: N:BackOffice.API
+  id: BackOffice.API
+  children:
+  - BackOffice.API.WeatherForecast
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API
+  nameWithType: BackOffice.API
+  fullName: BackOffice.API
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.WeatherForecast
+  commentId: T:BackOffice.API.WeatherForecast
+  href: BackOffice.API.WeatherForecast.html
+  name: WeatherForecast
+  nameWithType: WeatherForecast
+  fullName: BackOffice.API.WeatherForecast

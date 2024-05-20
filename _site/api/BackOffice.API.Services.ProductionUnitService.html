@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProductionUnitService | Koereskoleportalen </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProductionUnitService | Koereskoleportalen ">
+      
+      <meta name="description" content="Service for managing production units.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/melander2910/koereskoleportalen/new/docfx/apiSpec/new?filename=BackOffice_API_Services_ProductionUnitService.md&amp;value=---%0Auid%3A%20BackOffice.API.Services.ProductionUnitService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Koereskoleportalen">
+            Koereskoleportalen
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BackOffice.API.Services.ProductionUnitService">
+
+
+
+  <h1 id="BackOffice_API_Services_ProductionUnitService" data-uid="BackOffice.API.Services.ProductionUnitService" class="text-break">
+Class ProductionUnitService  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BackOffice.html">BackOffice</a>.<a class="xref" href="BackOffice.API.html">API</a>.<a class="xref" href="BackOffice.API.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BackOffice.API.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Service for managing production units.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ProductionUnitService : IProductionUnitService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ProductionUnitService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="BackOffice.API.Services.Interfaces.IProductionUnitService.html">IProductionUnitService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService__ctor_" data-uid="BackOffice.API.Services.ProductionUnitService.#ctor*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService__ctor_BackOffice_API_Repositories_Interfaces_IProductionUnitRepository_MassTransit_IPublishEndpoint_" data-uid="BackOffice.API.Services.ProductionUnitService.#ctor(BackOffice.API.Repositories.Interfaces.IProductionUnitRepository,MassTransit.IPublishEndpoint)">
+  ProductionUnitService(IProductionUnitRepository, IPublishEndpoint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProductionUnitService(IProductionUnitRepository productionUnitRepository, IPublishEndpoint publishEndpoint)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>productionUnitRepository</code> <a class="xref" href="BackOffice.API.Repositories.Interfaces.IProductionUnitRepository.html">IProductionUnitRepository</a></dt>
+    <dd></dd>
+    <dt><code>publishEndpoint</code> <span class="xref">IPublishEndpoint</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_AddAsync_" data-uid="BackOffice.API.Services.ProductionUnitService.AddAsync*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_AddAsync_BackOffice_API_Dto_ProductionUnitCreateDto_" data-uid="BackOffice.API.Services.ProductionUnitService.AddAsync(BackOffice.API.Dto.ProductionUnitCreateDto)">
+  AddAsync(ProductionUnitCreateDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a new production unit asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProductionUnit&gt; AddAsync(ProductionUnitCreateDto productionUnitCreateDto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>productionUnitCreateDto</code> <a class="xref" href="BackOffice.API.Dto.ProductionUnitCreateDto.html">ProductionUnitCreateDto</a></dt>
+    <dd><p>The DTO for creating a production unit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;</dt>
+    <dd><p>The created production unit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_Delete_" data-uid="BackOffice.API.Services.ProductionUnitService.Delete*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_Delete_System_Guid_" data-uid="BackOffice.API.Services.ProductionUnitService.Delete(System.Guid)">
+  Delete(Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a production unit asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; Delete(Guid id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The production unit ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p><code>true</code> if the production unit was successfully deleted; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown when the production unit with the specified ID is not found.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_FindAsync_" data-uid="BackOffice.API.Services.ProductionUnitService.FindAsync*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_FindAsync_System_Guid_" data-uid="BackOffice.API.Services.ProductionUnitService.FindAsync(System.Guid)">
+  FindAsync(Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a production unit by ID asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProductionUnit&gt; FindAsync(Guid id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The production unit ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;</dt>
+    <dd><p>The production unit with the specified ID.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_FindByProductionUnitNumber_" data-uid="BackOffice.API.Services.ProductionUnitService.FindByProductionUnitNumber*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_FindByProductionUnitNumber_System_String_" data-uid="BackOffice.API.Services.ProductionUnitService.FindByProductionUnitNumber(System.String)">
+  FindByProductionUnitNumber(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a production unit by production unit number asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProductionUnit&gt; FindByProductionUnitNumber(string productionUnitNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>productionUnitNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The production unit number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;</dt>
+    <dd><p>The production unit with the specified production unit number.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_GetAllAsync_" data-uid="BackOffice.API.Services.ProductionUnitService.GetAllAsync*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_GetAllAsync" data-uid="BackOffice.API.Services.ProductionUnitService.GetAllAsync">
+  GetAllAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all production units asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;ProductionUnit&gt;&gt; GetAllAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;&gt;</dt>
+    <dd><p>A list of production units.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_GetAllByUserIdAsync_" data-uid="BackOffice.API.Services.ProductionUnitService.GetAllByUserIdAsync*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_GetAllByUserIdAsync_System_Guid_" data-uid="BackOffice.API.Services.ProductionUnitService.GetAllByUserIdAsync(System.Guid)">
+  GetAllByUserIdAsync(Guid)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all production units by user ID asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;ProductionUnit&gt;&gt; GetAllByUserIdAsync(Guid userId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The user ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;&gt;</dt>
+    <dd><p>A list of production units associated with the specified user ID.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BackOffice_API_Services_ProductionUnitService_Update_" data-uid="BackOffice.API.Services.ProductionUnitService.Update*"></a>
+
+  <h3 id="BackOffice_API_Services_ProductionUnitService_Update_System_Guid_BackOffice_API_Dto_ProductionUnitUpdateDto_" data-uid="BackOffice.API.Services.ProductionUnitService.Update(System.Guid,BackOffice.API.Dto.ProductionUnitUpdateDto)">
+  Update(Guid, ProductionUnitUpdateDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates a production unit asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ProductionUnit&gt; Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The production unit ID.</p>
+</dd>
+    <dt><code>productionUnitUpdateDto</code> <a class="xref" href="BackOffice.API.Dto.ProductionUnitUpdateDto.html">ProductionUnitUpdateDto</a></dt>
+    <dd><p>The DTO for updating a production unit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BackOffice.API.Models.DatabaseEntities.ProductionUnit.html">ProductionUnit</a>&gt;</dt>
+    <dd><p>The updated production unit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/melander2910/koereskoleportalen/blob/docfx/BackOffice.API/Services/ProductionUnitService.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

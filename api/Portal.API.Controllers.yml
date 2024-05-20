@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Controllers
+  commentId: N:Portal.API.Controllers
+  id: Portal.API.Controllers
+  children:
+  - Portal.API.Controllers.DrivingSchoolController
+  - Portal.API.Controllers.OrganisationController
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Controllers
+  nameWithType: Portal.API.Controllers
+  fullName: Portal.API.Controllers
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Controllers.DrivingSchoolController
+  commentId: T:Portal.API.Controllers.DrivingSchoolController
+  href: Portal.API.Controllers.DrivingSchoolController.html
+  name: DrivingSchoolController
+  nameWithType: DrivingSchoolController
+  fullName: Portal.API.Controllers.DrivingSchoolController
+- uid: Portal.API.Controllers.OrganisationController
+  commentId: T:Portal.API.Controllers.OrganisationController
+  href: Portal.API.Controllers.OrganisationController.html
+  name: OrganisationController
+  nameWithType: OrganisationController
+  fullName: Portal.API.Controllers.OrganisationController

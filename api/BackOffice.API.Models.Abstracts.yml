@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Models.Abstracts
+  commentId: N:BackOffice.API.Models.Abstracts
+  id: BackOffice.API.Models.Abstracts
+  children:
+  - BackOffice.API.Models.Abstracts.BaseEntity
+  - BackOffice.API.Models.Abstracts.SubTenant
+  - BackOffice.API.Models.Abstracts.Tenant
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Models.Abstracts
+  nameWithType: BackOffice.API.Models.Abstracts
+  fullName: BackOffice.API.Models.Abstracts
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Models.Abstracts.BaseEntity
+  commentId: T:BackOffice.API.Models.Abstracts.BaseEntity
+  parent: BackOffice.API.Models.Abstracts
+  href: BackOffice.API.Models.Abstracts.BaseEntity.html
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: BackOffice.API.Models.Abstracts.BaseEntity
+- uid: BackOffice.API.Models.Abstracts.SubTenant
+  commentId: T:BackOffice.API.Models.Abstracts.SubTenant
+  parent: BackOffice.API.Models.Abstracts
+  href: BackOffice.API.Models.Abstracts.SubTenant.html
+  name: SubTenant
+  nameWithType: SubTenant
+  fullName: BackOffice.API.Models.Abstracts.SubTenant
+- uid: BackOffice.API.Models.Abstracts.Tenant
+  commentId: T:BackOffice.API.Models.Abstracts.Tenant
+  parent: BackOffice.API.Models.Abstracts
+  href: BackOffice.API.Models.Abstracts.Tenant.html
+  name: Tenant
+  nameWithType: Tenant
+  fullName: BackOffice.API.Models.Abstracts.Tenant
+- uid: BackOffice.API.Models.Abstracts
+  commentId: N:BackOffice.API.Models.Abstracts
+  href: BackOffice.html
+  name: BackOffice.API.Models.Abstracts
+  nameWithType: BackOffice.API.Models.Abstracts
+  fullName: BackOffice.API.Models.Abstracts
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.Abstracts
+    name: Abstracts
+    href: BackOffice.API.Models.Abstracts.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.Abstracts
+    name: Abstracts
+    href: BackOffice.API.Models.Abstracts.html

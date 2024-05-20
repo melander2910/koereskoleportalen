@@ -1,0 +1,350 @@
+### YamlMime:TableOfContent
+items:
+- uid: Authentication.Service.Controllers
+  name: Authentication.Service.Controllers
+  items:
+  - uid: Authentication.Service.Controllers.AuthController
+    name: AuthController
+- uid: Authentication.Service.Data
+  name: Authentication.Service.Data
+  items:
+  - uid: Authentication.Service.Data.ApplicationDbContext
+    name: ApplicationDbContext
+- uid: Authentication.Service.Dto
+  name: Authentication.Service.Dto
+  items:
+  - uid: Authentication.Service.Dto.AssignRoleRequestDto
+    name: AssignRoleRequestDto
+  - uid: Authentication.Service.Dto.CreateClaimDto
+    name: CreateClaimDto
+  - uid: Authentication.Service.Dto.LoginRequestDto
+    name: LoginRequestDto
+  - uid: Authentication.Service.Dto.LoginResponseDto
+    name: LoginResponseDto
+  - uid: Authentication.Service.Dto.RefreshTokenDto
+    name: RefreshTokenDto
+  - uid: Authentication.Service.Dto.RegistrationRequestDto
+    name: RegistrationRequestDto
+  - uid: Authentication.Service.Dto.ResponseDto
+    name: ResponseDto
+  - uid: Authentication.Service.Dto.UserDto
+    name: UserDto
+  - uid: Authentication.Service.Dto.UserSignupDto
+    name: UserSignupDto
+- uid: Authentication.Service.Extensions
+  name: Authentication.Service.Extensions
+  items:
+  - uid: Authentication.Service.Extensions.WebApplicationBuilderExtension
+    name: WebApplicationBuilderExtension
+- uid: Authentication.Service.Migrations
+  name: Authentication.Service.Migrations
+  items:
+  - uid: Authentication.Service.Migrations.AddedRefrshToken
+    name: AddedRefrshToken
+  - uid: Authentication.Service.Migrations.identityInitialCreate
+    name: identityInitialCreate
+- uid: Authentication.Service.Models
+  name: Authentication.Service.Models
+  items:
+  - uid: Authentication.Service.Models.ExtendedIdentityUser
+    name: ExtendedIdentityUser
+  - uid: Authentication.Service.Models.JwtOptions
+    name: JwtOptions
+- uid: Authentication.Service.Repositories
+  name: Authentication.Service.Repositories
+  items:
+  - uid: Authentication.Service.Repositories.AuthRepository
+    name: AuthRepository
+- uid: Authentication.Service.Repositories.Interfaces
+  name: Authentication.Service.Repositories.Interfaces
+  items:
+  - uid: Authentication.Service.Repositories.Interfaces.IAuthRepository
+    name: IAuthRepository
+- uid: Authentication.Service.Services
+  name: Authentication.Service.Services
+  items:
+  - uid: Authentication.Service.Services.AuthService
+    name: AuthService
+  - uid: Authentication.Service.Services.JwtTokenGeneratorService
+    name: JwtTokenGeneratorService
+- uid: Authentication.Service.Services.Interfaces
+  name: Authentication.Service.Services.Interfaces
+  items:
+  - uid: Authentication.Service.Services.Interfaces.IAuthService
+    name: IAuthService
+  - uid: Authentication.Service.Services.Interfaces.IJwtTokenGeneratorService
+    name: IJwtTokenGeneratorService
+- uid: Authentication.Service.Utils
+  name: Authentication.Service.Utils
+  items:
+  - uid: Authentication.Service.Utils.Enums
+    name: Enums
+  - uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+    name: Enums.AuthorizationRoles
+- uid: BackOffice.API
+  name: BackOffice.API
+  items:
+  - uid: BackOffice.API.WeatherForecast
+    name: WeatherForecast
+- uid: BackOffice.API.Consumers
+  name: BackOffice.API.Consumers
+  items:
+  - uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+    name: SubTenantClaimCreatedEventConsumer
+  - uid: BackOffice.API.Consumers.TenantClaimCreatedEventConsumer
+    name: TenantClaimCreatedEventConsumer
+  - uid: BackOffice.API.Consumers.UserCreatedEventConsumer
+    name: UserCreatedEventConsumer
+- uid: BackOffice.API.Controllers
+  name: BackOffice.API.Controllers
+  items:
+  - uid: BackOffice.API.Controllers.OrganisationController
+    name: OrganisationController
+  - uid: BackOffice.API.Controllers.ProductionUnitController
+    name: ProductionUnitController
+  - uid: BackOffice.API.Controllers.SubTenantController
+    name: SubTenantController
+  - uid: BackOffice.API.Controllers.TenantController
+    name: TenantController
+  - uid: BackOffice.API.Controllers.UserController
+    name: UserController
+- uid: BackOffice.API.Data
+  name: BackOffice.API.Data
+  items:
+  - uid: BackOffice.API.Data.Context
+    name: Context
+  - uid: BackOffice.API.Data.SubTenantDbContext
+    name: SubTenantDbContext
+  - uid: BackOffice.API.Data.TenantDbContext
+    name: TenantDbContext
+- uid: BackOffice.API.Dto
+  name: BackOffice.API.Dto
+  items:
+  - uid: BackOffice.API.Dto.OrganisationCreateDto
+    name: OrganisationCreateDto
+  - uid: BackOffice.API.Dto.ProductionUnitCreateDto
+    name: ProductionUnitCreateDto
+  - uid: BackOffice.API.Dto.ProductionUnitUpdateDto
+    name: ProductionUnitUpdateDto
+  - uid: BackOffice.API.Dto.TenantRequestDto
+    name: TenantRequestDto
+  - uid: BackOffice.API.Dto.UserSignupDto
+    name: UserSignupDto
+  - uid: BackOffice.API.Dto.UserUpdateDto
+    name: UserUpdateDto
+- uid: BackOffice.API.Extensions
+  name: BackOffice.API.Extensions
+  items:
+  - uid: BackOffice.API.Extensions.WebApplicationBuilderExtension
+    name: WebApplicationBuilderExtension
+- uid: BackOffice.API.Middleware
+  name: BackOffice.API.Middleware
+  items:
+  - uid: BackOffice.API.Middleware.TenantResolver
+    name: TenantResolver
+- uid: BackOffice.API.Migrations
+  name: BackOffice.API.Migrations
+  items:
+  - uid: BackOffice.API.Migrations.AbstractTenantTwo
+    name: AbstractTenantTwo
+  - uid: BackOffice.API.Migrations.AddedFixAbstractClass
+    name: AddedFixAbstractClass
+  - uid: BackOffice.API.Migrations.AddedUserEntity
+    name: AddedUserEntity
+  - uid: BackOffice.API.Migrations.InitialCreateBackOffice
+    name: InitialCreateBackOffice
+  - uid: BackOffice.API.Migrations.NullableProperties
+    name: NullableProperties
+  - uid: BackOffice.API.Migrations.ProductionUnitRemoved
+    name: ProductionUnitRemoved
+  - uid: BackOffice.API.Migrations.SpecifyingTableNames
+    name: SpecifyingTableNames
+  - uid: BackOffice.API.Migrations.abstracttenancy
+    name: abstracttenancy
+  - uid: BackOffice.API.Migrations.tenantId
+    name: tenantId
+- uid: BackOffice.API.Models.Abstracts
+  name: BackOffice.API.Models.Abstracts
+  items:
+  - uid: BackOffice.API.Models.Abstracts.BaseEntity
+    name: BaseEntity
+  - uid: BackOffice.API.Models.Abstracts.SubTenant
+    name: SubTenant
+  - uid: BackOffice.API.Models.Abstracts.Tenant
+    name: Tenant
+- uid: BackOffice.API.Models.DatabaseEntities
+  name: BackOffice.API.Models.DatabaseEntities
+  items:
+  - uid: BackOffice.API.Models.DatabaseEntities.Course
+    name: Course
+  - uid: BackOffice.API.Models.DatabaseEntities.Organisation
+    name: Organisation
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnitRemoved
+    name: ProductionUnitRemoved
+  - uid: BackOffice.API.Models.DatabaseEntities.User
+    name: User
+- uid: BackOffice.API.Repositories
+  name: BackOffice.API.Repositories
+  items:
+  - uid: BackOffice.API.Repositories.OrganisationRepository
+    name: OrganisationRepository
+  - uid: BackOffice.API.Repositories.ProductionUnitRepository
+    name: ProductionUnitRepository
+  - uid: BackOffice.API.Repositories.SubTenantRepository
+    name: SubTenantRepository
+  - uid: BackOffice.API.Repositories.TenantRepository
+    name: TenantRepository
+  - uid: BackOffice.API.Repositories.UserRepository
+    name: UserRepository
+- uid: BackOffice.API.Repositories.Interfaces
+  name: BackOffice.API.Repositories.Interfaces
+  items:
+  - uid: BackOffice.API.Repositories.Interfaces.IOrganisationRepository
+    name: IOrganisationRepository
+  - uid: BackOffice.API.Repositories.Interfaces.IProductionUnitRepository
+    name: IProductionUnitRepository
+  - uid: BackOffice.API.Repositories.Interfaces.ISubTenantRepository
+    name: ISubTenantRepository
+  - uid: BackOffice.API.Repositories.Interfaces.ITenantRepository
+    name: ITenantRepository
+  - uid: BackOffice.API.Repositories.Interfaces.IUserRepository
+    name: IUserRepository
+- uid: BackOffice.API.Services
+  name: BackOffice.API.Services
+  items:
+  - uid: BackOffice.API.Services.CurrentSubTenantService
+    name: CurrentSubTenantService
+  - uid: BackOffice.API.Services.CurrentTenantService
+    name: CurrentTenantService
+  - uid: BackOffice.API.Services.OrganisationService
+    name: OrganisationService
+  - uid: BackOffice.API.Services.ProductionUnitService
+    name: ProductionUnitService
+  - uid: BackOffice.API.Services.SubTenantService
+    name: SubTenantService
+  - uid: BackOffice.API.Services.TenantService
+    name: TenantService
+  - uid: BackOffice.API.Services.UserService
+    name: UserService
+- uid: BackOffice.API.Services.Interfaces
+  name: BackOffice.API.Services.Interfaces
+  items:
+  - uid: BackOffice.API.Services.Interfaces.ICurrentSubTenantService
+    name: ICurrentSubTenantService
+  - uid: BackOffice.API.Services.Interfaces.ICurrentTenantService
+    name: ICurrentTenantService
+  - uid: BackOffice.API.Services.Interfaces.IOrganisationService
+    name: IOrganisationService
+  - uid: BackOffice.API.Services.Interfaces.IProductionUnitService
+    name: IProductionUnitService
+  - uid: BackOffice.API.Services.Interfaces.ISubTenantService
+    name: ISubTenantService
+  - uid: BackOffice.API.Services.Interfaces.ITenantService
+    name: ITenantService
+  - uid: BackOffice.API.Services.Interfaces.IUserService
+    name: IUserService
+- uid: Contracts
+  name: Contracts
+  items:
+  - uid: Contracts.ProductionUnitUpdatedEvent
+    name: ProductionUnitUpdatedEvent
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - uid: Contracts.TenantClaimCreatedEvent
+    name: TenantClaimCreatedEvent
+  - uid: Contracts.UserCreatedEvent
+    name: UserCreatedEvent
+- uid: CvrSync.Service.Models
+  name: CvrSync.Service.Models
+  items:
+  - uid: CvrSync.Service.Models.Address
+    name: Address
+  - uid: CvrSync.Service.Models.BusinessType
+    name: BusinessType
+  - uid: CvrSync.Service.Models.CvrAuthenticationSettings
+    name: CvrAuthenticationSettings
+  - uid: CvrSync.Service.Models.DrivingSchool
+    name: DrivingSchool
+  - uid: CvrSync.Service.Models.DrivingSchoolQuery
+    name: DrivingSchoolQuery
+  - uid: CvrSync.Service.Models.MetaData
+    name: MetaData
+  - uid: CvrSync.Service.Models.Municipality
+    name: Municipality
+  - uid: CvrSync.Service.Models.NewestName
+    name: NewestName
+  - uid: CvrSync.Service.Models.Organisation
+    name: Organisation
+  - uid: CvrSync.Service.Models.OrganisationProp
+    name: OrganisationProp
+  - uid: CvrSync.Service.Models.OrganisationQuery
+    name: OrganisationQuery
+  - uid: CvrSync.Service.Models.OrganisationRelation
+    name: OrganisationRelation
+  - uid: CvrSync.Service.Models.PortalDatabaseSettings
+    name: PortalDatabaseSettings
+  - uid: CvrSync.Service.Models.ProductionUnit
+    name: ProductionUnit
+  - uid: CvrSync.Service.Models.Unit
+    name: Unit
+- uid: CvrSync.Service.Services
+  name: CvrSync.Service.Services
+  items:
+  - uid: CvrSync.Service.Services.ElasticSearchService
+    name: ElasticSearchService
+  - uid: CvrSync.Service.Services.MongoDBClient
+    name: MongoDBClient
+  - uid: CvrSync.Service.Services.NewElasticSearchService
+    name: NewElasticSearchService
+- uid: Portal.API.Controllers
+  name: Portal.API.Controllers
+  items:
+  - uid: Portal.API.Controllers.DrivingSchoolController
+    name: DrivingSchoolController
+  - uid: Portal.API.Controllers.OrganisationController
+    name: OrganisationController
+- uid: Portal.API.Data
+  name: Portal.API.Data
+  items:
+  - uid: Portal.API.Data.MongoDbClient
+    name: MongoDbClient
+- uid: Portal.API.Models
+  name: Portal.API.Models
+  items:
+  - uid: Portal.API.Models.DrivingSchool
+    name: DrivingSchool
+  - uid: Portal.API.Models.Organisation
+    name: Organisation
+  - uid: Portal.API.Models.PortalDatabaseSettings
+    name: PortalDatabaseSettings
+- uid: Portal.API.Repositories
+  name: Portal.API.Repositories
+  items:
+  - uid: Portal.API.Repositories.DrivingSchoolRepository
+    name: DrivingSchoolRepository
+  - uid: Portal.API.Repositories.OrganisationRepository
+    name: OrganisationRepository
+- uid: Portal.API.Repositories.Interfaces
+  name: Portal.API.Repositories.Interfaces
+  items:
+  - uid: Portal.API.Repositories.Interfaces.IDrivingSchoolRepository
+    name: IDrivingSchoolRepository
+  - uid: Portal.API.Repositories.Interfaces.IOrganisationRepository
+    name: IOrganisationRepository
+- uid: Portal.API.Services
+  name: Portal.API.Services
+  items:
+  - uid: Portal.API.Services.OrganisationService
+    name: OrganisationService
+- uid: Portal.API.Services.Interfaces
+  name: Portal.API.Services.Interfaces
+  items:
+  - uid: Portal.API.Services.Interfaces.DrivingSchoolService
+    name: DrivingSchoolService
+  - uid: Portal.API.Services.Interfaces.IDrivingSchoolService
+    name: IDrivingSchoolService
+  - uid: Portal.API.Services.Interfaces.IOrganisationService
+    name: IOrganisationService
+memberLayout: SamePage

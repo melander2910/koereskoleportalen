@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Repositories
+  commentId: N:Portal.API.Repositories
+  id: Portal.API.Repositories
+  children:
+  - Portal.API.Repositories.DrivingSchoolRepository
+  - Portal.API.Repositories.OrganisationRepository
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Repositories
+  nameWithType: Portal.API.Repositories
+  fullName: Portal.API.Repositories
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Repositories.DrivingSchoolRepository
+  commentId: T:Portal.API.Repositories.DrivingSchoolRepository
+  href: Portal.API.Repositories.DrivingSchoolRepository.html
+  name: DrivingSchoolRepository
+  nameWithType: DrivingSchoolRepository
+  fullName: Portal.API.Repositories.DrivingSchoolRepository
+- uid: Portal.API.Repositories.OrganisationRepository
+  commentId: T:Portal.API.Repositories.OrganisationRepository
+  href: Portal.API.Repositories.OrganisationRepository.html
+  name: OrganisationRepository
+  nameWithType: OrganisationRepository
+  fullName: Portal.API.Repositories.OrganisationRepository

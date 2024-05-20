@@ -1,0 +1,533 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto
+  commentId: T:BackOffice.API.Dto.ProductionUnitUpdateDto
+  id: ProductionUnitUpdateDto
+  parent: BackOffice.API.Dto
+  children:
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.City
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+  - BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode
+  langs:
+  - csharp
+  - vb
+  name: ProductionUnitUpdateDto
+  nameWithType: ProductionUnitUpdateDto
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto
+  type: Class
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ProductionUnitUpdateDto
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 2
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public class ProductionUnitUpdateDto
+    content.vb: Public Class ProductionUnitUpdateDto
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+  id: Name
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ProductionUnitUpdateDto.Name
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Name
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 4
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.Name*
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+  id: PhoneNumber
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: PhoneNumber
+  nameWithType: ProductionUnitUpdateDto.PhoneNumber
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: PhoneNumber
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 5
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string PhoneNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PhoneNumber As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber*
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+  id: Email
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: ProductionUnitUpdateDto.Email
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Email
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 6
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.Email*
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.City
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.City
+  id: City
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: ProductionUnitUpdateDto.City
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.City
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: City
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 7
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.City*
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+  id: StreetAddress
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: StreetAddress
+  nameWithType: ProductionUnitUpdateDto.StreetAddress
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: StreetAddress
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 8
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string StreetAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StreetAddress As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress*
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode
+  commentId: P:BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode
+  id: Zipcode
+  parent: BackOffice.API.Dto.ProductionUnitUpdateDto
+  langs:
+  - csharp
+  - vb
+  name: Zipcode
+  nameWithType: ProductionUnitUpdateDto.Zipcode
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Zipcode
+    path: BackOffice.API/Dto/ProductionUnitUpdateDto.cs
+    startLine: 9
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Dto
+  syntax:
+    content: public string Zipcode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Zipcode As String
+  overload: BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode*
+references:
+- uid: BackOffice.API.Dto
+  commentId: N:BackOffice.API.Dto
+  href: BackOffice.html
+  name: BackOffice.API.Dto
+  nameWithType: BackOffice.API.Dto
+  fullName: BackOffice.API.Dto
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Dto
+    name: Dto
+    href: BackOffice.API.Dto.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Name*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_Name
+  name: Name
+  nameWithType: ProductionUnitUpdateDto.Name
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_PhoneNumber
+  name: PhoneNumber
+  nameWithType: ProductionUnitUpdateDto.PhoneNumber
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.PhoneNumber
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Email*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_Email
+  name: Email
+  nameWithType: ProductionUnitUpdateDto.Email
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Email
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.City*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.City
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_City
+  name: City
+  nameWithType: ProductionUnitUpdateDto.City
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.City
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_StreetAddress
+  name: StreetAddress
+  nameWithType: ProductionUnitUpdateDto.StreetAddress
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.StreetAddress
+- uid: BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode*
+  commentId: Overload:BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode
+  href: BackOffice.API.Dto.ProductionUnitUpdateDto.html#BackOffice_API_Dto_ProductionUnitUpdateDto_Zipcode
+  name: Zipcode
+  nameWithType: ProductionUnitUpdateDto.Zipcode
+  fullName: BackOffice.API.Dto.ProductionUnitUpdateDto.Zipcode

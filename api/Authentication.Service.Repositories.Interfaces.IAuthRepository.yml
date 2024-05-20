@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  commentId: T:Authentication.Service.Repositories.Interfaces.IAuthRepository
+  id: IAuthRepository
+  parent: Authentication.Service.Repositories.Interfaces
+  children:
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole(System.String,System.String)
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim(System.Security.Claims.ClaimsPrincipal,Authentication.Service.Dto.CreateClaimDto)
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository.Login(Authentication.Service.Dto.LoginRequestDto)
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken(Authentication.Service.Dto.RefreshTokenDto)
+  - Authentication.Service.Repositories.Interfaces.IAuthRepository.Register(Authentication.Service.Models.ExtendedIdentityUser,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IAuthRepository
+  nameWithType: IAuthRepository
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  type: Interface
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IAuthRepository
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 6
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: public interface IAuthRepository
+    content.vb: Public Interface IAuthRepository
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register(Authentication.Service.Models.ExtendedIdentityUser,System.String)
+  commentId: M:Authentication.Service.Repositories.Interfaces.IAuthRepository.Register(Authentication.Service.Models.ExtendedIdentityUser,System.String)
+  id: Register(Authentication.Service.Models.ExtendedIdentityUser,System.String)
+  parent: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Register(ExtendedIdentityUser, string)
+  nameWithType: IAuthRepository.Register(ExtendedIdentityUser, string)
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register(Authentication.Service.Models.ExtendedIdentityUser, string)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Register
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 8
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: Task<ExtendedIdentityUser> Register(ExtendedIdentityUser extendedIdentityUser, string password)
+    parameters:
+    - id: extendedIdentityUser
+      type: Authentication.Service.Models.ExtendedIdentityUser
+    - id: password
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Authentication.Service.Models.ExtendedIdentityUser}
+    content.vb: Function Register(extendedIdentityUser As ExtendedIdentityUser, password As String) As Task(Of ExtendedIdentityUser)
+  overload: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register*
+  nameWithType.vb: IAuthRepository.Register(ExtendedIdentityUser, String)
+  fullName.vb: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register(Authentication.Service.Models.ExtendedIdentityUser, String)
+  name.vb: Register(ExtendedIdentityUser, String)
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.Login(Authentication.Service.Dto.LoginRequestDto)
+  commentId: M:Authentication.Service.Repositories.Interfaces.IAuthRepository.Login(Authentication.Service.Dto.LoginRequestDto)
+  id: Login(Authentication.Service.Dto.LoginRequestDto)
+  parent: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Login(LoginRequestDto)
+  nameWithType: IAuthRepository.Login(LoginRequestDto)
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.Login(Authentication.Service.Dto.LoginRequestDto)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Login
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 9
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)
+    parameters:
+    - id: loginRequestDto
+      type: Authentication.Service.Dto.LoginRequestDto
+    return:
+      type: System.Threading.Tasks.Task{Authentication.Service.Dto.LoginResponseDto}
+    content.vb: Function Login(loginRequestDto As LoginRequestDto) As Task(Of LoginResponseDto)
+  overload: Authentication.Service.Repositories.Interfaces.IAuthRepository.Login*
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole(System.String,System.String)
+  commentId: M:Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole(System.String,System.String)
+  id: AssignRole(System.String,System.String)
+  parent: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: AssignRole(string, string)
+  nameWithType: IAuthRepository.AssignRole(string, string)
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole(string, string)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: AssignRole
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 10
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: Task<bool> AssignRole(string email, string roleName)
+    parameters:
+    - id: email
+      type: System.String
+    - id: roleName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function AssignRole(email As String, roleName As String) As Task(Of Boolean)
+  overload: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole*
+  nameWithType.vb: IAuthRepository.AssignRole(String, String)
+  fullName.vb: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole(String, String)
+  name.vb: AssignRole(String, String)
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken(Authentication.Service.Dto.RefreshTokenDto)
+  commentId: M:Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken(Authentication.Service.Dto.RefreshTokenDto)
+  id: RefreshToken(Authentication.Service.Dto.RefreshTokenDto)
+  parent: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: RefreshToken(RefreshTokenDto)
+  nameWithType: IAuthRepository.RefreshToken(RefreshTokenDto)
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken(Authentication.Service.Dto.RefreshTokenDto)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: RefreshToken
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 11
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: Task<LoginResponseDto> RefreshToken(RefreshTokenDto refreshTokenDto)
+    parameters:
+    - id: refreshTokenDto
+      type: Authentication.Service.Dto.RefreshTokenDto
+    return:
+      type: System.Threading.Tasks.Task{Authentication.Service.Dto.LoginResponseDto}
+    content.vb: Function RefreshToken(refreshTokenDto As RefreshTokenDto) As Task(Of LoginResponseDto)
+  overload: Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken*
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim(System.Security.Claims.ClaimsPrincipal,Authentication.Service.Dto.CreateClaimDto)
+  commentId: M:Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim(System.Security.Claims.ClaimsPrincipal,Authentication.Service.Dto.CreateClaimDto)
+  id: CreateClaim(System.Security.Claims.ClaimsPrincipal,Authentication.Service.Dto.CreateClaimDto)
+  parent: Authentication.Service.Repositories.Interfaces.IAuthRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateClaim(ClaimsPrincipal, CreateClaimDto)
+  nameWithType: IAuthRepository.CreateClaim(ClaimsPrincipal, CreateClaimDto)
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim(System.Security.Claims.ClaimsPrincipal, Authentication.Service.Dto.CreateClaimDto)
+  type: Method
+  source:
+    remote:
+      path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: CreateClaim
+    path: Authentication.Service/Repositories/Interfaces/IAuthRepository.cs
+    startLine: 12
+  assemblies:
+  - Authentication.Service
+  namespace: Authentication.Service.Repositories.Interfaces
+  syntax:
+    content: Task<string> CreateClaim(ClaimsPrincipal user, CreateClaimDto createClaimDto)
+    parameters:
+    - id: user
+      type: System.Security.Claims.ClaimsPrincipal
+    - id: createClaimDto
+      type: Authentication.Service.Dto.CreateClaimDto
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Function CreateClaim(user As ClaimsPrincipal, createClaimDto As CreateClaimDto) As Task(Of String)
+  overload: Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim*
+references:
+- uid: Authentication.Service.Repositories.Interfaces
+  commentId: N:Authentication.Service.Repositories.Interfaces
+  href: Authentication.html
+  name: Authentication.Service.Repositories.Interfaces
+  nameWithType: Authentication.Service.Repositories.Interfaces
+  fullName: Authentication.Service.Repositories.Interfaces
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Repositories
+    name: Repositories
+    href: Authentication.Service.Repositories.html
+  - name: .
+  - uid: Authentication.Service.Repositories.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Repositories.Interfaces.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Repositories
+    name: Repositories
+    href: Authentication.Service.Repositories.html
+  - name: .
+  - uid: Authentication.Service.Repositories.Interfaces
+    name: Interfaces
+    href: Authentication.Service.Repositories.Interfaces.html
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register*
+  commentId: Overload:Authentication.Service.Repositories.Interfaces.IAuthRepository.Register
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html#Authentication_Service_Repositories_Interfaces_IAuthRepository_Register_Authentication_Service_Models_ExtendedIdentityUser_System_String_
+  name: Register
+  nameWithType: IAuthRepository.Register
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.Register
+- uid: Authentication.Service.Models.ExtendedIdentityUser
+  commentId: T:Authentication.Service.Models.ExtendedIdentityUser
+  parent: Authentication.Service.Models
+  href: Authentication.Service.Models.ExtendedIdentityUser.html
+  name: ExtendedIdentityUser
+  nameWithType: ExtendedIdentityUser
+  fullName: Authentication.Service.Models.ExtendedIdentityUser
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{Authentication.Service.Models.ExtendedIdentityUser}
+  commentId: T:System.Threading.Tasks.Task{Authentication.Service.Models.ExtendedIdentityUser}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ExtendedIdentityUser>
+  nameWithType: Task<ExtendedIdentityUser>
+  fullName: System.Threading.Tasks.Task<Authentication.Service.Models.ExtendedIdentityUser>
+  nameWithType.vb: Task(Of ExtendedIdentityUser)
+  fullName.vb: System.Threading.Tasks.Task(Of Authentication.Service.Models.ExtendedIdentityUser)
+  name.vb: Task(Of ExtendedIdentityUser)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Authentication.Service.Models.ExtendedIdentityUser
+    name: ExtendedIdentityUser
+    href: Authentication.Service.Models.ExtendedIdentityUser.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Authentication.Service.Models.ExtendedIdentityUser
+    name: ExtendedIdentityUser
+    href: Authentication.Service.Models.ExtendedIdentityUser.html
+  - name: )
+- uid: Authentication.Service.Models
+  commentId: N:Authentication.Service.Models
+  href: Authentication.html
+  name: Authentication.Service.Models
+  nameWithType: Authentication.Service.Models
+  fullName: Authentication.Service.Models
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Models
+    name: Models
+    href: Authentication.Service.Models.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.Login*
+  commentId: Overload:Authentication.Service.Repositories.Interfaces.IAuthRepository.Login
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html#Authentication_Service_Repositories_Interfaces_IAuthRepository_Login_Authentication_Service_Dto_LoginRequestDto_
+  name: Login
+  nameWithType: IAuthRepository.Login
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.Login
+- uid: Authentication.Service.Dto.LoginRequestDto
+  commentId: T:Authentication.Service.Dto.LoginRequestDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.LoginRequestDto.html
+  name: LoginRequestDto
+  nameWithType: LoginRequestDto
+  fullName: Authentication.Service.Dto.LoginRequestDto
+- uid: System.Threading.Tasks.Task{Authentication.Service.Dto.LoginResponseDto}
+  commentId: T:System.Threading.Tasks.Task{Authentication.Service.Dto.LoginResponseDto}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<LoginResponseDto>
+  nameWithType: Task<LoginResponseDto>
+  fullName: System.Threading.Tasks.Task<Authentication.Service.Dto.LoginResponseDto>
+  nameWithType.vb: Task(Of LoginResponseDto)
+  fullName.vb: System.Threading.Tasks.Task(Of Authentication.Service.Dto.LoginResponseDto)
+  name.vb: Task(Of LoginResponseDto)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Authentication.Service.Dto.LoginResponseDto
+    name: LoginResponseDto
+    href: Authentication.Service.Dto.LoginResponseDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Authentication.Service.Dto.LoginResponseDto
+    name: LoginResponseDto
+    href: Authentication.Service.Dto.LoginResponseDto.html
+  - name: )
+- uid: Authentication.Service.Dto
+  commentId: N:Authentication.Service.Dto
+  href: Authentication.html
+  name: Authentication.Service.Dto
+  nameWithType: Authentication.Service.Dto
+  fullName: Authentication.Service.Dto
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Dto
+    name: Dto
+    href: Authentication.Service.Dto.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Dto
+    name: Dto
+    href: Authentication.Service.Dto.html
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole*
+  commentId: Overload:Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html#Authentication_Service_Repositories_Interfaces_IAuthRepository_AssignRole_System_String_System_String_
+  name: AssignRole
+  nameWithType: IAuthRepository.AssignRole
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.AssignRole
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken*
+  commentId: Overload:Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html#Authentication_Service_Repositories_Interfaces_IAuthRepository_RefreshToken_Authentication_Service_Dto_RefreshTokenDto_
+  name: RefreshToken
+  nameWithType: IAuthRepository.RefreshToken
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.RefreshToken
+- uid: Authentication.Service.Dto.RefreshTokenDto
+  commentId: T:Authentication.Service.Dto.RefreshTokenDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.RefreshTokenDto.html
+  name: RefreshTokenDto
+  nameWithType: RefreshTokenDto
+  fullName: Authentication.Service.Dto.RefreshTokenDto
+- uid: Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim*
+  commentId: Overload:Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim
+  href: Authentication.Service.Repositories.Interfaces.IAuthRepository.html#Authentication_Service_Repositories_Interfaces_IAuthRepository_CreateClaim_System_Security_Claims_ClaimsPrincipal_Authentication_Service_Dto_CreateClaimDto_
+  name: CreateClaim
+  nameWithType: IAuthRepository.CreateClaim
+  fullName: Authentication.Service.Repositories.Interfaces.IAuthRepository.CreateClaim
+- uid: System.Security.Claims.ClaimsPrincipal
+  commentId: T:System.Security.Claims.ClaimsPrincipal
+  parent: System.Security.Claims
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.security.claims.claimsprincipal
+  name: ClaimsPrincipal
+  nameWithType: ClaimsPrincipal
+  fullName: System.Security.Claims.ClaimsPrincipal
+- uid: Authentication.Service.Dto.CreateClaimDto
+  commentId: T:Authentication.Service.Dto.CreateClaimDto
+  parent: Authentication.Service.Dto
+  href: Authentication.Service.Dto.CreateClaimDto.html
+  name: CreateClaimDto
+  nameWithType: CreateClaimDto
+  fullName: Authentication.Service.Dto.CreateClaimDto
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Security.Claims
+  commentId: N:System.Security.Claims
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Security.Claims
+  nameWithType: System.Security.Claims
+  fullName: System.Security.Claims
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Claims
+    name: Claims
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Security
+    name: Security
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security
+  - name: .
+  - uid: System.Security.Claims
+    name: Claims
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims

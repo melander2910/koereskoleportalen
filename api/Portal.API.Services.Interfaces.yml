@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Services.Interfaces
+  commentId: N:Portal.API.Services.Interfaces
+  id: Portal.API.Services.Interfaces
+  children:
+  - Portal.API.Services.Interfaces.DrivingSchoolService
+  - Portal.API.Services.Interfaces.IDrivingSchoolService
+  - Portal.API.Services.Interfaces.IOrganisationService
+  langs:
+  - csharp
+  - vb
+  name: Portal.API.Services.Interfaces
+  nameWithType: Portal.API.Services.Interfaces
+  fullName: Portal.API.Services.Interfaces
+  type: Namespace
+  assemblies:
+  - Portal.API
+references:
+- uid: Portal.API.Services.Interfaces.DrivingSchoolService
+  commentId: T:Portal.API.Services.Interfaces.DrivingSchoolService
+  href: Portal.API.Services.Interfaces.DrivingSchoolService.html
+  name: DrivingSchoolService
+  nameWithType: DrivingSchoolService
+  fullName: Portal.API.Services.Interfaces.DrivingSchoolService
+- uid: Portal.API.Services.Interfaces.IDrivingSchoolService
+  commentId: T:Portal.API.Services.Interfaces.IDrivingSchoolService
+  parent: Portal.API.Services.Interfaces
+  href: Portal.API.Services.Interfaces.IDrivingSchoolService.html
+  name: IDrivingSchoolService
+  nameWithType: IDrivingSchoolService
+  fullName: Portal.API.Services.Interfaces.IDrivingSchoolService
+- uid: Portal.API.Services.Interfaces.IOrganisationService
+  commentId: T:Portal.API.Services.Interfaces.IOrganisationService
+  parent: Portal.API.Services.Interfaces
+  href: Portal.API.Services.Interfaces.IOrganisationService.html
+  name: IOrganisationService
+  nameWithType: IOrganisationService
+  fullName: Portal.API.Services.Interfaces.IOrganisationService
+- uid: Portal.API.Services.Interfaces
+  commentId: N:Portal.API.Services.Interfaces
+  href: Portal.html
+  name: Portal.API.Services.Interfaces
+  nameWithType: Portal.API.Services.Interfaces
+  fullName: Portal.API.Services.Interfaces
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Services
+    name: Services
+    href: Portal.API.Services.html
+  - name: .
+  - uid: Portal.API.Services.Interfaces
+    name: Interfaces
+    href: Portal.API.Services.Interfaces.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Services
+    name: Services
+    href: Portal.API.Services.html
+  - name: .
+  - uid: Portal.API.Services.Interfaces
+    name: Interfaces
+    href: Portal.API.Services.Interfaces.html

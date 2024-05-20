@@ -1,0 +1,670 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  commentId: T:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  id: SubTenantClaimCreatedEventConsumer
+  parent: BackOffice.API.Consumers
+  children:
+  - BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor(BackOffice.API.Services.Interfaces.ICurrentTenantService,BackOffice.API.Services.Interfaces.IProductionUnitService,BackOffice.API.Services.Interfaces.IUserService)
+  - BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  langs:
+  - csharp
+  - vb
+  name: SubTenantClaimCreatedEventConsumer
+  nameWithType: SubTenantClaimCreatedEventConsumer
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  type: Class
+  source:
+    remote:
+      path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: SubTenantClaimCreatedEventConsumer
+    path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+    startLine: 6
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Consumers
+  syntax:
+    content: 'public sealed class SubTenantClaimCreatedEventConsumer : IConsumer<SubTenantClaimCreatedEvent>, IConsumer'
+    content.vb: Public NotInheritable Class SubTenantClaimCreatedEventConsumer Implements IConsumer(Of SubTenantClaimCreatedEvent), IConsumer
+  inheritance:
+  - System.Object
+  implements:
+  - MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}
+  - MassTransit.IConsumer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor(BackOffice.API.Services.Interfaces.ICurrentTenantService,BackOffice.API.Services.Interfaces.IProductionUnitService,BackOffice.API.Services.Interfaces.IUserService)
+  commentId: M:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor(BackOffice.API.Services.Interfaces.ICurrentTenantService,BackOffice.API.Services.Interfaces.IProductionUnitService,BackOffice.API.Services.Interfaces.IUserService)
+  id: '#ctor(BackOffice.API.Services.Interfaces.ICurrentTenantService,BackOffice.API.Services.Interfaces.IProductionUnitService,BackOffice.API.Services.Interfaces.IUserService)'
+  parent: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: SubTenantClaimCreatedEventConsumer(ICurrentTenantService, IProductionUnitService, IUserService)
+  nameWithType: SubTenantClaimCreatedEventConsumer.SubTenantClaimCreatedEventConsumer(ICurrentTenantService, IProductionUnitService, IUserService)
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.SubTenantClaimCreatedEventConsumer(BackOffice.API.Services.Interfaces.ICurrentTenantService, BackOffice.API.Services.Interfaces.IProductionUnitService, BackOffice.API.Services.Interfaces.IUserService)
+  type: Constructor
+  source:
+    remote:
+      path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: .ctor
+    path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+    startLine: 12
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Consumers
+  syntax:
+    content: public SubTenantClaimCreatedEventConsumer(ICurrentTenantService currentTenantService, IProductionUnitService productionUnitService, IUserService userService)
+    parameters:
+    - id: currentTenantService
+      type: BackOffice.API.Services.Interfaces.ICurrentTenantService
+    - id: productionUnitService
+      type: BackOffice.API.Services.Interfaces.IProductionUnitService
+    - id: userService
+      type: BackOffice.API.Services.Interfaces.IUserService
+    content.vb: Public Sub New(currentTenantService As ICurrentTenantService, productionUnitService As IProductionUnitService, userService As IUserService)
+  overload: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor*
+  nameWithType.vb: SubTenantClaimCreatedEventConsumer.New(ICurrentTenantService, IProductionUnitService, IUserService)
+  fullName.vb: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.New(BackOffice.API.Services.Interfaces.ICurrentTenantService, BackOffice.API.Services.Interfaces.IProductionUnitService, BackOffice.API.Services.Interfaces.IUserService)
+  name.vb: New(ICurrentTenantService, IProductionUnitService, IUserService)
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  commentId: M:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  id: Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  parent: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: Consume(ConsumeContext<SubTenantClaimCreatedEvent>)
+  nameWithType: SubTenantClaimCreatedEventConsumer.Consume(ConsumeContext<SubTenantClaimCreatedEvent>)
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume(MassTransit.ConsumeContext<Contracts.SubTenantClaimCreatedEvent>)
+  type: Method
+  source:
+    remote:
+      path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Consume
+    path: BackOffice.API/Consumers/SubTenantClaimCreatedEventConsumer.cs
+    startLine: 19
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Consumers
+  example: []
+  syntax:
+    content: public Task Consume(ConsumeContext<SubTenantClaimCreatedEvent> context)
+    parameters:
+    - id: context
+      type: MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Consume(context As ConsumeContext(Of SubTenantClaimCreatedEvent)) As Task
+  overload: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume*
+  implements:
+  - MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  nameWithType.vb: SubTenantClaimCreatedEventConsumer.Consume(ConsumeContext(Of SubTenantClaimCreatedEvent))
+  fullName.vb: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume(MassTransit.ConsumeContext(Of Contracts.SubTenantClaimCreatedEvent))
+  name.vb: Consume(ConsumeContext(Of SubTenantClaimCreatedEvent))
+references:
+- uid: BackOffice.API.Consumers
+  commentId: N:BackOffice.API.Consumers
+  href: BackOffice.html
+  name: BackOffice.API.Consumers
+  nameWithType: BackOffice.API.Consumers
+  fullName: BackOffice.API.Consumers
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Consumers
+    name: Consumers
+    href: BackOffice.API.Consumers.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Consumers
+    name: Consumers
+    href: BackOffice.API.Consumers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}
+  commentId: T:MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}
+  parent: MassTransit
+  definition: MassTransit.IConsumer`1
+  name: IConsumer<SubTenantClaimCreatedEvent>
+  nameWithType: IConsumer<SubTenantClaimCreatedEvent>
+  fullName: MassTransit.IConsumer<Contracts.SubTenantClaimCreatedEvent>
+  nameWithType.vb: IConsumer(Of SubTenantClaimCreatedEvent)
+  fullName.vb: MassTransit.IConsumer(Of Contracts.SubTenantClaimCreatedEvent)
+  name.vb: IConsumer(Of SubTenantClaimCreatedEvent)
+  spec.csharp:
+  - uid: MassTransit.IConsumer`1
+    name: IConsumer
+    isExternal: true
+  - name: <
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: '>'
+  spec.vb:
+  - uid: MassTransit.IConsumer`1
+    name: IConsumer
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: )
+- uid: MassTransit.IConsumer
+  commentId: T:MassTransit.IConsumer
+  parent: MassTransit
+  isExternal: true
+  name: IConsumer
+  nameWithType: IConsumer
+  fullName: MassTransit.IConsumer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MassTransit.IConsumer`1
+  commentId: T:MassTransit.IConsumer`1
+  isExternal: true
+  name: IConsumer<TMessage>
+  nameWithType: IConsumer<TMessage>
+  fullName: MassTransit.IConsumer<TMessage>
+  nameWithType.vb: IConsumer(Of TMessage)
+  fullName.vb: MassTransit.IConsumer(Of TMessage)
+  name.vb: IConsumer(Of TMessage)
+  spec.csharp:
+  - uid: MassTransit.IConsumer`1
+    name: IConsumer
+    isExternal: true
+  - name: <
+  - name: TMessage
+  - name: '>'
+  spec.vb:
+  - uid: MassTransit.IConsumer`1
+    name: IConsumer
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TMessage
+  - name: )
+- uid: MassTransit
+  commentId: N:MassTransit
+  isExternal: true
+  name: MassTransit
+  nameWithType: MassTransit
+  fullName: MassTransit
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor*
+  commentId: Overload:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.#ctor
+  href: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.html#BackOffice_API_Consumers_SubTenantClaimCreatedEventConsumer__ctor_BackOffice_API_Services_Interfaces_ICurrentTenantService_BackOffice_API_Services_Interfaces_IProductionUnitService_BackOffice_API_Services_Interfaces_IUserService_
+  name: SubTenantClaimCreatedEventConsumer
+  nameWithType: SubTenantClaimCreatedEventConsumer.SubTenantClaimCreatedEventConsumer
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.SubTenantClaimCreatedEventConsumer
+  nameWithType.vb: SubTenantClaimCreatedEventConsumer.New
+  fullName.vb: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.New
+  name.vb: New
+- uid: BackOffice.API.Services.Interfaces.ICurrentTenantService
+  commentId: T:BackOffice.API.Services.Interfaces.ICurrentTenantService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.ICurrentTenantService.html
+  name: ICurrentTenantService
+  nameWithType: ICurrentTenantService
+  fullName: BackOffice.API.Services.Interfaces.ICurrentTenantService
+- uid: BackOffice.API.Services.Interfaces.IProductionUnitService
+  commentId: T:BackOffice.API.Services.Interfaces.IProductionUnitService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.IProductionUnitService.html
+  name: IProductionUnitService
+  nameWithType: IProductionUnitService
+  fullName: BackOffice.API.Services.Interfaces.IProductionUnitService
+- uid: BackOffice.API.Services.Interfaces.IUserService
+  commentId: T:BackOffice.API.Services.Interfaces.IUserService
+  parent: BackOffice.API.Services.Interfaces
+  href: BackOffice.API.Services.Interfaces.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: BackOffice.API.Services.Interfaces.IUserService
+- uid: BackOffice.API.Services.Interfaces
+  commentId: N:BackOffice.API.Services.Interfaces
+  href: BackOffice.html
+  name: BackOffice.API.Services.Interfaces
+  nameWithType: BackOffice.API.Services.Interfaces
+  fullName: BackOffice.API.Services.Interfaces
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Services
+    name: Services
+    href: BackOffice.API.Services.html
+  - name: .
+  - uid: BackOffice.API.Services.Interfaces
+    name: Interfaces
+    href: BackOffice.API.Services.Interfaces.html
+- uid: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume*
+  commentId: Overload:BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume
+  href: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.html#BackOffice_API_Consumers_SubTenantClaimCreatedEventConsumer_Consume_MassTransit_ConsumeContext_Contracts_SubTenantClaimCreatedEvent__
+  name: Consume
+  nameWithType: SubTenantClaimCreatedEventConsumer.Consume
+  fullName: BackOffice.API.Consumers.SubTenantClaimCreatedEventConsumer.Consume
+- uid: MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  commentId: M:MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+  parent: MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}
+  definition: MassTransit.IConsumer`1.Consume(MassTransit.ConsumeContext{`0})
+  name: Consume(ConsumeContext<SubTenantClaimCreatedEvent>)
+  nameWithType: IConsumer<SubTenantClaimCreatedEvent>.Consume(ConsumeContext<SubTenantClaimCreatedEvent>)
+  fullName: MassTransit.IConsumer<Contracts.SubTenantClaimCreatedEvent>.Consume(MassTransit.ConsumeContext<Contracts.SubTenantClaimCreatedEvent>)
+  nameWithType.vb: IConsumer(Of SubTenantClaimCreatedEvent).Consume(ConsumeContext(Of SubTenantClaimCreatedEvent))
+  fullName.vb: MassTransit.IConsumer(Of Contracts.SubTenantClaimCreatedEvent).Consume(MassTransit.ConsumeContext(Of Contracts.SubTenantClaimCreatedEvent))
+  name.vb: Consume(ConsumeContext(Of SubTenantClaimCreatedEvent))
+  spec.csharp:
+  - uid: MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+    name: Consume
+    isExternal: true
+  - name: (
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: <
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: MassTransit.IConsumer{Contracts.SubTenantClaimCreatedEvent}.Consume(MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent})
+    name: Consume
+    isExternal: true
+  - name: (
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: )
+  - name: )
+- uid: MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent}
+  commentId: T:MassTransit.ConsumeContext{Contracts.SubTenantClaimCreatedEvent}
+  parent: MassTransit
+  definition: MassTransit.ConsumeContext`1
+  name: ConsumeContext<SubTenantClaimCreatedEvent>
+  nameWithType: ConsumeContext<SubTenantClaimCreatedEvent>
+  fullName: MassTransit.ConsumeContext<Contracts.SubTenantClaimCreatedEvent>
+  nameWithType.vb: ConsumeContext(Of SubTenantClaimCreatedEvent)
+  fullName.vb: MassTransit.ConsumeContext(Of Contracts.SubTenantClaimCreatedEvent)
+  name.vb: ConsumeContext(Of SubTenantClaimCreatedEvent)
+  spec.csharp:
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: <
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: '>'
+  spec.vb:
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Contracts.SubTenantClaimCreatedEvent
+    name: SubTenantClaimCreatedEvent
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: MassTransit.IConsumer`1.Consume(MassTransit.ConsumeContext{`0})
+  commentId: M:MassTransit.IConsumer`1.Consume(MassTransit.ConsumeContext{`0})
+  isExternal: true
+  name: Consume(ConsumeContext<TMessage>)
+  nameWithType: IConsumer<TMessage>.Consume(ConsumeContext<TMessage>)
+  fullName: MassTransit.IConsumer<TMessage>.Consume(MassTransit.ConsumeContext<TMessage>)
+  nameWithType.vb: IConsumer(Of TMessage).Consume(ConsumeContext(Of TMessage))
+  fullName.vb: MassTransit.IConsumer(Of TMessage).Consume(MassTransit.ConsumeContext(Of TMessage))
+  name.vb: Consume(ConsumeContext(Of TMessage))
+  spec.csharp:
+  - uid: MassTransit.IConsumer`1.Consume(MassTransit.ConsumeContext{`0})
+    name: Consume
+    isExternal: true
+  - name: (
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: <
+  - name: TMessage
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: MassTransit.IConsumer`1.Consume(MassTransit.ConsumeContext{`0})
+    name: Consume
+    isExternal: true
+  - name: (
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TMessage
+  - name: )
+  - name: )
+- uid: MassTransit.ConsumeContext`1
+  commentId: T:MassTransit.ConsumeContext`1
+  isExternal: true
+  name: ConsumeContext<T>
+  nameWithType: ConsumeContext<T>
+  fullName: MassTransit.ConsumeContext<T>
+  nameWithType.vb: ConsumeContext(Of T)
+  fullName.vb: MassTransit.ConsumeContext(Of T)
+  name.vb: ConsumeContext(Of T)
+  spec.csharp:
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MassTransit.ConsumeContext`1
+    name: ConsumeContext
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

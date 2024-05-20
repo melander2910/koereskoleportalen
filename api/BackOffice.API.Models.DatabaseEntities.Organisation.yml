@@ -1,0 +1,1454 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation
+  commentId: T:BackOffice.API.Models.DatabaseEntities.Organisation
+  id: Organisation
+  parent: BackOffice.API.Models.DatabaseEntities
+  children:
+  - BackOffice.API.Models.DatabaseEntities.Organisation.#ctor
+  - BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+  - BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+  - BackOffice.API.Models.DatabaseEntities.Organisation.City
+  - BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Country
+  - BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Email
+  - BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+  - BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+  - BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Name
+  - BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+  - BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+  - BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+  - BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Status
+  - BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Users
+  - BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+  langs:
+  - csharp
+  - vb
+  name: Organisation
+  nameWithType: Organisation
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation
+  type: Class
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Organisation
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 4
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: 'public class Organisation : BaseEntity'
+    content.vb: Public Class Organisation Inherits BaseEntity
+  inheritance:
+  - System.Object
+  - BackOffice.API.Models.Abstracts.BaseEntity
+  inheritedMembers:
+  - BackOffice.API.Models.Abstracts.BaseEntity.Id
+  - BackOffice.API.Models.Abstracts.BaseEntity.CreatedDate
+  - BackOffice.API.Models.Abstracts.BaseEntity.ModifiedDate
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.#ctor
+  commentId: M:BackOffice.API.Models.DatabaseEntities.Organisation.#ctor
+  id: '#ctor'
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Organisation()
+  nameWithType: Organisation.Organisation()
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Organisation()
+  type: Constructor
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: .ctor
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 7
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public Organisation()
+    content.vb: Public Sub New()
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.#ctor*
+  nameWithType.vb: Organisation.New()
+  fullName.vb: BackOffice.API.Models.DatabaseEntities.Organisation.New()
+  name.vb: New()
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+  id: CVR
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: CVR
+  nameWithType: Organisation.CVR
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: CVR
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 12
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string CVR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CVR As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.CVR*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Name
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Name
+  id: Name
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Organisation.Name
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Name
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Name
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 13
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Name*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+  id: PhoneNumber
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: PhoneNumber
+  nameWithType: Organisation.PhoneNumber
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: PhoneNumber
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 14
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? PhoneNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PhoneNumber As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Email
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Email
+  id: Email
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: Organisation.Email
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Email
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Email
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 15
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Email*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+  id: ClaimedByOwner
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: ClaimedByOwner
+  nameWithType: Organisation.ClaimedByOwner
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ClaimedByOwner
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 17
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public bool? ClaimedByOwner { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property ClaimedByOwner As Boolean?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+  id: ProductionUnits
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: ProductionUnits
+  nameWithType: Organisation.ProductionUnits
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ProductionUnits
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 19
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public ICollection<ProductionUnit> ProductionUnits { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+    content.vb: Public Property ProductionUnits As ICollection(Of ProductionUnit)
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Users
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Users
+  id: Users
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: Organisation.Users
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Users
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Users
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 20
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public ICollection<User> Users { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.User}
+    content.vb: Public Property Users As ICollection(Of User)
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Users*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+  id: StartDate
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: Organisation.StartDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: StartDate
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 23
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public DateTime? StartDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDate As Date?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.StartDate*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+  id: EndDate
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: Organisation.EndDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: EndDate
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 24
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public DateTime? EndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As Date?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.EndDate*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+  id: CvrApiModifiedDate
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: CvrApiModifiedDate
+  nameWithType: Organisation.CvrApiModifiedDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: CvrApiModifiedDate
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 25
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public DateTime? CvrApiModifiedDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property CvrApiModifiedDate As Date?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+  id: IndustryCode
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: IndustryCode
+  nameWithType: Organisation.IndustryCode
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IndustryCode
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 27
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? IndustryCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IndustryCode As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+  id: IndustryDescription
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: IndustryDescription
+  nameWithType: Organisation.IndustryDescription
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: IndustryDescription
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 28
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? IndustryDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IndustryDescription As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+  id: Municipality
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Municipality
+  nameWithType: Organisation.Municipality
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Municipality
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 30
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? Municipality { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Municipality As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Municipality*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Country
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Country
+  id: Country
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: Organisation.Country
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Country
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Country
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 31
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? Country { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Country As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Country*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.City
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.City
+  id: City
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: Organisation.City
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.City
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: City
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 32
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.City*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+  id: StreetAddress
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: StreetAddress
+  nameWithType: Organisation.StreetAddress
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: StreetAddress
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 33
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? StreetAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StreetAddress As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+  id: Zipcode
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Zipcode
+  nameWithType: Organisation.Zipcode
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Zipcode
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 34
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? Zipcode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Zipcode As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+  id: Latitude
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: Organisation.Latitude
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Latitude
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 35
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public double? Latitude { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property Latitude As Double?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Latitude*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+  id: Longtitude
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Longtitude
+  nameWithType: Organisation.Longtitude
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Longtitude
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 36
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public double? Longtitude { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property Longtitude As Double?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+  id: AdvertisementProtection
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: AdvertisementProtection
+  nameWithType: Organisation.AdvertisementProtection
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: AdvertisementProtection
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 38
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public bool? AdvertisementProtection { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property AdvertisementProtection As Boolean?
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+  id: OrganisationType
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: OrganisationType
+  nameWithType: Organisation.OrganisationType
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: OrganisationType
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 39
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? OrganisationType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OrganisationType As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType*
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Status
+  commentId: P:BackOffice.API.Models.DatabaseEntities.Organisation.Status
+  id: Status
+  parent: BackOffice.API.Models.DatabaseEntities.Organisation
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Organisation.Status
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Status
+  type: Property
+  source:
+    remote:
+      path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Status
+    path: BackOffice.API/Models/DatabaseEntities/Organisation.cs
+    startLine: 40
+  assemblies:
+  - BackOffice.API
+  namespace: BackOffice.API.Models.DatabaseEntities
+  syntax:
+    content: public string? Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: BackOffice.API.Models.DatabaseEntities.Organisation.Status*
+references:
+- uid: BackOffice.API.Models.DatabaseEntities
+  commentId: N:BackOffice.API.Models.DatabaseEntities
+  href: BackOffice.html
+  name: BackOffice.API.Models.DatabaseEntities
+  nameWithType: BackOffice.API.Models.DatabaseEntities
+  fullName: BackOffice.API.Models.DatabaseEntities
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.DatabaseEntities
+    name: DatabaseEntities
+    href: BackOffice.API.Models.DatabaseEntities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BackOffice.API.Models.Abstracts.BaseEntity
+  commentId: T:BackOffice.API.Models.Abstracts.BaseEntity
+  parent: BackOffice.API.Models.Abstracts
+  href: BackOffice.API.Models.Abstracts.BaseEntity.html
+  name: BaseEntity
+  nameWithType: BaseEntity
+  fullName: BackOffice.API.Models.Abstracts.BaseEntity
+- uid: BackOffice.API.Models.Abstracts.BaseEntity.Id
+  commentId: P:BackOffice.API.Models.Abstracts.BaseEntity.Id
+  parent: BackOffice.API.Models.Abstracts.BaseEntity
+  href: BackOffice.API.Models.Abstracts.BaseEntity.html#BackOffice_API_Models_Abstracts_BaseEntity_Id
+  name: Id
+  nameWithType: BaseEntity.Id
+  fullName: BackOffice.API.Models.Abstracts.BaseEntity.Id
+- uid: BackOffice.API.Models.Abstracts.BaseEntity.CreatedDate
+  commentId: P:BackOffice.API.Models.Abstracts.BaseEntity.CreatedDate
+  parent: BackOffice.API.Models.Abstracts.BaseEntity
+  href: BackOffice.API.Models.Abstracts.BaseEntity.html#BackOffice_API_Models_Abstracts_BaseEntity_CreatedDate
+  name: CreatedDate
+  nameWithType: BaseEntity.CreatedDate
+  fullName: BackOffice.API.Models.Abstracts.BaseEntity.CreatedDate
+- uid: BackOffice.API.Models.Abstracts.BaseEntity.ModifiedDate
+  commentId: P:BackOffice.API.Models.Abstracts.BaseEntity.ModifiedDate
+  parent: BackOffice.API.Models.Abstracts.BaseEntity
+  href: BackOffice.API.Models.Abstracts.BaseEntity.html#BackOffice_API_Models_Abstracts_BaseEntity_ModifiedDate
+  name: ModifiedDate
+  nameWithType: BaseEntity.ModifiedDate
+  fullName: BackOffice.API.Models.Abstracts.BaseEntity.ModifiedDate
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BackOffice.API.Models.Abstracts
+  commentId: N:BackOffice.API.Models.Abstracts
+  href: BackOffice.html
+  name: BackOffice.API.Models.Abstracts
+  nameWithType: BackOffice.API.Models.Abstracts
+  fullName: BackOffice.API.Models.Abstracts
+  spec.csharp:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.Abstracts
+    name: Abstracts
+    href: BackOffice.API.Models.Abstracts.html
+  spec.vb:
+  - uid: BackOffice
+    name: BackOffice
+    href: BackOffice.html
+  - name: .
+  - uid: BackOffice.API
+    name: API
+    href: BackOffice.API.html
+  - name: .
+  - uid: BackOffice.API.Models
+    name: Models
+    href: BackOffice.API.Models.html
+  - name: .
+  - uid: BackOffice.API.Models.Abstracts
+    name: Abstracts
+    href: BackOffice.API.Models.Abstracts.html
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.#ctor*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.#ctor
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation__ctor
+  name: Organisation
+  nameWithType: Organisation.Organisation
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Organisation
+  nameWithType.vb: Organisation.New
+  fullName.vb: BackOffice.API.Models.DatabaseEntities.Organisation.New
+  name.vb: New
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.CVR*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_CVR
+  name: CVR
+  nameWithType: Organisation.CVR
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.CVR
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Name*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Name
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Name
+  name: Name
+  nameWithType: Organisation.Name
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Name
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_PhoneNumber
+  name: PhoneNumber
+  nameWithType: Organisation.PhoneNumber
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.PhoneNumber
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Email*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Email
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Email
+  name: Email
+  nameWithType: Organisation.Email
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Email
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_ClaimedByOwner
+  name: ClaimedByOwner
+  nameWithType: Organisation.ClaimedByOwner
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.ClaimedByOwner
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_ProductionUnits
+  name: ProductionUnits
+  nameWithType: Organisation.ProductionUnits
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.ProductionUnits
+- uid: System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+  commentId: T:System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.ProductionUnit}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<ProductionUnit>
+  nameWithType: ICollection<ProductionUnit>
+  fullName: System.Collections.Generic.ICollection<BackOffice.API.Models.DatabaseEntities.ProductionUnit>
+  nameWithType.vb: ICollection(Of ProductionUnit)
+  fullName.vb: System.Collections.Generic.ICollection(Of BackOffice.API.Models.DatabaseEntities.ProductionUnit)
+  name.vb: ICollection(Of ProductionUnit)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.ProductionUnit
+    name: ProductionUnit
+    href: BackOffice.API.Models.DatabaseEntities.ProductionUnit.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Users*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Users
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Users
+  name: Users
+  nameWithType: Organisation.Users
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Users
+- uid: System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.User}
+  commentId: T:System.Collections.Generic.ICollection{BackOffice.API.Models.DatabaseEntities.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<User>
+  nameWithType: ICollection<User>
+  fullName: System.Collections.Generic.ICollection<BackOffice.API.Models.DatabaseEntities.User>
+  nameWithType.vb: ICollection(Of User)
+  fullName.vb: System.Collections.Generic.ICollection(Of BackOffice.API.Models.DatabaseEntities.User)
+  name.vb: ICollection(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: BackOffice.API.Models.DatabaseEntities.User
+    name: User
+    href: BackOffice.API.Models.DatabaseEntities.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BackOffice.API.Models.DatabaseEntities.User
+    name: User
+    href: BackOffice.API.Models.DatabaseEntities.User.html
+  - name: )
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.StartDate*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_StartDate
+  name: StartDate
+  nameWithType: Organisation.StartDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.StartDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.EndDate*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_EndDate
+  name: EndDate
+  nameWithType: Organisation.EndDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.EndDate
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_CvrApiModifiedDate
+  name: CvrApiModifiedDate
+  nameWithType: Organisation.CvrApiModifiedDate
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.CvrApiModifiedDate
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_IndustryCode
+  name: IndustryCode
+  nameWithType: Organisation.IndustryCode
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryCode
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_IndustryDescription
+  name: IndustryDescription
+  nameWithType: Organisation.IndustryDescription
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.IndustryDescription
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Municipality*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Municipality
+  name: Municipality
+  nameWithType: Organisation.Municipality
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Municipality
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Country*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Country
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Country
+  name: Country
+  nameWithType: Organisation.Country
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Country
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.City*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.City
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_City
+  name: City
+  nameWithType: Organisation.City
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.City
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_StreetAddress
+  name: StreetAddress
+  nameWithType: Organisation.StreetAddress
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.StreetAddress
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Zipcode
+  name: Zipcode
+  nameWithType: Organisation.Zipcode
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Zipcode
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Latitude*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Latitude
+  name: Latitude
+  nameWithType: Organisation.Latitude
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Latitude
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Longtitude
+  name: Longtitude
+  nameWithType: Organisation.Longtitude
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Longtitude
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_AdvertisementProtection
+  name: AdvertisementProtection
+  nameWithType: Organisation.AdvertisementProtection
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.AdvertisementProtection
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_OrganisationType
+  name: OrganisationType
+  nameWithType: Organisation.OrganisationType
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.OrganisationType
+- uid: BackOffice.API.Models.DatabaseEntities.Organisation.Status*
+  commentId: Overload:BackOffice.API.Models.DatabaseEntities.Organisation.Status
+  href: BackOffice.API.Models.DatabaseEntities.Organisation.html#BackOffice_API_Models_DatabaseEntities_Organisation_Status
+  name: Status
+  nameWithType: Organisation.Status
+  fullName: BackOffice.API.Models.DatabaseEntities.Organisation.Status

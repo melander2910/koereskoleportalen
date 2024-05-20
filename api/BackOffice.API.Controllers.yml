@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Controllers
+  commentId: N:BackOffice.API.Controllers
+  id: BackOffice.API.Controllers
+  children:
+  - BackOffice.API.Controllers.OrganisationController
+  - BackOffice.API.Controllers.ProductionUnitController
+  - BackOffice.API.Controllers.SubTenantController
+  - BackOffice.API.Controllers.TenantController
+  - BackOffice.API.Controllers.UserController
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Controllers
+  nameWithType: BackOffice.API.Controllers
+  fullName: BackOffice.API.Controllers
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Controllers.OrganisationController
+  commentId: T:BackOffice.API.Controllers.OrganisationController
+  href: BackOffice.API.Controllers.OrganisationController.html
+  name: OrganisationController
+  nameWithType: OrganisationController
+  fullName: BackOffice.API.Controllers.OrganisationController
+- uid: BackOffice.API.Controllers.ProductionUnitController
+  commentId: T:BackOffice.API.Controllers.ProductionUnitController
+  href: BackOffice.API.Controllers.ProductionUnitController.html
+  name: ProductionUnitController
+  nameWithType: ProductionUnitController
+  fullName: BackOffice.API.Controllers.ProductionUnitController
+- uid: BackOffice.API.Controllers.SubTenantController
+  commentId: T:BackOffice.API.Controllers.SubTenantController
+  href: BackOffice.API.Controllers.SubTenantController.html
+  name: SubTenantController
+  nameWithType: SubTenantController
+  fullName: BackOffice.API.Controllers.SubTenantController
+- uid: BackOffice.API.Controllers.TenantController
+  commentId: T:BackOffice.API.Controllers.TenantController
+  href: BackOffice.API.Controllers.TenantController.html
+  name: TenantController
+  nameWithType: TenantController
+  fullName: BackOffice.API.Controllers.TenantController
+- uid: BackOffice.API.Controllers.UserController
+  commentId: T:BackOffice.API.Controllers.UserController
+  href: BackOffice.API.Controllers.UserController.html
+  name: UserController
+  nameWithType: UserController
+  fullName: BackOffice.API.Controllers.UserController

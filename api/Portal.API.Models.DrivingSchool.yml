@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: Portal.API.Models.DrivingSchool
+  commentId: T:Portal.API.Models.DrivingSchool
+  id: DrivingSchool
+  parent: Portal.API.Models
+  children:
+  - Portal.API.Models.DrivingSchool.Address
+  - Portal.API.Models.DrivingSchool.City
+  - Portal.API.Models.DrivingSchool.Id
+  - Portal.API.Models.DrivingSchool.Name
+  - Portal.API.Models.DrivingSchool.OrganisationNumber
+  - Portal.API.Models.DrivingSchool.ProductionUnitNumber
+  - Portal.API.Models.DrivingSchool.Zip
+  langs:
+  - csharp
+  - vb
+  name: DrivingSchool
+  nameWithType: DrivingSchool
+  fullName: Portal.API.Models.DrivingSchool
+  type: Class
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: DrivingSchool
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 5
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonIgnoreExtraElements]
+
+      public class DrivingSchool
+    content.vb: >-
+      <BsonIgnoreExtraElements>
+
+      Public Class DrivingSchool
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonIgnoreExtraElementsAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonIgnoreExtraElementsAttribute.#ctor
+    arguments: []
+- uid: Portal.API.Models.DrivingSchool.Id
+  commentId: P:Portal.API.Models.DrivingSchool.Id
+  id: Id
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: DrivingSchool.Id
+  fullName: Portal.API.Models.DrivingSchool.Id
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Id
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 8
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonId]
+
+      [BsonRepresentation(BsonType.ObjectId)]
+
+      public string? Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonId>
+
+      <BsonRepresentation(BsonType.ObjectId)>
+
+      Public Property Id As String
+  overload: Portal.API.Models.DrivingSchool.Id*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonIdAttribute.#ctor
+    arguments: []
+  - type: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonRepresentationAttribute.#ctor(MongoDB.Bson.BsonType)
+    arguments:
+    - type: MongoDB.Bson.BsonType
+      value: 7
+- uid: Portal.API.Models.DrivingSchool.ProductionUnitNumber
+  commentId: P:Portal.API.Models.DrivingSchool.ProductionUnitNumber
+  id: ProductionUnitNumber
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: ProductionUnitNumber
+  nameWithType: DrivingSchool.ProductionUnitNumber
+  fullName: Portal.API.Models.DrivingSchool.ProductionUnitNumber
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: ProductionUnitNumber
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 12
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("ProductionUnitNumber")]
+
+      public int ProductionUnitNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <BsonElement("ProductionUnitNumber")>
+
+      Public Property ProductionUnitNumber As Integer
+  overload: Portal.API.Models.DrivingSchool.ProductionUnitNumber*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ProductionUnitNumber
+- uid: Portal.API.Models.DrivingSchool.OrganisationNumber
+  commentId: P:Portal.API.Models.DrivingSchool.OrganisationNumber
+  id: OrganisationNumber
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: OrganisationNumber
+  nameWithType: DrivingSchool.OrganisationNumber
+  fullName: Portal.API.Models.DrivingSchool.OrganisationNumber
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: OrganisationNumber
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 14
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("OrganisationNumber")]
+
+      public int OrganisationNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <BsonElement("OrganisationNumber")>
+
+      Public Property OrganisationNumber As Integer
+  overload: Portal.API.Models.DrivingSchool.OrganisationNumber*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: OrganisationNumber
+- uid: Portal.API.Models.DrivingSchool.Name
+  commentId: P:Portal.API.Models.DrivingSchool.Name
+  id: Name
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: DrivingSchool.Name
+  fullName: Portal.API.Models.DrivingSchool.Name
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Name
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 16
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("Name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("Name")>
+
+      Public Property Name As String
+  overload: Portal.API.Models.DrivingSchool.Name*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Name
+- uid: Portal.API.Models.DrivingSchool.Address
+  commentId: P:Portal.API.Models.DrivingSchool.Address
+  id: Address
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: DrivingSchool.Address
+  fullName: Portal.API.Models.DrivingSchool.Address
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Address
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 18
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("Address")]
+
+      public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("Address")>
+
+      Public Property Address As String
+  overload: Portal.API.Models.DrivingSchool.Address*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Address
+- uid: Portal.API.Models.DrivingSchool.Zip
+  commentId: P:Portal.API.Models.DrivingSchool.Zip
+  id: Zip
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: Zip
+  nameWithType: DrivingSchool.Zip
+  fullName: Portal.API.Models.DrivingSchool.Zip
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: Zip
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 20
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("ZipCode")]
+
+      public int Zip { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <BsonElement("ZipCode")>
+
+      Public Property Zip As Integer
+  overload: Portal.API.Models.DrivingSchool.Zip*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ZipCode
+- uid: Portal.API.Models.DrivingSchool.City
+  commentId: P:Portal.API.Models.DrivingSchool.City
+  id: City
+  parent: Portal.API.Models.DrivingSchool
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: DrivingSchool.City
+  fullName: Portal.API.Models.DrivingSchool.City
+  type: Property
+  source:
+    remote:
+      path: Portal.API/Models/DrivingSchool.cs
+      branch: docfx
+      repo: https://github.com/melander2910/koereskoleportalen.git
+    id: City
+    path: Portal.API/Models/DrivingSchool.cs
+    startLine: 22
+  assemblies:
+  - Portal.API
+  namespace: Portal.API.Models
+  syntax:
+    content: >-
+      [BsonElement("City")]
+
+      public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <BsonElement("City")>
+
+      Public Property City As String
+  overload: Portal.API.Models.DrivingSchool.City*
+  attributes:
+  - type: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute
+    ctor: MongoDB.Bson.Serialization.Attributes.BsonElementAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: City
+references:
+- uid: Portal.API.Models
+  commentId: N:Portal.API.Models
+  href: Portal.html
+  name: Portal.API.Models
+  nameWithType: Portal.API.Models
+  fullName: Portal.API.Models
+  spec.csharp:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Models
+    name: Models
+    href: Portal.API.Models.html
+  spec.vb:
+  - uid: Portal
+    name: Portal
+    href: Portal.html
+  - name: .
+  - uid: Portal.API
+    name: API
+    href: Portal.API.html
+  - name: .
+  - uid: Portal.API.Models
+    name: Models
+    href: Portal.API.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Portal.API.Models.DrivingSchool.Id*
+  commentId: Overload:Portal.API.Models.DrivingSchool.Id
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_Id
+  name: Id
+  nameWithType: DrivingSchool.Id
+  fullName: Portal.API.Models.DrivingSchool.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Portal.API.Models.DrivingSchool.ProductionUnitNumber*
+  commentId: Overload:Portal.API.Models.DrivingSchool.ProductionUnitNumber
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_ProductionUnitNumber
+  name: ProductionUnitNumber
+  nameWithType: DrivingSchool.ProductionUnitNumber
+  fullName: Portal.API.Models.DrivingSchool.ProductionUnitNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Portal.API.Models.DrivingSchool.OrganisationNumber*
+  commentId: Overload:Portal.API.Models.DrivingSchool.OrganisationNumber
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_OrganisationNumber
+  name: OrganisationNumber
+  nameWithType: DrivingSchool.OrganisationNumber
+  fullName: Portal.API.Models.DrivingSchool.OrganisationNumber
+- uid: Portal.API.Models.DrivingSchool.Name*
+  commentId: Overload:Portal.API.Models.DrivingSchool.Name
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_Name
+  name: Name
+  nameWithType: DrivingSchool.Name
+  fullName: Portal.API.Models.DrivingSchool.Name
+- uid: Portal.API.Models.DrivingSchool.Address*
+  commentId: Overload:Portal.API.Models.DrivingSchool.Address
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_Address
+  name: Address
+  nameWithType: DrivingSchool.Address
+  fullName: Portal.API.Models.DrivingSchool.Address
+- uid: Portal.API.Models.DrivingSchool.Zip*
+  commentId: Overload:Portal.API.Models.DrivingSchool.Zip
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_Zip
+  name: Zip
+  nameWithType: DrivingSchool.Zip
+  fullName: Portal.API.Models.DrivingSchool.Zip
+- uid: Portal.API.Models.DrivingSchool.City*
+  commentId: Overload:Portal.API.Models.DrivingSchool.City
+  href: Portal.API.Models.DrivingSchool.html#Portal_API_Models_DrivingSchool_City
+  name: City
+  nameWithType: DrivingSchool.City
+  fullName: Portal.API.Models.DrivingSchool.City

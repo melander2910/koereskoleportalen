@@ -1,0 +1,34 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "src": ".././",
+                    "files": ["**/*.csproj"]
+                }
+            ],
+            "dest": "api"
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": ["**/*.{md,yml}"],
+                "exclude": ["_site/**", "Portal.Client/**", "nextjs-client/**", "BackOffice.Client/**", "kubernetes/**", "Synchronization.Service/**", "docker-compose.yml", "azure-pipelines-test.yml", "azure-pipelines.yml"]
+            }
+        ],
+        "resource": [
+            {
+                "files": ["images/**"]
+            }
+        ],
+        "output": "_site",
+        "template": ["default", "modern"],
+        "globalMetadata": {
+            "_appName": "Koereskoleportalen",
+            "_appTitle": "Koereskoleportalen",
+            "_enableSearch": true,
+            "pdf": true
+        }
+    }
+}

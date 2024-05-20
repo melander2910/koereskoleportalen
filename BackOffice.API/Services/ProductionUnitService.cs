@@ -7,6 +7,9 @@ using MassTransit;
 
 namespace BackOffice.API.Services;
 
+/// <summary>
+/// Service for managing production units.
+/// </summary>
 public class ProductionUnitService : IProductionUnitService
 {
     private readonly IProductionUnitRepository _productionUnitRepository;
@@ -18,6 +21,11 @@ public class ProductionUnitService : IProductionUnitService
         _publishEndpoint = publishEndpoint;
     }
 
+    /// <summary>
+    /// Adds a new production unit asynchronously.
+    /// </summary>
+    /// <param name="productionUnitCreateDto">The DTO for creating a production unit.</param>
+    /// <returns>The created production unit.</returns>
     public async Task<ProductionUnit> AddAsync(ProductionUnitCreateDto productionUnitCreateDto)
     {
         var productionUnit = new ProductionUnit
@@ -37,21 +45,41 @@ public class ProductionUnitService : IProductionUnitService
         return await _productionUnitRepository.AddAsync(productionUnit);
     }
 
+    /// <summary>
+    /// Gets all production units asynchronously.
+    /// </summary>
+    /// <returns>A list of production units.</returns>
     public async Task<IEnumerable<ProductionUnit>> GetAllAsync()
     {
         return await _productionUnitRepository.GetAllAsync();
     }
 
+    /// <summary>
+    /// Gets all production units by user ID asynchronously.
+    /// </summary>
+    /// <param name="userId">The user ID.</param>
+    /// <returns>A list of production units associated with the specified user ID.</returns>
     public async Task<IEnumerable<ProductionUnit>> GetAllByUserIdAsync(Guid userId)
     {
         return await _productionUnitRepository.GetAllByUserIdAsync(userId);
     }
 
+    /// <summary>
+    /// Finds a production unit by ID asynchronously.
+    /// </summary>
+    /// <param name="id">The production unit ID.</param>
+    /// <returns>The production unit with the specified ID.</returns>
     public async Task<ProductionUnit> FindAsync(Guid id)
     {
         return await _productionUnitRepository.FindAsync(id);
     }
 
+    /// <summary>
+    /// Updates a production unit asynchronously.
+    /// </summary>
+    /// <param name="id">The production unit ID.</param>
+    /// <param name="productionUnitUpdateDto">The DTO for updating a production unit.</param>
+    /// <returns>The updated production unit.</returns>
     public async Task<ProductionUnit> Update(Guid id, ProductionUnitUpdateDto productionUnitUpdateDto)
     {
         var productionUnit = await _productionUnitRepository.FindAsync(id);
@@ -79,6 +107,12 @@ public class ProductionUnitService : IProductionUnitService
         return updatedProductionUnit;
     }
 
+    /// <summary>
+    /// Deletes a production unit asynchronously.
+    /// </summary>
+    /// <param name="id">The production unit ID.</param>
+    /// <returns><c>true</c> if the production unit was successfully deleted; otherwise, <c>false</c>.</returns>
+    /// <exception cref="Exception">Thrown when the production unit with the specified ID is not found.</exception>
     public async Task<bool> Delete(Guid id)
     {
         var productionUnit = await _productionUnitRepository.FindAsync(id);
@@ -97,6 +131,11 @@ public class ProductionUnitService : IProductionUnitService
         return await _productionUnitRepository.Delete(id, productionUnitRemoved);
     }
 
+    /// <summary>
+    /// Finds a production unit by production unit number asynchronously.
+    /// </summary>
+    /// <param name="productionUnitNumber">The production unit number.</param>
+    /// <returns>The production unit with the specified production unit number.</returns>
     public async Task<ProductionUnit> FindByProductionUnitNumber(string productionUnitNumber)
     {
         return await _productionUnitRepository.FindByProductionUnitNumber(productionUnitNumber);

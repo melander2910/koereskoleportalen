@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BackOffice.API.Middleware
+  commentId: N:BackOffice.API.Middleware
+  id: BackOffice.API.Middleware
+  children:
+  - BackOffice.API.Middleware.TenantResolver
+  langs:
+  - csharp
+  - vb
+  name: BackOffice.API.Middleware
+  nameWithType: BackOffice.API.Middleware
+  fullName: BackOffice.API.Middleware
+  type: Namespace
+  assemblies:
+  - BackOffice.API
+references:
+- uid: BackOffice.API.Middleware.TenantResolver
+  commentId: T:BackOffice.API.Middleware.TenantResolver
+  href: BackOffice.API.Middleware.TenantResolver.html
+  name: TenantResolver
+  nameWithType: TenantResolver
+  fullName: BackOffice.API.Middleware.TenantResolver

@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Authentication.Service.Utils
+  commentId: N:Authentication.Service.Utils
+  id: Authentication.Service.Utils
+  children:
+  - Authentication.Service.Utils.Enums
+  - Authentication.Service.Utils.Enums.AuthorizationRoles
+  langs:
+  - csharp
+  - vb
+  name: Authentication.Service.Utils
+  nameWithType: Authentication.Service.Utils
+  fullName: Authentication.Service.Utils
+  type: Namespace
+  assemblies:
+  - Authentication.Service
+references:
+- uid: Authentication.Service.Utils.Enums
+  commentId: T:Authentication.Service.Utils.Enums
+  href: Authentication.Service.Utils.Enums.html
+  name: Enums
+  nameWithType: Enums
+  fullName: Authentication.Service.Utils.Enums
+- uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+  commentId: T:Authentication.Service.Utils.Enums.AuthorizationRoles
+  parent: Authentication.Service.Utils
+  href: Authentication.Service.Utils.Enums.html
+  name: Enums.AuthorizationRoles
+  nameWithType: Enums.AuthorizationRoles
+  fullName: Authentication.Service.Utils.Enums.AuthorizationRoles
+  spec.csharp:
+  - uid: Authentication.Service.Utils.Enums
+    name: Enums
+    href: Authentication.Service.Utils.Enums.html
+  - name: .
+  - uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+    name: AuthorizationRoles
+    href: Authentication.Service.Utils.Enums.AuthorizationRoles.html
+  spec.vb:
+  - uid: Authentication.Service.Utils.Enums
+    name: Enums
+    href: Authentication.Service.Utils.Enums.html
+  - name: .
+  - uid: Authentication.Service.Utils.Enums.AuthorizationRoles
+    name: AuthorizationRoles
+    href: Authentication.Service.Utils.Enums.AuthorizationRoles.html
+- uid: Authentication.Service.Utils
+  commentId: N:Authentication.Service.Utils
+  href: Authentication.html
+  name: Authentication.Service.Utils
+  nameWithType: Authentication.Service.Utils
+  fullName: Authentication.Service.Utils
+  spec.csharp:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Utils
+    name: Utils
+    href: Authentication.Service.Utils.html
+  spec.vb:
+  - uid: Authentication
+    name: Authentication
+    href: Authentication.html
+  - name: .
+  - uid: Authentication.Service
+    name: Service
+    href: Authentication.Service.html
+  - name: .
+  - uid: Authentication.Service.Utils
+    name: Utils
+    href: Authentication.Service.Utils.html
