@@ -8,4 +8,5 @@ public class ProductionUnitUpdateDto
     public string City { get; set; }
     public string StreetAddress { get; set; }
     public string Zipcode { get; set; }
+    public double Price { get; set; }
 }

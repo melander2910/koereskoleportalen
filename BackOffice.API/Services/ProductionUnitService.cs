@@ -61,6 +61,7 @@ public class ProductionUnitService : IProductionUnitService
         productionUnit.City = productionUnitUpdateDto.City;
         productionUnit.StreetAddress = productionUnitUpdateDto.StreetAddress;
         productionUnit.Zipcode = productionUnitUpdateDto.Zipcode;
+        productionUnit.Price = productionUnitUpdateDto.Price;
         
         var updatedProductionUnit = await _productionUnitRepository.Update(id, productionUnit);
         
@@ -69,11 +70,12 @@ public class ProductionUnitService : IProductionUnitService
             {
                 ProductionUnitNumber = Int32.Parse(productionUnit.ProductionUnitNumber),
                 Name = productionUnitUpdateDto.Name,
-                /*PhoneNumber = productionUnitUpdateDto.PhoneNumber,
-                Email = productionUnitUpdateDto.Email,*/
+                PhoneNumber = productionUnitUpdateDto.PhoneNumber,
+                Email = productionUnitUpdateDto.Email,
                 City = productionUnitUpdateDto.City,
                 Address = productionUnitUpdateDto.StreetAddress,
-                ZipCode = Int32.Parse(productionUnitUpdateDto.Zipcode)
+                ZipCode = Int32.Parse(productionUnitUpdateDto.Zipcode),
+                Price = productionUnitUpdateDto.Price
             });
 
         return updatedProductionUnit;

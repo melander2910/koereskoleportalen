@@ -83,6 +83,7 @@ export interface ProductionUnit {
   name?: string | null;
   phoneNumber?: string | null;
   email?: string | null;
+  price?: number | null;
   /** @format date-time */
   startDate?: string | null;
   /** @format date-time */
@@ -136,6 +137,7 @@ export interface ProductionUnitUpdateDto {
   city?: string | null;
   streetAddress?: string | null;
   zipcode?: string | null;
+  price?: number | null;
 }
 
 export interface TenantRequestDto {
@@ -298,8 +300,8 @@ export class HttpClient<SecurityDataType = unknown> {
           property instanceof Blob
             ? property
             : typeof property === 'object' && property !== null
-            ? JSON.stringify(property)
-            : `${property}`,
+              ? JSON.stringify(property)
+              : `${property}`,
         );
         return formData;
       }, new FormData()),
@@ -347,19 +349,17 @@ export class HttpClient<SecurityDataType = unknown> {
     }
   };
 
-  public request = async <T = any, E = any>(
-    {
-      body,
-      secure,
-      path,
-      type,
-      query,
-      format,
-      baseUrl,
-      cancelToken,
-      ...params
-    }: FullRequestParams,
-  ): Promise<HttpResponse<T, E>> => {
+  public request = async <T = any, E = any>({
+    body,
+    secure,
+    path,
+    type,
+    query,
+    format,
+    baseUrl,
+    cancelToken,
+    ...params
+  }: FullRequestParams): Promise<HttpResponse<T, E>> => {
     const secureParams =
       ((typeof secure === 'boolean' ? secure : this.baseApiParams.secure) &&
         this.securityWorker &&
