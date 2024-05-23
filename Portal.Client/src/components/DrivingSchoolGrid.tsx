@@ -1,5 +1,5 @@
 import useDrivingSchools from "@/hooks/useDrivingSchools";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 
 interface Props {
     searchInput: string;
@@ -9,24 +9,24 @@ function DrivingSchoolGrid({ searchInput }: Props) {
     const { data: drivingschools } = useDrivingSchools();
 
     return (
-        <>
-            <div className="grid grid-cols-4 gap-4">
-                {drivingschools
-                    .filter((drivingSchool) => drivingSchool.name?.toLowerCase().includes(searchInput.toLowerCase()))
-                    .map((drivingSchool) => (
-                        <Card key={drivingSchool.id}>
-                            <CardHeader>
-                                <CardTitle>{drivingSchool.name}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p>
-                                    {drivingSchool.address}, {drivingSchool.zip}, {drivingSchool.city}
-                                </p>
-                            </CardContent>
-                        </Card>
-                    ))}
-            </div>
-        </>
+        <div className="grid grid-cols-4 gap-4">
+            {drivingschools
+                .filter((drivingSchool) => drivingSchool.name?.toLowerCase().includes(searchInput.toLowerCase()))
+                .map((drivingSchool) => (
+                    <Card key={drivingSchool.id} className="flex flex-col justify-between h-64">
+                        <CardHeader className="flex-grow-0">
+                            <CardDescription>{drivingSchool.city}</CardDescription>
+                            <CardTitle className="min-h-12">{drivingSchool.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <div>
+                                {drivingSchool.address}, {drivingSchool.zip}
+                            </div>
+                        </CardContent>
+                        <CardFooter className="justify-end">{drivingSchool.price > 0 ? `${drivingSchool.price},-` : "Pris utilgængelig"}</CardFooter>
+                    </Card>
+                ))}
+        </div>
     );
 }
 

@@ -4,4 +4,5 @@ export interface DrivingSchool {
     city: string;
     address: string;
     zip: number;
+    price: number;
 }
