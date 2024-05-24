@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export default async function middleware(req: NextRequest) {
-  const publicRoutes = ['/login', '/signup', '/favicon.ico', '/register'];
+  const publicRoutes = ['/login', '/signup', '/favicon.ico', '/register', '/'];
   const path = req.nextUrl.pathname;
   const isPublicRoute = publicRoutes.includes(path);
   const jwtToken = req.cookies.get('jwtToken')?.value;
@@ -38,13 +38,12 @@ export default async function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     // '/((?!api|_next/static|_next/image|.*\\.png$).*)',
-    '/',
     // '/login',
     '/dashboard',
     '/:path/',
     '/:path/productionunits',
     '/:path/:path/dashboard',
     '/:path/:path/invoice',
-    '/:path/:path/customers',
+    '/:path/:path/students',
   ],
 };

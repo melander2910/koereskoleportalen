@@ -1,4 +1,3 @@
-import SideNav from '@/app/ui/dashboard/sidenav';
 import TenancyPicker from '../../ui/tenancy/tenancy-picker';
 
 export default function Layout({

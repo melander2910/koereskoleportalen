@@ -36,7 +36,6 @@ export default function AddTenantModal({claimType, displayText}: Props) {
     console.log(tempTenant);
     if(tempTenant.claimValue != ""){
       var response = await authClient.authClaimCreate(tempTenant)
-      var data = await response.json();
     }
   }
 

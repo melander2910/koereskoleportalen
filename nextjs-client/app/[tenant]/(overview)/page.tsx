@@ -1,9 +1,5 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { Card } from '../../ui/dashboard/cards';
-import SideNav from '../../ui/dashboard/sidenav';
-import TenancyPicker from '../../ui/tenancy/tenancy-picker';
-import { useQuery } from '@tanstack/react-query';
 import { Api } from '../../lib/api/backoffice-api';
 import SubTenancyPicker from '../../ui/tenancy/sub-tenancy-picker';
 

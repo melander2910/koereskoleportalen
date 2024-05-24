@@ -19,7 +19,7 @@ const links = [
     href: '/dashboard/invoices',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Customers', href: '/dashboard/customers', icon: UserGroupIcon },
+  { name: 'Students', href: '/dashboard/students', icon: UserGroupIcon },
 ];
 
 
@@ -36,7 +36,7 @@ export default function NavLinks({ params }: { params: { tenant: string, subtena
             className={clsx(
               'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-sky-100 text-blue-600': pathname === link.href,
+                'bg-sky-100 text-blue-200': pathname === link.href,
               }
             )}
           >

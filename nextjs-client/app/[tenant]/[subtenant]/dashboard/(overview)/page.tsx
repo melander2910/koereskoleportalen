@@ -1,12 +1,6 @@
 'use client';
-import { Card } from '@/app/ui/dashboard/cards';
-import RevenueChart from '@/app/ui/dashboard/revenue-chart';
-import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
-import { customers, invoices, revenue } from '../../../../lib/placeholder-data';
-import { Suspense, useEffect, useState } from 'react';
-import { Customer, LatestInvoice } from '../../../../lib/definitions';
-import { Api, ProductionUnit } from '../../../../lib/api/backoffice-api';
-import { RevenueChartSkeleton } from '@/app/ui/skeletons';
+
+import { Api } from '../../../../lib/api/backoffice-api';
 import UpdateProductionUnitForm from '@/app/ui/update-productionunit-form';
 import { useQuery } from '@tanstack/react-query';
 
