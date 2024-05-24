@@ -23,7 +23,7 @@ export default async function middleware(req: NextRequest) {
   // you cannot make requests to backend with invalid cookie, but frontend might need to handle it so it does not look weird
   if(jwtToken && path == "/login"){
     console.log("have jwt and visit login")
-
+    
     // TODO: add currentTenant to response from server?
     // var currentTenant = localStorage.getItem("currentTenant")!;
     return NextResponse.redirect(new URL(`/${"tenant"}`, req.nextUrl));
@@ -39,10 +39,10 @@ export const config = {
   matcher: [
     // '/((?!api|_next/static|_next/image|.*\\.png$).*)',
     // '/login',
-    '/dashboard',
+    '/home',
     '/:path/',
     '/:path/productionunits',
-    '/:path/:path/dashboard',
+    '/:path/:path/home',
     '/:path/:path/invoice',
     '/:path/:path/students',
   ],

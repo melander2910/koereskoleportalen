@@ -12,14 +12,14 @@ import { usePathname } from 'next/navigation';
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
-  { name: 'Workflow', href: 'dashboard/workflow', icon: HomeIcon },
+  { name: 'Home', href: '/home', icon: HomeIcon },
+  { name: 'Workflow', href: 'home/workflow', icon: HomeIcon },
   {
     name: 'Invoices',
-    href: '/dashboard/invoices',
+    href: '/home/invoices',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'Students', href: '/dashboard/students', icon: UserGroupIcon },
+  { name: 'Students', href: '/home/students', icon: UserGroupIcon },
 ];
 
 

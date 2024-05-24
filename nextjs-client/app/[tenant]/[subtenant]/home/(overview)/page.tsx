@@ -33,7 +33,7 @@ export default function Page({
 
   return (
     <main>
-      <h1 className="mb-4 text-xl md:text-2xl">Dashboard</h1>
+      <h1 className="mb-4 text-xl md:text-2xl">{subTenantData?.name}</h1>
       <div>Tenant id: {params.tenant}</div>
       <div>Sub Tenant id: {params.subtenant}</div>
 
