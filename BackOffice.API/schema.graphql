@@ -32,10 +32,10 @@ directive @skip(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
 type Query {
 	"""Return a Course by its Id"""
 	course(id: ID!): Course
-	courses: [Course!]!
+	courses(filter: String): [Course!]!
 	"""Return a Organisation by its Id"""
 	organisation(id: ID!): Organisation
-	organisations: [Organisation!]!
+	organisations(filter: String): [Organisation!]!
 	"""Return a ProductionUnit by its Id"""
 	productionUnit(id: ID!): ProductionUnit
 	productionUnits: [ProductionUnit!]!

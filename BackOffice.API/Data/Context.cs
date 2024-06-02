@@ -1,6 +1,7 @@
 using BackOffice.API.Models.Abstracts;
 using BackOffice.API.Models.DatabaseEntities;
 using BackOffice.API.Services.Interfaces;
+using EntityGraphQL.Schema.FieldExtensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackOffice.API.Data;
@@ -22,11 +23,15 @@ public class Context : DbContext
         SubTenantId = _currentSubTenantService.SubTenantId;
     }
 
+    [UseFilter]
     public DbSet<Organisation> Organisations { get; set; }
+    
     public DbSet<ProductionUnit> ProductionUnits { get; set; }
     public DbSet<User> Users { get; set; }
     
+    [UseFilter]
     public DbSet<Course> Courses { get; set; }
+    
     public DbSet<ProductionUnitRemoved> ProductionUnitsRemoved { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
