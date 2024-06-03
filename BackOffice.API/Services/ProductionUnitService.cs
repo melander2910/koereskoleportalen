@@ -12,7 +12,7 @@ public class ProductionUnitService : IProductionUnitService
     private readonly IProductionUnitRepository _productionUnitRepository;
     private readonly IPublishEndpoint _publishEndpoint;
     
-    // comment 2
+    // comment 3
     public ProductionUnitService(IProductionUnitRepository productionUnitRepository, IPublishEndpoint publishEndpoint)
     {
         _productionUnitRepository = productionUnitRepository;
